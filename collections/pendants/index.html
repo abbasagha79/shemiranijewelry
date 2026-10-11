@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>آویز | SHEMIRANI Jewelry</title>
-  <meta name="description" content="مجموعه‌ی آویز در SHEMIRANI">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1a3a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23d9ad4b'%3ESM%3C/text%3E%3C/svg%3E">
+  <title data-fa="آویز | SHEMIRANI Jewelry">Pendants | SHEMIRANI Jewelry</title>
+  <meta name="description" content="Pendants by SHEMIRANI">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1f5c'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23f5c04a'%3ESM%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('shemirani-lang')==='fa'){document.documentElement.lang='fa';document.documentElement.dir='rtl'}}catch(e){}</script>
   <link rel="stylesheet" href="/assets/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="/assets/app.js" defer></script>
 </head>
 <body>
 
   <header>
     <a class="brand" href="/">SM</a>
-    <nav>
-      <a href="/">خانه</a>
-      <a href="/#collections">مجموعه‌ها</a>
-      <a href="/#about">درباره‌ی ما</a>
-      <a href="/#contact">تماس</a>
-    </nav>
+    <div class="right">
+      <nav>
+        <a href="/" data-fa="خانه">Home</a>
+        <a href="/#collections" data-fa="مجموعه‌ها">Collections</a>
+        <a href="/#about" data-fa="درباره‌ی ما">About</a>
+        <a href="/#contact" data-fa="تماس">Contact</a>
+      </nav>
+      <button class="lang" id="lang" type="button" aria-label="Switch language / تغییر زبان">فارسی</button>
+    </div>
   </header>
 
-  <main class="cat">
+  <main class="cat" style="--c1:#ff9a3d">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="cat-inner">
-      <svg class="icon big" viewBox="0 0 100 100" aria-hidden="true"><polyline points="28,8 50,38 72,8"/><line x1="50" y1="38" x2="50" y2="46"/><ellipse cx="50" cy="68" rx="17" ry="23"/><ellipse cx="50" cy="68" rx="9" ry="14"/></svg>
-      <h1>آویز</h1>
-      <div class="sub">PENDANTS</div>
-      <p class="lead">طراحی‌های این مجموعه به‌زودی اضافه می‌شود.</p>
-      <a class="btn" href="/#collections">بازگشت به مجموعه‌ها</a>
-      <nav class="siblings" aria-label="سایر مجموعه‌ها"><a href="/collections/rings/">انگشتر</a><a href="/collections/earrings/">گوشواره</a><a href="/collections/bracelets/">دستبند</a><a href="/collections/bangles/">النگو و بنگل</a><a href="/collections/necklaces/">گردنبند</a></nav>
+      <div class="stage"><div class="fb"><svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><polyline points="28,8 50,38 72,8"/><ellipse cx="50" cy="68" rx="17" ry="23"/><ellipse cx="50" cy="68" rx="9" ry="14"/></svg></div><canvas data-gem="pendants" aria-hidden="true"></canvas></div>
+      <h1 data-fa="آویز">Pendants</h1>
+      <p class="lead" data-fa="طراحی‌های این مجموعه به‌زودی اضافه می‌شود.">Designs in this collection will be added soon.</p>
+      <a class="btn" href="/#collections" data-fa="بازگشت به مجموعه‌ها">Back to collections</a>
+      <nav class="siblings" aria-label="Collections"><a href="/collections/rings/" data-fa="انگشتر">Rings</a><a href="/collections/earrings/" data-fa="گوشواره">Earrings</a><a href="/collections/bracelets/" data-fa="دستبند">Bracelets</a><a href="/collections/bangles/" data-fa="النگو و بنگل">Bangles</a><a href="/collections/necklaces/" data-fa="گردنبند">Necklaces</a></nav>
     </div>
   </main>
 
