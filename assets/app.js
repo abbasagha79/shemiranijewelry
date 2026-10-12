@@ -196,6 +196,42 @@
     }
   };
 
+  /* ---- real ring 0003 from the design files ---- */
+  var modelP = null;
+  function fetchBin(u) {
+    return fetch(u).then(function (r) { if (!r.ok) throw new Error(u); return r.arrayBuffer(); }).then(function (buf) {
+      var dv = new DataView(buf), nV = dv.getUint32(0, true), nI = dv.getUint32(4, true), u32 = dv.getUint32(8, true);
+      var pos = new Float32Array(buf, 16, nV * 3);
+      var nOff = 16 + nV * 12, nor = new Int8Array(buf, nOff, nV * 3);
+      var iOff = nOff + ((nV * 3 + 3) & ~3);
+      var idx = u32 ? new Uint32Array(buf, iOff, nI) : new Uint16Array(buf, iOff, nI);
+      var g = new THREE.BufferGeometry();
+      g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      g.setAttribute('normal', new THREE.BufferAttribute(nor, 3, true));
+      g.setIndex(new THREE.BufferAttribute(idx, 1));
+      g.computeBoundingBox(); g.computeBoundingSphere();
+      return g;
+    });
+  }
+  function loadRing() {
+    if (!modelP) modelP = Promise.all([fetchBin('/assets/models/ring-0003-gold.bin'), fetchBin('/assets/models/ring-0003-stones.bin')]);
+    return modelP;
+  }
+  function ringModel(tx, tz) {
+    return loadRing().then(function (m) {
+      var g = new THREE.Group();
+      g.add(new THREE.Mesh(m[0], new THREE.MeshStandardMaterial({ color: 0xf0b73a, metalness: 1, roughness: 0.16, side: THREE.DoubleSide })));
+      g.add(new THREE.Mesh(m[1], new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: 0.95, roughness: 0.02, envMapIntensity: 2.2, side: THREE.DoubleSide })));
+      g.rotation.x = -Math.PI / 2;           /* design file: Z up, Y along the finger */
+      var w = new THREE.Group(); w.add(g); w.rotation.set(tx, 0, tz);
+      w.userData.sparkPos = [new THREE.Vector3(0, 13.5, 0), new THREE.Vector3(-4.3, 13.3, 0.6), new THREE.Vector3(4.3, 13.3, -0.6)];
+      return w;
+    });
+  }
+  BUILD.heroRing = function () { return ringModel(0.8, -0.2); };
+  BUILD.rings = function () { return ringModel(0.6, 0); };
+  BUILD.ring3d = function () { return ringModel(0.55, 0); };
+
   function init(cv) {
     var kind = cv.getAttribute('data-gem'); if (!BUILD[kind]) return;
     var r;
@@ -206,20 +242,26 @@
       var scene = new THREE.Scene(); scene.environment = makeEnv(r);
       var l = new THREE.DirectionalLight(0xffffff, 1.1); l.position.set(3, 5, 4); scene.add(l);
       var cam = new THREE.PerspectiveCamera(30, 1, 0.1, 50); cam.position.set(0, 0.2, 8.6);
-      var obj = BUILD[kind](COL[kind] || 0xffffff);
-      var box = new THREE.Box3().setFromObject(obj), size = box.getSize(new THREE.Vector3()), ctr = box.getCenter(new THREE.Vector3());
-      obj.position.sub(ctr);
+      var piv = new THREE.Group(); scene.add(piv);
       var fit = parseFloat(cv.getAttribute('data-fit')) || 2.9;
-      var inner = new THREE.Group(); inner.add(obj); inner.scale.setScalar(fit / Math.max(size.x, size.y, size.z));
-      var piv = new THREE.Group(); piv.add(inner); scene.add(piv);
+      var o = { r: r, scene: scene, cam: cam, piv: piv, vis: true, spd: 1, tx: 0, ty: 0, s: 1, sparks: [], sway: kind === 'heroRing', base: kind === 'heroRing' ? -0.6 : 0, drag: cv.hasAttribute('data-drag'), down: false, idle: 0, ready: false, seed: inst.length * 1.7 };
+      piv.rotation.y = o.base;
 
-      var sparks = [], spos = obj.userData.sparkPos || [new THREE.Vector3(size.x * 0.2, size.y * 0.3, 0.5)];
-      spos.forEach(function (p, i) {
-        var s = new THREE.Sprite(new THREE.SpriteMaterial({ map: star(), blending: THREE.AdditiveBlending, transparent: true, depthTest: false, depthWrite: false }));
-        s.position.copy(p); s.userData.base = (kind === 'heroRing' ? 1.5 : 0.9); s.userData.k = i; obj.add(s); sparks.push(s);
-      });
+      function place(obj) {
+        var box = new THREE.Box3().setFromObject(obj), size = box.getSize(new THREE.Vector3()), ctr = box.getCenter(new THREE.Vector3());
+        obj.position.sub(ctr);
+        var inner = new THREE.Group(); inner.add(obj); inner.scale.setScalar(fit / Math.max(size.x, size.y, size.z)); piv.add(inner);
+        var spos = obj.userData.sparkPos || [new THREE.Vector3(size.x * 0.2, size.y * 0.3, 0.5)];
+        spos.forEach(function (p, i) {
+          var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: star(), blending: THREE.AdditiveBlending, transparent: true, depthTest: false, depthWrite: false }));
+          sp.position.copy(p); sp.userData.base = (kind === 'heroRing' ? 1.3 : 0.8) / inner.scale.x; sp.userData.k = i; obj.add(sp); o.sparks.push(sp);
+        });
+        o.ready = true;
+        (cv.parentElement || cv).classList.add('gl');
+      }
+      var made = BUILD[kind](COL[kind] || 0xffffff);
+      if (made && typeof made.then === 'function') made.then(place).catch(function () {}); else place(made);
 
-      var o = { r: r, scene: scene, cam: cam, piv: piv, vis: true, spd: 1, tx: 0, ty: 0, s: 1, sparks: sparks, sway: kind === 'heroRing', seed: inst.length * 1.7 };
       var rs = function () {
         var w = cv.clientWidth, h = cv.clientHeight; if (!w || !h) return;
         r.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
@@ -228,13 +270,22 @@
       if (window.ResizeObserver) new ResizeObserver(rs).observe(cv); else addEventListener('resize', rs);
       if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { o.vis = es[0].isIntersecting; }, { rootMargin: '120px' }).observe(cv);
       var host = o.sway ? cv.closest('.hero') : (cv.closest('.card') || cv.closest('.stage'));
-      if (host) {
+      if (host && !o.drag) {
         if (!o.sway) host.addEventListener('pointerenter', function () { o.spd = 2.6; o.s = 1.07; });
         host.addEventListener('pointerleave', function () { o.spd = 1; o.s = 1; o.ty = 0; o.tx = 0; });
         host.addEventListener('pointermove', function (e) { var b = host.getBoundingClientRect(); o.ty = (e.clientY - b.top) / b.height - 0.5; o.tx = (e.clientX - b.left) / b.width - 0.5; });
       }
+      if (o.drag) {
+        cv.addEventListener('pointerdown', function (e) { o.down = true; o.lx = e.clientX; o.ly = e.clientY; try { cv.setPointerCapture(e.pointerId); } catch (_) {} });
+        cv.addEventListener('pointermove', function (e) {
+          if (!o.down) return;
+          piv.rotation.y += (e.clientX - o.lx) * 0.012;
+          piv.rotation.x = Math.max(-1.2, Math.min(1.2, piv.rotation.x + (e.clientY - o.ly) * 0.008));
+          o.lx = e.clientX; o.ly = e.clientY; o.idle = performance.now() / 1000;
+        });
+        ['pointerup', 'pointercancel'].forEach(function (n) { cv.addEventListener(n, function () { o.down = false; o.idle = performance.now() / 1000; }); });
+      }
       inst.push(o);
-      (cv.parentElement || cv).classList.add('gl');
     } catch (err) { try { r.dispose(); } catch (e) {} }
   }
 
@@ -248,23 +299,37 @@
     var dt = Math.min((t - last) / 1000, 0.05); last = t;
     var sec = t / 1000;
     inst.forEach(function (o) {
-      if (!o.vis) return;
-      if (o.sway) {
-        o.piv.rotation.y = reduce ? 0 : Math.sin(sec * 0.45 + o.seed) * 0.55 + o.tx * 0.5;
+      if (!o.vis || !o.ready) return;
+      if (o.drag) {
+        if (!o.down && !reduce && sec - o.idle > 2.5) o.piv.rotation.y += dt * 0.5;
+      } else if (o.sway) {
+        o.piv.rotation.y = o.base + (reduce ? 0 : Math.sin(sec * 0.45 + o.seed) * 0.5 + o.tx * 0.5);
+        o.piv.rotation.x += (o.ty * 0.7 - o.piv.rotation.x) * 0.08;
       } else {
         o.piv.rotation.y += dt * 0.7 * (reduce ? 0 : o.spd);
+        o.piv.rotation.x += (o.ty * 0.7 - o.piv.rotation.x) * 0.08;
       }
-      o.piv.rotation.x += (o.ty * 0.7 - o.piv.rotation.x) * 0.08;
-      o.piv.position.y = reduce ? 0 : Math.sin(sec * 1.2 + o.seed) * 0.08;
+      o.piv.position.y = (reduce || o.drag) ? 0 : Math.sin(sec * 1.2 + o.seed) * 0.08;
       var k = o.piv.scale.x + (o.s - o.piv.scale.x) * 0.1; o.piv.scale.set(k, k, k);
-      o.sparks.forEach(function (s) {
-        var p = Math.max(0, Math.sin(sec * 1.7 + s.userData.k * 2.1 + o.seed));
-        s.material.opacity = 0.15 + 0.85 * p; s.material.rotation = sec * 0.3;
-        var z = s.userData.base * (0.6 + 0.6 * p); s.scale.set(z, z, z);
+      o.sparks.forEach(function (sp) {
+        var p = Math.max(0, Math.sin(sec * 1.7 + sp.userData.k * 2.1 + o.seed));
+        sp.material.opacity = 0.15 + 0.85 * p; sp.material.rotation = sec * 0.3;
+        var z = sp.userData.base * (0.6 + 0.6 * p); sp.scale.set(z, z, z);
       });
       o.r.render(o.scene, o.cam);
     });
     drawSparkles(t);
   }
   requestAnimationFrame(tick);
+
+  /* ---------- product page thumbnails ---------- */
+  var th = [].slice.call(document.querySelectorAll('.thumbs button')), simg = document.querySelector('.stageimg'), svid = document.querySelector('.stagevideo');
+  th.forEach(function (b) {
+    b.addEventListener('click', function () {
+      th.forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on');
+      var src = b.getAttribute('data-src'), isVid = b.hasAttribute('data-video');
+      if (simg) { if (src) { simg.src = src; simg.hidden = false; } else { simg.hidden = true; } }
+      if (svid) { if (isVid) { svid.classList.add('show'); try { svid.play(); } catch (e) {} } else { svid.classList.remove('show'); } }
+    });
+  });
 })();

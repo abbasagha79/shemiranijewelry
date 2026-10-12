@@ -173,7 +173,48 @@ html[lang=fa] .cat h1 { font-family: Tahoma, "Segoe UI", sans-serif; }
 .siblings a { border-bottom: 1px solid transparent; transition: border-color .25s, color .25s; }
 .siblings a:hover { color: var(--gold-bright); border-color: var(--gold); }
 
+/* ---------- ring tile + product page ---------- */
+.tile { display: inline-grid; justify-items: center; gap: 4px; width: 200px; margin-top: 26px; padding: 10px 10px 14px; border: 1px solid rgba(227, 189, 116, .4); background: rgba(4, 11, 36, .6); transition: border-color .3s, transform .3s, box-shadow .3s; }
+.tile:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 16px 40px -14px var(--c1); }
+.tile img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.tile .code { font-family: var(--display); letter-spacing: .3em; color: var(--gold-bright); }
+.tile .go { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink); }
+.product { position: relative; min-height: calc(100vh - 70px); padding: 120px clamp(18px, 6vw, 96px) 70px; overflow: hidden; }
+.pgrid { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); max-width: 1180px; margin: 0 auto; align-items: start; }
+.stage.big { width: 100%; max-width: 600px; margin: 0; overflow: hidden; border: 1px solid rgba(227, 189, 116, .35); background: radial-gradient(70% 60% at 50% 40%, #1a3f9e, #08164a 70%, #040b24); cursor: grab; }
+.stage.big canvas { touch-action: pan-y; }
+.stageimg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 3; }
+.stageimg[hidden] { display: none; }
+.hint { margin: 10px 0 0; font-size: .75rem !important; letter-spacing: .2em; text-transform: uppercase; color: var(--ink) !important; opacity: .7; }
+.thumbs { display: flex; gap: 10px; margin-top: 12px; }
+.thumbs button { width: 74px; height: 74px; padding: 0; overflow: hidden; cursor: pointer; font: inherit; font-size: .8rem; letter-spacing: .15em; color: var(--gold-bright); background: rgba(4, 11, 36, .7); border: 1px solid rgba(227, 189, 116, .35); transition: border-color .25s; }
+.thumbs button.on, .thumbs button:hover { border-color: var(--gold-bright); box-shadow: 0 0 14px rgba(227, 189, 116, .35); }
+.thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pill { display: inline-block; padding: 3px 14px; font-size: .68rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-bright); border: 1px solid rgba(227, 189, 116, .5); border-radius: 999px; }
+.pinfo h1 { margin: 18px 0 6px; font-family: var(--display); font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: .12em; color: var(--gold-bright); direction: ltr; text-align: start; }
+.pinfo h1 b { font-weight: 400; color: var(--gold); }
+.back { display: inline-block; margin-bottom: 30px; font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--gold); }
+.back:hover { color: var(--gold-bright); }
+.pinfo h2 { font-size: 1.1rem; letter-spacing: .2em; text-transform: uppercase; }
+.specs { margin: 0; border-top: 1px solid rgba(227, 189, 116, .5); }
+.specs div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(227, 189, 116, .25); }
+.specs dt { color: var(--ink); }
+.specs dd { margin: 0; font-family: var(--serif); font-size: 1.2rem; color: var(--gold-bright); direction: ltr; }
+
+.stagevideo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.gl > .stagevideo { display: none; }
+.stage .stagevideo.show { display: block; z-index: 3; }
+.thumbs button { position: relative; }
+.thumbs .play { position: absolute; inset: 0; display: grid; place-items: center; font-style: normal; font-size: 1rem; color: #fff; background: rgba(4, 11, 36, .35); }
+.pinfo .desc { max-width: none; margin: 0 0 28px; font-size: 1rem; line-height: 1.9; }
+.pinfo h2 { margin-top: 26px; margin-bottom: 8px; }
+.pinfo .foot { margin: 14px 0 0; max-width: none; font-size: .8rem !important; opacity: .7; }
+.cta.tg { margin-top: 24px; animation: none; }
+.social a { display: inline-flex; align-items: center; gap: 10px; }
+.social span { font-size: .78rem; letter-spacing: .08em; }
+
 /* ---------- responsive ---------- */
+@media (max-width: 860px) { .pgrid { grid-template-columns: 1fr; } }
 @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 860px) {
   header nav { display: none; }
