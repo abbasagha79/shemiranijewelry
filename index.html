@@ -1,134 +1,169 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-base="" data-page="home">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-fa="SHEMIRANI Jewelry | طراحی و ساخت جواهر">SHEMIRANI Jewelry | Design &amp; Craft</title>
-  <meta name="description" content="SHEMIRANI: jewelry design and craft in 18K gold, silver 925 and diamonds.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23040b24'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23e3bd74'%3ESM%3C/text%3E%3C/svg%3E">
-  <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('shemirani-lang')==='fa'){document.documentElement.lang='fa';document.documentElement.dir='rtl'}}catch(e){}</script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="/assets/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="/assets/app.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SHEMIRANI Jewelry</title>
+<script>(function(){var d=document.documentElement;try{if(localStorage.getItem('shemirani-lang')==='fa'){d.lang='fa';d.dir='rtl'}}catch(e){}if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("anim");setTimeout(function(){d.classList.remove("anim")},3200);}})();</script>
+<meta name="description" content="SHEMIRANI: jewelry design and craft in 18K gold, silver 925 and diamonds.">
+<meta name="theme-color" content="#040818">
+<meta property="og:title" content="SHEMIRANI Jewelry">
+<meta property="og:description" content="Jewelry design and craft in 18K gold, silver 925 and diamonds.">
+<meta property="og:image" content="assets/img/brand/shemirani-logo.png">
+<link rel="apple-touch-icon" href="assets/img/brand/icon-192.png">
+<link rel="icon" type="image/png" href="assets/img/brand/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Chakra+Petch:wght@700&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&family=Vazirmatn:wght@300;400;500;600;700;800&display=block">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/hero.css">
 </head>
 <body>
+<div class="stage" id="home">
+  <div class="bg" role="img" aria-label="SHEMIRANI ring in 18K gold and diamonds">
+    <div class="halo"></div>
+    <img class="poster" alt="">
+    <canvas id="gl" aria-hidden="true"></canvas>
+  </div>
 
-  <header>
-    <a class="logo" href="/" aria-label="SHEMIRANI">
-      <span class="mono">SM</span>
-      <span class="wm"><b>SHEMIRANI</b><small>JEWELRY DESIGN &amp; CRAFT</small></span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="/" data-fa="خانه">Home</a></li>
-        <li class="has-menu"><a href="/#collections"><span data-fa="مجموعه‌ها">Collections</span><svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></a><ul class="menu"><li><a href="/collections/rings/" data-fa="انگشتر">Rings</a></li><li><a href="/collections/earrings/" data-fa="گوشواره">Earrings</a></li><li><a href="/collections/bracelets/" data-fa="دستبند">Bracelets</a></li><li><a href="/collections/bangles/" data-fa="النگو و بنگل">Bangles</a></li><li><a href="/collections/necklaces/" data-fa="گردنبند">Necklaces</a></li><li><a href="/collections/pendants/" data-fa="آویز">Pendants</a></li></ul></li>
-        <li><a href="/#about" data-fa="درباره‌ی ما">About</a></li>
-        <li><a href="/#contact" data-fa="تماس">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="langwrap">
-      <button class="lang" id="lang" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language / زبان"><svg class="globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><span id="langcode">EN</span><svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
-      <ul class="langmenu"><li><button type="button" data-lang="en">English</button></li><li><button type="button" data-lang="fa">فارسی</button></li></ul>
-    </div>
-  </header>
+  <div class="frame">
+    <span class="ln ln-t"></span><span class="ln ln-b"></span>
+    <span class="ln ln-l"></span><span class="ln ln-r"></span>
+    <span class="cn cn-tl"></span><span class="cn cn-tr"></span>
+    <span class="cn cn-bl"></span><span class="cn cn-br"></span>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="silk" aria-hidden="true"><i></i><i></i><i></i></div>
-      <svg class="streaks" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
-        <defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#f6d98f" stop-opacity="0"/><stop offset=".5" stop-color="#ffe9a8"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></linearGradient></defs>
-        <path pathLength="1" d="M-60 560 C 260 470, 520 330, 1260 90"/>
-        <path pathLength="1" d="M-60 330 C 300 300, 620 200, 1260 330"/>
-        <path pathLength="1" d="M200 640 C 520 520, 860 420, 1260 520"/>
+    <a class="logo" href="#home" aria-label="SHEMIRANI, home">
+      <svg viewBox="0 0 163 19" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="wmg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff3c8"/><stop offset=".55" stop-color="#e3bd74"/><stop offset="1" stop-color="#b98d2f"/></linearGradient></defs>
+        <text x="0" y="16.6" fill="url(#wmg)" font-family="Cinzel, Georgia, serif" font-weight="600" font-size="19.4" textLength="163" lengthAdjust="spacing">SHEMIRANI</text>
       </svg>
-      <canvas id="sparkles" aria-hidden="true"></canvas>
-      <div class="herogl"><div class="fb"><svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,22 62,22 70,32 50,50 30,32"/><line x1="30" y1="32" x2="70" y2="32"/><circle cx="50" cy="70" r="20"/></svg></div><canvas data-gem="heroRing" data-fit="3.5" aria-hidden="true"></canvas></div>
-      <div class="hero-inner">
-        <div class="eyebrow" data-fa="ظرافتی جاودان">Timeless Elegance</div>
-        <h1 aria-label="SHEMIRANI"><span style="--i:0">S</span><span style="--i:1">H</span><span style="--i:2">E</span><span style="--i:3">M</span><span style="--i:4">I</span><span style="--i:5">R</span><span style="--i:6">A</span><span style="--i:7">N</span><span style="--i:8">I</span></h1>
-        <div class="sub">JEWELRY DESIGN &amp; CRAFT</div>
-        <p class="lead" data-fa="جایی که میراث ایرانی با طراحی مدرن به هم می‌رسد. هر قطعه روایتی از دقت، هنر و زیبایی ماندگار است.">Where Persian heritage meets modern design. Each piece is a story of precision, artistry and enduring beauty.</p>
-        <a class="cta" href="#collections"><span data-fa="مشاهده‌ی مجموعه‌ها">Explore Collections</span><svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h21M17 1l5 5-5 5"/></svg></a>
-      </div>
-      <div class="scrollcue" aria-hidden="true"><span data-fa="اسکرول">SCROLL</span><i></i></div>
-    </section>
+    </a>
 
-    <section id="collections">
-      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-      <div class="wrap wide">
-        <div class="rowhead reveal"><span data-fa="مجموعه‌های ما">Our Collections</span><i></i></div>
-        <div class="grid">
-          <a class="card reveal" href="/collections/rings/" style="--c1:#3b82ff;--d:0ms" aria-label="Rings">
-            <div class="area"><div class="fb"><svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,22 62,22 70,32 50,50 30,32"/><line x1="30" y1="32" x2="70" y2="32"/><circle cx="50" cy="70" r="20"/></svg></div><canvas data-gem="rings" aria-hidden="true"></canvas></div>
-            <div class="meta"><span class="en">Rings</span><span class="fa">انگشتر</span><svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h21M17 1l5 5-5 5"/></svg></div>
-          </a>
-          <a class="card reveal" href="/collections/earrings/" style="--c1:#9b5cff;--d:90ms" aria-label="Earrings">
-            <div class="area"><div class="fb"><svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><circle cx="34" cy="20" r="8"/><line x1="34" y1="28" x2="34" y2="46"/><path d="M34 46 C26 56 28 70 34 74 C40 70 42 56 34 46Z"/><circle cx="66" cy="20" r="8"/><line x1="66" y1="28" x2="66" y2="46"/><path d="M66 46 C58 56 60 70 66 74 C72 70 74 56 66 46Z"/></svg></div><canvas data-gem="earrings" aria-hidden="true"></canvas></div>
-            <div class="meta"><span class="en">Earrings</span><span class="fa">گوشواره</span><svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h21M17 1l5 5-5 5"/></svg></div>
-          </a>
-          <a class="card reveal" href="/collections/bracelets/" style="--c1:#14c8c0;--d:180ms" aria-label="Bracelets">
-            <div class="area"><div class="fb"><svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="52" rx="38" ry="24"/><ellipse cx="50" cy="52" rx="31" ry="18" stroke-dasharray="7 5"/></svg></div><canvas data-gem="bracelets" aria-hidden="true"></canvas></div>
-            <div class="meta"><span class="en">Bracelets</span><span class="fa">دستبند</span><svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h21M17 1l5 5-5 5"/></svg></div>
-          </a>
-          <a class="card reveal" href="/collections/bangles/" style="--c1:#ff3d6e;--d:270ms" aria-label="Bangles">
-            <div class="area"><div class="fb"><svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="50" rx="36" ry="22"/><ellipse cx="50" cy="50" rx="29" ry="15"/></svg></div><canvas data-gem="bangles" aria-hidden="true"></canvas></div>
-            <div class="meta"><span class="en">Bangles</span><span class="fa">النگو و بنگل</span><svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h21M17 1l5 5-5 5"/></svg></div>
-          </a>
-          <a class="card reveal" href="/collections/necklaces/" style="--c1:#17d68a;--d:360ms" aria-label="Necklaces">
-            <div class="area"><div class="fb"><svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><path d="M14 18 C22 74 78 74 86 18"/><polygon points="50,68 60,80 50,96 40,80"/></svg></div><canvas data-gem="necklaces" aria-hidden="true"></canvas></div>
-            <div class="meta"><span class="en">Necklaces</span><span class="fa">گردنبند</span><svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h21M17 1l5 5-5 5"/></svg></div>
-          </a>
-          <a class="card reveal" href="/collections/pendants/" style="--c1:#ff9a3d;--d:450ms" aria-label="Pendants">
-            <div class="area"><div class="fb"><svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><polyline points="28,8 50,38 72,8"/><ellipse cx="50" cy="68" rx="17" ry="23"/><ellipse cx="50" cy="68" rx="9" ry="14"/></svg></div><canvas data-gem="pendants" aria-hidden="true"></canvas></div>
-            <div class="meta"><span class="en">Pendants</span><span class="fa">آویز</span><svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h21M17 1l5 5-5 5"/></svg></div>
-          </a>
-        </div>
+    <nav class="masthead" aria-label="Main">
+      <div class="navset" id="navset">
+      <div class="links lbl">
+        <a href="#collections"><span class="t" data-fa="مجموعه‌ها">COLLECTIONS</span></a><a href="collections/rings/index.html"><span class="t" data-fa="انگشترها">RINGS</span></a><a href="#story"><span class="t" data-fa="داستان">STORY</span></a><a href="https://t.me/abbasamrahbari" target="_blank" rel="noopener"><span class="t" data-fa="تماس">CONNECT</span></a><a class="langlink" href="#" data-setlang aria-label="Language / زبان"><span class="t" data-fa="EN">فارسی</span></a>
       </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap two">
-        <div class="reveal">
-          <h2 data-fa="از طرح دیجیتال تا قطعه‌ی نهایی">From digital design to finished piece</h2>
-          <p data-fa="در SHEMIRANI هر جواهر اول روی صفحه طراحی می‌شود و بعد با دقت ساخته می‌شود. شکل جواهر، تعداد سنگ‌ها و جای هر چنگ از مرحله‌ی طراحی تا ساخت ثابت می‌ماند.">At SHEMIRANI every piece is first designed on screen, then built with care. The shape of the jewel, the number of stones and the position of each prong stay exactly as designed, all the way to the finished piece.</p>
-          <p data-fa="هر قطعه کد اختصاصی دارد و مشخصات فلز و الماس آن ثبت شده است.">Each piece has its own code, with its metals and diamonds recorded.</p>
-        </div>
-        <ul class="materials reveal" style="--d:150ms">
-          <li><strong data-fa="طلا">Gold</strong><span>18K</span></li>
-          <li><strong data-fa="نقره">Silver</strong><span>925</span></li>
-          <li><strong data-fa="سنگ">Stones</strong><span data-fa="الماس">Diamonds</span></li>
-        </ul>
+      <a class="pill enter lbl" href="#collections">
+        <svg class="ico" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="4" height="5"/><rect x="3" y="4" width="4" height="4"/><rect x="0" y="7" width="4" height="4"/></svg>
+        <span class="t" data-fa="ورود">ENTER</span>
+      </a>
       </div>
-    </section>
+      <button class="pill menu lbl" type="button" data-menu>
+        <svg class="ico" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="4" height="4" rx=".8"/><rect x="6" y="0" width="4" height="4" rx=".8"/><rect x="0" y="6" width="4" height="4" rx=".8"/><rect x="6" y="6" width="4" height="4" rx=".8"/></svg>
+        <span class="t" data-fa="منو">MENU</span>
+      </button>
+    </nav>
 
-    <section id="code">
-      <div class="wrap two">
-        <div class="plate reveal" aria-label="Sample product code">
-          <div class="qrbox"><svg class="qr" viewBox="0 0 9 9" aria-hidden="true"><rect x="0" y="0" width="1" height="1" style="--i:0"/><rect x="0" y="1" width="1" height="1" style="--i:1"/><rect x="0" y="2" width="1" height="1" style="--i:2"/><rect x="0" y="6" width="1" height="1" style="--i:3"/><rect x="0" y="7" width="1" height="1" style="--i:4"/><rect x="0" y="8" width="1" height="1" style="--i:5"/><rect x="1" y="0" width="1" height="1" style="--i:6"/><rect x="1" y="1" width="1" height="1" style="--i:7"/><rect x="1" y="2" width="1" height="1" style="--i:8"/><rect x="1" y="4" width="1" height="1" style="--i:9"/><rect x="1" y="6" width="1" height="1" style="--i:10"/><rect x="1" y="7" width="1" height="1" style="--i:11"/><rect x="1" y="8" width="1" height="1" style="--i:12"/><rect x="2" y="0" width="1" height="1" style="--i:13"/><rect x="2" y="1" width="1" height="1" style="--i:14"/><rect x="2" y="2" width="1" height="1" style="--i:15"/><rect x="2" y="6" width="1" height="1" style="--i:16"/><rect x="2" y="7" width="1" height="1" style="--i:17"/><rect x="2" y="8" width="1" height="1" style="--i:18"/><rect x="3" y="4" width="1" height="1" style="--i:19"/><rect x="4" y="0" width="1" height="1" style="--i:20"/><rect x="4" y="3" width="1" height="1" style="--i:21"/><rect x="4" y="6" width="1" height="1" style="--i:22"/><rect x="4" y="8" width="1" height="1" style="--i:23"/><rect x="5" y="5" width="1" height="1" style="--i:24"/><rect x="5" y="7" width="1" height="1" style="--i:25"/><rect x="5" y="8" width="1" height="1" style="--i:26"/><rect x="6" y="0" width="1" height="1" style="--i:27"/><rect x="6" y="1" width="1" height="1" style="--i:28"/><rect x="6" y="2" width="1" height="1" style="--i:29"/><rect x="6" y="4" width="1" height="1" style="--i:30"/><rect x="6" y="5" width="1" height="1" style="--i:31"/><rect x="6" y="6" width="1" height="1" style="--i:32"/><rect x="6" y="8" width="1" height="1" style="--i:33"/><rect x="7" y="0" width="1" height="1" style="--i:34"/><rect x="7" y="1" width="1" height="1" style="--i:35"/><rect x="7" y="2" width="1" height="1" style="--i:36"/><rect x="7" y="4" width="1" height="1" style="--i:37"/><rect x="7" y="7" width="1" height="1" style="--i:38"/><rect x="8" y="0" width="1" height="1" style="--i:39"/><rect x="8" y="1" width="1" height="1" style="--i:40"/><rect x="8" y="2" width="1" height="1" style="--i:41"/><rect x="8" y="4" width="1" height="1" style="--i:42"/><rect x="8" y="5" width="1" height="1" style="--i:43"/><rect x="8" y="6" width="1" height="1" style="--i:44"/><rect x="8" y="7" width="1" height="1" style="--i:45"/></svg><span class="scan"></span></div>
-          <div class="plate-code">SHEMIRANI<b>0003</b></div>
-          <dl>
-            <div><dt>Gold 18K</dt><dd>5.25 g</dd></div>
-            <div><dt>Silver 925</dt><dd>3.53 g</dd></div>
-            <div><dt>Diamonds</dt><dd>16 · 0.36 ct</dd></div>
-          </dl>
-        </div>
-        <div class="reveal" style="--d:150ms">
-          <h2 data-fa="هر قطعه یک کد دارد">Every piece has a code</h2>
-          <p data-fa="با اسکن QR روی کارت ویزیت یا کاتالوگ، مشتری مستقیم به صفحه‌ی همان جواهر می‌رسد و رندرها و مشخصات کامل آن را می‌بیند.">Scan the QR code on a business card or catalogue to open that piece's own page, with its renders and full specifications.</p>
-          <p class="note" data-fa="نمونه‌ی نمایشی">Illustrative sample</p>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer id="contact">
-    <a class="logo small" href="/" aria-label="SHEMIRANI"><span class="mono">SM</span><span class="wm"><b>SHEMIRANI</b></span></a>
-    <p data-fa="© ۲۰۲۶ SHEMIRANI. تمامی حقوق محفوظ است.">© 2026 SHEMIRANI. All rights reserved.</p>
-    <div class="social">
-      <a href="https://t.me/abbasamrahbari" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.5 3.5 2.5 10.8l6.1 2.1 2.2 6.6 3-4 4.8 3.5z"/><path d="M8.6 12.9 21.5 3.5"/></svg><span>@abbasamrahbari</span></a>
+    <div class="hero">
+      <div class="ticker" role="group" aria-label="Designs"></div>
+      <h1 class="headline"><span class="hrow"><span class="hrise">&nbsp;</span></span><span class="hrow"><span class="hrise">&nbsp;</span></span></h1>
+      <p class="blurb"></p>
+      <a class="cta lbl" href="#collections">
+        <span class="cta-glass"></span>
+        <svg class="cta-edge" viewBox="0 0 190 41" preserveAspectRatio="none" aria-hidden="true"><path d="M3.5.5 H179.5 L189.5 10.5 V37.5 L186.5 40.5 H10.5 L.5 30.5 V3.5 Z" vector-effect="non-scaling-stroke"/></svg>
+        <span class="cta-in">
+          <svg class="ico" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="4" height="5"/><rect x="3" y="4" width="4" height="4"/><rect x="0" y="7" width="4" height="4"/></svg>
+          <span class="t" data-fa="مشاهده‌ی طرح">VIEW THE DESIGN</span>
+        </span>
+      </a>
     </div>
-  </footer>
 
+    <div class="dock">
+      <span class="rule"></span><span class="div div-l"></span><span class="div div-r"></span>
+      <button class="audio lbl" type="button" aria-pressed="true">
+        <svg class="ico" viewBox="0 0 14 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 0 L7 11 L0.6 7.6 L0.6 3.4 Z" stroke="none"/>
+          <path class="wave" d="M9.4 2.2 C10.9 4 10.9 7 9.4 8.8" fill="none" stroke-width="1.3" stroke-linecap="round"/>
+          <path class="wave" d="M11.9 0.6 C14.1 3.3 14.1 7.7 11.9 10.4" fill="none" stroke-width="1.3" stroke-linecap="round"/>
+          <path class="slash" d="M9.2 2.4 L13.8 8.6 M13.8 2.4 L9.2 8.6" fill="none" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        <span class="t" data-fa="صدا روشن">AUDIO ON</span>
+      </button>
+      <a class="scroll lbl" href="#collections">
+        <svg class="ico" viewBox="0 0 5 7" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 0 H5 L2.5 3 Z"/><path d="M0 4 H5 L2.5 7 Z"/></svg>
+        <span class="t" data-fa="برای دیدن بیشتر اسکرول کنید">SCROLL TO UNCOVER</span>
+      </a>
+      <a class="talk lbl" href="https://t.me/abbasamrahbari" target="_blank" rel="noopener">
+        <span class="t" data-fa="با ما صحبت کنید">TALK WITH US</span>
+        <svg class="ico" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 .8 C12 .8 15.2 3.8 15.2 7.4 C15.2 11 12 14 8 14 C6.6 14 5.3 13.6 4.2 13 L.9 13.9 L1.9 10.9 C1.2 9.9 .8 8.7 .8 7.4 C.8 3.8 4 .8 8 .8 Z"/>
+          <g fill="currentColor" stroke="none"><circle cx="5.2" cy="7.4" r=".95"/><circle cx="8" cy="7.4" r=".95"/><circle cx="10.8" cy="7.4" r=".95"/></g>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<main>
+  <section class="sec" id="collections">
+    <div class="wrap">
+      <div class="rowhead"><span data-fa="مجموعه‌های ما">Our collections</span><i></i></div>
+      <div class="grid" id="colgrid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="featured">
+    <div class="wrap feature">
+      <div class="ph"></div>
+      <div>
+        <div class="kind"><span data-fa="جدیدترین طرح">Newest design</span> · <span data-design-kind></span></div>
+        <h2 data-design-name></h2>
+        <p data-design-desc></p>
+        <p class="fline" data-design-line></p>
+        <a class="textlink" data-design-link href="designs/aurelis/index.html"><span data-fa="مشاهده‌ی کامل طرح">See the full design</span><svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6h21M17 1l5 5-5 5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="story">
+    <div class="wrap two">
+      <div>
+        <h2 data-fa="از طرح دیجیتال تا قطعه‌ی نهایی">From digital design to finished piece</h2>
+        <p data-fa="در SHEMIRANI هر جواهر اول روی صفحه طراحی می‌شود و بعد با دقت ساخته می‌شود. شکل جواهر، تعداد سنگ‌ها و جای هر چنگ از مرحله‌ی طراحی تا ساخت ثابت می‌ماند.">At SHEMIRANI every piece is first designed on screen, then built with care. The shape of the jewel, the number of stones and the position of each prong stay exactly as designed, all the way to the finished piece.</p>
+        <p data-fa="هر طرح نام خودش را دارد و مشخصات فلز و الماس آن ثبت شده است.">Each design has its own name, with its metals and diamonds recorded.</p>
+      </div>
+      <ul class="materials">
+        <li><strong data-fa="طلا">Gold</strong><span>18K</span></li>
+        <li><strong data-fa="نقره">Silver</strong><span>925</span></li>
+        <li><strong data-fa="سنگ">Stones</strong><span data-fa="الماس">Diamonds</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <a class="flogo" href="#home" aria-label="SHEMIRANI, home"><img src="assets/img/brand/sm-monogram.png" alt="" width="62" height="64"><b>SHEMIRANI</b></a>
+  <p data-fa="© ۲۰۲۶ SHEMIRANI. تمامی حقوق محفوظ است.">© 2026 SHEMIRANI. All rights reserved.</p>
+  <div class="social">
+    <a href="https://t.me/abbasamrahbari" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.5 3.5 2.5 10.8l6.1 2.1 2.2 6.6 3-4 4.8 3.5z"/><path d="M8.6 12.9 21.5 3.5"/></svg><span>@abbasamrahbari</span></a>
+  </div>
+</footer>
+
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/js/designs.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/ring3d.js"></script>
+<script>
+/* collection cards, from the design list */
+(function(){
+  var SM = window.SM, g = document.getElementById('colgrid');
+  function render(){
+    g.innerHTML = SM.collections.map(function(c){
+      var ds = SM.inCollection(c.id), lead = ds[0];
+      var art = lead ? '<img src="' + SM.url(lead.thumb) + '" alt="' + SM.esc(lead.name) + '" loading="lazy">'
+                     : '<svg class="icon" viewBox="0 0 100 100" aria-hidden="true">' + c.icon + '</svg>';
+      var st = ds.length ? '<span class="st live">' + (SM.lang === 'fa' ? ds.length.toLocaleString('fa-IR') + ' طرح' : ds.length + (ds.length > 1 ? ' designs' : ' design')) + '</span>'
+                         : '<span class="st">' + (SM.lang === 'fa' ? 'به‌زودی' : 'Coming soon') + '</span>';
+      return '<a class="card" href="' + SM.url('collections/' + c.id + '/index.html') + '" style="--c1:' + c.c + '"><span class="card-in"><span class="art">' + art + '</span>' +
+        '<span class="meta"><span class="nm"><b>' + (SM.lang === 'fa' ? c.fa : c.en) + '</b><small>' + (SM.lang === 'fa' ? c.en : c.fa) + '</small></span>' + st + '</span></span></a>';
+    }).join('');
+  }
+  SM.onLang(render);
+})();
+</script>
+<script src="assets/js/home.js"></script>
 </body>
 </html>
