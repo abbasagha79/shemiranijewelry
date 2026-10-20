@@ -39,3 +39,15 @@ The new design then appears in its collection and in the sidebar menu. The desig
 ## Test on your computer
 
 Open a terminal in this folder and run `python3 -m http.server 8080`, then visit `http://localhost:8080`. (Opening `index.html` directly from the disk will not load the 3D models, because browsers block that.)
+
+## Security
+
+This is a static site (no backend, database, login or forms), so its attack surface is small. Hardening applied in the HTML `<head>` of every page:
+
+- **Content-Security-Policy** (meta): scripts, styles, images, fonts, media and network calls are restricted to this site plus Google Fonts; `object`/`embed`, foreign `base`, and cross-site form posts are blocked; http subresources are upgraded to https.
+- **Referrer-Policy:** `strict-origin-when-cross-origin` (outbound links don't leak the full path).
+- **Clickjacking:** a frame-buster script (GitHub Pages can't send `X-Frame-Options`/`frame-ancestors` headers, so this is the client-side equivalent).
+
+`three.js` is vendored locally (`assets/vendor/`), so there is no runtime CDN dependency. No API keys, tokens or secrets exist in the client code.
+
+Checks that must be done in the repo/host settings (not in code): enable **Settings → Pages → Enforce HTTPS**, and **verify the custom domain** to prevent subdomain takeover.
