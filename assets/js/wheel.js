@@ -36,7 +36,7 @@
     function ringDegFor(i, d){ return arc >= 360 ? d * (360 / count) : (i - (count - 1) / 2) * (arc / count) - (i - d) * (arc / count); }
 
     section.classList.add('wheel'); if (H) section.classList.add('wheel-x'); if (opt.feature) section.classList.add('wheel-feat');
-    section.innerHTML =
+    section.innerHTML = '<div class="wheel-pin">' +
       '<div class="wheel-stage" tabindex="0" role="listbox" aria-label="' + esc(opt.label) + '">' +
         '<div class="wheel-drum">' + items.map(function(it, i){
           var media = it.html ? it.html : it.video
@@ -54,7 +54,8 @@
           '<a class="wf-cta"><span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>'
         : '<div class="wheel-title" aria-hidden="true"><b></b><small></small></div>') +
       '<ol class="wheel-index">' + items.map(function(it, i){ return '<li><button type="button" data-i="' + i + '">' + esc(it.title) + '</button></li>'; }).join('') + '</ol>' +
-      '<div class="wheel-hint" aria-hidden="true">' + esc(opt.hint || '') + '</div>';
+      '<div class="wheel-hint" aria-hidden="true">' + esc(opt.hint || '') + '</div>' +
+    '</div>';
 
     var stageEl = section.querySelector('.wheel-stage'), drumEl = section.querySelector('.wheel-drum');
     var cards = [].slice.call(section.querySelectorAll('.wheel-card'));
@@ -124,11 +125,16 @@
       else { wfCta.removeAttribute('href'); }
     }
 
-    function draw(){
+    var lastDraw = 0;
+    function draw(now){
       requestAnimationFrame(draw);
+      /* time-based easing: the same feel at 60fps or on a phone managing 20fps (frame-count easing
+         made a slow phone trail well behind the finger) */
+      var dt = lastDraw ? Math.min(0.1, (now - lastDraw) / 1000) : 1 / 60; lastDraw = now;
       if (!vis || !M.cardH) return;
       var gap = target - turn;
-      if (Math.abs(gap) < 0.0005){ if (turn === target && !dirty) return; turn = target; } else turn += gap * (reduced ? 1 : EASE);
+      if (Math.abs(gap) < 0.0005){ if (turn === target && !dirty) return; turn = target; }
+      else turn += gap * (reduced ? 1 : 1 - Math.pow(1 - (SCROLLY ? 0.2 : EASE), dt * 60));
       dirty = false;
       var t = turn, m = clamp(t, 0, 1), pos = Math.max(0, t - 1);
       /* a short list fans over the top of the ring; lower it so the fan sits inside the frame */
@@ -150,10 +156,40 @@
 
     function to(n){ target = clamp(n, 0, last + 1); }
 
+    /* touch screens: the page scroll itself turns the wheel. The section becomes a tall track and
+       the wheel pins to the screen while you scroll through it, so an ordinary vertical swipe brings
+       each card to the front in turn (a phone has no mouse wheel, and sideways drags felt hidden). */
+    var SCROLLY = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
+    var pinEl = section.querySelector('.wheel-pin'), TRACK_STEP = 0.6, trackW = 0;
+    function travel(){ return Math.max(1, section.offsetHeight - pinEl.offsetHeight); }
+    function layoutTrack(){
+      if (innerWidth === trackW) return;          /* ignore the iOS address bar resizing the height */
+      trackW = innerWidth;
+      section.style.height = Math.round(pinEl.offsetHeight * (1 + TRACK_STEP * (last + 1))) + 'px';
+    }
+    function fromScroll(){
+      var p = clamp(-section.getBoundingClientRect().top / travel(), 0, 1), t = p * (last + 1), f = t - Math.floor(t);
+      /* each card holds the front for part of the swipe before the next one turns in */
+      f = f < .2 ? 0 : f > .8 ? 1 : (f - .2) / .6; f = f * f * (3 - 2 * f);
+      to(Math.floor(t) + f);
+    }
+    function go(n){
+      if (!SCROLLY){ to(n); rest = target; return; }
+      var y = scrollY + section.getBoundingClientRect().top + travel() * (clamp(n, 0, last + 1) + (n <= last ? .05 : 0)) / (last + 1);
+      window.scrollTo({ top: y, behavior: reduced ? 'auto' : 'smooth' });
+    }
+    if (SCROLLY){
+      section.classList.add('wheel-scrolly');
+      layoutTrack(); fromScroll();
+      addEventListener('scroll', fromScroll, { passive: true });
+      addEventListener('resize', function(){ layoutTrack(); fromScroll(); });
+    }
+
     /* wheel: cancelled only while the drum still has somewhere to go, so the page scrolls on at either end.
        Listened for on the whole section: browsers latch a scroll gesture's later events onto the
        section itself, so a listener on the inner stage would only ever see the first notch. */
     section.addEventListener('wheel', function(e){
+      if (SCROLLY) return;
       var next = target + (e.deltaY + (H ? e.deltaX : 0)) / WHEEL_UNITS;
       if (next > 0 && next < last + 1) e.preventDefault();
       to(next);
@@ -173,7 +209,7 @@
 
     /* drag: up/down with a mouse; sideways on touch, so a vertical swipe still scrolls the page */
     var drag = null, moved = 0;
-    stageEl.addEventListener('pointerdown', function(e){ drag = { x: e.clientX, y: e.clientY, id: e.pointerId, touch: e.pointerType === 'touch' }; moved = 0; });
+    stageEl.addEventListener('pointerdown', function(e){ moved = 0; if (SCROLLY) return; drag = { x: e.clientX, y: e.clientY, id: e.pointerId, touch: e.pointerType === 'touch' }; });
     stageEl.addEventListener('pointermove', function(e){
       if (!drag) return;
       var dv = (drag.touch || H) ? (drag.x - e.clientX) : (drag.y - e.clientY);
@@ -188,7 +224,7 @@
     cards.forEach(function(c, i){
       c.addEventListener('click', function(e){
         if (moved > 6){ e.preventDefault(); return; }
-        if (Math.round(turn) !== i + 1){ e.preventDefault(); to(i + 1); rest = target; }   /* first tap brings a card to the front */
+        if (Math.round(turn) !== i + 1){ e.preventDefault(); go(i + 1); }   /* first tap brings a card to the front */
       });
     });
     stageEl.addEventListener('keydown', function(e){
@@ -198,14 +234,14 @@
       else return;
       e.preventDefault();
     });
-    idxBtns.forEach(function(b){ b.addEventListener('click', function(){ to(+b.getAttribute('data-i') + 1); rest = target; }); });
+    idxBtns.forEach(function(b){ b.addEventListener('click', function(){ go(+b.getAttribute('data-i') + 1); }); });
 
     /* films play only while the wheel is on screen, and only the front card's */
     if ('IntersectionObserver' in window){
       var vio = new IntersectionObserver(function(es){
         vis = es[0].isIntersecting;
         if (vis) syncVideos(); else videos.forEach(function(v){ v.pause(); });
-      }, { threshold: .15 });
+      }, { threshold: SCROLLY ? 0 : .15 });
       vio.observe(section); section.__wheelIO = vio;   /* retain */
     } else { vis = true; syncVideos(); }
 

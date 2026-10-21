@@ -481,11 +481,17 @@ html[dir=rtl] .beam-ring{transform:scaleX(-1)}
 /* ================= WORKS WHEEL ================= */
 .wheel{position:relative;width:100%;height:min(88vh, 860px);min-height:26rem;overflow:hidden;user-select:none;-webkit-user-select:none;
   background:radial-gradient(60% 60% at 50% 50%, rgba(29,78,216,.22), transparent 70%), linear-gradient(180deg,#050c2a,#040818);color:#fff}
+.wheel-pin{position:relative;width:100%;height:100%;overflow:hidden}
+/* touch: the section is a tall scroll track and the wheel pins to the screen while you swipe through it */
+.wheel-scrolly{overflow:visible;min-height:0}
+.wheel-scrolly .wheel-pin{position:sticky;top:0;height:100vh;height:100svh}
 .wheel-stage{position:absolute;inset:0;cursor:grab;outline:none;touch-action:pan-y}
 .wheel-stage.dragging{cursor:grabbing}
 .wheel-stage:focus-visible{outline:2px solid var(--gold-hi);outline-offset:-6px}
 .wheel-drum{position:absolute;top:50%;left:50%;transform-style:preserve-3d}
-.wheel-card{position:absolute;display:block;backface-visibility:hidden;-webkit-backface-visibility:hidden;color:inherit;text-decoration:none;
+/* left/top must be explicit: without them an RTL page anchors each card to the drum's right edge,
+   which pushed every card half a card-width to the left in Farsi */
+.wheel-card{position:absolute;left:0;top:0;display:block;backface-visibility:hidden;-webkit-backface-visibility:hidden;color:inherit;text-decoration:none;
   filter:drop-shadow(0 22px 34px rgba(0,0,0,.55))}
 .wheel-face{--c:14px;position:relative;display:block;width:100%;height:100%;overflow:hidden;background:#071438;
   clip-path:polygon(0 0, calc(100% - var(--c)) 0, 100% var(--c), 100% 100%, var(--c) 100%, 0 calc(100% - var(--c)))}
@@ -542,6 +548,10 @@ html[dir=rtl] .wheel-feat .wheel-index{right:auto;left:2.5%}
 @media (max-width: 700px){
   .wheel-feat .wheel-drum{left:50%!important}
   .wheel-feature{left:0;right:0;top:auto;bottom:6%;transform:none;max-width:none;justify-items:center;text-align:center;direction:ltr;gap:10px}
+  html[dir=rtl] .wheel-feature{left:0;right:0;justify-items:center;text-align:center}
+  /* a soft dark fade behind the panel so the next card peeking below never sits under the text */
+  .wheel-feature{bottom:0;padding:44px 16px max(6%, 22px);background:linear-gradient(180deg,rgba(4,8,24,0),rgba(4,8,24,.9) 38%)}
+  .wheel-feat .wheel-drum{top:44%}   /* sit the card in the space above the panel */
   .wf-desc,.wf-cta{display:none}
   .wf-stats{justify-content:center}
   .wheel-feature b{font-size:clamp(26px,7vw,40px)}
