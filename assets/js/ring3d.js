@@ -14,7 +14,8 @@
   var MODELS = {
     aurelis: { metal: 'models/aurelis-metal.bin', gems: 'models/aurelis-gems.json' },
     imperia: { metal: 'models/imperia-metal.bin', gems: 'models/imperia-gems.json' },
-    regalia:  { metal: 'models/regalia-metal.bin',  gems: 'models/regalia-gems.json' }
+    regalia:  { metal: 'models/regalia-metal.bin',  gems: 'models/regalia-gems.json' },
+    sovereign: { metal: 'models/sovereign-metal.bin', gems: 'models/sovereign-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
@@ -142,10 +143,14 @@
     var host = opt.host || cv.parentElement;
     function fail(){ host.classList.add('gl-fail'); if (opt.onFail) opt.onFail(); }
     if (typeof THREE === 'undefined'){ fail(); return api; }
+    /* phones can't afford the ray-traced diamonds at full resolution and 60fps,
+       so cap the pixel ratio and the frame rate on small / touch screens */
+    var MOB = (Math.min(window.innerWidth, window.innerHeight) < 760) ||
+              (window.matchMedia && matchMedia('(pointer:coarse)').matches);
     var R;
-    try { R = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true, powerPreference: 'high-performance' }); }
+    try { R = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: !MOB, powerPreference: 'high-performance' }); }
     catch(e){ fail(); return api; }
-    R.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    R.setPixelRatio(Math.min(window.devicePixelRatio || 1, MOB ? 1.5 : 2));
     R.outputEncoding = THREE.sRGBEncoding;
     R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = opt.exposure || 1.2;
 
@@ -372,9 +377,11 @@
     }
 
     function wrap(a){ return Math.atan2(Math.sin(a), Math.cos(a)); }
-    var last = performance.now();
+    var last = performance.now(), lastFrame = 0, FRAME_MS = MOB ? 32 : 0;
     function tick(now){
       requestAnimationFrame(tick);
+      if (now - lastFrame < FRAME_MS) return;   /* ~30fps cap on mobile */
+      lastFrame = now;
       var dt = Math.min((now - last) / 1000, .05); last = now;
       if (!api.ready || !vis || document.hidden || api.manual) return;
       var k = RM ? 1 : 1 - Math.exp(-dt * 2.0);

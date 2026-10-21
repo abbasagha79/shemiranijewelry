@@ -11,6 +11,59 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'sovereign',
+    name: 'SOVEREIGN',
+    added: '2026-10-21T13:45',
+    collection: 'bangles',
+    kind: { en: "Hinged bangle · 18K gold and diamonds", fa: 'النگوی لولایی · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · 37 diamonds', fa: 'طلای ۱۸ عیار · ۳۷ الماس' },
+    description: {
+      en: 'A statement of confidence, independence and power — in the form of jewellery.',
+      fa: 'بیانی از اعتمادبه‌نفس، استقلال و قدرت در قالب جواهر.'
+    },
+    model: 'sovereign',
+    film: 'assets/video/sovereign-360.mp4',
+    poster: 'assets/img/sovereign/film-poster.jpg',
+    spin: 'assets/video/sovereign-spin.mp4',
+    spinPoster: 'assets/img/sovereign/spin-poster.jpg',
+    cover: 'assets/img/sovereign/render-01.jpg',
+    thumb: 'assets/img/sovereign/render-01-sm.jpg',
+    photos: [
+      'assets/img/sovereign/render-01.jpg',
+      'assets/img/sovereign/detail-01.jpg', 'assets/img/sovereign/detail-02.jpg',
+      'assets/img/sovereign/detail-03.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 20.40 g', fa: 'طلای زرد ۱۸ عیار: ۲۰٫۴۰ گرم' },
+        { en: '18K white gold: 20.72 g', fa: 'طلای سفید ۱۸ عیار: ۲۰٫۷۲ گرم' },
+        { en: '18K rose gold: 20.40 g', fa: 'طلای رزگلد ۱۸ عیار: ۲۰٫۴۰ گرم' },
+        { en: '14K yellow gold: 17.05 g', fa: 'طلای زرد ۱۴ عیار: ۱۷٫۰۵ گرم' },
+        { en: '22K yellow gold: 23.68 g', fa: 'طلای زرد ۲۲ عیار: ۲۳٫۶۸ گرم' },
+        { en: 'Silver 925: 13.71 g', fa: 'نقره‌ی ۹۲۵: ۱۳٫۷۱ گرم' },
+        { en: 'Platinum: 26.61 g', fa: 'پلاتین: ۲۶٫۶۱ گرم' }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: '37 round diamonds, about 0.20 ct in total', fa: '۳۷ الماس گرد، در مجموع حدود ۰٫۲۰ قیراط' },
+        { en: '3 stones, 1.4 mm · 5 stones, 1.3 mm · 4 stones, 1.2 mm', fa: '۳ نگین ۱٫۴ میلی‌متری · ۵ نگین ۱٫۳ میلی‌متری · ۴ نگین ۱٫۲ میلی‌متری' },
+        { en: '4 stones, 1.1 mm · 21 stones, 1.0 mm', fa: '۴ نگین ۱٫۱ میلی‌متری · ۲۱ نگین ۱٫۰ میلی‌متری' },
+        { en: 'Pavé-set in a long row and a short block along the band', fa: 'نشانده به‌صورت پاوه در یک ردیف بلند و یک بلوک کوتاه روی بدنه' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Outer, long axis: 63.3 mm', fa: 'قطر بیرونی، محور بلند: ۶۳٫۳ میلی‌متر' },
+        { en: 'Outer, short axis: 52.4 mm', fa: 'قطر بیرونی، محور کوتاه: ۵۲٫۴ میلی‌متر' },
+        { en: 'Band width: 7.2 mm', fa: 'پهنای بدنه: ۷٫۲ میلی‌متر' },
+        { en: 'Band thickness: 2.8 mm', fa: 'ضخامت بدنه: ۲٫۸ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'Hinged oval bangle with a concealed box clasp', fa: 'النگوی بیضی لولایی با قفل جعبه‌ای پنهان' },
+        { en: 'A long single row of pavé set flush into the band', fa: 'یک ردیف بلند پاوه، هم‌تراز نشانده در بدنه' },
+        { en: 'A short pavé block beside a cluster of raised gold beads', fa: 'یک بلوک کوتاه پاوه در کنار خوشه‌ای از گوی‌های طلایی برجسته' }
+      ]}
+    ],
+    note: { en: 'Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.', fa: 'وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است.' }
+  },
+  {
     id: 'regalia',
     name: 'REGALIA',
     added: '2026-10-20T20:49',
