@@ -13,7 +13,7 @@
   var fa = function(){ return SM.lang === 'fa'; };
 
   function render(){
-    document.title = (fa() ? C.fa : C.en) + ' | SHEMIRANI Jewelry';
+    document.title = (fa() ? C.fa + ' | طلا و جواهر | SHEMIRANI' : C.en + ' | SHEMIRANI \u2014 18K Gold & Diamond Jewellery');
     head.innerHTML =
       '<nav class="crumbs" aria-label="Breadcrumb"><a href="' + u('index.html') + '">' + (fa() ? 'خانه' : 'Home') + '</a><i></i>' +
         '<a href="' + u('index.html#collections') + '">' + (fa() ? 'مجموعه‌ها' : 'Collections') + '</a></nav>' +
