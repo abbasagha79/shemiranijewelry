@@ -13,8 +13,8 @@
 (function(){
   'use strict';
   /* geometry, tuned together (see the original component) */
-  var CARD_H = 0.38, CARD_MAX_W = 0.34, CARD_RATIO = 1.45, STEP = 40, DRUM = 2.22, LENS = 2.7, RING_R = 1.14, BOW = 1.82;
-  var TITLE = 0.124, INDEX = 0.04, CULL = 1.6, WHEEL_UNITS = 900, DRAG_UNITS = 420, SETTLE = 140, EASE = 0.12;
+  var CARD_H = 0.46, CARD_MAX_W = 0.40, CARD_RATIO = 1.45, STEP = 40, DRUM = 2.22, LENS = 2.7, RING_R = 1.14, BOW = 1.82;
+  var TITLE = 0.15, INDEX = 0.055, CULL = 1.6, WHEEL_UNITS = 900, DRAG_UNITS = 420, SETTLE = 140, EASE = 0.12;
   function clamp(v, lo, hi){ return Math.min(hi, Math.max(lo, v)); }
   function lerp(a, b, t){ return a + (b - a) * t; }
   function rad(d){ return d * Math.PI / 180; }

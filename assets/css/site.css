@@ -55,6 +55,9 @@ img,video{max-width:100%}
   transition:width .75s var(--sb-ease),padding .75s var(--sb-ease),transform .7s var(--sb-ease),opacity .5s ease,visibility .7s;isolation:isolate}
 html[dir=rtl] .sidebar{transform:translateX(calc(100% + 40px));font-family:'Vazirmatn',Tahoma,sans-serif}
 .sb-open .sidebar{transform:none;opacity:1;visibility:visible}
+/* RTL: this needs higher specificity than the rule above, or the panel stays off-screen.
+   .sb-open sits on <html> itself, so no space between html[dir=rtl] and .sb-open. */
+html[dir=rtl].sb-open .sidebar{transform:none}
 .sidebar::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(45deg,transparent 55%,#ffffff05 60%,transparent 70%)}
 .sidebar svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 .sidebar svg.v100{stroke-width:7}
@@ -493,12 +496,12 @@ html[dir=rtl] .beam-ring{transform:scaleX(-1)}
 html[lang=fa] .wheel-act{font-family:var(--fa);letter-spacing:0;font-size:12px}
 .wheel-act svg{width:10px;height:10px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .wheel-card:hover .wheel-act,.wheel-card[aria-selected=true]:focus-visible .wheel-act{opacity:1;transform:none}
-.wheel-label{position:absolute;inset:0;display:grid;place-items:center;padding-top:22%;pointer-events:none;font-family:var(--sans);font-weight:700;letter-spacing:-.02em;
+.wheel-label{position:absolute;inset:0;display:grid;place-items:center;padding-top:22%;pointer-events:none;font-family:var(--display);font-weight:600;letter-spacing:.04em;
   background:linear-gradient(160deg,#fff6dc,#e3bd74 60%,#b98d2f);-webkit-background-clip:text;background-clip:text;color:transparent}
 html[lang=fa] .wheel-label{font-family:var(--fa);letter-spacing:0}
-.wheel-title{position:absolute;top:50%;left:6%;transform:translateY(-50%);pointer-events:none;opacity:0;display:grid;gap:6px;max-width:24%;direction:ltr;text-align:left}
-.wheel-title b{font-family:var(--sans);font-weight:700;letter-spacing:.04em;line-height:1;color:#fff}
-.wheel-title small{font-family:var(--label);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi)}
+.wheel-title{position:absolute;top:50%;left:6%;transform:translateY(-50%);pointer-events:none;opacity:0;display:grid;gap:10px;max-width:26%;direction:ltr;text-align:left}
+.wheel-title b{font-family:var(--display);font-weight:600;letter-spacing:.06em;line-height:1.02;color:#fff6ec}
+.wheel-title small{font-family:var(--label);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi)}
 html[lang=fa] .wheel-title small{font-family:var(--fa);letter-spacing:0;text-transform:none}
 .wheel-index{position:absolute;top:7.5%;right:2.5%;margin:0;padding:0;list-style:none;text-align:right;line-height:1.75;direction:ltr}
 .wheel-index button{background:none;border:0;padding:0;cursor:pointer;font-family:var(--label);font-weight:700;letter-spacing:.14em;color:rgba(232,238,250,.45);font-size:inherit;transition:color .25s}

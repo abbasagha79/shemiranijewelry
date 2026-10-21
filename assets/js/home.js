@@ -119,7 +119,7 @@
     wheel = window.ShemiraniWheel(wheelEl, LIST.map(function(d, i){
       return { title: d.name, sub: wt.items[i].sub, href: SM.url('designs/' + d.id + '/index.html'),
         video: d.spin ? SM.url(d.spin) : null, poster: d.spinPoster ? SM.url(d.spinPoster) : null, image: SM.url(d.cover) };
-    }), wt);
+    }), Object.assign({ beam: true }, wt));
     SM.onLang(function(){ wheel.update(wheelText()); });
   }
 

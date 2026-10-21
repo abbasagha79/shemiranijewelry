@@ -150,7 +150,7 @@
     var R;
     try { R = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: !MOB, powerPreference: 'high-performance' }); }
     catch(e){ fail(); return api; }
-    R.setPixelRatio(Math.min(window.devicePixelRatio || 1, MOB ? 1.5 : 2));
+    R.setPixelRatio(Math.min(window.devicePixelRatio || 1, MOB ? 1 : 2));
     R.outputEncoding = THREE.sRGBEncoding;
     R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = opt.exposure || 1.2;
 
@@ -213,7 +213,7 @@
     var gemCube = cube(THREE.CubeReflectionMapping, gemEnv);
     function diamondMat(dim){
       return new THREE.ShaderMaterial({
-        defines: { NPLANES: PLANES.length, BOUNCES: 5 },
+        defines: { NPLANES: PLANES.length, BOUNCES: MOB ? 3 : 5 },
         uniforms: { envMap: { value: gemCube }, planes: { value: PLANES }, dim: { value: dim ? .28 : 1 }, gain: { value: 1.25 } },
         transparent: !!dim, depthWrite: !dim, side: THREE.DoubleSide,
         vertexShader: [
