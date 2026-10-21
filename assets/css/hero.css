@@ -23,6 +23,10 @@
 #gl{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity 1.4s ease;touch-action:pan-y}
 .gl-on #gl{opacity:1}
 .bg{will-change:transform;transform-origin:50% 50%;backface-visibility:hidden}
+/* starfield + shooting stars, drawn behind the ring */
+#stars{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity 1.6s ease;pointer-events:none;mix-blend-mode:screen}
+.stars-on #stars{opacity:1}
+@media (prefers-reduced-motion:reduce){ #stars{opacity:.5} }
 
 /* chapter change */
 .hero .hrise{transition:transform .5s var(--e-mask)}
@@ -32,6 +36,13 @@
 
 /* ---------- frame ---------- */
 .frame{position:absolute;left:calc(30*var(--u));top:calc(30*var(--u));right:calc(30*var(--u));bottom:calc(31*var(--u))}
+/* the same gold border-beam used across the site, a touch thicker because this is the main frame */
+.frame-beam{position:absolute;inset:calc(-1*var(--fb,2.4px));pointer-events:none;padding:var(--fb,2.4px);
+  background:conic-gradient(from var(--beam-angle), transparent, #f6d98f calc(15% * .9), #fffbe8 15%, transparent calc(15% * 1.2));
+  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);mask-composite:exclude;
+  animation:beam 13s linear infinite;will-change:background}
+@media (prefers-reduced-motion:reduce){ .frame-beam{display:none} }
 .ln{position:absolute;background:var(--line)}
 .ln-t{left:calc(26*var(--u));right:calc(26*var(--u));top:0;height:var(--hair)}
 .ln-b{left:calc(26*var(--u));right:calc(26*var(--u));bottom:0;height:var(--hair)}

@@ -7,7 +7,7 @@
   --u: clamp(0.68px, min(100vw / 1280, 100vh / 800), 1.72px);
   --t: var(--u);
   --u: clamp(0.68px, min(100vw / 1280, 100dvh / 800), 1.72px);
-  --line: rgba(255,255,255,.13);
+  --line: rgba(227,189,116,.22);   /* hero hairlines: faint warm gold, not plain white */
   --cream:#e3bd74;           /* MENU pill, focus ring: SHEMIRANI gold */
   --cream-hi:#f6d98f;
   --ink:#071438;             /* label on the gold pill: SHEMIRANI navy */
@@ -222,11 +222,9 @@ html[lang=fa] .card .st{letter-spacing:0;font-size:.78rem}
 
 
 .two{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px, 6vw, 80px);align-items:center}
-.materials{list-style:none;margin:0;padding:0;border-top:1px solid rgba(227,189,116,.5)}
-.materials li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid rgba(227,189,116,.25)}
-.materials strong{color:#fff6e0;font-weight:400;font-size:1.05rem}
-.materials span{font-family:var(--display);font-size:1.45rem;direction:ltr;background:linear-gradient(100deg,#b98d2f,#f6d98f);-webkit-background-clip:text;background-clip:text;color:transparent}
-html[lang=fa] .materials span[data-fa]{font-family:var(--fa)}
+/* About is now a single, comfortable reading column */
+.story-wrap{max-width:840px}
+.story-wrap p{max-width:68ch}
 
   background:linear-gradient(160deg,#f6d98f,rgba(227,189,116,.35) 50%,#e3bd74);
   clip-path:polygon(0 0, calc(100% - var(--c)) 0, 100% var(--c), 100% 100%, var(--c) 100%, 0 calc(100% - var(--c)))}
@@ -248,6 +246,52 @@ footer p{margin:0;font-size:.72rem;letter-spacing:.06em;color:#8f9bb8;text-align
 .social a{display:inline-flex;align-items:center;gap:10px;color:var(--gold);text-decoration:none;font-size:.78rem;letter-spacing:.08em;transition:color .25s}
 .social a:hover{color:var(--gold-hi)}
 .social svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- shutter-glyph footer (home) ---------- */
+.sgf{display:block;position:relative;overflow:hidden;background:
+    radial-gradient(120% 90% at 50% 120%, rgba(40,86,200,.14), transparent 60%),
+    linear-gradient(180deg,#040b24 0%,#030817 100%);
+  border-top:1px solid rgba(227,189,116,.22);
+  padding:clamp(30px,5vw,60px) max(18px,5vw) clamp(10px,2vw,22px)}
+.sgf-top{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:20px 40px;margin-bottom:clamp(18px,3vw,34px)}
+.sgf-brandline{display:flex;flex-direction:column;gap:6px}
+.sgf-mono-brand{font-family:var(--display);font-weight:500;font-size:.82rem;letter-spacing:.34em;text-decoration:none;
+  background:linear-gradient(160deg,#fff0b8,#e3bd74 55%,#a8741a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sgf-tag{font-family:var(--label);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:#8f9bb8}
+html[lang=fa] .sgf-tag{font-family:var(--fa);letter-spacing:0;font-size:.82rem}
+.sgf-nav{flex:1 1 auto}
+.sgf-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px clamp(18px,3vw,34px);justify-content:flex-end}
+.sgf-link{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--body);
+  font-family:var(--label);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:color .25s}
+html[lang=fa] .sgf-link{font-family:var(--fa);letter-spacing:0;font-size:.86rem;text-transform:none}
+.sgf-link:hover,.sgf-link:focus-visible{color:var(--gold-hi);outline:none}
+.sgf-lab{min-width:0}
+.sgf-link svg{width:12px;height:12px;color:var(--gold);opacity:0;transform:translateX(-4px);transition:opacity .25s,transform .25s}
+.sgf-link:hover svg,.sgf-link:focus-visible svg{opacity:1;transform:none}
+html[dir=rtl] .sgf-link svg{transform:scaleX(-1) translateX(-4px)}
+html[dir=rtl] .sgf-link:hover svg{transform:scaleX(-1)}
+.sgf-copy{margin:0;flex:1 1 100%;font-size:.7rem;letter-spacing:.05em;color:#7b87a6}
+html[lang=fa] .sgf-copy{font-family:var(--fa);letter-spacing:0;font-size:.8rem}
+
+.sgf .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.sgf-mark{direction:ltr;line-height:0}
+.sgf-svg{display:block;width:100%;height:auto;overflow:visible}
+.sgf-rise{opacity:0;transform:translateY(14%);transform-box:fill-box;transition:opacity .8s var(--e-soft),transform .9s var(--e-soft);transition-delay:var(--d,0ms)}
+.sgf[data-in="true"] .sgf-rise{opacity:1;transform:none}
+.sgf-g{transform-box:fill-box;transform-origin:center}
+.sgf-half{transition:transform .35s var(--e-soft)}
+.sgf-flip:hover .sgf-up{transform:translate(4px,-2.5px)}
+.sgf-flip:hover .sgf-dn{transform:translate(-4px,2.5px)}
+.sgf-flip.is-flip{animation:sgfFlip .6s var(--e-soft)}
+@keyframes sgfFlip{50%{transform:scaleY(.02)}}
+.sgf-sh{cursor:pointer}
+.sgf-sh polygon{transition:opacity .3s}
+.sgf-sh:hover polygon{opacity:.86}
+@media (prefers-reduced-motion:reduce){ .sgf-rise{opacity:1;transform:none;transition:none} .sgf-flip.is-flip{animation:none} }
+@media (max-width: 620px){
+  .sgf-top{flex-direction:column;gap:14px}
+  .sgf-list{justify-content:flex-start}
+}
 
 @media (max-width: 900px){ .grid{grid-template-columns:repeat(2, minmax(0,1fr))} .two{grid-template-columns:1fr} }
 @media (max-width: 520px){

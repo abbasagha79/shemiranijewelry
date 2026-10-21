@@ -40,11 +40,13 @@
 <div class="stage" id="home">
   <div class="bg" role="img" aria-label="SHEMIRANI ring in 18K gold and diamonds">
     <div class="halo"></div>
+    <canvas id="stars" aria-hidden="true"></canvas>
     <img class="poster" alt="">
     <canvas id="gl" aria-hidden="true"></canvas>
   </div>
 
   <div class="frame">
+    <span class="frame-beam" aria-hidden="true"></span>
     <span class="ln ln-t"></span><span class="ln ln-b"></span>
     <span class="ln ln-l"></span><span class="ln ln-r"></span>
     <span class="cn cn-tl"></span><span class="cn cn-tr"></span>
@@ -127,7 +129,7 @@
   </section>
 
   <section class="sec" id="story">
-    <div class="wrap two">
+    <div class="wrap story-wrap">
       <div>
         <div class="eyebrow-s" data-fa="درباره‌ی ما">About</div>
         <h2 data-fa="طراحی و ساخت، به‌دست عباس شمیرانی">Designed and made by Abbas Shemirani</h2>
@@ -136,24 +138,11 @@
         <p data-fa="دو مدرک طراحی در ایران و دو مدرک بین‌المللی دارم، و مدرک کارآفرینی‌ام را در شانزده‌سالگی گرفتم. هر طرح — فایل‌ها و قطعه‌هایی که از آن ساخته می‌شوند — به‌صورت محدود عرضه می‌شود تا هر کار خاص و کمیاب باقی بماند.">I hold two national design certificates and two international ones, and earned my entrepreneurship certificate at the age of sixteen. Every design — its files and the pieces made from them — is released in a strictly limited edition, so each one stays rare.</p>
         <p data-fa="کار را با چند کارگاه به‌صورت دور پیش می‌برم. مستقر در کرج هستم و همین‌جا دو طلافروشی داریم.">I work with several workshops remotely. I am based in Karaj, where we also keep two gold boutiques.</p>
       </div>
-      <ul class="materials">
-        <li><strong data-fa="تجربه">Experience</strong><span data-fa="‏+۷ سال">7+ yrs</span></li>
-        <li><strong data-fa="طلا">Gold</strong><span>18K</span></li>
-        <li><strong data-fa="نقره">Silver</strong><span>925</span></li>
-        <li><strong data-fa="سنگ">Stones</strong><span data-fa="الماس">Diamonds</span></li>
-        <li><strong data-fa="عرضه">Release</strong><span data-fa="محدود">Limited</span></li>
-      </ul>
     </div>
   </section>
 </main>
 
-<footer id="contact">
-  <a class="flogo" href="#home" aria-label="SHEMIRANI, home"><img src="assets/img/brand/sm-monogram.png" alt="" width="62" height="64"><b>SHEMIRANI</b></a>
-  <p data-fa="© ۲۰۲۶ SHEMIRANI. تمامی حقوق محفوظ است.">© 2026 SHEMIRANI. All rights reserved.</p>
-  <div class="social">
-    <a href="https://t.me/abbasamrahbari" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.5 3.5 2.5 10.8l6.1 2.1 2.2 6.6 3-4 4.8 3.5z"/><path d="M8.6 12.9 21.5 3.5"/></svg><span>@abbasamrahbari</span></a>
-  </div>
-</footer>
+<footer id="contact" data-sgf></footer>
 
 <script src="assets/vendor/three.min.js"></script>
 <script src="assets/js/designs.js"></script>
@@ -200,6 +189,9 @@
   });
 })();
 </script>
+<script src="assets/js/footer.js"></script>
+<script>window.ShemiraniFooter && ShemiraniFooter(document.getElementById('contact'));</script>
+<script src="assets/js/stars.js"></script>
 <script src="assets/js/home.js"></script>
 </body>
 </html>
