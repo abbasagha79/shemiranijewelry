@@ -30,8 +30,10 @@ window.SHEMIRANI_DESIGNS = [
     thumb: 'assets/img/sovereign/render-01-sm.jpg',
     photos: [
       'assets/img/sovereign/render-01.jpg',
-      'assets/img/sovereign/detail-01.jpg', 'assets/img/sovereign/detail-02.jpg',
-      'assets/img/sovereign/detail-03.jpg'
+      'assets/img/sovereign/matrix-01.jpg', 'assets/img/sovereign/matrix-02.jpg',
+      'assets/img/sovereign/matrix-03.jpg', 'assets/img/sovereign/matrix-04.jpg',
+      'assets/img/sovereign/matrix-05.jpg', 'assets/img/sovereign/matrix-06.jpg',
+      'assets/img/sovereign/matrix-07.jpg', 'assets/img/sovereign/matrix-08.jpg'
     ],
     specs: [
       { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
