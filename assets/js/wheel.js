@@ -83,12 +83,24 @@
     measure();
     if (window.ResizeObserver) new ResizeObserver(measure).observe(stageEl); else addEventListener('resize', measure);
 
+    /* only the front-facing card's film plays — several videos at once is the main
+       source of jank on phones */
+    function syncVideos(){
+      if (!videos.length) return;
+      cards.forEach(function(c, i){
+        var v = c.querySelector('video'); if (!v) return;
+        if (vis && i === active){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+        else if (!v.paused) v.pause();
+      });
+    }
+
     function setActive(n){
       if (n === active) return; active = n;
       cards.forEach(function(c, i){ c.setAttribute('aria-selected', String(i === n)); });
       stageEl.setAttribute('aria-activedescendant', uid + '-' + n);
       idxBtns.forEach(function(b, i){ b.classList.toggle('on', i === n); });
       var it = items[n]; titleB.textContent = it ? it.title : ''; titleS.textContent = it ? (it.sub || '') : '';
+      syncVideos();
     }
 
     function draw(){
@@ -166,12 +178,14 @@
     });
     idxBtns.forEach(function(b){ b.addEventListener('click', function(){ to(+b.getAttribute('data-i') + 1); rest = target; }); });
 
-    /* films play only while the wheel is on screen */
-    if ('IntersectionObserver' in window) new IntersectionObserver(function(es){
-      vis = es[0].isIntersecting;
-      videos.forEach(function(v){ if (vis){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } else v.pause(); });
-    }, { threshold: .15 }).observe(section);
-    else videos.forEach(function(v){ v.play(); });
+    /* films play only while the wheel is on screen, and only the front card's */
+    if ('IntersectionObserver' in window){
+      var vio = new IntersectionObserver(function(es){
+        vis = es[0].isIntersecting;
+        if (vis) syncVideos(); else videos.forEach(function(v){ v.pause(); });
+      }, { threshold: .15 });
+      vio.observe(section); section.__wheelIO = vio;   /* retain */
+    } else { vis = true; syncVideos(); }
 
     /* language switch: new label, card captions and action text without rebuilding the wheel */
     function update(o){

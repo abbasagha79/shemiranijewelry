@@ -21,6 +21,9 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "sovereign", "name": "SOVEREIGN", "collection": "bangles",
+     "desc": "SOVEREIGN is an 18K gold hinged bangle with 37 diamonds (about 0.20 ct), pavé-set in a long row and a short block — a statement of confidence, independence and power.",
+     "diamonds": "37 round diamonds, 0.20 ct", "weight18k": "20.40 g"},
     {"id": "regalia", "name": "REGALIA", "collection": "rings",
      "desc": "REGALIA is a men's signet ring in 18K gold with 16 diamonds (0.36 ct) — a four-diamond flower at its heart, framed in gold for a quiet, lasting presence.",
      "diamonds": "16 round diamonds, 0.36 ct", "weight18k": "5.25 g"},
@@ -34,6 +37,11 @@ DESIGNS = [
 COLLECTIONS = {
     "rings": "Rings", "earrings": "Earrings", "bracelets": "Bracelets",
     "bangles": "Bangles", "necklaces": "Necklaces", "pendants": "Pendants",
+}
+# singular noun per collection, for titles and alt text
+NOUN = {
+    "rings": "Ring", "earrings": "Earrings", "bracelets": "Bracelet",
+    "bangles": "Bangle", "necklaces": "Necklace", "pendants": "Pendant",
 }
 
 ORG = {
@@ -78,7 +86,7 @@ def product(d):
             "name": "SHEMIRANI %s" % d["name"], "sku": d["name"],
             "url": SITE + "/designs/%s/" % d["id"],
             "image": [SITE + "/assets/img/%s/render-01.jpg" % d["id"]],
-            "description": d["desc"], "category": "Rings",
+            "description": d["desc"], "category": COLLECTIONS[d["collection"]],
             "brand": {"@type": "Brand", "name": "SHEMIRANI"},
             "material": "18K gold, diamond",
             "manufacturer": {"@id": SITE + "/#org"},
@@ -147,14 +155,15 @@ inject_noscript("index.html",
 # ---- design pages ----
 for d in DESIGNS:
     url = SITE + "/designs/%s/" % d["id"]
-    title = "%s — 18K Gold & Diamond Ring | SHEMIRANI" % d["name"]
+    noun = NOUN[d["collection"]]
+    title = "%s — 18K Gold & Diamond %s | SHEMIRANI" % (d["name"], noun)
     bc = crumb([("Home", SITE + "/"), (COLLECTIONS[d["collection"]], SITE + "/collections/%s/" % d["collection"]), (d["name"], url)])
     inject_head("designs/%s/index.html" % d["id"],
                 tags(url, title, d["desc"], "assets/img/%s/render-01.jpg" % d["id"], [product(d), bc]))
     inject_noscript("designs/%s/index.html" % d["id"],
         "<h1>SHEMIRANI %s</h1><p>%s</p>"
-        "<p><img src=\"/assets/img/%s/render-01.jpg\" alt=\"SHEMIRANI %s ring in 18K gold with diamonds\" width=\"600\"></p>"
-        % (d["name"], d["desc"], d["id"], d["name"]))
+        "<p><img src=\"/assets/img/%s/render-01.jpg\" alt=\"SHEMIRANI %s %s in 18K gold with diamonds\" width=\"600\"></p>"
+        % (d["name"], d["desc"], d["id"], d["name"], noun.lower()))
 
 # ---- collection pages ----
 for cid, cname in COLLECTIONS.items():

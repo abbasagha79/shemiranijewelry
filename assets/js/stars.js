@@ -7,17 +7,20 @@
   if (!cv || !cv.getContext) return;
   var ctx = cv.getContext('2d', { alpha: true });
   var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* phones: fewer stars, no shooting stars, lower pixel ratio — keeps the hero light */
+  var MOB = (Math.min(window.innerWidth, window.innerHeight) < 760) ||
+            (window.matchMedia && matchMedia('(pointer:coarse)').matches);
   var W = 0, H = 0, DPR = 1, stars = [], comets = [], last = 0, nextComet = 0, vis = true, raf = 0;
 
   function rand(a, b){ return a + Math.random() * (b - a); }
 
   function resize(){
-    DPR = Math.min(2, window.devicePixelRatio || 1);
+    DPR = Math.min(MOB ? 1.5 : 2, window.devicePixelRatio || 1);
     var r = cv.getBoundingClientRect();
     W = Math.max(1, r.width); H = Math.max(1, r.height);
     cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    var n = Math.round(Math.min(150, (W * H) / 9000));
+    var n = Math.round(Math.min(MOB ? 70 : 150, (W * H) / (MOB ? 13000 : 9000)));
     stars = [];
     for (var i = 0; i < n; i++){
       stars.push({
@@ -59,7 +62,7 @@
     }
     ctx.globalAlpha = 1;
 
-    if (RM) return; /* no shooting stars when reduced motion */
+    if (RM || MOB) return; /* no shooting stars on phones or with reduced motion */
 
     if (now >= nextComet && comets.length < 2) spawnComet(now);
     for (var j = comets.length - 1; j >= 0; j--){

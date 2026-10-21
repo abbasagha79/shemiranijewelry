@@ -472,6 +472,8 @@ html[dir=rtl] .beam-ring{transform:scaleX(-1)}
 .beam[data-reveal]:hover .beam-ring,.beam[data-reveal]:focus-visible .beam-ring,.beam[data-reveal]:active .beam-ring{opacity:1;animation-play-state:running}
 @media (hover:none){ .beam[data-reveal][data-touch] .beam-ring{opacity:1;animation-play-state:running} }
 @media (prefers-reduced-motion:reduce){ .beam-ring{display:none} }
+/* phones: keep a static gold edge but stop the per-frame conic repaint that causes jank */
+@media (pointer:coarse), (max-width:760px){ .beam-ring, .frame-beam{ animation:none !important; will-change:auto } }
 
 /* ================= WORKS WHEEL ================= */
 .wheel{position:relative;width:100%;height:min(88vh, 860px);min-height:26rem;overflow:hidden;user-select:none;-webkit-user-select:none;
