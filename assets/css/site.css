@@ -23,7 +23,7 @@
   --display:'Cinzel','Trajan Pro',Georgia,serif;
   --sans:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;
   --label:'Chakra Petch','Inter',sans-serif;
-  --serif:'Cormorant Garamond',Georgia,serif;
+  --serif:Georgia,'Times New Roman',serif;
   --fa:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;
   --sb-ease: cubic-bezier(.22,.8,.22,1);
   color-scheme: dark;

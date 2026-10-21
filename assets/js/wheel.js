@@ -41,7 +41,7 @@
         '<div class="wheel-drum">' + items.map(function(it, i){
           var media = it.html ? it.html : it.video
             ? '<video muted loop playsinline preload="metadata" ' + (it.poster ? 'poster="' + esc(it.poster) + '" ' : '') + 'src="' + esc(it.video) + '"></video>'
-            : '<img src="' + esc(it.image) + '" alt="" draggable="false">';
+            : '<img src="' + esc(it.image) + '" alt="" draggable="false" loading="lazy" decoding="async">';
           return '<a class="wheel-card" id="' + uid + '-' + i + '" role="option" aria-selected="false" aria-label="' + esc(it.title) + '"' + (it.href ? ' href="' + esc(it.href) + '"' : '') + ' draggable="false">' +
             '<span class="wheel-face">' + media +
               (opt.action && it.href ? '<span class="wheel-act"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg><span>' + esc(opt.action) + '</span></span>' : '') +
