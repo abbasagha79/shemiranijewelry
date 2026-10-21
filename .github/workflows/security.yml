@@ -27,7 +27,13 @@ jobs:
       - name: Static-site security check (CSP, secrets, unsafe patterns)
         run: python3 tools/security_check.py
 
+      # Run the gitleaks CLI directly instead of gitleaks-action@v2: the action
+      # requires a licence for organisations and posts to the API, which made it
+      # fail on every PR. The CLI needs neither — it just scans and sets the exit
+      # code (0 = clean, 1 = a secret was found).
       - name: Secret scan (gitleaks)
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VER=8.18.4
+          curl -sSL -o /tmp/gitleaks.tar.gz "https://github.com/gitleaks/gitleaks/releases/download/v${VER}/gitleaks_${VER}_linux_x64.tar.gz"
+          tar -xzf /tmp/gitleaks.tar.gz -C /tmp gitleaks
+          /tmp/gitleaks detect --source . --redact --no-banner --exit-code 1
