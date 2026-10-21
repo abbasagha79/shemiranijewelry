@@ -107,16 +107,17 @@
   };
   function sidebarHTML(){
     var here = root.getAttribute('data-page') || 'home', h = '';
-    function item(id, href, en, fa, icon, extra, group){
-      return '<a class="nav-item' + (id === here ? ' active' : '') + '" data-id="' + id + '" data-group="' + group + '" href="' + href + '" data-l-en="' + SM.esc(en) + '" data-l-fa="' + SM.esc(fa) + '">' + icon +
+    function item(id, href, en, fa, icon, extra, group, searchonly){
+      return '<a class="nav-item' + (id === here ? ' active' : '') + '" data-id="' + id + '" data-group="' + group + '"' + (searchonly ? ' data-searchonly' : '') + ' href="' + href + '" data-l-en="' + SM.esc(en) + '" data-l-fa="' + SM.esc(fa) + '">' + icon +
         '<span class="item-label"></span>' + (extra || '') + '<span class="tooltip"></span></a>';
     }
     h += '<div class="menu-caption" data-group="site" data-fa="منو">Menu</div>';
     h += item('home', SM.url('index.html'), 'Home', 'خانه', ICON.home, '', 'site');
-    SM.designs.forEach(function(d){
-      h += item('design-' + d.id, SM.url('designs/' + d.id + '/index.html'), d.name, d.name, ICON.gem, d.isNew ? '<span class="badge" data-fa="جدید">New</span>' : '', 'site');
-    });
     h += item('story', SM.url('index.html#story'), 'Our story', 'داستان ما', ICON.story, '', 'site');
+    /* designs stay searchable but out of the default menu — the collections below are the way in */
+    SM.designs.forEach(function(d){
+      h += item('design-' + d.id, SM.url('designs/' + d.id + '/index.html'), d.name, d.name, ICON.gem, '', 'site', true);
+    });
     h += '<div class="menu-caption" data-group="col" data-fa="مجموعه‌ها">Collections</div>';
     SM.collections.forEach(function(c){
       var n = SM.inCollection(c.id).length;
@@ -179,7 +180,9 @@
   function filter(){
     var q = norm(search.value.trim());
     items.forEach(function(i){
-      var hit = !q || norm(i.getAttribute('data-l-en')).indexOf(q) > -1 || norm(i.getAttribute('data-l-fa')).indexOf(q) > -1;
+      var match = norm(i.getAttribute('data-l-en')).indexOf(q) > -1 || norm(i.getAttribute('data-l-fa')).indexOf(q) > -1;
+      /* search-only items (individual designs) are hidden until you actually search */
+      var hit = q ? match : !i.hasAttribute('data-searchonly');
       i.hidden = !hit; i.style.display = hit ? '' : 'none';
     });
     caps.forEach(function(c){ var g = c.getAttribute('data-group'); c.hidden = !items.some(function(i){ return !i.hidden && i.getAttribute('data-group') === g; }); });
@@ -233,6 +236,7 @@
     });
     if (window.ResizeObserver) new ResizeObserver(updateTrack).observe(sb.querySelector('.navigation'));
     setCollapsed(load('shemirani-sidebar-collapsed') === 'true');
+    filter();   /* hide the search-only design items by default */
   }
 
   /* ---------- language ---------- */
