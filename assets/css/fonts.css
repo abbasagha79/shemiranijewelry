@@ -1,0 +1,11 @@
+/* SHEMIRANI — self-hosted fonts (no third-party requests).
+   Subset WOFF builds of the Google Fonts originals, made with tools/build_fonts.sh.
+   All four families are under the SIL Open Font License — see assets/fonts/OFL-*.txt. */
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url('../fonts/inter-var.woff') format('woff')}
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:400 900;font-display:swap;
+  src:url('../fonts/cinzel-var.woff') format('woff')}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:700;font-display:swap;
+  src:url('../fonts/chakrapetch-700.woff') format('woff')}
+@font-face{font-family:'Vazirmatn';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url('../fonts/vazirmatn-var.woff') format('woff')}

@@ -41,6 +41,14 @@ for f in HTML:
             fail(f"{f}: CSP missing directive: {need}")
     if "'unsafe-eval'" in csp:
         fail(f"{f}: CSP must not allow 'unsafe-eval'")
+    # everything (fonts included) is self-hosted: the CSP must not open up to any
+    # outside origin or blanket scheme
+    for tok in re.findall(r'https?:\S*', csp):
+        fail(f"{f}: CSP allows an outside source: {tok.rstrip(';')}")
+    for d in ('script-src', 'style-src', 'font-src', 'connect-src'):
+        dm = re.search(d + r'\s+([^;]+)', csp)
+        if dm and re.search(r'https?:', dm.group(1)):
+            fail(f"{f}: CSP {d} must stay 'self' only")
     if 'name="referrer"' not in s:
         fail(f"{f}: missing Referrer-Policy meta")
     if 'top!==self' not in s.replace(' ', ''):
@@ -71,7 +79,7 @@ for f in HTML + JS:
 
 # external RESOURCE hosts must be on the allow-list. Only script/style/font/image
 # loads count — canonical/alternate/og:url carry the site's own URL and are not loads.
-ALLOWED = ('fonts.googleapis.com', 'fonts.gstatic.com', 'shemiranijewelry.com')
+ALLOWED = ('shemiranijewelry.com',)   # fonts are self-hosted now — no third-party hosts at all
 RESOURCE_TAG = re.compile(
     r'<script\b[^>]+src=["\'](https?://[^"\']+)'
     r'|<link\b(?=[^>]*rel=["\'](?:stylesheet|preconnect|preload|icon|apple-touch-icon|manifest)["\'])[^>]+href=["\'](https?://[^"\']+)')
