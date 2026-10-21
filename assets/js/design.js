@@ -8,7 +8,7 @@
   if (!D){ main.innerHTML = '<div class="page-in"><p class="lead">This design was not found.</p></div>'; SM.start(); return; }
   var C = SM.collections.filter(function(c){ return c.id === D.collection; })[0] || SM.collections[0];
   var u = SM.url, e = SM.esc;
-  document.title = D.name + ' | SHEMIRANI Jewelry';
+  document.title = D.name + ' \u2014 18K Gold & Diamond Ring | SHEMIRANI';
 
   var arrow = '<svg class="arrow-i" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>';
   var tg = '<svg viewBox="0 0 24 24"><path d="M21.5 3.5 2.5 10.8l6.1 2.1 2.2 6.6 3-4 4.8 3.5z"/><path d="M8.6 12.9 21.5 3.5"/></svg>';
