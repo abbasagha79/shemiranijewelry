@@ -514,6 +514,39 @@ html[lang=fa] .wheel-hint{font-family:var(--fa);letter-spacing:0;font-size:12px}
   .wheel-index{display:none}
 }
 
+/* featured-design panel on the works wheel: fills the space beside the turning card */
+.wheel-feature{position:absolute;top:50%;left:6%;transform:translateY(-50%);max-width:min(32%,440px);z-index:3;
+  pointer-events:none;display:grid;gap:14px;justify-items:start;direction:ltr;text-align:left;opacity:0}
+.wf-eyebrow{font-family:var(--label);font-weight:700;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+html[lang=fa] .wf-eyebrow{font-family:var(--fa);letter-spacing:0;font-size:.85rem}
+.wheel-feature b{font-family:var(--display);font-weight:600;font-size:clamp(30px,3.8vw,56px);letter-spacing:.06em;line-height:1.02;color:#fff6ec}
+html[lang=fa] .wheel-feature b{font-family:var(--fa);letter-spacing:0}
+.wf-desc{margin:0;font-size:clamp(14px,1.05vw,17px);line-height:1.75;color:var(--body);max-width:36ch;font-weight:300}
+.wf-stats{display:flex;flex-wrap:wrap;gap:8px}
+.wf-stats span{font-family:var(--label);font-weight:700;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hi);
+  padding:6px 13px;border:1px solid rgba(227,189,116,.38);border-radius:999px;white-space:nowrap}
+html[lang=fa] .wf-stats span{font-family:var(--fa);letter-spacing:0;font-size:.82rem;direction:rtl}
+.wf-cta{margin-top:6px;display:inline-flex;align-items:center;gap:10px;pointer-events:none;text-decoration:none;
+  padding:13px 24px;border-radius:999px;color:#071438;background:linear-gradient(135deg,#f6d98f,#c99a45);
+  font-family:var(--label);font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;transition:filter .25s,transform .25s}
+html[lang=fa] .wf-cta{font-family:var(--fa);letter-spacing:0;font-size:.92rem}
+.wf-cta svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wf-cta:hover{filter:brightness(1.06);transform:translateY(-1px)}
+html[dir=rtl] .wf-cta svg{transform:scaleX(-1)}
+/* slide the drum off-centre so the card clears the panel; the whole composition then reads balanced */
+.wheel-feat .wheel-drum{left:60%}
+html[dir=rtl] .wheel-feature{left:auto;right:6%;direction:rtl;text-align:right;justify-items:end}
+html[dir=rtl] .wheel-feat .wheel-drum{left:40%}
+html[dir=rtl] .wheel-feat .wheel-index{right:auto;left:2.5%}
+@media (max-width: 920px){ .wheel-feature{max-width:34%} .wheel-feat .wheel-drum{left:63%} html[dir=rtl] .wheel-feat .wheel-drum{left:37%} }
+@media (max-width: 700px){
+  .wheel-feat .wheel-drum{left:50%!important}
+  .wheel-feature{left:0;right:0;top:auto;bottom:6%;transform:none;max-width:none;justify-items:center;text-align:center;direction:ltr;gap:10px}
+  .wf-desc,.wf-cta{display:none}
+  .wf-stats{justify-content:center}
+  .wheel-feature b{font-size:clamp(26px,7vw,40px)}
+}
+
 /* works wheel on the home page */
 .works{position:relative;background:linear-gradient(180deg,#071440,#050c2a 18%)}
 .works-head{max-width:1180px;margin:0 auto;padding-block:clamp(48px,7vw,90px) 0;

@@ -109,17 +109,25 @@
   function wheelText(){
     return {
       label: SM.lang === 'fa' ? 'طرح‌ها ۲۰۲۶' : 'Works \u201926',
-      action: SM.lang === 'fa' ? 'مشاهده' : 'View',
+      action: SM.lang === 'fa' ? 'مشاهده‌ی طرح' : 'View the design',
       hint: SM.lang === 'fa' ? 'برای چرخاندن اسکرول کنید یا بکشید' : 'Scroll or drag to turn',
-      items: LIST.map(function(d){ return { sub: SM.t(d.line) }; })
+      items: LIST.map(function(d){ var c = SM.collections.filter(function(x){ return x.id === d.collection; })[0] || {}; return { sub: SM.t(d.line), desc: SM.t(d.description), stats: statsOf(d), eyebrow: SM.lang === 'fa' ? (c.fa || '') : (c.en || '') }; })
     };
+  }
+  /* key stats for the featured-design panel: "18K gold" · "N diamonds" · carats */
+  function statsOf(d){
+    var out = SM.t(d.line).split('·').map(function(s){ return s.trim(); }).filter(Boolean);
+    var dg = (d.specs || []).filter(function(g){ return g.title && g.title.en === 'Diamonds'; })[0];
+    if (dg && dg.items[0]){ var m = /([\d.۰-۹٫,]+)\s*(ct|قیراط)/.exec(SM.t(dg.items[0])); if (m) out.push(m[1] + (SM.lang === 'fa' ? ' قیراط' : ' ct')); }
+    return out;
   }
   if (wheelEl && window.ShemiraniWheel){
     var wt = wheelText();
     wheel = window.ShemiraniWheel(wheelEl, LIST.map(function(d, i){
-      return { title: d.name, sub: wt.items[i].sub, href: SM.url('designs/' + d.id + '/index.html'),
+      return { title: d.name, sub: wt.items[i].sub, desc: wt.items[i].desc, stats: wt.items[i].stats, eyebrow: wt.items[i].eyebrow,
+        href: SM.url('designs/' + d.id + '/index.html'),
         video: d.spin ? SM.url(d.spin) : null, poster: d.spinPoster ? SM.url(d.spinPoster) : null, image: SM.url(d.cover) };
-    }), Object.assign({ beam: true }, wt));
+    }), Object.assign({ beam: true, feature: true }, wt));
     SM.onLang(function(){ wheel.update(wheelText()); });
   }
 

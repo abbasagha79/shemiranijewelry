@@ -35,7 +35,7 @@
     var arc = Math.min(360, count * 60);
     function ringDegFor(i, d){ return arc >= 360 ? d * (360 / count) : (i - (count - 1) / 2) * (arc / count) - (i - d) * (arc / count); }
 
-    section.classList.add('wheel'); if (H) section.classList.add('wheel-x');
+    section.classList.add('wheel'); if (H) section.classList.add('wheel-x'); if (opt.feature) section.classList.add('wheel-feat');
     section.innerHTML =
       '<div class="wheel-stage" tabindex="0" role="listbox" aria-label="' + esc(opt.label) + '">' +
         '<div class="wheel-drum">' + items.map(function(it, i){
@@ -49,7 +49,10 @@
         }).join('') + '</div>' +
       '</div>' +
       '<div class="wheel-label" aria-hidden="true">' + esc(opt.label) + '</div>' +
-      '<div class="wheel-title" aria-hidden="true"><b></b><small></small></div>' +
+      (opt.feature
+        ? '<div class="wheel-title wheel-feature"><span class="wf-eyebrow"></span><b></b><p class="wf-desc"></p><div class="wf-stats"></div>' +
+          '<a class="wf-cta"><span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>'
+        : '<div class="wheel-title" aria-hidden="true"><b></b><small></small></div>') +
       '<ol class="wheel-index">' + items.map(function(it, i){ return '<li><button type="button" data-i="' + i + '">' + esc(it.title) + '</button></li>'; }).join('') + '</ol>' +
       '<div class="wheel-hint" aria-hidden="true">' + esc(opt.hint || '') + '</div>';
 
@@ -58,6 +61,9 @@
     var faces = cards.map(function(c){ return c.firstElementChild; });
     var labelEl = section.querySelector('.wheel-label'), titleEl = section.querySelector('.wheel-title');
     var titleB = titleEl.querySelector('b'), titleS = titleEl.querySelector('small');
+    var wfEye = titleEl.querySelector('.wf-eyebrow'), wfDesc = titleEl.querySelector('.wf-desc'),
+        wfStats = titleEl.querySelector('.wf-stats'), wfCta = titleEl.querySelector('.wf-cta'),
+        wfCtaSpan = wfCta ? wfCta.querySelector('span') : null;
     var idxBtns = [].slice.call(section.querySelectorAll('.wheel-index button'));
     var videos = [].slice.call(section.querySelectorAll('video'));
     var hint = section.querySelector('.wheel-hint');
@@ -76,7 +82,8 @@
       stageEl.style.perspective = M.depth + 'px';
       cards.forEach(function(c){ c.style.width = cardW + 'px'; c.style.height = cardH + 'px'; c.style.marginLeft = (-cardW / 2) + 'px'; c.style.marginTop = (-cardH / 2) + 'px'; });
       labelEl.style.fontSize = Math.max(26, M.title) + 'px';
-      titleB.style.fontSize = Math.max(22, M.title * .62) + 'px'; titleS.style.fontSize = Math.max(11, M.title * .17) + 'px';
+      /* the feature panel sizes its own name via CSS; only the simple title is scaled here */
+      if (titleS){ titleB.style.fontSize = Math.max(22, M.title * .62) + 'px'; titleS.style.fontSize = Math.max(11, M.title * .17) + 'px'; }
       section.querySelector('.wheel-index').style.fontSize = Math.max(11, M.index) + 'px';
       dirty = true;
     }
@@ -99,8 +106,22 @@
       cards.forEach(function(c, i){ c.setAttribute('aria-selected', String(i === n)); });
       stageEl.setAttribute('aria-activedescendant', uid + '-' + n);
       idxBtns.forEach(function(b, i){ b.classList.toggle('on', i === n); });
-      var it = items[n]; titleB.textContent = it ? it.title : ''; titleS.textContent = it ? (it.sub || '') : '';
+      paintTitle(n);
       syncVideos();
+    }
+
+    /* fill the title / featured-design panel for item n */
+    function paintTitle(n){
+      var it = items[n] || {};
+      titleB.textContent = it.title || '';
+      if (titleS) titleS.textContent = it.sub || '';
+      if (!wfCta) return;                         /* not a feature wheel */
+      if (wfEye) wfEye.textContent = it.eyebrow || '';
+      if (wfDesc) wfDesc.textContent = it.desc || '';
+      if (wfStats) wfStats.innerHTML = (it.stats || []).map(function(s){ return '<span>' + esc(s) + '</span>'; }).join('');
+      if (wfCtaSpan) wfCtaSpan.textContent = opt.action || 'View';
+      if (it.href){ wfCta.setAttribute('href', it.href); wfCta.removeAttribute('aria-hidden'); }
+      else { wfCta.removeAttribute('href'); }
     }
 
     function draw(){
@@ -121,6 +142,7 @@
       }
       labelEl.style.opacity = String(1 - m);
       titleEl.style.opacity = String(m);
+      if (wfCta) wfCta.style.pointerEvents = m > 0.9 ? 'auto' : 'none';
       if (hint) hint.style.opacity = String(Math.max(0, 1 - m * 3));
       setActive(clamp(Math.round(pos), 0, last));
     }
@@ -194,10 +216,13 @@
       if (o.items) o.items.forEach(function(it, i){
         if (!items[i]) return;
         if (it.sub != null) items[i].sub = it.sub;
+        if (it.desc != null) items[i].desc = it.desc;
+        if (it.stats != null) items[i].stats = it.stats;
+        if (it.eyebrow != null) items[i].eyebrow = it.eyebrow;
         if (it.title != null){ items[i].title = it.title; if (idxBtns[i]) idxBtns[i].textContent = it.title; cards[i].setAttribute('aria-label', it.title); }
         if (it.html != null){ var f = faces[i], keep = f.querySelector('.wheel-act'), ring = f.querySelector('.beam-ring'); f.innerHTML = it.html; if (keep) f.appendChild(keep); if (ring) f.appendChild(ring); }
       });
-      if (o.action != null) [].forEach.call(section.querySelectorAll('.wheel-act span'), function(sp){ sp.textContent = o.action; });
+      if (o.action != null){ opt.action = o.action; [].forEach.call(section.querySelectorAll('.wheel-act span'), function(sp){ sp.textContent = o.action; }); }
       var a = active; active = -1; setActive(a < 0 ? 0 : a);
     }
     return { to: to, update: update };
