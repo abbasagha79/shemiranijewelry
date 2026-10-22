@@ -7,6 +7,7 @@
    page folder designs/<id>/), put its photos in assets/img/<id>/, its film (if
    any) in assets/video/<id>-360.mp4, convert its STL files with
    tools/convert_model.py, add it to MODELS at the top of assets/js/ring3d.js,
+   make its corridor cards with tools/make_stream.py <id> (the "stream" line),
    and copy the folder designs/aurelis/ to designs/<id>/ (change data-design).
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
@@ -28,6 +29,7 @@ window.SHEMIRANI_DESIGNS = [
     spinPoster: 'assets/img/royale/spin-poster.jpg',
     cover: 'assets/img/royale/render-01.jpg',
     thumb: 'assets/img/royale/render-01-sm.jpg',
+    stream: ['assets/img/royale/stream-a.jpg', 'assets/img/royale/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
     photos: [
       'assets/img/royale/render-01.jpg',
       'assets/img/royale/matrix-01.jpg', 'assets/img/royale/matrix-02.jpg',
@@ -82,6 +84,7 @@ window.SHEMIRANI_DESIGNS = [
     spinPoster: 'assets/img/monarch/spin-poster.jpg',
     cover: 'assets/img/monarch/render-01.jpg',
     thumb: 'assets/img/monarch/render-01-sm.jpg',
+    stream: ['assets/img/monarch/stream-a.jpg', 'assets/img/monarch/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
     photos: [
       'assets/img/monarch/render-01.jpg',
       'assets/img/monarch/matrix-01.jpg', 'assets/img/monarch/matrix-02.jpg',
@@ -137,6 +140,7 @@ window.SHEMIRANI_DESIGNS = [
     spinPoster: 'assets/img/valoria/spin-poster.jpg',
     cover: 'assets/img/valoria/render-01.jpg',
     thumb: 'assets/img/valoria/render-01-sm.jpg',
+    stream: ['assets/img/valoria/stream-a.jpg', 'assets/img/valoria/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
     photos: [
       'assets/img/valoria/render-01.jpg',
       'assets/img/valoria/matrix-01.jpg', 'assets/img/valoria/matrix-02.jpg',
@@ -193,6 +197,7 @@ window.SHEMIRANI_DESIGNS = [
     spinPoster: 'assets/img/sovereign/spin-poster.jpg',
     cover: 'assets/img/sovereign/render-01.jpg',
     thumb: 'assets/img/sovereign/render-01-sm.jpg',
+    stream: ['assets/img/sovereign/stream-a.jpg', 'assets/img/sovereign/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
     photos: [
       'assets/img/sovereign/render-01.jpg',
       'assets/img/sovereign/matrix-01.jpg', 'assets/img/sovereign/matrix-02.jpg',
@@ -248,6 +253,7 @@ window.SHEMIRANI_DESIGNS = [
     spinPoster: 'assets/img/regalia/spin-poster.jpg',
     cover: 'assets/img/regalia/render-01.jpg',
     thumb: 'assets/img/regalia/render-01-sm.jpg',
+    stream: ['assets/img/regalia/stream-a.jpg', 'assets/img/regalia/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
     photos: [
       'assets/img/regalia/render-01.jpg',
       'assets/img/regalia/matrix-01.jpg', 'assets/img/regalia/matrix-02.jpg', 'assets/img/regalia/matrix-03.jpg',
@@ -301,6 +307,7 @@ window.SHEMIRANI_DESIGNS = [
     spinPoster: 'assets/img/imperia/spin-poster.jpg',
     cover: 'assets/img/imperia/render-01.jpg',
     thumb: 'assets/img/imperia/render-01-sm.jpg',
+    stream: ['assets/img/imperia/stream-a.jpg', 'assets/img/imperia/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
     photos: [
       'assets/img/imperia/render-01.jpg',
       'assets/img/imperia/matrix-01.jpg', 'assets/img/imperia/matrix-02.jpg', 'assets/img/imperia/matrix-03.jpg',
@@ -355,6 +362,7 @@ window.SHEMIRANI_DESIGNS = [
     spinPoster: 'assets/img/aurelis/spin-poster.jpg',
     cover: 'assets/img/aurelis/render-01.jpg',
     thumb: 'assets/img/aurelis/render-01-sm.jpg',
+    stream: ['assets/img/aurelis/stream-a.jpg', 'assets/img/aurelis/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
     photos: [
       'assets/img/aurelis/render-01.jpg',
       'assets/img/aurelis/matrix-01.jpg', 'assets/img/aurelis/matrix-02.jpg', 'assets/img/aurelis/matrix-03.jpg',

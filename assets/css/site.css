@@ -562,7 +562,6 @@ html[dir=rtl] .wheel-feat .wheel-index{right:auto;left:2.5%}
 .works-head{max-width:1180px;margin:0 auto;padding-block:clamp(48px,7vw,90px) 0;
   padding-left:max(18px, 6vw, env(safe-area-inset-left, 0px));padding-right:max(18px, 6vw, env(safe-area-inset-right, 0px))}
 .works-head .rowhead{margin-bottom:0}
-#col-wheel{margin-top:clamp(18px,3vw,30px);border-block:1px solid rgba(227,189,116,.14)}
 .cta .beam-ring{clip-path:polygon(calc(3*var(--t)) 0, calc(100% - 10*var(--t)) 0, 100% calc(10*var(--t)), 100% calc(100% - 3*var(--t)), calc(100% - 3*var(--t)) 100%, calc(10*var(--t)) 100%, 0 calc(100% - 10*var(--t)), 0 calc(3*var(--t)))}
 
 /* ================= SIDEWAYS WHEEL (collections) ================= */
@@ -636,3 +635,54 @@ a.stk:hover{box-shadow:inset 0 0 0 1px var(--gold-hi),0 0 26px rgba(246,217,143,
   .stk *,.stk::after{animation:none!important}
   .about.rv .ab-row,.about.rv .ab-row .stk{opacity:1;transform:none;transition:none}
 }
+
+/* ---------- Collections: the corridor of gold-framed photos (assets/js/corridor.js) ---------- */
+.corr{position:relative;overflow:hidden;container-type:inline-size;isolation:isolate;
+  height:clamp(600px, 86vh, 820px);
+  background:radial-gradient(60% 45% at 50% 56%, #0b1d5a 0%, #061033 55%, #040a26 100%)}
+.corr-view{position:absolute;inset:0;pointer-events:none;z-index:0}
+.corr-stage{position:absolute;inset:0;transform-style:preserve-3d}
+.corr-card{position:absolute;display:block;box-sizing:border-box;padding:.42cqw;border-radius:.55cqw;
+  background:linear-gradient(155deg,#fbe6ad 0%,#c99a4b 30%,#f2d18a 52%,#8f6a2e 78%,#e9c47c 100%);
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;will-change:transform}
+.corr-in{display:block;width:100%;height:100%;overflow:hidden;border-radius:.3cqw;background:#08164a}
+.corr-in img{display:block;width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
+.corr-paused .corr-card{animation-play-state:paused!important}
+/* depth: the corridor's throat sinks into the night, so cards are born out of darkness */
+.corr-glow{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(15cqw 10cqw at 50% 56%, rgba(4,10,38,.92), rgba(4,10,38,0) 100%),
+    linear-gradient(180deg, #040a26 0%, rgba(4,10,38,.82) 17%, rgba(4,10,38,0) 36%, rgba(4,10,38,0) 70%, rgba(5,12,42,.86) 86%, #050c2a 100%)}
+.corr-top,.corr-chips{position:absolute;left:0;right:0;z-index:2;text-align:center;padding-inline:20px}
+.corr-top{top:clamp(44px,7vw,84px)}
+.corr-top .eyebrow-s{letter-spacing:.42em}
+html[lang=fa] .corr-top .eyebrow-s{letter-spacing:0;font-family:var(--fa);font-size:.95rem}
+.corr-top h2{margin:6px 0 0;font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,4.4vw,3.4rem);line-height:1.2;letter-spacing:.08em;color:var(--gold-hi);
+  text-shadow:0 2px 24px rgba(4,10,38,.9)}
+html[lang=fa] .corr-top h2{font-family:var(--fa);font-weight:700;letter-spacing:0}
+.corr-chips{bottom:clamp(30px,5vw,56px);display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:1040px;margin:0 auto}
+.corr-chip{--c:10px;position:relative;display:grid;gap:3px;min-width:132px;padding:13px 20px 12px;text-decoration:none;text-align:center;
+  background:linear-gradient(160deg,rgba(246,217,143,.75),rgba(227,189,116,.25) 45%,rgba(227,189,116,.55));
+  clip-path:polygon(0 0,calc(100% - var(--c)) 0,100% var(--c),100% 100%,var(--c) 100%,0 calc(100% - var(--c)));
+  transition:transform .35s var(--e-soft),background .35s ease}
+.corr-chip::before{content:"";position:absolute;inset:1px;z-index:-1;background:rgba(5,12,42,.86);
+  clip-path:polygon(0 0,calc(100% - var(--c) + .4px) 0,100% calc(var(--c) - .4px),100% 100%,calc(var(--c) - .4px) 100%,0 calc(100% - var(--c) + .4px))}
+.corr-chip{isolation:isolate}
+.corr-chip b{font-weight:500;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-hi)}
+.corr-chip small{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--body);opacity:.7}
+.corr-chip.live small{color:#fff6e0;opacity:.95}
+html[lang=fa] .corr-chip b{font-family:var(--fa);font-size:1rem;letter-spacing:0;text-transform:none}
+html[lang=fa] .corr-chip small{font-family:var(--fa);font-size:.8rem;letter-spacing:0}
+.corr-chip:hover,.corr-chip:focus-visible{transform:translateY(-3px);background:linear-gradient(160deg,#fbe6ad,#c99a4b 50%,#f2d18a)}
+.corr-chip:focus-visible{outline:none}
+@media (max-width:700px){
+  .corr{height:max(620px, 92svh)}
+  .corr-glow{background:radial-gradient(26cqw 18cqw at 50% 50%, rgba(4,10,38,.92), rgba(4,10,38,0) 100%),linear-gradient(180deg,#040a26 0%,rgba(4,10,38,.82) 16%,rgba(4,10,38,0) 30%,rgba(4,10,38,0) 68%,rgba(5,12,42,.88) 80%,#050c2a 100%)}
+  .corr-chips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding-inline:14px}
+  .corr-chip{min-width:0;padding:10px 6px 9px;--c:8px}
+  .corr-chip b{font-size:.66rem;letter-spacing:.14em}
+  .corr-chip small{font-size:.6rem;letter-spacing:.08em}
+  html[lang=fa] .corr-chip b{font-size:.9rem}
+  html[lang=fa] .corr-chip small{font-size:.72rem}
+}
+@media (prefers-reduced-motion:reduce){ .corr-card{animation-play-state:paused!important} }
