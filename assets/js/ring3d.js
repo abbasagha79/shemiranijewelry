@@ -15,7 +15,8 @@
     aurelis: { metal: 'models/aurelis-metal.bin', gems: 'models/aurelis-gems.json' },
     imperia: { metal: 'models/imperia-metal.bin', gems: 'models/imperia-gems.json' },
     regalia:  { metal: 'models/regalia-metal.bin',  gems: 'models/regalia-gems.json' },
-    sovereign: { metal: 'models/sovereign-metal.bin', gems: 'models/sovereign-gems.json' }
+    sovereign: { metal: 'models/sovereign-metal.bin', gems: 'models/sovereign-gems.json' },
+    valoria:   { metal: 'models/valoria-metal.bin',   gems: 'models/valoria-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */

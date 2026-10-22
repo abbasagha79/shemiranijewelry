@@ -21,6 +21,9 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "valoria", "name": "VALORIA", "collection": "rings",
+     "desc": "VALORIA is a solitaire ring in 18K gold with 25 diamonds (0.97 ct) — a 6 mm, 0.81 ct centre diamond in a four-prong head, with pavé clusters on the shoulders and triangular pavé insets along the band.",
+     "diamonds": "25 round diamonds, 0.97 ct", "weight18k": "3.98 g"},
     {"id": "sovereign", "name": "SOVEREIGN", "collection": "bangles",
      "desc": "SOVEREIGN is an 18K gold hinged bangle with 37 diamonds (about 0.20 ct), pavé-set in a long row and a short block — a statement of confidence, independence and power.",
      "diamonds": "37 round diamonds, 0.20 ct", "weight18k": "20.40 g"},
