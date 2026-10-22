@@ -11,6 +11,61 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'monarch',
+    name: 'MONARCH',
+    added: '2026-10-22T21:41',
+    collection: 'rings',
+    kind: { en: 'Wide band ring · 18K gold and diamonds', fa: 'انگشتر رینگی پهن · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · 55 diamonds', fa: 'طلای ۱۸ عیار · ۵۵ الماس' },
+    description: {
+      en: 'A powerful, noble presence, with a character that outlasts time.',
+      fa: 'جلوه‌ای قدرتمند و اصیل با شخصیتی فراتر از زمان.'
+    },
+    model: 'monarch',
+    film: 'assets/video/monarch-360.mp4',
+    poster: 'assets/img/monarch/film-poster.jpg',
+    spin: 'assets/video/monarch-spin.mp4',
+    spinPoster: 'assets/img/monarch/spin-poster.jpg',
+    cover: 'assets/img/monarch/render-01.jpg',
+    thumb: 'assets/img/monarch/render-01-sm.jpg',
+    photos: [
+      'assets/img/monarch/render-01.jpg',
+      'assets/img/monarch/matrix-01.jpg', 'assets/img/monarch/matrix-02.jpg',
+      'assets/img/monarch/matrix-03.jpg', 'assets/img/monarch/matrix-04.jpg',
+      'assets/img/monarch/matrix-05.jpg', 'assets/img/monarch/matrix-06.jpg',
+      'assets/img/monarch/matrix-07.jpg', 'assets/img/monarch/matrix-08.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 4.68 g', fa: 'طلای زرد ۱۸ عیار: ۴٫۶۸ گرم' },
+        { en: '18K white gold: 4.46 g', fa: 'طلای سفید ۱۸ عیار: ۴٫۴۶ گرم' },
+        { en: '18K rose gold: 4.68 g', fa: 'طلای رزگلد ۱۸ عیار: ۴٫۶۸ گرم' },
+        { en: '14K yellow gold: 3.92 g', fa: 'طلای زرد ۱۴ عیار: ۳٫۹۲ گرم' },
+        { en: '22K yellow gold: 5.44 g', fa: 'طلای زرد ۲۲ عیار: ۵٫۴۴ گرم' },
+        { en: 'Silver 925: 3.15 g', fa: 'نقره‌ی ۹۲۵: ۳٫۱۵ گرم' },
+        { en: 'Platinum: 6.11 g', fa: 'پلاتین: ۶٫۱۱ گرم' }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: '55 round diamonds, 0.38 ct in total', fa: '۵۵ الماس گرد، در مجموع ۰٫۳۸ قیراط' },
+        { en: '7 stones, 1.34 mm: 0.07 ct, each in the centre of a gold disc', fa: '۷ نگین ۱٫۳۴ میلی‌متری: ۰٫۰۷ قیراط، هر کدام در مرکز یک دیسک طلایی' },
+        { en: '48 stones, 1.2 mm: 0.31 ct, in pavé rows along both edges', fa: '۴۸ نگین ۱٫۲ میلی‌متری: ۰٫۳۱ قیراط، در ردیف‌های پاوه روی هر دو لبه' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Height, base to top: 21.7 mm', fa: 'ارتفاع از پایین تا بالا: ۲۱٫۷ میلی‌متر' },
+        { en: 'Width across: 22.8 mm', fa: 'عرض کلی: ۲۲٫۸ میلی‌متر' },
+        { en: 'Band width along the finger: 8.5 mm', fa: 'پهنای رینگ در امتداد انگشت: ۸٫۵ میلی‌متر' },
+        { en: 'Inner diameter: 18.1 mm', fa: 'قطر داخلی: ۱۸٫۱ میلی‌متر' },
+        { en: 'Band at the base: 1.2 mm', fa: 'ضخامت حلقه در پایین: ۱٫۲ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'A row of overlapping oval gold discs, each set with a diamond', fa: 'ردیفی از دیسک‌های بیضی طلایی روی هم، هر کدام با یک الماس' },
+        { en: 'Two pavé rows framing the discs on both edges', fa: 'دو ردیف پاوه که دیسک‌ها را از دو لبه قاب می‌گیرند' },
+        { en: 'Open, split shank at the back', fa: 'بدنه‌ی باز و چندشاخه در پشت انگشتر' }
+      ]}
+    ],
+    note: { en: 'Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.', fa: 'وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است.' }
+  },
+  {
     id: 'valoria',
     name: 'VALORIA',
     added: '2026-10-22T21:25',
