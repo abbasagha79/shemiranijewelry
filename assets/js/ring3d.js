@@ -17,7 +17,8 @@
     regalia:  { metal: 'models/regalia-metal.bin',  gems: 'models/regalia-gems.json' },
     sovereign: { metal: 'models/sovereign-metal.bin', gems: 'models/sovereign-gems.json' },
     valoria:   { metal: 'models/valoria-metal.bin',   gems: 'models/valoria-gems.json' },
-    monarch:   { metal: 'models/monarch-metal.bin',   gems: 'models/monarch-gems.json' }
+    monarch:   { metal: 'models/monarch-metal.bin',   gems: 'models/monarch-gems.json' },
+    royale:    { metal: 'models/royale-metal.bin',    gems: 'models/royale-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */

@@ -11,6 +11,60 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'royale',
+    name: 'ROYALE',
+    added: '2026-10-22T22:20',
+    collection: 'rings',
+    kind: { en: 'Solitaire ring · 18K gold and diamond', fa: 'انگشتر تک‌نگین · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · solitaire diamond', fa: 'طلای ۱۸ عیار · تک‌نگین الماس' },
+    description: {
+      en: 'A blend of elegance, brilliance and beauty, with an aristocratic signature.',
+      fa: 'ترکیبی از ظرافت، درخشش و زیبایی با امضای اشرافی.'
+    },
+    model: 'royale',
+    film: 'assets/video/royale-360.mp4',
+    poster: 'assets/img/royale/film-poster.jpg',
+    spin: 'assets/video/royale-spin.mp4',
+    spinPoster: 'assets/img/royale/spin-poster.jpg',
+    cover: 'assets/img/royale/render-01.jpg',
+    thumb: 'assets/img/royale/render-01-sm.jpg',
+    photos: [
+      'assets/img/royale/render-01.jpg',
+      'assets/img/royale/matrix-01.jpg', 'assets/img/royale/matrix-02.jpg',
+      'assets/img/royale/matrix-03.jpg', 'assets/img/royale/matrix-04.jpg',
+      'assets/img/royale/matrix-05.jpg', 'assets/img/royale/matrix-06.jpg',
+      'assets/img/royale/matrix-07.jpg', 'assets/img/royale/matrix-08.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 4.77 g', fa: 'طلای زرد ۱۸ عیار: ۴٫۷۷ گرم' },
+        { en: '18K white gold: 4.54 g', fa: 'طلای سفید ۱۸ عیار: ۴٫۵۴ گرم' },
+        { en: '18K rose gold: 4.77 g', fa: 'طلای رزگلد ۱۸ عیار: ۴٫۷۷ گرم' },
+        { en: '14K yellow gold: 3.99 g', fa: 'طلای زرد ۱۴ عیار: ۳٫۹۹ گرم' },
+        { en: '22K yellow gold: 5.54 g', fa: 'طلای زرد ۲۲ عیار: ۵٫۵۴ گرم' },
+        { en: 'Silver 925: 3.21 g', fa: 'نقره‌ی ۹۲۵: ۳٫۲۱ گرم' },
+        { en: 'Platinum: 6.22 g', fa: 'پلاتین: ۶٫۲۲ گرم' }
+      ]},
+      { title: { en: 'Diamond', fa: 'الماس' }, items: [
+        { en: '1 round diamond, 5.8 mm: 0.73 ct', fa: '۱ الماس گرد ۵٫۸ میلی‌متری: ۰٫۷۳ قیراط' },
+        { en: 'Held in a six-prong head', fa: 'نشانده در سرِ شش‌چنگ' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Height, base to top: 26.0 mm', fa: 'ارتفاع از پایین تا بالا: ۲۶٫۰ میلی‌متر' },
+        { en: 'Width across: 21.5 mm', fa: 'عرض کلی: ۲۱٫۵ میلی‌متر' },
+        { en: 'Top, along the finger: 9.1 mm', fa: 'بالای انگشتر در امتداد انگشت: ۹٫۱ میلی‌متر' },
+        { en: 'Inner diameter: 17.9 mm', fa: 'قطر داخلی: ۱۷٫۹ میلی‌متر' },
+        { en: 'Band at the base: 1.3 mm', fa: 'ضخامت حلقه در پایین: ۱٫۳ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'Six-prong head on a stepped, angular seat', fa: 'سرِ شش‌چنگ روی نشیمنی پله‌دار و زاویه‌دار' },
+        { en: 'One shoulder sweeps around the head in a single curve', fa: 'یکی از شانه‌ها در یک قوس پیوسته دور سرِ نگین می‌چرخد' },
+        { en: 'Faceted, asymmetric shoulders', fa: 'شانه‌های تراش‌خورده و نامتقارن' }
+      ]}
+    ],
+    note: { en: 'Weights and stone size come from the design file. Dimensions are measured on the 3D model.', fa: 'وزن‌ها و اندازه‌ی نگین از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است.' }
+  },
+  {
     id: 'monarch',
     name: 'MONARCH',
     added: '2026-10-22T21:41',
