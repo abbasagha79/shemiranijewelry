@@ -12,6 +12,61 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'sovrana',
+    name: 'SOVRANA',
+    added: '2026-10-23T00:06',
+    collection: 'rings',
+    kind: { en: "Men's ring · 18K gold and diamonds", fa: 'انگشتر مردانه · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · 17 diamonds', fa: 'طلای ۱۸ عیار · ۱۷ الماس' },
+    description: {
+      en: 'A dignified design that turns beauty into a sign of power.',
+      fa: 'طراحی‌ای باوقار که زیبایی را به نشانه‌ای از قدرت تبدیل می‌کند.'
+    },
+    model: 'sovrana',
+    film: 'assets/video/sovrana-360.mp4',
+    poster: 'assets/img/sovrana/film-poster.jpg',
+    spin: 'assets/video/sovrana-spin.mp4',
+    spinPoster: 'assets/img/sovrana/spin-poster.jpg',
+    cover: 'assets/img/sovrana/render-01.jpg',
+    thumb: 'assets/img/sovrana/render-01-sm.jpg',
+    stream: ['assets/img/sovrana/stream-a.jpg', 'assets/img/sovrana/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/sovrana/render-01.jpg',
+      'assets/img/sovrana/matrix-01.jpg', 'assets/img/sovrana/matrix-02.jpg',
+      'assets/img/sovrana/matrix-03.jpg', 'assets/img/sovrana/matrix-04.jpg',
+      'assets/img/sovrana/matrix-05.jpg', 'assets/img/sovrana/matrix-06.jpg',
+      'assets/img/sovrana/matrix-07.jpg', 'assets/img/sovrana/matrix-08.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 4.26 g', fa: 'طلای زرد ۱۸ عیار: ۴٫۲۶ گرم' },
+        { en: '18K white gold: 4.06 g', fa: 'طلای سفید ۱۸ عیار: ۴٫۰۶ گرم' },
+        { en: '18K rose gold: 4.26 g', fa: 'طلای رزگلد ۱۸ عیار: ۴٫۲۶ گرم' },
+        { en: '14K yellow gold: 3.56 g', fa: 'طلای زرد ۱۴ عیار: ۳٫۵۶ گرم' },
+        { en: '22K yellow gold: 4.95 g', fa: 'طلای زرد ۲۲ عیار: ۴٫۹۵ گرم' },
+        { en: 'Silver 925: 2.87 g', fa: 'نقره‌ی ۹۲۵: ۲٫۸۷ گرم' },
+        { en: 'Platinum: 5.56 g', fa: 'پلاتین: ۵٫۵۶ گرم' }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: '17 round diamonds, 0.14 ct in total', fa: '۱۷ الماس گرد، در مجموع ۰٫۱۴ قیراط' },
+        { en: 'All 17 stones 1.3 mm, prong-set in three rows of 6, 5 and 6', fa: 'هر ۱۷ نگین ۱٫۳ میلی‌متری، چنگی، در سه ردیف ۶، ۵ و ۶ تایی' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Height, base to top: 23.4 mm', fa: 'ارتفاع از پایین تا بالا: ۲۳٫۴ میلی‌متر' },
+        { en: 'Width across: 21.8 mm', fa: 'عرض کلی: ۲۱٫۸ میلی‌متر' },
+        { en: 'Top width along the finger: 7.6 mm', fa: 'پهنای بالای انگشتر در امتداد انگشت: ۷٫۶ میلی‌متر' },
+        { en: 'Inner diameter: 19.0 mm', fa: 'قطر داخلی: ۱۹٫۰ میلی‌متر' },
+        { en: 'Band at the base: 1.0 mm', fa: 'ضخامت حلقه در پایین: ۱٫۰ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'Three rows of diamonds on a flat rectangular top, the middle row raised', fa: 'سه ردیف الماس روی سطح تخت و مستطیلی بالا، با ردیف وسطِ برجسته‌تر' },
+        { en: 'Tapered shoulders, each cut through with three open slots', fa: 'شانه‌های باریک‌شونده، هر کدام با سه شیار باز' },
+        { en: 'Clean, polished band that narrows toward the base', fa: 'حلقه‌ی صاف و براق که به سمت پایین باریک می‌شود' }
+      ]}
+    ],
+    note: { en: 'Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.', fa: 'وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است.' }
+  },
+  {
     id: 'royale',
     name: 'ROYALE',
     added: '2026-10-22T22:20',
