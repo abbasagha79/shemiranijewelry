@@ -139,6 +139,18 @@
     SM.onLang(function(){ wheel.update(wheelText()); });
   }
 
+
+  /* ---------- About: rows rise in with their stickers; stickers only animate while on screen ---------- */
+  var about = document.querySelector('.about');
+  if (about){
+    if (!RM && 'IntersectionObserver' in window){
+      about.classList.add('rv');
+      about._io = new IntersectionObserver(function(es){ var v = es[0].isIntersecting;
+        about.classList.toggle('live', v); if (v) about.classList.add('in'); }, { threshold: .15 });
+      about._io.observe(about);
+    } else about.classList.add('in', 'live');
+  }
+
   /* the hero button lights its edge on hover */
   SM.beam(cta, { reveal: 'hover', showOnTouch: true, length: 22, thickness: 1, speed: 3.2 });
 
