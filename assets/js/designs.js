@@ -11,6 +11,62 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'valoria',
+    name: 'VALORIA',
+    added: '2026-10-22T21:25',
+    collection: 'rings',
+    kind: { en: 'Solitaire ring · 18K gold and diamonds', fa: 'انگشتر تک‌نگین · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · 25 diamonds', fa: 'طلای ۱۸ عیار · ۲۵ الماس' },
+    description: {
+      en: 'For those who find true value in the details, and in a design that stands apart.',
+      fa: 'برای کسانی که ارزش واقعی را در جزئیات و طراحی متمایز می‌بینند.'
+    },
+    model: 'valoria',
+    film: 'assets/video/valoria-360.mp4',
+    poster: 'assets/img/valoria/film-poster.jpg',
+    spin: 'assets/video/valoria-spin.mp4',
+    spinPoster: 'assets/img/valoria/spin-poster.jpg',
+    cover: 'assets/img/valoria/render-01.jpg',
+    thumb: 'assets/img/valoria/render-01-sm.jpg',
+    photos: [
+      'assets/img/valoria/render-01.jpg',
+      'assets/img/valoria/matrix-01.jpg', 'assets/img/valoria/matrix-02.jpg',
+      'assets/img/valoria/matrix-03.jpg', 'assets/img/valoria/matrix-04.jpg',
+      'assets/img/valoria/matrix-05.jpg', 'assets/img/valoria/matrix-06.jpg',
+      'assets/img/valoria/matrix-07.jpg', 'assets/img/valoria/matrix-08.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 3.98 g', fa: 'طلای زرد ۱۸ عیار: ۳٫۹۸ گرم' },
+        { en: '18K white gold: 3.79 g', fa: 'طلای سفید ۱۸ عیار: ۳٫۷۹ گرم' },
+        { en: '18K rose gold: 3.98 g', fa: 'طلای رزگلد ۱۸ عیار: ۳٫۹۸ گرم' },
+        { en: '14K yellow gold: 3.33 g', fa: 'طلای زرد ۱۴ عیار: ۳٫۳۳ گرم' },
+        { en: '22K yellow gold: 4.62 g', fa: 'طلای زرد ۲۲ عیار: ۴٫۶۲ گرم' },
+        { en: 'Silver 925: 2.68 g', fa: 'نقره‌ی ۹۲۵: ۲٫۶۸ گرم' },
+        { en: 'Platinum: 5.20 g', fa: 'پلاتین: ۵٫۲۰ گرم' }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: '25 round diamonds, 0.97 ct in total', fa: '۲۵ الماس گرد، در مجموع ۰٫۹۷ قیراط' },
+        { en: '1 centre stone, 6.0 mm: 0.81 ct, in a four-prong head', fa: '۱ نگین مرکزی ۶٫۰ میلی‌متری: ۰٫۸۱ قیراط، در سرِ چهارچنگ' },
+        { en: '8 stones, 1.3 mm: 0.07 ct · 8 stones, 1.2 mm: 0.05 ct', fa: '۸ نگین ۱٫۳ میلی‌متری: ۰٫۰۷ قیراط · ۸ نگین ۱٫۲ میلی‌متری: ۰٫۰۵ قیراط' },
+        { en: '8 stones, 1.1 mm: 0.04 ct', fa: '۸ نگین ۱٫۱ میلی‌متری: ۰٫۰۴ قیراط' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Height, base to top: 27.0 mm', fa: 'ارتفاع از پایین تا بالا: ۲۷٫۰ میلی‌متر' },
+        { en: 'Width across the shoulders: 21.3 mm', fa: 'عرض از شانه تا شانه: ۲۱٫۳ میلی‌متر' },
+        { en: 'Top, along the finger: 8.8 mm', fa: 'بالای انگشتر در امتداد انگشت: ۸٫۸ میلی‌متر' },
+        { en: 'Inner diameter: 17.5 mm', fa: 'قطر داخلی: ۱۷٫۵ میلی‌متر' },
+        { en: 'Band at the base: 2.4 mm', fa: 'ضخامت حلقه در پایین: ۲٫۴ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'Raised four-prong head holding the 6 mm centre diamond', fa: 'سرِ چهارچنگِ برجسته که الماس مرکزی ۶ میلی‌متری را نگه می‌دارد' },
+        { en: 'Pavé clusters on both shoulders and a row beneath the head', fa: 'خوشه‌های پاوه روی هر دو شانه و یک ردیف زیر سرِ نگین' },
+        { en: 'Triangular pavé insets on both sides of the band', fa: 'نشیمن‌های مثلثی پاوه در دو طرف حلقه' }
+      ]}
+    ],
+    note: { en: 'Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.', fa: 'وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است.' }
+  },
+  {
     id: 'sovereign',
     name: 'SOVEREIGN',
     added: '2026-10-21T13:45',
