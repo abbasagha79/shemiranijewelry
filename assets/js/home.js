@@ -32,6 +32,14 @@
     cta.setAttribute('href', SM.url('designs/' + d.id + '/index.html'));
     var bgl = document.querySelector('.bg'); if (bgl) bgl.setAttribute('aria-label', d.name + ', ' + SM.t(d.kind));
     [].forEach.call(ticker.querySelectorAll('button'), function(b, i){ b.classList.toggle('on', i === idx); b.setAttribute('aria-current', i === idx ? 'true' : 'false'); });
+    /* when the design names don't fit (phones, or as the collection grows) the strip scrolls
+       sideways; keep the current one in the middle. scrollBy with a measured delta works in
+       RTL too and never moves the page itself. */
+    var on = ticker.querySelector('button.on');
+    if (on && ticker.scrollWidth > ticker.clientWidth + 1){
+      var tr = ticker.getBoundingClientRect(), br = on.getBoundingClientRect();
+      ticker.scrollBy({ left: (br.left + br.width / 2) - (tr.left + tr.width / 2), behavior: RM ? 'auto' : 'smooth' });
+    }
   }
   SM.onLang(fill);
 
@@ -117,7 +125,7 @@
   /* key stats for the featured-design panel: "18K gold" · "N diamonds" · carats */
   function statsOf(d){
     var out = SM.t(d.line).split('·').map(function(s){ return s.trim(); }).filter(Boolean);
-    var dg = (d.specs || []).filter(function(g){ return g.title && g.title.en === 'Diamonds'; })[0];
+    var dg = (d.specs || []).filter(function(g){ return g.title && /^Diamond/.test(g.title.en); })[0];
     if (dg && dg.items[0]){ var m = /([\d.۰-۹٫,]+)\s*(ct|قیراط)/.exec(SM.t(dg.items[0])); if (m) out.push(m[1] + (SM.lang === 'fa' ? ' قیراط' : ' ct')); }
     return out;
   }

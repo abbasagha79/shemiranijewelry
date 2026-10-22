@@ -64,6 +64,9 @@ html[lang=fa] .t{top:0}
 .logo{position:absolute;inset-inline-start:calc(24*var(--t));top:calc(22*var(--t));
       width:calc(163*var(--t));height:calc(19*var(--t));display:block;text-decoration:none;direction:ltr}
 .logo svg{width:100%;height:100%;display:block;fill:#fff;overflow:visible}
+/* the wordmark keeps direction:ltr for its letters, which also made inset-inline-start resolve to
+   the LEFT in Farsi — on top of the menu pill, which correctly moves left. Pin it right in RTL. */
+html[dir=rtl] .logo{left:auto;right:calc(24*var(--t))}
 
 .masthead{position:absolute;inset-inline-end:calc(11*var(--t));top:calc(12*var(--t));height:calc(41*var(--t));display:flex;align-items:center}
 .navset{display:contents}
@@ -229,6 +232,7 @@ a:focus-visible,button:focus-visible{outline:calc(1.5*var(--t)) solid var(--crea
   }
   .frame{left:calc(22*var(--u));right:calc(22*var(--u));top:calc(22*var(--u));bottom:calc(22*var(--u))}
   .logo{inset-inline-start:calc(16*var(--t));top:calc(22*var(--t));width:min(calc(163*var(--t)), 42vw);height:auto;aspect-ratio:163 / 19}
+  html[dir=rtl] .logo{right:calc(16*var(--t))}
   .masthead{inset-inline-end:calc(9*var(--t));top:calc(12*var(--t))}
   .index{top:calc(70*var(--t));transform:none}
   .index li{height:calc(24*var(--t))}
@@ -260,7 +264,19 @@ a:focus-visible,button:focus-visible{outline:calc(1.5*var(--t)) solid var(--crea
 @media (max-width: 830px){ .navset{display:none!important} }
 
 /* design ticker: one segment per design, filling over its 30 seconds on stage */
-.ticker{display:flex;justify-content:center;gap:calc(14*var(--t));margin-bottom:calc(16*var(--t))}
+/* centred while the names fit; once they don't (phones, a growing collection) the strip scrolls
+   sideways instead of spilling off both edges. The auto margins centre without clipping the start. */
+.ticker{display:flex;justify-content:flex-start;gap:calc(14*var(--t));margin-bottom:calc(16*var(--t));
+  max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ticker::-webkit-scrollbar{display:none}
+.ticker > :first-child{margin-inline-start:auto}
+.ticker > :last-child{margin-inline-end:auto}
+.ticker button{flex:none}
+@media (max-width: 700px){
+  .ticker{-webkit-mask:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 22px),transparent);
+          mask:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 22px),transparent);padding-inline:18px}
+  .ticker i{width:calc(52*var(--t))}
+}
 .ticker button{display:grid;gap:calc(6*var(--t));justify-items:start;background:none;border:0;padding:calc(4*var(--t)) 0;cursor:pointer;
   font-family:var(--label);font-weight:700;font-size:calc(8.5*var(--t));letter-spacing:calc(1.6*var(--t));color:rgba(232,238,250,.42);transition:color .3s}
 .ticker button:hover,.ticker button.on{color:#e6eaf5}
