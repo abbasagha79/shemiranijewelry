@@ -12,6 +12,118 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'asterion',
+    name: 'ASTERION',
+    added: '2026-10-23T23:28',
+    collection: 'pendants',
+    kind: { en: 'Pendant · 18K gold and diamonds', fa: 'آویز · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · 61 diamonds', fa: 'طلای ۱۸ عیار · ۶۱ الماس' },
+    description: {
+      en: 'A star-like splendour in a modern, distinctive design.',
+      fa: 'شکوهی ستاره‌گون در طراحی‌ای مدرن و متمایز.'
+    },
+    model: 'asterion',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .55, ty: -.1 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/asterion-spin.mp4',
+    spinPoster: 'assets/img/asterion/spin-poster.jpg',
+    cover: 'assets/img/asterion/render-01.jpg',
+    thumb: 'assets/img/asterion/render-01-sm.jpg',
+    stream: ['assets/img/asterion/stream-a.jpg', 'assets/img/asterion/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/asterion/render-01.jpg',
+      'assets/img/asterion/matrix-01.jpg', 'assets/img/asterion/matrix-02.jpg',
+      'assets/img/asterion/matrix-03.jpg', 'assets/img/asterion/matrix-04.jpg',
+      'assets/img/asterion/matrix-05.jpg', 'assets/img/asterion/matrix-06.jpg',
+      'assets/img/asterion/matrix-07.jpg', 'assets/img/asterion/matrix-08.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 3.79 g', fa: 'طلای زرد ۱۸ عیار: ۳٫۷۹ گرم' },
+        { en: '18K white gold: 3.60 g', fa: 'طلای سفید ۱۸ عیار: ۳٫۶۰ گرم' },
+        { en: '18K rose gold: 3.79 g', fa: 'طلای رزگلد ۱۸ عیار: ۳٫۷۹ گرم' },
+        { en: '14K yellow gold: 3.16 g', fa: 'طلای زرد ۱۴ عیار: ۳٫۱۶ گرم' },
+        { en: '22K yellow gold: 4.40 g', fa: 'طلای زرد ۲۲ عیار: ۴٫۴۰ گرم' },
+        { en: 'Silver 925: 2.55 g', fa: 'نقره‌ی ۹۲۵: ۲٫۵۵ گرم' },
+        { en: 'Platinum: 4.94 g', fa: 'پلاتین: ۴٫۹۴ گرم' }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: '61 round diamonds, 0.36 ct in total', fa: '۶۱ الماس گرد، در مجموع ۰٫۳۶ قیراط' },
+        { en: '48 stones, 1.1 mm: 0.24 ct', fa: '۴۸ نگین ۱٫۱ میلی‌متری: ۰٫۲۴ قیراط' },
+        { en: '7 stones, 1.4 mm: 0.07 ct', fa: '۷ نگین ۱٫۴ میلی‌متری: ۰٫۰۷ قیراط' },
+        { en: '4 stones, 1.3 mm: 0.033 ct', fa: '۴ نگین ۱٫۳ میلی‌متری: ۰٫۰۳۳ قیراط' },
+        { en: '2 stones, 1.2 mm: 0.013 ct', fa: '۲ نگین ۱٫۲ میلی‌متری: ۰٫۰۱۳ قیراط' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Length: 30.7 mm', fa: 'طول: ۳۰٫۷ میلی‌متر' },
+        { en: 'Width: 12.8 mm', fa: 'عرض: ۱۲٫۸ میلی‌متر' },
+        { en: 'Thickness: 3.2 mm', fa: 'ضخامت: ۳٫۲ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'A teardrop frame lined with a row of pavé diamonds', fa: 'قاب قطره‌ای با یک ردیف الماس پاوه' },
+        { en: 'A pear-shaped diamond cluster inside a sweeping inner curve', fa: 'خوشه‌ی الماس گلابی‌شکل درون یک قوس داخلی' },
+        { en: 'Sculpted gold leaves at the neck, under a diamond-set loop', fa: 'برگ‌های طلایی تراش‌خورده در گردن آویز، زیر حلقه‌ای نگین‌دار' }
+      ]}
+    ],
+    note: { en: 'Weights, stone sizes and dimensions come from the design file.', fa: 'وزن‌ها، اندازه‌ی نگین‌ها و ابعاد از فایل طراحی است.' }
+  },
+  {
+    id: 'crownelle',
+    name: 'CROWNELLE',
+    added: '2026-10-23T23:27',
+    collection: 'pendants',
+    kind: { en: 'Halo pendant · 18K gold and diamonds', fa: 'آویز هاله‌ای · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · oval diamond halo', fa: 'طلای ۱۸ عیار · الماس بیضی با هاله' },
+    description: {
+      en: 'Inspired by a crown; a symbol of singular brilliance and refined beauty.',
+      fa: 'الهام‌گرفته از تاج؛ نمادی از درخشش منحصربه‌فرد و زیبایی فاخر.'
+    },
+    model: 'crownelle',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .55, ty: -.32 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/crownelle-spin.mp4',
+    spinPoster: 'assets/img/crownelle/spin-poster.jpg',
+    cover: 'assets/img/crownelle/render-01.jpg',
+    thumb: 'assets/img/crownelle/render-01-sm.jpg',
+    stream: ['assets/img/crownelle/stream-a.jpg', 'assets/img/crownelle/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/crownelle/render-01.jpg',
+      'assets/img/crownelle/matrix-01.jpg', 'assets/img/crownelle/matrix-02.jpg',
+      'assets/img/crownelle/matrix-03.jpg', 'assets/img/crownelle/matrix-04.jpg',
+      'assets/img/crownelle/matrix-05.jpg', 'assets/img/crownelle/matrix-06.jpg',
+      'assets/img/crownelle/matrix-07.jpg', 'assets/img/crownelle/matrix-08.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 3.17 g', fa: 'طلای زرد ۱۸ عیار: ۳٫۱۷ گرم' },
+        { en: '18K white gold: 3.02 g', fa: 'طلای سفید ۱۸ عیار: ۳٫۰۲ گرم' },
+        { en: '18K rose gold: 3.17 g', fa: 'طلای رزگلد ۱۸ عیار: ۳٫۱۷ گرم' },
+        { en: '14K yellow gold: 2.65 g', fa: 'طلای زرد ۱۴ عیار: ۲٫۶۵ گرم' },
+        { en: '22K yellow gold: 3.68 g', fa: 'طلای زرد ۲۲ عیار: ۳٫۶۸ گرم' },
+        { en: 'Silver 925: 2.13 g', fa: 'نقره‌ی ۹۲۵: ۲٫۱۳ گرم' },
+        { en: 'Platinum: 4.14 g', fa: 'پلاتین: ۴٫۱۴ گرم' }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: '46 diamonds, 1.84 ct in total', fa: '۴۶ الماس، در مجموع ۱٫۸۴ قیراط' },
+        { en: 'Centre: oval diamond 9.5 × 6.5 mm, 1.61 ct, four-prong', fa: 'مرکز: الماس بیضی ۹٫۵ × ۶٫۵ میلی‌متر، ۱٫۶۱ قیراط، چهارچنگ' },
+        { en: '45 round stones, 1.1 mm: 0.23 ct, in the halo and the scroll', fa: '۴۵ نگین گرد ۱٫۱ میلی‌متری: ۰٫۲۳ قیراط، در هاله و پیچک بالا' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Height: 23.9 mm', fa: 'ارتفاع: ۲۳٫۹ میلی‌متر' },
+        { en: 'Width: 10.9 mm', fa: 'عرض: ۱۰٫۹ میلی‌متر' },
+        { en: 'Thickness: 5.6 mm', fa: 'ضخامت: ۵٫۶ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'Oval centre diamond held by four prongs inside a pavé halo', fa: 'الماس بیضی مرکزی با چهار چنگ درون هاله‌ای از الماس پاوه' },
+        { en: 'A crown-like scroll on top, set with diamonds', fa: 'پیچکی تاج‌مانند در بالا، نگین‌کاری‌شده' },
+        { en: 'Open gallery with windows around the sides', fa: 'بدنه‌ی باز با پنجره‌هایی دور تا دور' }
+      ]}
+    ],
+    note: { en: 'Weights, stone sizes and dimensions come from the design file.', fa: 'وزن‌ها، اندازه‌ی نگین‌ها و ابعاد از فایل طراحی است.' }
+  },
+  {
     id: 'sovrana',
     name: 'SOVRANA',
     added: '2026-10-23T00:06',
