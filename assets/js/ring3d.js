@@ -19,7 +19,11 @@
     valoria:   { metal: 'models/valoria-metal.bin',   gems: 'models/valoria-gems.json' },
     monarch:   { metal: 'models/monarch-metal.bin',   gems: 'models/monarch-gems.json' },
     royale:    { metal: 'models/royale-metal.bin',    gems: 'models/royale-gems.json' },
-    sovrana:   { metal: 'models/sovrana-metal.bin',   gems: 'models/sovrana-gems.json' }
+    sovrana:   { metal: 'models/sovrana-metal.bin',   gems: 'models/sovrana-gems.json' },
+    crownelle: { metal: 'models/crownelle-metal.bin', gems: 'models/crownelle-gems.json' },
+    asterion:  { metal: 'models/asterion-metal.bin',  gems: 'models/asterion-gems.json' },
+    lumiere:   { metal: 'models/lumiere-metal.bin',   gems: 'models/lumiere-gems.json' },
+    imperio:   { metal: 'models/imperio-metal.bin',   gems: 'models/imperio-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
@@ -227,11 +231,12 @@
           '  #ifdef USE_INSTANCING',
           '    M = modelMatrix * instanceMatrix;',
           '  #endif',
-          '  mat3 R3 = mat3(M); float s2 = dot(R3[0], R3[0]); float s = sqrt(s2);',
+          '  mat3 R3 = mat3(M); vec3 s2 = vec3(dot(R3[0], R3[0]), dot(R3[1], R3[1]), dot(R3[2], R3[2])); vec3 s = sqrt(s2);',
           '  vec3 d = cameraPosition - M[3].xyz;',
-          /* inverse of (rotation x uniform scale) is its transpose / s^2; written out for WebGL1 */
+          /* inverse of (rotation x per-axis scale): each column over its own squared length; written
+             out for WebGL1. Round stones have equal scales; ovals are stretched along local x. */
           '  vCam = vec3(dot(R3[0], d), dot(R3[1], d), dot(R3[2], d)) / s2;',
-          '  vW0 = R3[0] / s; vW1 = R3[1] / s; vW2 = R3[2] / s;',
+          '  vW0 = R3[0] / s.x; vW1 = R3[1] / s.y; vW2 = R3[2] / s.z;',
           '  vP = position; vN = normal;',
           '  gl_Position = projectionMatrix * viewMatrix * M * vec4(position, 1.0);',
           '}'
@@ -291,8 +296,17 @@
       g.add(new THREE.Mesh(m.metal, goldMat(dim)));
       var im = new THREE.InstancedMesh(GEM, diamondMat(dim), m.gems.length), M = new THREE.Matrix4(), Q = new THREE.Quaternion(), up = new THREE.Vector3(0, 1, 0), n = new THREE.Vector3();
       m.gems.forEach(function(st, k){
-        n.set(st.n[0], st.n[1], st.n[2]).normalize(); Q.setFromUnitVectors(up, n);
-        M.compose(new THREE.Vector3(st.c[0], st.c[1], st.c[2]), Q, new THREE.Vector3(st.d, st.d, st.d));
+        n.set(st.n[0], st.n[1], st.n[2]).normalize();
+        if (st.L && st.u){
+          /* oval: local y = the table's facing, local x = the stone's length */
+          var X = new THREE.Vector3(st.u[0], st.u[1], st.u[2]); X.addScaledVector(n, -X.dot(n)).normalize();
+          var Z = new THREE.Vector3().crossVectors(X, n);
+          Q.setFromRotationMatrix(new THREE.Matrix4().makeBasis(X, n, Z));
+          M.compose(new THREE.Vector3(st.c[0], st.c[1], st.c[2]), Q, new THREE.Vector3(st.L, st.d, st.d));
+        } else {
+          Q.setFromUnitVectors(up, n);
+          M.compose(new THREE.Vector3(st.c[0], st.c[1], st.c[2]), Q, new THREE.Vector3(st.d, st.d, st.d));
+        }
         im.setMatrixAt(k, M);
       });
       if (dim) im.renderOrder = 1;

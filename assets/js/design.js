@@ -67,7 +67,7 @@
   var stage = main.querySelector('.vstage'), stageIn = main.querySelector('.vstage-in');
   SM.beam(stage, { length: 16, thickness: 1.5, speed: 9 });
   var video = stage.querySelector('video'), img = stage.querySelector('.vimg');
-  var viewer = window.ShemiraniRing(stage.querySelector('canvas'), { model: D.model, base: u('assets/'), host: stageIn, drag: true, fill: .62, pose: { az: .62, el: .32, d: 1, ty: 0 } });
+  var viewer = window.ShemiraniRing(stage.querySelector('canvas'), { model: D.model, base: u('assets/'), host: stageIn, drag: true, fill: .62, pose: D.pose || { az: .62, el: .32, d: 1, ty: 0 } });
   var tabs = [].slice.call(main.querySelectorAll('.vtabs button'));
   tabs.forEach(function(b){
     b.addEventListener('click', function(){

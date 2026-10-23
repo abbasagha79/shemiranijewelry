@@ -24,6 +24,8 @@
   var idx = 0, swapT = 0;
 
   function D(){ return LIST[idx]; }
+  /* a design can bring its own camera tour (pendants stand upright, so "from the top" means nothing) */
+  function tour(){ return D().tour || TOUR; }
   function fill(){
     var d = D();
     rises[0].textContent = d.name;
@@ -51,7 +53,7 @@
   [].forEach.call(ticker.querySelectorAll('button'), function(b, i){ b.addEventListener('click', function(){ show(i); }); });
 
   var scene = window.ShemiraniRing(document.getElementById('gl'), {
-    model: D().model, base: SM.url('assets/'), host: stage, fill: .5, pose: TOUR[0],
+    model: D().model, base: SM.url('assets/'), host: stage, fill: .5, pose: tour()[0],
     offset: function(W, H){ var a = W / H; return W <= 548 ? .17 : (a < 1.2 ? .14 : .11); },
     onResize: function(off){ stage.style.setProperty('--ring-y', (50 - off * 100 - 3) + '%'); }
   });
@@ -62,7 +64,7 @@
   function show(i){
     if (i === idx) { elapsed = 0; return; }
     idx = (i + LIST.length) % LIST.length; elapsed = 0; tourStep = 0;
-    scene.setModel(D().model); scene.go(TOUR[0]);
+    scene.setModel(D().model); scene.go(tour()[0]);
     clearTimeout(swapT);
     hero.classList.add('swapping');
     swapT = setTimeout(function(){ fill(); void hero.offsetWidth; hero.classList.remove('swapping'); }, RM ? 0 : 500);
@@ -79,8 +81,8 @@
     elapsed += dt;
     var bars = ticker.querySelectorAll('b');
     if (bars[idx]) bars[idx].style.transform = 'scaleX(' + Math.min(1, elapsed / HOLD).toFixed(4) + ')';
-    var step = Math.max(0, Math.min(TOUR.length - 1, Math.floor(elapsed / (HOLD / TOUR.length))));
-    if (step !== tourStep){ tourStep = step; scene.go(TOUR[step]); }
+    var T = tour(), step = Math.max(0, Math.min(T.length - 1, Math.floor(elapsed / (HOLD / T.length))));
+    if (step !== tourStep){ tourStep = step; scene.go(T[step]); }
     if (elapsed >= HOLD && LIST.length > 1) show(idx + 1);
   }
   requestAnimationFrame(clock);

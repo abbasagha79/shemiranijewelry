@@ -21,6 +21,18 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "imperio", "name": "IMPERIO", "collection": "pendants",
+     "desc": "IMPERIO is a pendant in 18K gold — a 1.20 ct pear diamond (9 × 6 mm) hung from a looping gold ribbon set with small diamonds; 14 diamonds, 1.28 ct in total.",
+     "diamonds": "14 diamonds, 1.28 ct", "weight18k": "1.95 g"},
+    {"id": "lumiere", "name": "LUMIÈRE", "collection": "pendants",
+     "desc": "LUMIÈRE is a cluster pendant in 18K gold — 36 round diamonds (0.45 ct) on a domed cluster, their prongs radiating like rays of light, under a polished gold dome.",
+     "diamonds": "36 round diamonds, 0.45 ct", "weight18k": "2.10 g"},
+    {"id": "asterion", "name": "ASTERION", "collection": "pendants",
+     "desc": "ASTERION is a pendant in 18K gold with 61 diamonds (0.36 ct) — a pavé-lined teardrop frame around a pear-shaped diamond cluster, with sculpted gold leaves under a diamond-set loop.",
+     "diamonds": "61 round diamonds, 0.36 ct", "weight18k": "3.79 g"},
+    {"id": "crownelle", "name": "CROWNELLE", "collection": "pendants",
+     "desc": "CROWNELLE is a halo pendant in 18K gold — a 1.61 ct oval diamond (9.5 × 6.5 mm) in four prongs inside a pavé halo, under a crown-like diamond scroll; 46 diamonds, 1.84 ct in total.",
+     "diamonds": "46 diamonds, 1.84 ct", "weight18k": "3.17 g"},
     {"id": "sovrana", "name": "SOVRANA", "collection": "rings",
      "desc": "SOVRANA is a men's ring in 18K gold with 17 diamonds (0.14 ct) — three prong-set rows on a flat rectangular top, the middle row raised, with three open slots through each tapered shoulder.",
      "diamonds": "17 round diamonds, 0.14 ct", "weight18k": "4.26 g"},

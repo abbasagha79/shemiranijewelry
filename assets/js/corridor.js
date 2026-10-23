@@ -51,7 +51,7 @@
       for (var i = 0; i < cards; i++){
         /* the left rail runs half a lap behind the right one, so the two sides show different
            pieces at the same depth while still reading as one mirrored stream */
-        var img = images.length ? images[(i + side * Math.ceil(images.length / 2)) % images.length] : null;
+        var img = images.length ? images[(images.length > cards * 2 ? i + side * cards : i + side * Math.ceil(images.length / 2)) % images.length] : null;
         html += '<div class="corr-card" style="left:50%;top:' + axis + '%;width:' + p.cardWidth + 'cqw;height:' + p.cardHeight + 'cqw;' +
           'margin-left:' + (-p.cardWidth / 2) + 'cqw;margin-top:' + (-p.cardHeight / 2) + 'cqw;' +
           'animation:' + name + ' ' + speed + 's linear infinite;animation-delay:' + (-(i * speed) / cards).toFixed(3) + 's">' +
@@ -60,6 +60,17 @@
     });
     stage.innerHTML = html;
     host.insertBefore(view, host.firstChild);
+
+    /* more photos than cards: each time a card is reborn at the throat (tiny and hidden behind
+       its neighbours) it takes the next photo in the list, so every design comes round in turn */
+    var used = Math.min(images.length, cards * 2), next = used;
+    if (images.length > used){
+      stage.addEventListener('animationiteration', function(e){
+        var im = e.target.querySelector && e.target.querySelector('img');
+        if (!im || !loaded) return;
+        im.src = images[next % images.length]; next++;
+      });
+    }
 
     /* the photos load only as the section comes near, so they never compete with the hero */
     var loaded = false;

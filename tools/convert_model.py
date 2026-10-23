@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """SHEMIRANI: convert a design's Rhino STL exports into the site's web model files.
 
-  python3 tools/convert_model.py metal.stl gems.stl <name>
+  python3 tools/convert_model.py metal.stl gems.stl <name> [--upright]
+
+--upright is for pendants and other pieces drawn lying flat (face up +Z, top of the piece +Y):
+the piece is stood up so its face looks at the viewer and its top points up.
 
 Writes assets/models/<name>-metal.bin (+ .gz) and assets/models/<name>-gems.json.
 Needs Python 3 and numpy (pip install numpy). Models are expected in millimetres, Z up,
 the finger along Y (the usual Rhino / Matrix ring orientation).
 The gems STL is read stone by stone: each stone's centre, size and facing is stored,
-and the site draws it as a round brilliant.
+and the site draws it as a brilliant; oval stones keep their length and direction.
 """
 import numpy as np, json, struct, gzip, sys
 dt=np.dtype([('n','<f4',3),('v','<f4',(3,3)),('a','<u2')])
@@ -48,8 +51,15 @@ def crease_split(pos, idx, crease_deg=35):
     return newpos,newn,inv.reshape(-1,3)
 
 import os
-if len(sys.argv)<4: sys.exit('usage: python3 tools/convert_model.py <metal.stl> <gems.stl> <name>   (run from the site folder)')
-METAL,GEMS,NAME=sys.argv[1:4]; OUT='assets/models/'
+UPRIGHT='--upright' in sys.argv; args=[a for a in sys.argv[1:] if not a.startswith('--')]
+if len(args)<3: sys.exit('usage: python3 tools/convert_model.py <metal.stl> <gems.stl> <name> [--upright]   (run from the site folder)')
+METAL,GEMS,NAME=args[:3]; OUT='assets/models/'
+_load=load
+def load(f):
+    t=_load(f)
+    if UPRIGHT:   # (x, y, z) -> (x, -z, y): the top (+Y) goes up, the face (+Z) turns to the front (-Y)
+        t=np.stack([t[...,0],-t[...,2],t[...,1]],axis=-1)
+    return t
 metal=load(METAL); pos,idx=weld(metal)
 print('metal verts',len(pos),'tris',len(idx))
 pos,nrm,idx=crease_split(pos,idx)
@@ -94,14 +104,22 @@ for r,vs in comps.items():
     fn=np.cross(b-a,cc-a); ar=np.linalg.norm(fn,axis=1)/2; un=fn/np.maximum(np.linalg.norm(fn,axis=1,keepdims=True),1e-12)
     d=un@ax
     # the table: biggest flat area facing +/-ax
-    out=np.array([c[0],0.0,c[2]]); out/=max(np.linalg.norm(out),1e-9)
+    if UPRIGHT: out=np.array([0.0,-1.0,0.0])   # the table faces the front
+    else: out=np.array([c[0],0.0,c[2]]); out/=max(np.linalg.norm(out),1e-9)
     if ax@out<0: ax=-ax   # the table faces away from the finger
     h=Q@ax; radial=np.linalg.norm(Q-np.outer(h,ax),axis=1)
     dia=2*radial.max()
     # put origin at girdle: girdle is where radius is max
     gh=h[radial>radial.max()*0.985].mean()
     top=h.max(); bot=h.min()
-    gems.append(dict(c=(c+ax*gh).round(4).tolist(), n=ax.round(4).tolist(), d=round(float(dia),3), crown=round(float(top-gh),3), pav=round(float(gh-bot),3)))
+    st=dict(c=(c+ax*gh).round(4).tolist(), n=ax.round(4).tolist(), d=round(float(dia),3), crown=round(float(top-gh),3), pav=round(float(gh-bot),3))
+    # oval / elongated stones: measure the girdle along its two in-plane axes
+    G=Q[radial>radial.max()*0.6]; G=G-np.outer(G@ax,ax)
+    w2,V2=np.linalg.eigh(G.T@G); u=V2[:,2]; v=np.cross(ax,u)
+    L=float((G@u).max()-(G@u).min()); W=float((G@v).max()-(G@v).min())
+    if L>W*1.12:
+        st['d']=round(W,3); st['L']=round(L,3); st['u']=u.round(4).tolist()
+    gems.append(st)
 ds=sorted(round(x['d'],2) for x in gems)
 from collections import Counter; print(Counter(ds))
 json.dump(gems,open(OUT+NAME+'-gems.json','w'),separators=(',',':'))
