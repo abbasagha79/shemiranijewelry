@@ -21,7 +21,9 @@
     royale:    { metal: 'models/royale-metal.bin',    gems: 'models/royale-gems.json' },
     sovrana:   { metal: 'models/sovrana-metal.bin',   gems: 'models/sovrana-gems.json' },
     crownelle: { metal: 'models/crownelle-metal.bin', gems: 'models/crownelle-gems.json' },
-    asterion:  { metal: 'models/asterion-metal.bin',  gems: 'models/asterion-gems.json' }
+    asterion:  { metal: 'models/asterion-metal.bin',  gems: 'models/asterion-gems.json' },
+    lumiere:   { metal: 'models/lumiere-metal.bin',   gems: 'models/lumiere-gems.json' },
+    imperio:   { metal: 'models/imperio-metal.bin',   gems: 'models/imperio-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */

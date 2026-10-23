@@ -12,6 +12,115 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'imperio',
+    name: 'IMPERIO',
+    added: '2026-10-23T23:41',
+    collection: 'pendants',
+    kind: { en: 'Pear diamond pendant · 18K gold and diamonds', fa: 'آویز الماس گلابی · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · 1.20 ct pear diamond', fa: 'طلای ۱۸ عیار · الماس گلابی ۱٫۲۰ قیراط' },
+    description: {
+      en: 'A majestic presence, with a design that draws the eye without needing to exaggerate.',
+      fa: 'حضوری باشکوه با طراحی‌ای که توجه را بی‌نیاز از اغراق جلب می‌کند.'
+    },
+    model: 'imperio',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .55, ty: -.22 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/imperio-spin.mp4',
+    spinPoster: 'assets/img/imperio/spin-poster.jpg',
+    cover: 'assets/img/imperio/render-01.jpg',
+    thumb: 'assets/img/imperio/render-01-sm.jpg',
+    stream: ['assets/img/imperio/stream-a.jpg', 'assets/img/imperio/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/imperio/render-01.jpg',
+      'assets/img/imperio/matrix-01.jpg', 'assets/img/imperio/matrix-02.jpg',
+      'assets/img/imperio/matrix-03.jpg', 'assets/img/imperio/matrix-04.jpg',
+      'assets/img/imperio/matrix-05.jpg', 'assets/img/imperio/matrix-06.jpg',
+      'assets/img/imperio/matrix-07.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 1.95 g', fa: 'طلای زرد ۱۸ عیار: ۱٫۹۵ گرم' },
+        { en: '18K white gold: 1.85 g', fa: 'طلای سفید ۱۸ عیار: ۱٫۸۵ گرم' },
+        { en: '18K rose gold: 1.95 g', fa: 'طلای رزگلد ۱۸ عیار: ۱٫۹۵ گرم' },
+        { en: '14K yellow gold: 1.63 g', fa: 'طلای زرد ۱۴ عیار: ۱٫۶۳ گرم' },
+        { en: '22K yellow gold: 2.26 g', fa: 'طلای زرد ۲۲ عیار: ۲٫۲۶ گرم' },
+        { en: 'Silver 925: 1.31 g', fa: 'نقره‌ی ۹۲۵: ۱٫۳۱ گرم' },
+        { en: 'Platinum: 2.54 g', fa: 'پلاتین: ۲٫۵۴ گرم' }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: '14 diamonds, 1.28 ct in total', fa: '۱۴ الماس، در مجموع ۱٫۲۸ قیراط' },
+        { en: 'Centre: pear diamond 9 × 6 mm, 1.20 ct, three-prong', fa: 'مرکز: الماس گلابی ۹ × ۶ میلی‌متر، ۱٫۲۰ قیراط، سه‌چنگ' },
+        { en: '13 round stones, 0.9–1.4 mm: 0.08 ct, along the ribbon', fa: '۱۳ نگین گرد ۰٫۹ تا ۱٫۴ میلی‌متری: ۰٫۰۸ قیراط، روی روبان' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Height: 19.5 mm', fa: 'ارتفاع: ۱۹٫۵ میلی‌متر' },
+        { en: 'Width: 9.3 mm', fa: 'عرض: ۹٫۳ میلی‌متر' },
+        { en: 'Thickness: 6.8 mm', fa: 'ضخامت: ۶٫۸ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'A pear diamond hung from a looping gold ribbon', fa: 'الماس گلابی آویخته از روبانی طلایی و پیچان' },
+        { en: 'The ribbon is set with a line of small diamonds and forms the bail', fa: 'روبان با ردیفی از الماس‌های ریز نگین‌کاری شده و خودش گیره‌ی آویز است' },
+        { en: 'Open basket seat with three prongs', fa: 'نشیمن باز سبدی با سه چنگ' }
+      ]}
+    ],
+    note: { en: 'Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.', fa: 'وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است.' }
+  },
+  {
+    id: 'lumiere',
+    name: 'LUMIÈRE',
+    added: '2026-10-23T23:38',
+    collection: 'pendants',
+    kind: { en: 'Cluster pendant · 18K gold and diamonds', fa: 'آویز خوشه‌ای · طلای ۱۸ عیار و الماس' },
+    line: { en: '18K gold · 36 diamonds', fa: 'طلای ۱۸ عیار · ۳۶ الماس' },
+    description: {
+      en: 'Inspired by light; a soft brilliance that comes alive with every movement.',
+      fa: 'الهام‌گرفته از نور؛ درخششی لطیف که با هر حرکت جان می‌گیرد.'
+    },
+    model: 'lumiere',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .6, ty: -.2 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/lumiere-spin.mp4',
+    spinPoster: 'assets/img/lumiere/spin-poster.jpg',
+    cover: 'assets/img/lumiere/render-01.jpg',
+    thumb: 'assets/img/lumiere/render-01-sm.jpg',
+    stream: ['assets/img/lumiere/stream-a.jpg', 'assets/img/lumiere/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/lumiere/render-01.jpg',
+      'assets/img/lumiere/matrix-01.jpg', 'assets/img/lumiere/matrix-02.jpg',
+      'assets/img/lumiere/matrix-03.jpg', 'assets/img/lumiere/matrix-04.jpg',
+      'assets/img/lumiere/matrix-05.jpg', 'assets/img/lumiere/matrix-06.jpg',
+      'assets/img/lumiere/matrix-07.jpg', 'assets/img/lumiere/matrix-08.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: '18K yellow gold: 2.10 g', fa: 'طلای زرد ۱۸ عیار: ۲٫۱۰ گرم' },
+        { en: '18K white gold: 1.99 g', fa: 'طلای سفید ۱۸ عیار: ۱٫۹۹ گرم' },
+        { en: '18K rose gold: 2.10 g', fa: 'طلای رزگلد ۱۸ عیار: ۲٫۱۰ گرم' },
+        { en: '14K yellow gold: 1.75 g', fa: 'طلای زرد ۱۴ عیار: ۱٫۷۵ گرم' },
+        { en: '22K yellow gold: 2.43 g', fa: 'طلای زرد ۲۲ عیار: ۲٫۴۳ گرم' },
+        { en: 'Silver 925: 1.41 g', fa: 'نقره‌ی ۹۲۵: ۱٫۴۱ گرم' },
+        { en: 'Platinum: 2.73 g', fa: 'پلاتین: ۲٫۷۳ گرم' }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: '36 round diamonds, 0.45 ct in total', fa: '۳۶ الماس گرد، در مجموع ۰٫۴۵ قیراط' },
+        { en: 'All 36 stones 1.5 mm, prong-set over a domed cluster', fa: 'هر ۳۶ نگین ۱٫۵ میلی‌متری، چنگی، روی یک خوشه‌ی گنبدی' }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: 'Length: 16.4 mm', fa: 'طول: ۱۶٫۴ میلی‌متر' },
+        { en: 'Width: 10.4 mm', fa: 'عرض: ۱۰٫۴ میلی‌متر' },
+        { en: 'Thickness: 5.2 mm', fa: 'ضخامت: ۵٫۲ میلی‌متر' }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: 'A domed cluster of diamonds, their prongs radiating like rays of light', fa: 'خوشه‌ای گنبدی از الماس، با چنگ‌هایی که مثل پرتوهای نور باز می‌شوند' },
+        { en: 'A polished gold dome above, joined by a hidden link', fa: 'گنبدی طلایی و براق در بالا، متصل با اتصالی پنهان' },
+        { en: 'Open gallery with windows around both parts', fa: 'بدنه‌ی باز با پنجره‌هایی دور هر دو بخش' }
+      ]}
+    ],
+    note: { en: 'Weights, stone sizes and dimensions come from the design file.', fa: 'وزن‌ها، اندازه‌ی نگین‌ها و ابعاد از فایل طراحی است.' }
+  },
+  {
     id: 'asterion',
     name: 'ASTERION',
     added: '2026-10-23T23:28',
