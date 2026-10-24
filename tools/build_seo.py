@@ -21,6 +21,12 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "seravel", "name": "SERAVÉL", "collection": "rings", "desc": "SERAVÉL is a solitaire band ring in 18K gold — a 0.44 ct, 5 mm diamond in four prongs on a wide fluted band edged with rows of diamonds; 43 diamonds, 0.76 ct in total.", "diamonds": "43 round diamonds, 0.76 ct", "weight18k": "4.88 g"},
+    {"id": "avelis", "name": "AVELIS", "collection": "sets", "desc": "AVELIS is a set of a pendant and earrings in 18K gold — a pavé-edged teardrop pendant filled with gold scrolls, and matching six-stone diamond flower earrings; 41 diamonds, 0.26 ct.", "diamonds": "41 round diamonds, 0.26 ct (set)", "weight18k": "1.85 g"},
+    {"id": "orvessa", "name": "ORVESSA", "collection": "rings", "desc": "ORVESSA is a cluster ring in 18K gold — three concentric rings of diamonds rising in steps to a raised centre stone, on sweeping shoulders; 57 diamonds, 0.48 ct.", "diamonds": "57 round diamonds, 0.48 ct", "weight18k": "4.09 g"},
+    {"id": "kaverin", "name": "KAVÉRIN", "collection": "earrings", "desc": "KAVÉRIN are stud earrings in 18K gold — two parallel diamond-set bars on the diagonal with polished gold loops woven between them; 22 diamonds (0.13 ct) per earring.", "diamonds": "22 round diamonds per earring, 0.13 ct", "weight18k": "1.09 g"},
+    {"id": "lumeria", "name": "LUMÉRIA", "collection": "earrings", "desc": "LUMÉRIA are statement drop earrings in 18K gold — three pavé leaves over a wide disc with two pavé rings and a swinging pavé diamond-shaped drop; 136 diamonds (0.87 ct) per earring.", "diamonds": "136 round diamonds per earring, 0.87 ct", "weight18k": "5.82 g"},
+    {"id": "elune", "name": "ELUNÉ", "collection": "rings", "desc": "ELUNÉ is a band ring in 18K gold — a polished band with bevelled edges and a single 2.5 mm diamond (0.06 ct) set in a recessed cross-channel.", "diamonds": "1 round diamond, 0.06 ct", "weight18k": "4.78 g"},
     {"id": "virelune", "name": "VIRELUNE", "collection": "rings", "desc": "VIRELUNE is a solitaire ring in 18K gold — a 0.47 ct, 5 mm round diamond in a tapered four-prong head, with a row of diamonds in a pointed channel on each shoulder; 13 diamonds, 0.62 ct in total.", "diamonds": "13 round diamonds, 0.62 ct", "weight18k": "3.20 g"},
     {"id": "thevora", "name": "THÉVORA", "collection": "earrings", "desc": "THÉVORA are drop earrings in 18K gold — a diamond-set scroll curling into a spiral, with a round drop holding a seven-stone diamond flower; 28 diamonds (0.19 ct) per earring.", "diamonds": "56 round diamonds, 0.38 ct (pair)", "weight18k": "1.35 g"},
     {"id": "zarelle", "name": "ZARELLE", "collection": "rings", "desc": "ZARELLE is a solitaire ring in 18K gold — a 0.81 ct, 6 mm round diamond in a six-prong head, with woven gold strands in each shoulder framed by two rows of diamonds; 37 diamonds, 1.04 ct in total.", "diamonds": "37 round diamonds, 1.04 ct", "weight18k": "5.15 g"},
@@ -66,12 +72,12 @@ DESIGNS = [
 ]
 COLLECTIONS = {
     "rings": "Rings", "earrings": "Earrings", "bracelets": "Bracelets",
-    "bangles": "Bangles", "necklaces": "Necklaces", "pendants": "Pendants",
+    "bangles": "Bangles", "necklaces": "Necklaces", "pendants": "Pendants", "sets": "Sets",
 }
 # singular noun per collection, for titles and alt text
 NOUN = {
     "rings": "Ring", "earrings": "Earrings", "bracelets": "Bracelet",
-    "bangles": "Bangle", "necklaces": "Necklace", "pendants": "Pendant",
+    "bangles": "Bangle", "necklaces": "Necklace", "pendants": "Pendant", "sets": "Set",
 }
 
 ORG = {

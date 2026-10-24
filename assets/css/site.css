@@ -678,8 +678,8 @@ html[lang=fa] .corr-chip small{font-family:var(--fa);font-size:.8rem;letter-spac
 @media (max-width:700px){
   .corr{height:max(620px, 92svh)}
   .corr-glow{background:radial-gradient(26cqw 18cqw at 50% 50%, rgba(4,10,38,.92), rgba(4,10,38,0) 100%),linear-gradient(180deg,#040a26 0%,rgba(4,10,38,.82) 16%,rgba(4,10,38,0) 30%,rgba(4,10,38,0) 68%,rgba(5,12,42,.88) 80%,#050c2a 100%)}
-  .corr-chips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding-inline:14px}
-  .corr-chip{min-width:0;padding:10px 6px 9px;--c:8px}
+  .corr-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding-inline:14px}
+  .corr-chip{min-width:0;flex:0 0 calc((100% - 16px) / 3);padding:10px 6px 9px;--c:8px}   /* three per row; a short last row stays centred */
   .corr-chip b{font-size:.66rem;letter-spacing:.14em}
   .corr-chip small{font-size:.6rem;letter-spacing:.08em}
   html[lang=fa] .corr-chip b{font-size:.9rem}
