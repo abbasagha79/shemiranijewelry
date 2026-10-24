@@ -27,7 +27,7 @@
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
-  var GOLD_18K = [1.0, 0.66, 0.25];
+  var GOLD_18K = [1.0, 0.73, 0.31];
 
   var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -112,7 +112,20 @@
   function studio(){
     /* colours are given in sRGB and converted: three r128 reads hex values as linear */
     function C(hex, k){ return new THREE.Color(hex).convertSRGBToLinear().multiplyScalar(k || 1); }
-    var s = new THREE.Scene(); s.background = C(0x2a2436, .9);
+    var s = new THREE.Scene();
+    /* a gradient dome instead of a flat dark backdrop: warm and bright overhead, a soft horizon,
+       deep underneath. Broad polished surfaces pick up this tone, so the gold reads yellow, not brown */
+    (function(){
+      var g = new THREE.SphereGeometry(40, 48, 24), n = g.attributes.position.count, col = new Float32Array(n * 3);
+      var top = C(0xfff1d6, 1.4), mid = C(0x5e5046, .75), low = C(0x0e0c14, .5), c = new THREE.Color();
+      for (var i = 0; i < n; i++){
+        var y = g.attributes.position.getY(i) / 40;
+        if (y > 0) c.copy(mid).lerp(top, Math.pow(y, .7)); else c.copy(mid).lerp(low, Math.min(1, -y * 2.2));
+        col[i * 3] = c.r; col[i * 3 + 1] = c.g; col[i * 3 + 2] = c.b;
+      }
+      g.setAttribute('color', new THREE.BufferAttribute(col, 3));
+      s.add(new THREE.Mesh(g, new THREE.MeshBasicMaterial({ vertexColors: true, side: THREE.BackSide })));
+    })();
     function box(c, k, w, h, p){
       var m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: C(c, k), side: THREE.DoubleSide }));
       m.position.set(p[0], p[1], p[2]); m.lookAt(0, 0, 0); s.add(m); return m;
@@ -128,6 +141,7 @@
     box(0x8fb0ff, 1.2, 7, 7, [6, 2, -8]);
     box(0xffffff, 8.0, 4, 1.4, [5, 5, 6]);
     box(0xfff3dc, 3.0, 3, 8, [-3, 4, 8]);
+    box(0xffffff, 6.0, .7, 12, [-5, 3, 7]); box(0xffffff, 6.0, .7, 12, [6.5, 3, 5]);   /* thin strips: crisp highlight lines */
     box(0x4a3a26, 1.0, 30, 30, [0, -9, 0]).rotation.set(-Math.PI / 2, 0, 0);
     return s;
   }
@@ -151,14 +165,20 @@
     var host = opt.host || cv.parentElement;
     function fail(){ host.classList.add('gl-fail'); if (opt.onFail) opt.onFail(); }
     if (typeof THREE === 'undefined'){ fail(); return api; }
-    /* phones can't afford the ray-traced diamonds at full resolution and 60fps,
-       so cap the pixel ratio and the frame rate on small / touch screens */
+    /* small / touch screens: 30fps cap, fewer diamond bounces and a lower starting resolution
+       (the adaptive clock below then finds what each device can really hold) */
     var MOB = (Math.min(window.innerWidth, window.innerHeight) < 760) ||
               (window.matchMedia && matchMedia('(pointer:coarse)').matches);
     var R;
-    try { R = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: !MOB, powerPreference: 'high-performance' }); }
+    try { R = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true, powerPreference: 'high-performance' }); }
     catch(e){ fail(); return api; }
-    R.setPixelRatio(Math.min(window.devicePixelRatio || 1, MOB ? 1 : 2));
+    /* adaptive sharpness: start sharp (phones at 1.5x, computers at up to 2x) and let the frame
+       clock decide. If frames run slow the resolution steps down, a little at a time, until the
+       device keeps up; if it has room to spare it steps back up, never past the level that lagged. */
+    var DPR = window.devicePixelRatio || 1;
+    var PR_MAX = Math.min(DPR, 2), PR_MIN = Math.min(DPR, MOB ? .75 : 1), prCeil = PR_MAX;
+    var PR = Math.min(PR_MAX, MOB ? 1.5 : 2);
+    R.setPixelRatio(PR);
     R.outputEncoding = THREE.sRGBEncoding;
     R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = opt.exposure || 1.2;
 
@@ -169,13 +189,13 @@
 
     /* cube captures of the studios (HDR when the device allows it) */
     function cube(mapping, sc){
-      var rt = new THREE.WebGLCubeRenderTarget(256, { format: THREE.RGBAFormat, type: HDR, generateMipmaps: true, minFilter: THREE.LinearMipmapLinearFilter });
+      var rt = new THREE.WebGLCubeRenderTarget(MOB ? 256 : 512, { format: THREE.RGBAFormat, type: HDR, generateMipmaps: true, minFilter: THREE.LinearMipmapLinearFilter });
       var cc = new THREE.CubeCamera(.1, 100, rt); cc.update(R, sc || env); rt.texture.mapping = mapping; return rt.texture;
     }
     /* the diamonds get their own studio: black velvet all round, hard white cards at many angles,
        so every facet flips between bright and dark the way a real stone does */
     var gemEnv = (function(){
-      var g = new THREE.Scene(); g.background = new THREE.Color(.36, .37, .41);
+      var g = new THREE.Scene(); g.background = new THREE.Color(.07, .075, .09);
       function card(w, h, k, p, warm){
         var c = warm ? new THREE.Color(1, .8, .45) : new THREE.Color(1, 1, 1);
         var m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: c.multiplyScalar(k), side: THREE.DoubleSide }));
@@ -183,10 +203,11 @@
       }
       for (var i = 0; i < 16; i++){
         var a = i / 16 * Math.PI * 2, y = (i % 4 - 1.5) * 3.5;
-        card(i % 2 ? 1.6 : 2.8, i % 3 ? 7 : 3, i % 4 === 1 ? 6 : 0.01, [Math.cos(a) * 8, y, Math.sin(a) * 8]);   /* black flags, a few hot cards */
+        card(i % 2 ? 1.6 : 2.8, i % 3 ? 7 : 3, (i % 4 === 1 || i % 5 === 3) ? 9 : 0.01, [Math.cos(a) * 8, y, Math.sin(a) * 8]);   /* black flags, hot cards between */
       }
       card(4, 4, 9, [0, 9, 1]); card(2, 6, 7, [6, -5, 3]); card(2, 6, 7, [-6, -5, -3]);                 /* hot whites */
       card(3, 1.5, 3, [0, -8, 4], true);                                                                 /* a warm kick */
+      for (var j = 0; j < 10; j++){ var b = j / 10 * Math.PI * 2 + .3; card(.9, .9, 12, [Math.cos(b) * 7, 5 + (j % 3) * 1.5, Math.sin(b) * 7]); }   /* small hard points: sparkle */
       return g;
     })();
     var metalEnv = cube(THREE.CubeReflectionMapping);
@@ -401,7 +422,7 @@
       if (now - lastFrame < FRAME_MS) return;   /* ~30fps cap on mobile */
       lastFrame = now;
       var dt = Math.min((now - last) / 1000, .05); last = now;
-      if (!api.ready || !vis || document.hidden || api.manual) return;
+      if (!api.ready || !vis || document.hidden || api.manual){ idleGap = true; return; }
       var k = RM ? 1 : 1 - Math.exp(-dt * 2.0);
       cur.az += wrap(tgt.az - cur.az) * k; cur.el += (tgt.el - cur.el) * k; cur.d += (tgt.d - cur.d) * k; cur.ty += (tgt.ty - cur.ty) * k;
 
@@ -424,7 +445,26 @@
         var z = (sp.userData.big ? .09 : .05) + (sp.userData.big ? .2 : .11) * p; sp.scale.set(z, z, z);
       });
       R.render(scene, cam);
+      adapt(now);
     }
+    /* frame clock for the adaptive sharpness: an average of the real time between drawn frames */
+    var BUDGET = MOB ? 44 : 24, avg = 0, lastDraw = 0, checkAt = 0, goodSince = 0, idleGap = true;
+    function adapt(now){
+      var gap = Math.min(now - lastDraw, 1000); lastDraw = now;
+      if (idleGap){ idleGap = false; avg = 0; checkAt = now + 1200; return; }   /* resumed after a pause: start over */
+      avg = avg ? avg * .9 + gap * .1 : gap;
+      if (now < checkAt) return;
+      checkAt = now + 1000;
+      if (avg > BUDGET && PR > PR_MIN){
+        prCeil = PR * .95;                                           /* never climb back to a level that lagged */
+        setPR(Math.max(PR_MIN, PR * .8)); goodSince = 0; checkAt = now + 1500;
+      } else if (avg < BUDGET * .75 && PR < prCeil){
+        if (!goodSince) goodSince = now;
+        else if (now - goodSince > 6000){ setPR(Math.min(prCeil, PR * 1.15)); goodSince = 0; }
+      } else goodSince = 0;
+    }
+    function setPR(v){ if (Math.abs(v - PR) < .02) return; PR = v; R.setPixelRatio(PR); api.resize(); }
+    api.quality = function(){ return { pixelRatio: PR, frameMs: Math.round(avg) }; };
     requestAnimationFrame(tick);
     /* render one still at a given turn (used to make turntable films offline) */
     api.still = function(rotY, pose){
