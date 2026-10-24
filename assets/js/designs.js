@@ -12,6 +12,60 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'elune',
+    name: "ELUNÉ",
+    added: '2026-10-24T23:05',
+    collection: 'rings',
+    kind: { en: "Band ring · 18K gold and diamond", fa: "انگشتر رینگی · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · single diamond", fa: "طلای ۱۸ عیار · تک الماس" },
+    description: {
+      en: "Inspired by moonlight, designed to captivate.",
+      fa: "الهام‌گرفته از نور ماه، طراحی‌شده برای مسحور کردن."
+    },
+    model: 'elune',
+    spin: 'assets/video/elune-spin.mp4',
+    spinPoster: 'assets/img/elune/spin-poster.jpg',
+    cover: 'assets/img/elune/render-01.jpg',
+    thumb: 'assets/img/elune/render-01-sm.jpg',
+    stream: ['assets/img/elune/stream-a.jpg', 'assets/img/elune/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/elune/render-01.jpg',
+      'assets/img/elune/matrix-01.jpg',
+      'assets/img/elune/matrix-02.jpg',
+      'assets/img/elune/matrix-03.jpg',
+      'assets/img/elune/matrix-04.jpg',
+      'assets/img/elune/matrix-05.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 4.78 g", fa: "طلای زرد ۱۸ عیار: ۴٫۷۸ گرم" },
+        { en: "18K white gold: 4.55 g", fa: "طلای سفید ۱۸ عیار: ۴٫۵۵ گرم" },
+        { en: "18K rose gold: 4.78 g", fa: "طلای رزگلد ۱۸ عیار: ۴٫۷۸ گرم" },
+        { en: "14K yellow gold: 4.00 g", fa: "طلای زرد ۱۴ عیار: ۴٫۰۰ گرم" },
+        { en: "22K yellow gold: 5.55 g", fa: "طلای زرد ۲۲ عیار: ۵٫۵۵ گرم" },
+        { en: "Silver 925: 3.22 g", fa: "نقره‌ی ۹۲۵: ۳٫۲۲ گرم" },
+        { en: "Platinum: 6.24 g", fa: "پلاتین: ۶٫۲۴ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "1 round diamond, 2.5 mm, 0.06 ct", fa: "۱ الماس گرد ۲٫۵ میلی‌متری، ۰٫۰۶ قیراط" },
+        { en: "Set flush in a polished channel across the band", fa: "نشانده‌شده هم‌سطح در کانالی براق در عرض حلقه" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 21.0 mm", fa: "ارتفاع از پایین تا بالا: ۲۱٫۰ میلی‌متر" },
+        { en: "Width across: 20.9 mm", fa: "عرض کلی: ۲۰٫۹ میلی‌متر" },
+        { en: "Band width along the finger: 4.8 mm", fa: "پهنای رینگ در امتداد انگشت: ۴٫۸ میلی‌متر" },
+        { en: "Inner diameter: 17.3 mm", fa: "قطر داخلی: ۱۷٫۳ میلی‌متر" },
+        { en: "Band thickness: 1.6 mm", fa: "ضخامت حلقه: ۱٫۶ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A clean, polished band with bevelled edges", fa: "حلقه‌ای صاف و براق با لبه‌های پخ‌خورده" },
+        { en: "One diamond in a recessed cross-channel on top", fa: "یک الماس در کانالی عرضی و فرورفته در بالای حلقه" },
+        { en: "Comfortable rounded inside", fa: "داخل گرد و راحت" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model where not marked.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی است؛ ابعادی که مشخص نشده بود از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'virelune',
     name: "VIRELUNE",
     added: '2026-10-24T21:06',

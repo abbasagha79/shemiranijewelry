@@ -29,7 +29,8 @@
     solvera:   { metal: 'models/solvera-metal.bin', gems: 'models/solvera-gems.json' },
     zarelle:   { metal: 'models/zarelle-metal.bin', gems: 'models/zarelle-gems.json' },
     thevora:   { metal: 'models/thevora-metal.bin', gems: 'models/thevora-gems.json' },
-    virelune:  { metal: 'models/virelune-metal.bin', gems: 'models/virelune-gems.json' }
+    virelune:  { metal: 'models/virelune-metal.bin', gems: 'models/virelune-gems.json' },
+    elune:     { metal: 'models/elune-metal.bin', gems: 'models/elune-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
