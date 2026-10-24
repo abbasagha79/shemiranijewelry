@@ -8,7 +8,7 @@
   if (!D){ main.innerHTML = '<div class="page-in"><p class="lead">This design was not found.</p></div>'; SM.start(); return; }
   var C = SM.collections.filter(function(c){ return c.id === D.collection; })[0] || SM.collections[0];
   var u = SM.url, e = SM.esc;
-  var NOUN = { rings: 'Ring', earrings: 'Earrings', bracelets: 'Bracelet', bangles: 'Bangle', necklaces: 'Necklace', pendants: 'Pendant' };
+  var NOUN = { rings: 'Ring', earrings: 'Earrings', bracelets: 'Bracelet', bangles: 'Bangle', necklaces: 'Necklace', pendants: 'Pendant', sets: 'Set' };
   document.title = D.name + ' \u2014 18K Gold & Diamond ' + (NOUN[D.collection] || 'Jewel') + ' | SHEMIRANI';
 
   var arrow = '<svg class="arrow-i" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>';

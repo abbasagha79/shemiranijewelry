@@ -32,7 +32,10 @@
     virelune:  { metal: 'models/virelune-metal.bin', gems: 'models/virelune-gems.json' },
     elune:     { metal: 'models/elune-metal.bin', gems: 'models/elune-gems.json' },
     lumeria:   { metal: 'models/lumeria-metal.bin', gems: 'models/lumeria-gems.json' },
-    kaverin:   { metal: 'models/kaverin-metal.bin', gems: 'models/kaverin-gems.json' }
+    kaverin:   { metal: 'models/kaverin-metal.bin', gems: 'models/kaverin-gems.json' },
+    orvessa:   { metal: 'models/orvessa-metal.bin', gems: 'models/orvessa-gems.json' },
+    avelis:    { metal: 'models/avelis-metal.bin', gems: 'models/avelis-gems.json' },
+    seravel:   { metal: 'models/seravel-metal.bin', gems: 'models/seravel-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
