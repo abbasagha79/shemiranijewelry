@@ -12,6 +12,62 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'kaverin',
+    name: "KAVÉRIN",
+    added: '2026-10-24T23:09',
+    collection: 'earrings',
+    kind: { en: "Stud earrings · 18K gold and diamonds", fa: "گوشواره‌ی میخی · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 22 diamonds each", fa: "طلای ۱۸ عیار · ۲۲ الماس در هر لنگه" },
+    description: {
+      en: "Sculpted with precision, made to be remembered.",
+      fa: "تراش‌خورده با دقت، ساخته‌شده برای ماندگاری در یاد."
+    },
+    model: 'kaverin',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .55, ty: 0 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/kaverin-spin.mp4',
+    spinPoster: 'assets/img/kaverin/spin-poster.jpg',
+    cover: 'assets/img/kaverin/render-01.jpg',
+    thumb: 'assets/img/kaverin/render-01-sm.jpg',
+    stream: ['assets/img/kaverin/stream-a.jpg', 'assets/img/kaverin/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/kaverin/render-01.jpg',
+      'assets/img/kaverin/matrix-01.jpg',
+      'assets/img/kaverin/matrix-02.jpg',
+      'assets/img/kaverin/matrix-03.jpg',
+      'assets/img/kaverin/matrix-04.jpg',
+      'assets/img/kaverin/matrix-05.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 1.09 g", fa: "طلای زرد ۱۸ عیار: ۱٫۰۹ گرم" },
+        { en: "18K white gold: 1.03 g", fa: "طلای سفید ۱۸ عیار: ۱٫۰۳ گرم" },
+        { en: "18K rose gold: 1.09 g", fa: "طلای رزگلد ۱۸ عیار: ۱٫۰۹ گرم" },
+        { en: "14K yellow gold: 0.91 g", fa: "طلای زرد ۱۴ عیار: ۰٫۹۱ گرم" },
+        { en: "22K yellow gold: 1.26 g", fa: "طلای زرد ۲۲ عیار: ۱٫۲۶ گرم" },
+        { en: "Silver 925: 0.73 g", fa: "نقره‌ی ۹۲۵: ۰٫۷۳ گرم" },
+        { en: "Platinum: 1.42 g", fa: "پلاتین: ۱٫۴۲ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "Each earring: 22 round diamonds, 0.13 ct", fa: "هر لنگه: ۲۲ الماس گرد، ۰٫۱۳ قیراط" },
+        { en: "17 stones, 1.2 mm: 0.11 ct", fa: "۱۷ نگین ۱٫۲ میلی‌متری: ۰٫۱۱ قیراط" },
+        { en: "5 stones, 1.0–1.1 mm: 0.02 ct", fa: "۵ نگین ۱ تا ۱٫۱ میلی‌متری: ۰٫۰۲ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 16.9 mm", fa: "طول: ۱۶٫۹ میلی‌متر" },
+        { en: "Width: 13.9 mm", fa: "عرض: ۱۳٫۹ میلی‌متر" },
+        { en: "Height: 7.9 mm", fa: "ارتفاع: ۷٫۹ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "Two parallel diamond-set bars laid on the diagonal", fa: "دو میله‌ی نگین‌دار موازی و مورب" },
+        { en: "Polished gold loops weave between them like a flower or bow", fa: "حلقه‌های طلای براق مثل گل یا پاپیون از میانشان رد می‌شوند" },
+        { en: "Post fitting behind", fa: "پین در پشت" }
+      ]}
+    ],
+    note: { en: "Metal weights and stones are per earring, from the design file.", fa: "وزن فلز و نگین‌ها برای هر لنگه و از فایل طراحی است." }
+  },
+  {
     id: 'lumeria',
     name: "LUMÉRIA",
     added: '2026-10-24T23:08',

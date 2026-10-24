@@ -21,6 +21,7 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "kaverin", "name": "KAVÉRIN", "collection": "earrings", "desc": "KAVÉRIN are stud earrings in 18K gold — two parallel diamond-set bars on the diagonal with polished gold loops woven between them; 22 diamonds (0.13 ct) per earring.", "diamonds": "22 round diamonds per earring, 0.13 ct", "weight18k": "1.09 g"},
     {"id": "lumeria", "name": "LUMÉRIA", "collection": "earrings", "desc": "LUMÉRIA are statement drop earrings in 18K gold — three pavé leaves over a wide disc with two pavé rings and a swinging pavé diamond-shaped drop; 136 diamonds (0.87 ct) per earring.", "diamonds": "136 round diamonds per earring, 0.87 ct", "weight18k": "5.82 g"},
     {"id": "elune", "name": "ELUNÉ", "collection": "rings", "desc": "ELUNÉ is a band ring in 18K gold — a polished band with bevelled edges and a single 2.5 mm diamond (0.06 ct) set in a recessed cross-channel.", "diamonds": "1 round diamond, 0.06 ct", "weight18k": "4.78 g"},
     {"id": "virelune", "name": "VIRELUNE", "collection": "rings", "desc": "VIRELUNE is a solitaire ring in 18K gold — a 0.47 ct, 5 mm round diamond in a tapered four-prong head, with a row of diamonds in a pointed channel on each shoulder; 13 diamonds, 0.62 ct in total.", "diamonds": "13 round diamonds, 0.62 ct", "weight18k": "3.20 g"},
