@@ -12,6 +12,63 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'lumeria',
+    name: "LUMÉRIA",
+    added: '2026-10-24T23:08',
+    collection: 'earrings',
+    kind: { en: "Statement drop earrings · 18K gold and diamonds", fa: "گوشواره‌ی آویزی شاخص · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 136 diamonds each", fa: "طلای ۱۸ عیار · ۱۳۶ الماس در هر لنگه" },
+    description: {
+      en: "A constellation of brilliance, held in gold.",
+      fa: "صورت‌فلکی‌ای از درخشش، در آغوش طلا."
+    },
+    model: 'lumeria',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .55, ty: -0.1 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/lumeria-spin.mp4',
+    spinPoster: 'assets/img/lumeria/spin-poster.jpg',
+    cover: 'assets/img/lumeria/render-01.jpg',
+    thumb: 'assets/img/lumeria/render-01-sm.jpg',
+    stream: ['assets/img/lumeria/stream-a.jpg', 'assets/img/lumeria/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/lumeria/render-01.jpg',
+      'assets/img/lumeria/matrix-01.jpg',
+      'assets/img/lumeria/matrix-02.jpg',
+      'assets/img/lumeria/matrix-03.jpg',
+      'assets/img/lumeria/matrix-04.jpg',
+      'assets/img/lumeria/matrix-05.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 5.82 g", fa: "طلای زرد ۱۸ عیار: ۵٫۸۲ گرم" },
+        { en: "18K white gold: 5.54 g", fa: "طلای سفید ۱۸ عیار: ۵٫۵۴ گرم" },
+        { en: "18K rose gold: 5.82 g", fa: "طلای رزگلد ۱۸ عیار: ۵٫۸۲ گرم" },
+        { en: "14K yellow gold: 4.86 g", fa: "طلای زرد ۱۴ عیار: ۴٫۸۶ گرم" },
+        { en: "22K yellow gold: 6.76 g", fa: "طلای زرد ۲۲ عیار: ۶٫۷۶ گرم" },
+        { en: "Silver 925: 3.91 g", fa: "نقره‌ی ۹۲۵: ۳٫۹۱ گرم" },
+        { en: "Platinum: 7.59 g", fa: "پلاتین: ۷٫۵۹ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "Each earring: 136 round diamonds, 0.87 ct", fa: "هر لنگه: ۱۳۶ الماس گرد، ۰٫۸۷ قیراط" },
+        { en: "92 stones, 1.2 mm: 0.60 ct", fa: "۹۲ نگین ۱٫۲ میلی‌متری: ۰٫۶۰ قیراط" },
+        { en: "36 stones, 1.1 mm: 0.18 ct", fa: "۳۶ نگین ۱٫۱ میلی‌متری: ۰٫۱۸ قیراط" },
+        { en: "8 stones, 1.4–1.6 mm: 0.09 ct", fa: "۸ نگین ۱٫۴ تا ۱٫۶ میلی‌متری: ۰٫۰۹ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 41.7 mm", fa: "طول: ۴۱٫۷ میلی‌متر" },
+        { en: "Width: 26.9 mm", fa: "عرض: ۲۶٫۹ میلی‌متر" },
+        { en: "Height: 7.4 mm", fa: "ارتفاع: ۷٫۴ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "Three pavé leaves at the top, each framing a larger stone", fa: "سه برگ پاوه در بالا، هر کدام دور یک نگین درشت‌تر" },
+        { en: "A diamond bar leads down into a wide disc with two pavé rings", fa: "میله‌ای نگین‌دار به دیسکی پهن با دو حلقه‌ی پاوه می‌رسد" },
+        { en: "A pavé diamond-shaped drop swings free in the centre", fa: "آویزی لوزی و پاوه که در مرکز آزادانه تاب می‌خورد" }
+      ]}
+    ],
+    note: { en: "Metal weights and stones are per earring, from the design file.", fa: "وزن فلز و نگین‌ها برای هر لنگه و از فایل طراحی است." }
+  },
+  {
     id: 'elune',
     name: "ELUNÉ",
     added: '2026-10-24T23:05',
