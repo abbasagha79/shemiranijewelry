@@ -21,6 +21,12 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "virelune", "name": "VIRELUNE", "collection": "rings", "desc": "VIRELUNE is a solitaire ring in 18K gold — a 0.47 ct, 5 mm round diamond in a tapered four-prong head, with a row of diamonds in a pointed channel on each shoulder; 13 diamonds, 0.62 ct in total.", "diamonds": "13 round diamonds, 0.62 ct", "weight18k": "3.20 g"},
+    {"id": "thevora", "name": "THÉVORA", "collection": "earrings", "desc": "THÉVORA are drop earrings in 18K gold — a diamond-set scroll curling into a spiral, with a round drop holding a seven-stone diamond flower; 28 diamonds (0.19 ct) per earring.", "diamonds": "56 round diamonds, 0.38 ct (pair)", "weight18k": "1.35 g"},
+    {"id": "zarelle", "name": "ZARELLE", "collection": "rings", "desc": "ZARELLE is a solitaire ring in 18K gold — a 0.81 ct, 6 mm round diamond in a six-prong head, with woven gold strands in each shoulder framed by two rows of diamonds; 37 diamonds, 1.04 ct in total.", "diamonds": "37 round diamonds, 1.04 ct", "weight18k": "5.15 g"},
+    {"id": "solvera", "name": "SOLVÉRA", "collection": "rings", "desc": "SOLVÉRA is a halo bypass ring in 18K gold — a 0.75 ct oval diamond (7.2 × 5.3 mm) in a pavé halo, with shoulders that sweep past each other; 37 diamonds, 0.96 ct in total.", "diamonds": "37 diamonds, 0.96 ct", "weight18k": "3.64 g"},
+    {"id": "velora", "name": "VELORA", "collection": "pendants", "desc": "VELORA is a heart pendant in 18K gold — two diamond-set strands and a plain gold sweep drawing a heart, under a double ribbon bail; 37 diamonds, 0.29 ct.", "diamonds": "37 round diamonds, 0.29 ct", "weight18k": "3.03 g"},
+    {"id": "aureve", "name": "AUREVÉ", "collection": "pendants", "desc": "AUREVÉ is a pear halo pendant in 18K gold — a pear diamond in a halo of prong-set round stones, under a twisted gold ribbon bail set with diamonds; 22 diamonds in all.", "diamonds": "22 diamonds", "weight18k": "1.15 g"},
     {"id": "imperio", "name": "IMPERIO", "collection": "pendants",
      "desc": "IMPERIO is a pendant in 18K gold — a 1.20 ct pear diamond (9 × 6 mm) hung from a looping gold ribbon set with small diamonds; 14 diamonds, 1.28 ct in total.",
      "diamonds": "14 diamonds, 1.28 ct", "weight18k": "1.95 g"},
