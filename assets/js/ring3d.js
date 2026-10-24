@@ -23,7 +23,13 @@
     crownelle: { metal: 'models/crownelle-metal.bin', gems: 'models/crownelle-gems.json' },
     asterion:  { metal: 'models/asterion-metal.bin',  gems: 'models/asterion-gems.json' },
     lumiere:   { metal: 'models/lumiere-metal.bin',   gems: 'models/lumiere-gems.json' },
-    imperio:   { metal: 'models/imperio-metal.bin',   gems: 'models/imperio-gems.json' }
+    imperio:   { metal: 'models/imperio-metal.bin',   gems: 'models/imperio-gems.json' },
+    aureve:    { metal: 'models/aureve-metal.bin', gems: 'models/aureve-gems.json' },
+    velora:    { metal: 'models/velora-metal.bin', gems: 'models/velora-gems.json' },
+    solvera:   { metal: 'models/solvera-metal.bin', gems: 'models/solvera-gems.json' },
+    zarelle:   { metal: 'models/zarelle-metal.bin', gems: 'models/zarelle-gems.json' },
+    thevora:   { metal: 'models/thevora-metal.bin', gems: 'models/thevora-gems.json' },
+    virelune:  { metal: 'models/virelune-metal.bin', gems: 'models/virelune-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
@@ -188,8 +194,8 @@
     if (!(R.capabilities.isWebGL2 ? gl.getExtension('EXT_color_buffer_float') || gl.getExtension('EXT_color_buffer_half_float') : gl.getExtension('OES_texture_half_float') && gl.getExtension('EXT_color_buffer_half_float'))) HDR = THREE.UnsignedByteType;
 
     /* cube captures of the studios (HDR when the device allows it) */
-    function cube(mapping, sc){
-      var rt = new THREE.WebGLCubeRenderTarget(MOB ? 256 : 512, { format: THREE.RGBAFormat, type: HDR, generateMipmaps: true, minFilter: THREE.LinearMipmapLinearFilter });
+    function cube(mapping, sc, size){
+      var rt = new THREE.WebGLCubeRenderTarget(size || (MOB ? 256 : 512), { format: THREE.RGBAFormat, type: HDR, generateMipmaps: true, minFilter: THREE.LinearMipmapLinearFilter });
       var cc = new THREE.CubeCamera(.1, 100, rt); cc.update(R, sc || env); rt.texture.mapping = mapping; return rt.texture;
     }
     /* the diamonds get their own studio: black velvet all round, hard white cards at many angles,
@@ -239,11 +245,11 @@
       }
       return out;
     })(GEM);
-    var gemCube = cube(THREE.CubeReflectionMapping, gemEnv);
+    var gemCube = cube(THREE.CubeReflectionMapping, gemEnv, 512);   /* diamonds always get the sharp capture: their facets magnify it */
     function diamondMat(dim){
       return new THREE.ShaderMaterial({
-        defines: { NPLANES: PLANES.length, BOUNCES: MOB ? 3 : 5 },
-        uniforms: { envMap: { value: gemCube }, planes: { value: PLANES }, dim: { value: dim ? .28 : 1 }, gain: { value: 1.25 } },
+        defines: { NPLANES: PLANES.length, BOUNCES: MOB ? 4 : 6 },
+        uniforms: { envMap: { value: gemCube }, planes: { value: PLANES }, dim: { value: dim ? .28 : 1 }, gain: { value: 1.32 } },
         transparent: !!dim, depthWrite: !dim, side: THREE.DoubleSide,
         vertexShader: [
           'varying vec3 vP; varying vec3 vN; varying vec3 vCam; varying vec3 vW0; varying vec3 vW1; varying vec3 vW2;',
@@ -285,13 +291,14 @@
           '    vec3 o = refract(d, -nh, 2.42);',
           '    if (dot(o, o) > 0.0){',
           '      float Fi = fres(dot(o, nh), 0.172);',
-          '      vec3 oR = refract(d, -nh, 2.407), oB = refract(d, -nh, 2.451);',
+          '      vec3 oR = refract(d, -nh, 2.400), oB = refract(d, -nh, 2.460);',
           '      vec3 c = vec3(env(dot(oR, oR) > 0.0 ? oR : o).r, env(o).g, env(dot(oB, oB) > 0.0 ? oB : o).b);',
           '      col += c * e * (1.0 - Fi); e *= Fi;',
           '    }',
           '    d = reflect(d, -nh);',
           '  }',
           '  col += env(d) * e * 0.6;',
+          '  col = pow(col, vec3(1.12)) * 1.08;',   /* a touch more contrast: darks deeper, flashes brighter */
           '  col *= vec3(0.985, 0.99, 1.0) * gain * dim;',
           '  gl_FragColor = vec4(col, dim < 1.0 ? 0.55 : 1.0);',
           '  #include <tonemapping_fragment>',
