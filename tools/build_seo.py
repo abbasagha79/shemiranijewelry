@@ -21,6 +21,7 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "vantheris", "name": "VANTHÉRIS", "collection": "rings", "desc": "VANTHÉRIS is a crown ring in 18K gold — gold arches with ball tips form a crown along a diamond-set band, with three larger diamonds as its jewels; 23 diamonds, 0.32 ct.", "diamonds": "23 round diamonds, 0.32 ct", "weight18k": "3.44 g"},
     {"id": "kryselon", "name": "KRYSELON", "collection": "rings", "desc": "KRYSELON is a solitaire ring in 18K gold — a 0.33 ct, 4.5 mm diamond in four prongs beside a small gold padlock with a keyhole, on a slim bypass shank.", "diamonds": "1 round diamond, 0.33 ct", "weight18k": "2.69 g"},
     {"id": "azmoriel", "name": "AZMORIEL", "collection": "rings", "desc": "AZMORIEL is a men's solitaire ring in 18K gold — a 0.59 ct, 5.4 mm diamond in a raised square seat on a wide flat top, with diamond rows along both edges; 37 diamonds, 1.06 ct in total.", "diamonds": "37 round diamonds, 1.06 ct", "weight18k": "7.32 g"},
     {"id": "thalver", "name": "THALVÉR", "collection": "rings", "desc": "THALVÉR is a men's ring in 18K gold — chevron arrows cut through a flat polished top, a diamond triangle beside a diamond chevron that runs down one shoulder; 20 diamonds, 0.16 ct.", "diamonds": "20 round diamonds, 0.16 ct", "weight18k": "4.68 g"},

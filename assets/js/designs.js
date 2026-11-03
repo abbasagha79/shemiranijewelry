@@ -12,6 +12,58 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'vantheris',
+    name: "VANTHÉRIS",
+    added: '2026-11-03T22:23',
+    collection: 'rings',
+    kind: { en: "Crown ring · 18K gold and diamonds", fa: "انگشتر تاجی · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 23 diamonds", fa: "طلای ۱۸ عیار · ۲۳ الماس" },
+    description: {
+      en: "A bold yet polished creation combining dramatic presence with refined craftsmanship.",
+      fa: "خلقی جسورانه اما آراسته؛ تلفیق حضوری چشمگیر با ساختی ظریف."
+    },
+    model: 'vantheris',
+    spin: 'assets/video/vantheris-spin.mp4',
+    spinPoster: 'assets/img/vantheris/spin-poster.jpg',
+    cover: 'assets/img/vantheris/render-01.jpg',
+    thumb: 'assets/img/vantheris/render-01-sm.jpg',
+    stream: ['assets/img/vantheris/stream-a.jpg', 'assets/img/vantheris/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/vantheris/render-01.jpg',
+      'assets/img/vantheris/matrix-01.jpg',
+      'assets/img/vantheris/matrix-02.jpg',
+      'assets/img/vantheris/matrix-03.jpg',
+      'assets/img/vantheris/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.44 g", fa: "طلای زرد ۱۸ عیار: ۳٫۴۴ گرم" },
+        { en: "18K white gold: 3.27 g", fa: "طلای سفید ۱۸ عیار: ۳٫۲۷ گرم" },
+        { en: "18K rose gold: 3.44 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۴۴ گرم" },
+        { en: "14K yellow gold: 2.87 g", fa: "طلای زرد ۱۴ عیار: ۲٫۸۷ گرم" },
+        { en: "22K yellow gold: 3.99 g", fa: "طلای زرد ۲۲ عیار: ۳٫۹۹ گرم" },
+        { en: "Silver 925: 2.31 g", fa: "نقره‌ی ۹۲۵: ۲٫۳۱ گرم" },
+        { en: "Platinum: 4.49 g", fa: "پلاتین: ۴٫۴۹ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "23 round diamonds, 0.32 ct in total", fa: "۲۳ الماس گرد، در مجموع ۰٫۳۲ قیراط" },
+        { en: "Crown points: one 2.5 mm and two 2.02 mm diamonds, 0.12 ct", fa: "نوک‌های تاج: یک الماس ۲٫۵ و دو الماس ۲٫۰۲ میلی‌متری، ۰٫۱۲ قیراط" },
+        { en: "20 stones, 1.4 mm: 0.21 ct, in a row along the band", fa: "۲۰ نگین ۱٫۴ میلی‌متری: ۰٫۲۱ قیراط، در یک ردیف روی رینگ" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 22.0 mm", fa: "ارتفاع از پایین تا بالا: ۲۲٫۰ میلی‌متر" },
+        { en: "Width across: 20.8 mm", fa: "عرض کلی: ۲۰٫۸ میلی‌متر" },
+        { en: "Inner diameter: 17.5 mm", fa: "قطر داخلی: ۱۷٫۵ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A crown of gold arches with ball tips around one side of the band", fa: "تاجی از قوس‌های طلایی با سرهای گوی‌مانند دور یک طرف رینگ" },
+        { en: "Three diamonds rise as the crown's jewels", fa: "سه الماس مثل جواهرهای تاج بالا آمده‌اند" },
+        { en: "A diamond-set band beside the crown", fa: "رینگی نگین‌دار در کنار تاج" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'kryselon',
     name: "KRYSELON",
     added: '2026-11-03T22:10',
