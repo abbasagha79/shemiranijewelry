@@ -12,6 +12,112 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'elystron',
+    name: "ELYSTRON",
+    added: '2026-11-03T22:36',
+    collection: 'rings',
+    kind: { en: "Flower ring · 18K gold and diamonds", fa: "انگشتر گل · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 11 diamonds", fa: "طلای ۱۸ عیار · ۱۱ الماس" },
+    description: {
+      en: "Refined geometry and balanced proportions create a memorable, elegant design.",
+      fa: "هندسه‌ای ظریف و تناسباتی متوازن، طرحی ماندگار و برازنده می‌سازند."
+    },
+    model: 'elystron',
+    spin: 'assets/video/elystron-spin.mp4',
+    spinPoster: 'assets/img/elystron/spin-poster.jpg',
+    cover: 'assets/img/elystron/render-01.jpg',
+    thumb: 'assets/img/elystron/render-01-sm.jpg',
+    stream: ['assets/img/elystron/stream-a.jpg', 'assets/img/elystron/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/elystron/render-01.jpg',
+      'assets/img/elystron/matrix-01.jpg',
+      'assets/img/elystron/matrix-02.jpg',
+      'assets/img/elystron/matrix-03.jpg',
+      'assets/img/elystron/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.76 g", fa: "طلای زرد ۱۸ عیار: ۳٫۷۶ گرم" },
+        { en: "18K white gold: 3.58 g", fa: "طلای سفید ۱۸ عیار: ۳٫۵۸ گرم" },
+        { en: "18K rose gold: 3.76 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۷۶ گرم" },
+        { en: "14K yellow gold: 3.15 g", fa: "طلای زرد ۱۴ عیار: ۳٫۱۵ گرم" },
+        { en: "22K yellow gold: 4.37 g", fa: "طلای زرد ۲۲ عیار: ۴٫۳۷ گرم" },
+        { en: "Silver 925: 2.53 g", fa: "نقره‌ی ۹۲۵: ۲٫۵۳ گرم" },
+        { en: "Platinum: 4.91 g", fa: "پلاتین: ۴٫۹۱ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "11 round diamonds, 0.13 ct in total", fa: "۱۱ الماس گرد، در مجموع ۰٫۱۳ قیراط" },
+        { en: "Two centre stones, 1.79 and 1.7 mm", fa: "دو نگین مرکزی ۱٫۷۹ و ۱٫۷ میلی‌متری" },
+        { en: "9 stones, 1.1–1.6 mm, set in the petals", fa: "۹ نگین ۱٫۱ تا ۱٫۶ میلی‌متری، نشانده‌شده در گلبرگ‌ها" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 23.6 mm", fa: "ارتفاع از پایین تا بالا: ۲۳٫۶ میلی‌متر" },
+        { en: "Width across: 20.7 mm", fa: "عرض کلی: ۲۰٫۷ میلی‌متر" },
+        { en: "Flower along the finger: 13.5 mm", fa: "طول گل در امتداد انگشت: ۱۳٫۵ میلی‌متر" },
+        { en: "Inner diameter: 17.5 mm", fa: "قطر داخلی: ۱۷٫۵ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A gold flower with diamond-set and open petals", fa: "گلی طلایی با گلبرگ‌های نگین‌دار و باز" },
+        { en: "Two raised diamonds at its heart", fa: "دو الماس برجسته در مرکز گل" },
+        { en: "A double shank that twists beneath", fa: "بدنه‌ی دوتایی که در زیر می‌پیچد" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'dravenza',
+    name: "DRAVÉNZA",
+    added: '2026-11-03T22:35',
+    collection: 'rings',
+    kind: { en: "Crossover ring · 18K gold and diamonds", fa: "انگشتر ضربدری · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 43 diamonds", fa: "طلای ۱۸ عیار · ۴۳ الماس" },
+    description: {
+      en: "A confident expression of contemporary luxury with powerful, expressive contours.",
+      fa: "بیانی مطمئن از تجمل معاصر، با خطوطی قدرتمند و گویا."
+    },
+    model: 'dravenza',
+    spin: 'assets/video/dravenza-spin.mp4',
+    spinPoster: 'assets/img/dravenza/spin-poster.jpg',
+    cover: 'assets/img/dravenza/render-01.jpg',
+    thumb: 'assets/img/dravenza/render-01-sm.jpg',
+    stream: ['assets/img/dravenza/stream-a.jpg', 'assets/img/dravenza/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/dravenza/render-01.jpg',
+      'assets/img/dravenza/matrix-01.jpg',
+      'assets/img/dravenza/matrix-02.jpg',
+      'assets/img/dravenza/matrix-03.jpg',
+      'assets/img/dravenza/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.67 g", fa: "طلای زرد ۱۸ عیار: ۳٫۶۷ گرم" },
+        { en: "18K white gold: 3.50 g", fa: "طلای سفید ۱۸ عیار: ۳٫۵۰ گرم" },
+        { en: "18K rose gold: 3.67 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۶۷ گرم" },
+        { en: "14K yellow gold: 3.07 g", fa: "طلای زرد ۱۴ عیار: ۳٫۰۷ گرم" },
+        { en: "22K yellow gold: 4.27 g", fa: "طلای زرد ۲۲ عیار: ۴٫۲۷ گرم" },
+        { en: "Silver 925: 2.47 g", fa: "نقره‌ی ۹۲۵: ۲٫۴۷ گرم" },
+        { en: "Platinum: 4.79 g", fa: "پلاتین: ۴٫۷۹ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "43 round diamonds, 0.37 ct in total", fa: "۴۳ الماس گرد، در مجموع ۰٫۳۷ قیراط" },
+        { en: "35 stones, 1.3 mm: 0.29 ct", fa: "۳۵ نگین ۱٫۳ میلی‌متری: ۰٫۲۹ قیراط" },
+        { en: "8 stones, 1.4 mm: 0.08 ct, at the crossing", fa: "۸ نگین ۱٫۴ میلی‌متری: ۰٫۰۸ قیراط، در محل تقاطع" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 21.6 mm", fa: "ارتفاع از پایین تا بالا: ۲۱٫۶ میلی‌متر" },
+        { en: "Width across: 21.8 mm", fa: "عرض کلی: ۲۱٫۸ میلی‌متر" },
+        { en: "Top width along the finger: 9.3 mm", fa: "پهنای بالای انگشتر در امتداد انگشت: ۹٫۳ میلی‌متر" },
+        { en: "Inner diameter: 17.8 mm", fa: "قطر داخلی: ۱۷٫۸ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "Two pavé bands crossing in an X over the top", fa: "دو رینگ پاوه که به شکل X روی هم رد می‌شوند" },
+        { en: "A plain polished bar running straight through the middle", fa: "میله‌ای ساده و براق که مستقیم از وسط عبور می‌کند" },
+        { en: "Open, split shank", fa: "بدنه‌ی باز و دوشاخه" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'opheryx',
     name: "OPHERYX",
     added: '2026-11-03T22:34',

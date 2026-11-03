@@ -44,7 +44,9 @@
     azmoriel:  { metal: 'models/azmoriel-metal.bin', gems: 'models/azmoriel-gems.json' },
     kryselon:  { metal: 'models/kryselon-metal.bin', gems: 'models/kryselon-gems.json' },
     vantheris: { metal: 'models/vantheris-metal.bin', gems: 'models/vantheris-gems.json' },
-    opheryx:   { metal: 'models/opheryx-metal.bin', gems: 'models/opheryx-gems.json' }
+    opheryx:   { metal: 'models/opheryx-metal.bin', gems: 'models/opheryx-gems.json' },
+    dravenza:  { metal: 'models/dravenza-metal.bin', gems: 'models/dravenza-gems.json' },
+    elystron:  { metal: 'models/elystron-metal.bin', gems: 'models/elystron-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */

@@ -21,6 +21,8 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "elystron", "name": "ELYSTRON", "collection": "rings", "desc": "ELYSTRON is a flower ring in 18K gold — a gold flower of diamond-set and open petals around two raised centre stones, on a twisting double shank; 11 diamonds, 0.13 ct.", "diamonds": "11 round diamonds, 0.13 ct", "weight18k": "3.76 g"},
+    {"id": "dravenza", "name": "DRAVÉNZA", "collection": "rings", "desc": "DRAVÉNZA is a crossover ring in 18K gold — two pavé bands crossing in an X over a plain polished bar, on an open split shank; 43 diamonds, 0.37 ct.", "diamonds": "43 round diamonds, 0.37 ct", "weight18k": "3.67 g"},
     {"id": "opheryx", "name": "OPHERYX", "collection": "rings", "desc": "OPHERYX is a solitaire ring in 18K gold — a 0.21 ct, 3.8 mm diamond on a tall six-prong head, with two twisting diamond strands on each shoulder around a polished leaf; 27 diamonds, 0.47 ct.", "diamonds": "27 round diamonds, 0.47 ct", "weight18k": "2.29 g"},
     {"id": "vantheris", "name": "VANTHÉRIS", "collection": "rings", "desc": "VANTHÉRIS is a crown ring in 18K gold — gold arches with ball tips form a crown along a diamond-set band, with three larger diamonds as its jewels; 23 diamonds, 0.32 ct.", "diamonds": "23 round diamonds, 0.32 ct", "weight18k": "3.44 g"},
     {"id": "kryselon", "name": "KRYSELON", "collection": "rings", "desc": "KRYSELON is a solitaire ring in 18K gold — a 0.33 ct, 4.5 mm diamond in four prongs beside a small gold padlock with a keyhole, on a slim bypass shank.", "diamonds": "1 round diamond, 0.33 ct", "weight18k": "2.69 g"},
