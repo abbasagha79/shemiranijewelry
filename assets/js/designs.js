@@ -12,6 +12,58 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'quorven',
+    name: "QUORVÉN",
+    added: '2026-11-03T22:38',
+    collection: 'rings',
+    kind: { en: "Open ring · 18K gold and diamonds", fa: "انگشتر باز · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 32 diamonds", fa: "طلای ۱۸ عیار · ۳۲ الماس" },
+    description: {
+      en: "An exclusive design combining distinctive form with enduring sophistication.",
+      fa: "طرحی انحصاری؛ تلفیق فرمی متمایز با ظرافتی ماندگار."
+    },
+    model: 'quorven',
+    spin: 'assets/video/quorven-spin.mp4',
+    spinPoster: 'assets/img/quorven/spin-poster.jpg',
+    cover: 'assets/img/quorven/render-01.jpg',
+    thumb: 'assets/img/quorven/render-01-sm.jpg',
+    stream: ['assets/img/quorven/stream-a.jpg', 'assets/img/quorven/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/quorven/render-01.jpg',
+      'assets/img/quorven/matrix-01.jpg',
+      'assets/img/quorven/matrix-02.jpg',
+      'assets/img/quorven/matrix-03.jpg',
+      'assets/img/quorven/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 2.77 g", fa: "طلای زرد ۱۸ عیار: ۲٫۷۷ گرم" },
+        { en: "18K white gold: 2.64 g", fa: "طلای سفید ۱۸ عیار: ۲٫۶۴ گرم" },
+        { en: "18K rose gold: 2.77 g", fa: "طلای رزگلد ۱۸ عیار: ۲٫۷۷ گرم" },
+        { en: "14K yellow gold: 2.32 g", fa: "طلای زرد ۱۴ عیار: ۲٫۳۲ گرم" },
+        { en: "22K yellow gold: 3.22 g", fa: "طلای زرد ۲۲ عیار: ۳٫۲۲ گرم" },
+        { en: "Silver 925: 1.86 g", fa: "نقره‌ی ۹۲۵: ۱٫۸۶ گرم" },
+        { en: "Platinum: 3.62 g", fa: "پلاتین: ۳٫۶۲ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "32 round diamonds, 0.21 ct in total", fa: "۳۲ الماس گرد، در مجموع ۰٫۲۱ قیراط" },
+        { en: "18 stones, 1.2 mm: 0.12 ct", fa: "۱۸ نگین ۱٫۲ میلی‌متری: ۰٫۱۲ قیراط" },
+        { en: "14 stones, 1.1–1.4 mm: 0.09 ct", fa: "۱۴ نگین ۱٫۱ تا ۱٫۴ میلی‌متری: ۰٫۰۹ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 21.5 mm", fa: "ارتفاع از پایین تا بالا: ۲۱٫۵ میلی‌متر" },
+        { en: "Width across: 20.7 mm", fa: "عرض کلی: ۲۰٫۷ میلی‌متر" },
+        { en: "Inner diameter: 17.5 mm", fa: "قطر داخلی: ۱۷٫۵ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "Two ends meet on top: a pavé ring and a plain polished ring", fa: "دو سرِ انگشتر در بالا به هم می‌رسند: یک حلقه‌ی پاوه و یک حلقه‌ی ساده‌ی براق" },
+        { en: "A tapering pavé panel on one shoulder", fa: "صفحه‌ای پاوه و باریک‌شونده روی یک شانه" },
+        { en: "Clean polished band", fa: "رینگ صاف و براق" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'elystron',
     name: "ELYSTRON",
     added: '2026-11-03T22:36',

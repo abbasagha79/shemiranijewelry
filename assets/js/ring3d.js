@@ -46,7 +46,8 @@
     vantheris: { metal: 'models/vantheris-metal.bin', gems: 'models/vantheris-gems.json' },
     opheryx:   { metal: 'models/opheryx-metal.bin', gems: 'models/opheryx-gems.json' },
     dravenza:  { metal: 'models/dravenza-metal.bin', gems: 'models/dravenza-gems.json' },
-    elystron:  { metal: 'models/elystron-metal.bin', gems: 'models/elystron-gems.json' }
+    elystron:  { metal: 'models/elystron-metal.bin', gems: 'models/elystron-gems.json' },
+    quorven:   { metal: 'models/quorven-metal.bin', gems: 'models/quorven-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */

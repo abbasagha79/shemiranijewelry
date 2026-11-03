@@ -21,6 +21,7 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "quorven", "name": "QUORVÉN", "collection": "rings", "desc": "QUORVÉN is an open ring in 18K gold — its two ends meet on top as a pavé ring and a plain polished ring, with a tapering pavé panel on one shoulder; 32 diamonds, 0.21 ct.", "diamonds": "32 round diamonds, 0.21 ct", "weight18k": "2.77 g"},
     {"id": "elystron", "name": "ELYSTRON", "collection": "rings", "desc": "ELYSTRON is a flower ring in 18K gold — a gold flower of diamond-set and open petals around two raised centre stones, on a twisting double shank; 11 diamonds, 0.13 ct.", "diamonds": "11 round diamonds, 0.13 ct", "weight18k": "3.76 g"},
     {"id": "dravenza", "name": "DRAVÉNZA", "collection": "rings", "desc": "DRAVÉNZA is a crossover ring in 18K gold — two pavé bands crossing in an X over a plain polished bar, on an open split shank; 43 diamonds, 0.37 ct.", "diamonds": "43 round diamonds, 0.37 ct", "weight18k": "3.67 g"},
     {"id": "opheryx", "name": "OPHERYX", "collection": "rings", "desc": "OPHERYX is a solitaire ring in 18K gold — a 0.21 ct, 3.8 mm diamond on a tall six-prong head, with two twisting diamond strands on each shoulder around a polished leaf; 27 diamonds, 0.47 ct.", "diamonds": "27 round diamonds, 0.47 ct", "weight18k": "2.29 g"},
