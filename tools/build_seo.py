@@ -21,6 +21,7 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "zafyren", "name": "ZAFYREN", "collection": "rings", "desc": "ZAFYREN is a cluster ring in 18K gold — a raised flower of seven diamonds over a halo of ten on tall prongs, openwork lattice sides and wide pavé shoulders; 69 diamonds, 0.72 ct.", "diamonds": "69 round diamonds, 0.72 ct", "weight18k": "6.28 g"},
     {"id": "seravel", "name": "SERAVÉL", "collection": "rings", "desc": "SERAVÉL is a solitaire band ring in 18K gold — a 0.44 ct, 5 mm diamond in four prongs on a wide fluted band edged with rows of diamonds; 43 diamonds, 0.76 ct in total.", "diamonds": "43 round diamonds, 0.76 ct", "weight18k": "4.88 g"},
     {"id": "avelis", "name": "AVELIS", "collection": "sets", "desc": "AVELIS is a set of a pendant and earrings in 18K gold — a pavé-edged teardrop pendant filled with gold scrolls, and matching six-stone diamond flower earrings; 41 diamonds, 0.26 ct.", "diamonds": "41 round diamonds, 0.26 ct (set)", "weight18k": "1.85 g"},
     {"id": "orvessa", "name": "ORVESSA", "collection": "rings", "desc": "ORVESSA is a cluster ring in 18K gold — three concentric rings of diamonds rising in steps to a raised centre stone, on sweeping shoulders; 57 diamonds, 0.48 ct.", "diamonds": "57 round diamonds, 0.48 ct", "weight18k": "4.09 g"},

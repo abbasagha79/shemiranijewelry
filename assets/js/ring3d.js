@@ -35,7 +35,8 @@
     kaverin:   { metal: 'models/kaverin-metal.bin', gems: 'models/kaverin-gems.json' },
     orvessa:   { metal: 'models/orvessa-metal.bin', gems: 'models/orvessa-gems.json' },
     avelis:    { metal: 'models/avelis-metal.bin', gems: 'models/avelis-gems.json' },
-    seravel:   { metal: 'models/seravel-metal.bin', gems: 'models/seravel-gems.json' }
+    seravel:   { metal: 'models/seravel-metal.bin', gems: 'models/seravel-gems.json' },
+    zafyren:   { metal: 'models/zafyren-metal.bin', gems: 'models/zafyren-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */

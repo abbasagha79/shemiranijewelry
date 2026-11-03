@@ -12,6 +12,60 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'zafyren',
+    name: "ZAFYREN",
+    added: '2026-11-03T21:59',
+    collection: 'rings',
+    kind: { en: "Cluster ring · 18K gold and diamonds", fa: "انگشتر خوشه‌ای · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 69 diamonds", fa: "طلای ۱۸ عیار · ۶۹ الماس" },
+    description: {
+      en: "A striking expression of luxury, combining refined craftsmanship with an unforgettable silhouette.",
+      fa: "بیانی چشمگیر از تجمل؛ ترکیب ساخت ظریف با فرمی فراموش‌نشدنی."
+    },
+    model: 'zafyren',
+    spin: 'assets/video/zafyren-spin.mp4',
+    spinPoster: 'assets/img/zafyren/spin-poster.jpg',
+    cover: 'assets/img/zafyren/render-01.jpg',
+    thumb: 'assets/img/zafyren/render-01-sm.jpg',
+    stream: ['assets/img/zafyren/stream-a.jpg', 'assets/img/zafyren/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/zafyren/render-01.jpg',
+      'assets/img/zafyren/matrix-01.jpg',
+      'assets/img/zafyren/matrix-02.jpg',
+      'assets/img/zafyren/matrix-03.jpg',
+      'assets/img/zafyren/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 6.28 g", fa: "طلای زرد ۱۸ عیار: ۶٫۲۸ گرم" },
+        { en: "18K white gold: 5.98 g", fa: "طلای سفید ۱۸ عیار: ۵٫۹۸ گرم" },
+        { en: "18K rose gold: 6.28 g", fa: "طلای رزگلد ۱۸ عیار: ۶٫۲۸ گرم" },
+        { en: "14K yellow gold: 5.25 g", fa: "طلای زرد ۱۴ عیار: ۵٫۲۵ گرم" },
+        { en: "22K yellow gold: 7.30 g", fa: "طلای زرد ۲۲ عیار: ۷٫۳۰ گرم" },
+        { en: "Silver 925: 4.23 g", fa: "نقره‌ی ۹۲۵: ۴٫۲۳ گرم" },
+        { en: "Platinum: 8.20 g", fa: "پلاتین: ۸٫۲۰ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "69 round diamonds, 0.72 ct in total", fa: "۶۹ الماس گرد، در مجموع ۰٫۷۲ قیراط" },
+        { en: "Raised centre: a 1.8 mm diamond ringed by six 1.7 mm stones", fa: "مرکز برجسته: الماس ۱٫۸ میلی‌متری با حلقه‌ای از شش نگین ۱٫۷ میلی‌متری" },
+        { en: "A halo of ten 1.42 mm stones, each on its own tall prong-set head", fa: "هاله‌ای از ده نگین ۱٫۴۲ میلی‌متری، هر کدام روی سرِ چنگی بلند خودش" },
+        { en: "52 stones, 1.2–1.4 mm, in pavé rows along both shoulders", fa: "۵۲ نگین ۱٫۲ تا ۱٫۴ میلی‌متری، در ردیف‌های پاوه روی هر دو شانه" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 29.2 mm", fa: "ارتفاع از پایین تا بالا: ۲۹٫۲ میلی‌متر" },
+        { en: "Width across: 23.6 mm", fa: "عرض کلی: ۲۳٫۶ میلی‌متر" },
+        { en: "Top width along the finger: 10.0 mm", fa: "پهنای بالای انگشتر در امتداد انگشت: ۱۰٫۰ میلی‌متر" },
+        { en: "Inner diameter: 17.8 mm", fa: "قطر داخلی: ۱۷٫۸ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A two-tier cluster head: a raised flower of seven diamonds over a halo of ten", fa: "سرِ خوشه‌ای دوطبقه: گلی برجسته از هفت الماس روی هاله‌ای از ده نگین" },
+        { en: "Openwork gold lattice in both sides of the shank", fa: "مشبک‌کاری طلا در دو طرف بدنه" },
+        { en: "Wide pavé shoulders that sweep up to the head", fa: "شانه‌های پهن پاوه که تا سرِ انگشتر بالا می‌آیند" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'seravel',
     name: "SERAVÉL",
     added: '2026-10-24T23:14',
