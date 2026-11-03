@@ -39,7 +39,10 @@
     zafyren:   { metal: 'models/zafyren-metal.bin', gems: 'models/zafyren-gems.json' },
     calystre:  { metal: 'models/calystre-metal.bin', gems: 'models/calystre-gems.json' },
     orovant:   { metal: 'models/orovant-metal.bin', gems: 'models/orovant-gems.json' },
-    myravex:   { metal: 'models/myravex-metal.bin', gems: 'models/myravex-gems.json' }
+    myravex:   { metal: 'models/myravex-metal.bin', gems: 'models/myravex-gems.json' },
+    thalver:   { metal: 'models/thalver-metal.bin', gems: 'models/thalver-gems.json' },
+    azmoriel:  { metal: 'models/azmoriel-metal.bin', gems: 'models/azmoriel-gems.json' },
+    kryselon:  { metal: 'models/kryselon-metal.bin', gems: 'models/kryselon-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */

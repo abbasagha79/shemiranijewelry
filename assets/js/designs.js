@@ -12,6 +12,161 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'kryselon',
+    name: "KRYSELON",
+    added: '2026-11-03T22:10',
+    collection: 'rings',
+    kind: { en: "Solitaire ring · 18K gold and diamond", fa: "انگشتر تک‌نگین · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 0.33 ct solitaire", fa: "طلای ۱۸ عیار · تک‌نگین ۰٫۳۳ قیراط" },
+    description: {
+      en: "A modern design defined by precision, symmetry, and architectural elegance.",
+      fa: "طراحی‌ای مدرن، با دقت، تقارن و ظرافتی معمارانه."
+    },
+    model: 'kryselon',
+    spin: 'assets/video/kryselon-spin.mp4',
+    spinPoster: 'assets/img/kryselon/spin-poster.jpg',
+    cover: 'assets/img/kryselon/render-01.jpg',
+    thumb: 'assets/img/kryselon/render-01-sm.jpg',
+    stream: ['assets/img/kryselon/stream-a.jpg', 'assets/img/kryselon/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/kryselon/render-01.jpg',
+      'assets/img/kryselon/matrix-01.jpg',
+      'assets/img/kryselon/matrix-02.jpg',
+      'assets/img/kryselon/matrix-03.jpg',
+      'assets/img/kryselon/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 2.69 g", fa: "طلای زرد ۱۸ عیار: ۲٫۶۹ گرم" },
+        { en: "18K white gold: 2.56 g", fa: "طلای سفید ۱۸ عیار: ۲٫۵۶ گرم" },
+        { en: "18K rose gold: 2.69 g", fa: "طلای رزگلد ۱۸ عیار: ۲٫۶۹ گرم" },
+        { en: "14K yellow gold: 2.25 g", fa: "طلای زرد ۱۴ عیار: ۲٫۲۵ گرم" },
+        { en: "22K yellow gold: 3.12 g", fa: "طلای زرد ۲۲ عیار: ۳٫۱۲ گرم" },
+        { en: "Silver 925: 1.81 g", fa: "نقره‌ی ۹۲۵: ۱٫۸۱ گرم" },
+        { en: "Platinum: 3.51 g", fa: "پلاتین: ۳٫۵۱ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "1 round diamond, 4.5 mm, 0.33 ct, four-prong", fa: "۱ الماس گرد ۴٫۵ میلی‌متری، ۰٫۳۳ قیراط، چهارچنگ" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 23.2 mm", fa: "ارتفاع از پایین تا بالا: ۲۳٫۲ میلی‌متر" },
+        { en: "Width across: 20.0 mm", fa: "عرض کلی: ۲۰٫۰ میلی‌متر" },
+        { en: "Inner diameter: 17.5 mm", fa: "قطر داخلی: ۱۷٫۵ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A four-prong solitaire beside a small gold padlock", fa: "تک‌نگینی چهارچنگ در کنار یک قفل کوچک طلایی" },
+        { en: "The padlock has a keyhole cut through its face", fa: "قفل یک سوراخ کلید روی سطح خود دارد" },
+        { en: "A slim bypass shank", fa: "بدنه‌ی باریک و پیچان" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'azmoriel',
+    name: "AZMORIEL",
+    added: '2026-11-03T22:08',
+    collection: 'rings',
+    kind: { en: "Men's solitaire ring · 18K gold and diamonds", fa: "انگشتر مردانه‌ی تک‌نگین · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 0.59 ct centre", fa: "طلای ۱۸ عیار · نگین مرکزی ۰٫۵۹ قیراط" },
+    description: {
+      en: "Inspired by rare treasures, featuring striking details and elegant form.",
+      fa: "الهام‌گرفته از گنجینه‌های کمیاب، با جزئیاتی چشمگیر و فرمی برازنده."
+    },
+    model: 'azmoriel',
+    spin: 'assets/video/azmoriel-spin.mp4',
+    spinPoster: 'assets/img/azmoriel/spin-poster.jpg',
+    cover: 'assets/img/azmoriel/render-01.jpg',
+    thumb: 'assets/img/azmoriel/render-01-sm.jpg',
+    stream: ['assets/img/azmoriel/stream-a.jpg', 'assets/img/azmoriel/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/azmoriel/render-01.jpg',
+      'assets/img/azmoriel/matrix-01.jpg',
+      'assets/img/azmoriel/matrix-02.jpg',
+      'assets/img/azmoriel/matrix-03.jpg',
+      'assets/img/azmoriel/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 7.32 g", fa: "طلای زرد ۱۸ عیار: ۷٫۳۲ گرم" },
+        { en: "18K white gold: 6.97 g", fa: "طلای سفید ۱۸ عیار: ۶٫۹۷ گرم" },
+        { en: "18K rose gold: 7.32 g", fa: "طلای رزگلد ۱۸ عیار: ۷٫۳۲ گرم" },
+        { en: "14K yellow gold: 6.12 g", fa: "طلای زرد ۱۴ عیار: ۶٫۱۲ گرم" },
+        { en: "22K yellow gold: 8.50 g", fa: "طلای زرد ۲۲ عیار: ۸٫۵۰ گرم" },
+        { en: "Silver 925: 4.92 g", fa: "نقره‌ی ۹۲۵: ۴٫۹۲ گرم" },
+        { en: "Platinum: 9.55 g", fa: "پلاتین: ۹٫۵۵ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "37 round diamonds, 1.06 ct in total", fa: "۳۷ الماس گرد، در مجموع ۱٫۰۶ قیراط" },
+        { en: "Centre: 5.4 mm diamond, 0.59 ct, four-prong in a square seat", fa: "مرکز: الماس ۵٫۴ میلی‌متری، ۰٫۵۹ قیراط، چهارچنگ در نشیمن مربعی" },
+        { en: "36 stones, 1.52 mm: 0.47 ct, in rows along both edges", fa: "۳۶ نگین ۱٫۵۲ میلی‌متری: ۰٫۴۷ قیراط، در ردیف‌هایی روی هر دو لبه" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 25.8 mm", fa: "ارتفاع از پایین تا بالا: ۲۵٫۸ میلی‌متر" },
+        { en: "Width across: 24.5 mm", fa: "عرض کلی: ۲۴٫۵ میلی‌متر" },
+        { en: "Top width along the finger: 11.8 mm", fa: "پهنای بالای انگشتر در امتداد انگشت: ۱۱٫۸ میلی‌متر" },
+        { en: "Inner diameter: 20.0 mm", fa: "قطر داخلی: ۲۰٫۰ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A solitaire in a raised square seat on a flat, wide top", fa: "تک‌نگینی در نشیمن مربعی برجسته روی سطحی تخت و پهن" },
+        { en: "Diamond rows along both edges, broken into panels", fa: "ردیف‌های الماس روی هر دو لبه، تقسیم‌شده به چند بخش" },
+        { en: "Bolt-head details on both sides of the head", fa: "جزئیات پیچ‌مانند در دو طرف سرِ انگشتر" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'thalver',
+    name: "THALVÉR",
+    added: '2026-11-03T22:06',
+    collection: 'rings',
+    kind: { en: "Men's ring · 18K gold and diamonds", fa: "انگشتر مردانه · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 20 diamonds", fa: "طلای ۱۸ عیار · ۲۰ الماس" },
+    description: {
+      en: "Flowing forms and balanced proportions create a graceful, refined statement.",
+      fa: "فرم‌های روان و تناسبات متوازن، بیانی برازنده و ظریف می‌سازند."
+    },
+    model: 'thalver',
+    spin: 'assets/video/thalver-spin.mp4',
+    spinPoster: 'assets/img/thalver/spin-poster.jpg',
+    cover: 'assets/img/thalver/render-01.jpg',
+    thumb: 'assets/img/thalver/render-01-sm.jpg',
+    stream: ['assets/img/thalver/stream-a.jpg', 'assets/img/thalver/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/thalver/render-01.jpg',
+      'assets/img/thalver/matrix-01.jpg',
+      'assets/img/thalver/matrix-02.jpg',
+      'assets/img/thalver/matrix-03.jpg',
+      'assets/img/thalver/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 4.68 g", fa: "طلای زرد ۱۸ عیار: ۴٫۶۸ گرم" },
+        { en: "18K white gold: 4.45 g", fa: "طلای سفید ۱۸ عیار: ۴٫۴۵ گرم" },
+        { en: "18K rose gold: 4.68 g", fa: "طلای رزگلد ۱۸ عیار: ۴٫۶۸ گرم" },
+        { en: "14K yellow gold: 3.91 g", fa: "طلای زرد ۱۴ عیار: ۳٫۹۱ گرم" },
+        { en: "22K yellow gold: 5.43 g", fa: "طلای زرد ۲۲ عیار: ۵٫۴۳ گرم" },
+        { en: "Silver 925: 3.15 g", fa: "نقره‌ی ۹۲۵: ۳٫۱۵ گرم" },
+        { en: "Platinum: 6.10 g", fa: "پلاتین: ۶٫۱۰ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "20 round diamonds, 0.16 ct in total", fa: "۲۰ الماس گرد، در مجموع ۰٫۱۶ قیراط" },
+        { en: "A pavé triangle of 1.5–1.6 mm stones, and a chevron row of 1.0–1.3 mm stones running down one shoulder", fa: "مثلثی پاوه از نگین‌های ۱٫۵ تا ۱٫۶ میلی‌متری و ردیفی هشتی از نگین‌های ۱ تا ۱٫۳ میلی‌متری که روی یک شانه ادامه دارد" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 22.6 mm", fa: "ارتفاع از پایین تا بالا: ۲۲٫۶ میلی‌متر" },
+        { en: "Width across: 22.4 mm", fa: "عرض کلی: ۲۲٫۴ میلی‌متر" },
+        { en: "Top width along the finger: 7.8 mm", fa: "پهنای بالای انگشتر در امتداد انگشت: ۷٫۸ میلی‌متر" },
+        { en: "Inner diameter: 19.0 mm", fa: "قطر داخلی: ۱۹٫۰ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "Chevron arrows cut through a flat polished top", fa: "پیکان‌های هشتی که از سطح تخت و براق عبور می‌کنند" },
+        { en: "A diamond triangle and a diamond chevron side by side", fa: "یک مثلث و یک هشت نگین‌دار در کنار هم" },
+        { en: "A diamond line that carries on down one shoulder", fa: "ردیفی از الماس که روی یک شانه پایین می‌آید" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'myravex',
     name: "MYRAVEX",
     added: '2026-11-03T22:03',
