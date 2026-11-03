@@ -12,6 +12,59 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'opheryx',
+    name: "OPHERYX",
+    added: '2026-11-03T22:34',
+    collection: 'rings',
+    kind: { en: "Solitaire ring · 18K gold and diamonds", fa: "انگشتر تک‌نگین · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 0.21 ct solitaire", fa: "طلای ۱۸ عیار · تک‌نگین ۰٫۲۱ قیراط" },
+    description: {
+      en: "Inspired by gemstones, celebrating brilliance, depth, and distinctive character.",
+      fa: "الهام‌گرفته از سنگ‌های قیمتی؛ جشنی از درخشش، عمق و شخصیتی متمایز."
+    },
+    model: 'opheryx',
+    spin: 'assets/video/opheryx-spin.mp4',
+    spinPoster: 'assets/img/opheryx/spin-poster.jpg',
+    cover: 'assets/img/opheryx/render-01.jpg',
+    thumb: 'assets/img/opheryx/render-01-sm.jpg',
+    stream: ['assets/img/opheryx/stream-a.jpg', 'assets/img/opheryx/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/opheryx/render-01.jpg',
+      'assets/img/opheryx/matrix-01.jpg',
+      'assets/img/opheryx/matrix-02.jpg',
+      'assets/img/opheryx/matrix-03.jpg',
+      'assets/img/opheryx/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 2.29 g", fa: "طلای زرد ۱۸ عیار: ۲٫۲۹ گرم" },
+        { en: "18K white gold: 2.18 g", fa: "طلای سفید ۱۸ عیار: ۲٫۱۸ گرم" },
+        { en: "18K rose gold: 2.29 g", fa: "طلای رزگلد ۱۸ عیار: ۲٫۲۹ گرم" },
+        { en: "14K yellow gold: 1.92 g", fa: "طلای زرد ۱۴ عیار: ۱٫۹۲ گرم" },
+        { en: "22K yellow gold: 2.66 g", fa: "طلای زرد ۲۲ عیار: ۲٫۶۶ گرم" },
+        { en: "Silver 925: 1.54 g", fa: "نقره‌ی ۹۲۵: ۱٫۵۴ گرم" },
+        { en: "Platinum: 2.99 g", fa: "پلاتین: ۲٫۹۹ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "27 round diamonds, 0.47 ct in total", fa: "۲۷ الماس گرد، در مجموع ۰٫۴۷ قیراط" },
+        { en: "Centre: 3.8 mm diamond, 0.21 ct, six-prong", fa: "مرکز: الماس ۳٫۸ میلی‌متری، ۰٫۲۱ قیراط، شش‌چنگ" },
+        { en: "26 stones, 1.3–1.4 mm: 0.27 ct, along the crossing shoulders", fa: "۲۶ نگین ۱٫۳ تا ۱٫۴ میلی‌متری: ۰٫۲۷ قیراط، روی شانه‌های متقاطع" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 23.4 mm", fa: "ارتفاع از پایین تا بالا: ۲۳٫۴ میلی‌متر" },
+        { en: "Width across: 20.4 mm", fa: "عرض کلی: ۲۰٫۴ میلی‌متر" },
+        { en: "Top width along the finger: 6.2 mm", fa: "پهنای بالای انگشتر در امتداد انگشت: ۶٫۲ میلی‌متر" },
+        { en: "Inner diameter: 17.6 mm", fa: "قطر داخلی: ۱۷٫۶ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A tall six-prong solitaire head", fa: "سرِ تک‌نگین بلند و شش‌چنگ" },
+        { en: "Two twisting strands on each shoulder, set with diamonds, around a polished leaf", fa: "دو رشته‌ی پیچان نگین‌دار روی هر شانه، دور یک برگ براق" },
+        { en: "Bow-tie silhouette seen from above", fa: "فرم پاپیونی از نمای بالا" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'vantheris',
     name: "VANTHÉRIS",
     added: '2026-11-03T22:23',
