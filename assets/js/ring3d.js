@@ -267,7 +267,7 @@
     function diamondMat(dim){
       return new THREE.ShaderMaterial({
         defines: { NPLANES: PLANES.length, BOUNCES: MOB ? 4 : 6 },
-        uniforms: { envMap: { value: gemCube }, planes: { value: PLANES }, dim: { value: dim ? .28 : 1 }, gain: { value: 1.32 } },
+        uniforms: { envMap: { value: gemCube }, planes: { value: PLANES }, dim: { value: dim ? .28 : 1 }, gain: { value: 1.32 * (opt.gemGain || 1) } },
         transparent: !!dim, depthWrite: !dim, side: THREE.DoubleSide,
         vertexShader: [
           'varying vec3 vP; varying vec3 vN; varying vec3 vCam; varying vec3 vW0; varying vec3 vW1; varying vec3 vW2;',
