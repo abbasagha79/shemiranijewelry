@@ -47,7 +47,13 @@
     opheryx:   { metal: 'models/opheryx-metal.bin', gems: 'models/opheryx-gems.json' },
     dravenza:  { metal: 'models/dravenza-metal.bin', gems: 'models/dravenza-gems.json' },
     elystron:  { metal: 'models/elystron-metal.bin', gems: 'models/elystron-gems.json' },
-    quorven:   { metal: 'models/quorven-metal.bin', gems: 'models/quorven-gems.json' }
+    quorven:   { metal: 'models/quorven-metal.bin', gems: 'models/quorven-gems.json' },
+    evorien:   { metal: 'models/evorien-metal.bin', gems: 'models/evorien-gems.json' },
+    zephoria:  { metal: 'models/zephoria-metal.bin', gems: 'models/zephoria-gems.json' },
+    aurevant:  { metal: 'models/aurevant-metal.bin', gems: 'models/aurevant-gems.json' },
+    calveron:  { metal: 'models/calveron-metal.bin', gems: 'models/calveron-gems.json' },
+    verenza:   { metal: 'models/verenza-metal.bin', gems: 'models/verenza-gems.json' },
+    orlevian:  { metal: 'models/orlevian-metal.bin', gems: 'models/orlevian-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
