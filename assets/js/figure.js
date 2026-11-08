@@ -117,13 +117,20 @@
     main.querySelector('[data-dims]').innerHTML = [
       [fa() ? 'عرض' : 'Width', mm(F.size.w * s)], [fa() ? 'عمق' : 'Depth', mm(F.size.d * s)], [fa() ? 'ارتفاع' : 'Height', mm(F.size.h * s)],
       [fa() ? 'حجم' : 'Volume', num(vol, vol < 100 ? 1 : 0) + (fa() ? ' سانتی‌متر مکعب' : ' cm³')]
-    ].map(function(r){ return '<li>' + e(r[0]) + ': ' + e(r[1]) + '</li>'; }).join('');
+    ].concat((F.parts || []).map(function(q){
+      var pv = q.volume * s * s * s; return [SM.t(q.name) + (fa() ? ' · حجم' : ' · volume'), num(pv, pv < 100 ? 1 : 0) + (fa() ? ' سانتی‌متر مکعب' : ' cm³')];
+    })).map(function(r){ return '<li>' + e(r[0]) + ': ' + e(r[1]) + '</li>'; }).join('');
     /* weights: solid = volume x density; hollow = thin shell (surface x wall) x density, never above solid */
     var shell = Math.min(vol, surf * (WALL / 10));
+    if (F.parts) shell = F.parts.reduce(function(t, q){                       /* hollow each part, except the ones kept solid */
+      var qv = q.volume * s * s * s;
+      return t + (q.solid ? qv : Math.min(qv, q.surface * s * s * (WALL / 10)));
+    }, 0);
     main.querySelector('[data-specs]').innerHTML = MATS.map(function(g){
       return '<div class="spec"><div class="spec-in"><h2>' + e(SM.t(g.title)) + '</h2><ul>' + g.items.map(function(it){
         var solid = vol * it.d, hollow = shell * it.d;
-        return '<li>' + e(SM.t(it)) + ': <b>' + e(grams(solid)) + '</b> ' + (fa() ? '(توپر)' : 'solid') + ' · <b>' + e(grams(hollow)) + '</b> ' + (fa() ? '(توخالی)' : 'hollow') + '</li>';
+        var split = (F.parts && F.parts.length > 1) ? ' <small>(' + F.parts.map(function(q){ return e(SM.t(q.name)) + ' ' + e(grams(q.volume * s * s * s * it.d)); }).join(' + ') + ')</small>' : '';
+        return '<li>' + e(SM.t(it)) + ': <b>' + e(grams(solid)) + '</b> ' + (fa() ? '(توپر)' : 'solid') + ' · <b>' + e(grams(hollow)) + '</b> ' + (fa() ? '(توخالی)' : 'hollow') + split + '</li>';
       }).join('') + '</ul></div></div>';
     }).join('');
     [].forEach.call(main.querySelectorAll('.spec'), function(sp){ SM.beam(sp, { reveal: 'hover', length: 18, thickness: 1, speed: 4 }); });
