@@ -2734,6 +2734,103 @@ window.SHEMIRANI_FIGURES = [
       'assets/img/cthulhu/render-05.jpg',
       'assets/img/cthulhu/render-06.jpg'
     ]
+  },
+  {
+    id: 'chess-helix',
+    name: "HELIX CHESS",
+    added: '2026-11-09T00:40',
+    kind: { en: "Chess set \u00b7 six pieces \u00b7 3D-print and cast file", fa: "ست شطرنج · شش مهره · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL \u00b7 6 pieces \u00b7 any size \u00b7 any colour", fa: "STL · ۶ مهره · هر اندازه · هر رنگ" },
+    description: {
+      en: "A full set of six chess pieces — pawn, rook, knight, bishop, queen and king — each twisted into an open spiral lattice on a round base. Light, airy and striking in metal or resin, and the six pieces are one product, supplied together in one file, in any size you need.",
+      fa: "یک ست کامل شش مهره‌ی شطرنج — پیاده، رخ، اسب، فیل، وزیر و شاه — که هر کدام به شکل شبکه‌ی مارپیچ باز روی پایه‌ی گرد پیچیده شده‌اند. سبک، پرنقش‌ونگار و چشمگیر در فلز یا رزین. هر شش مهره یک محصول‌اند و با هم در یک فایل ارائه می‌شوند، در هر اندازه‌ای که لازم دارید."
+    },
+    model: 'chess1',
+    rot: [-90, 0, 0],
+    view: [0.2, 0.28],
+    volume: 127.64,
+    surface: 576.3,
+    size: { w: 265.0, d: 40.0, h: 104.0 },
+    parts: [
+      { name: { en: "Pawn", fa: "پیاده" }, volume: 11.47, surface: 55.5 },
+      { name: { en: "Rook", fa: "رخ" }, volume: 21.09, surface: 99.9 },
+      { name: { en: "Knight", fa: "اسب" }, volume: 20.27, surface: 88.1 },
+      { name: { en: "Bishop", fa: "فیل" }, volume: 18.4, surface: 90.1 },
+      { name: { en: "Queen", fa: "وزیر" }, volume: 24.19, surface: 109.5 },
+      { name: { en: "King", fa: "شاه" }, volume: 32.22, surface: 133.2 }
+    ],
+    cover: 'assets/img/chess-helix/render-01.jpg',
+    thumb: 'assets/img/chess-helix/render-01.jpg',
+    photos: [
+      'assets/img/chess-helix/render-01.jpg',
+      'assets/img/chess-helix/render-02.jpg',
+      'assets/img/chess-helix/render-03.jpg',
+      'assets/img/chess-helix/render-04.jpg',
+      'assets/img/chess-helix/render-05.jpg',
+      'assets/img/chess-helix/render-06.jpg'
+    ]
+  },
+  {
+    id: 'chess-staunton',
+    name: "STAUNTON CHESS",
+    added: '2026-11-09T00:41',
+    kind: { en: "Chess set \u00b7 six pieces \u00b7 3D-print and cast file", fa: "ست شطرنج · شش مهره · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL \u00b7 6 pieces \u00b7 any size \u00b7 any colour", fa: "STL · ۶ مهره · هر اندازه · هر رنگ" },
+    description: {
+      en: "The classic tournament look: pawn, rook, knight, bishop, queen and king in the traditional Staunton shapes, with turned collars, a crowned queen and a notched king. Six pieces, one product, in one file — ready to print, cast or polish in any size.",
+      fa: "ظاهر کلاسیک مسابقات: پیاده، رخ، اسب، فیل، وزیر و شاه با فرم سنتی استاونتون، یقه‌های تراش‌خورده، وزیر تاج‌دار و شاه با تاج شکاف‌دار. شش مهره، یک محصول، در یک فایل — آماده‌ی چاپ، ریخته‌گری یا پولیش در هر اندازه."
+    },
+    model: 'chess2',
+    rot: [-90, 0, 0],
+    view: [0.2, 0.28],
+    volume: 104.03,
+    surface: 407.9,
+    size: { w: 234.2, d: 38.5, h: 89.0 },
+    parts: [
+      { name: { en: "Pawn", fa: "پیاده" }, volume: 8.23, surface: 42.1 },
+      { name: { en: "Rook", fa: "رخ" }, volume: 16.89, surface: 68.7 },
+      { name: { en: "Knight (base + head)", fa: "اسب (پایه + سر)" }, volume: 14.14, surface: 71.1 },
+      { name: { en: "Bishop (body + finial)", fa: "فیل (بدنه + گوی بالا)" }, volume: 14.44, surface: 60.2 },
+      { name: { en: "Queen", fa: "وزیر" }, volume: 23.47, surface: 79.8 },
+      { name: { en: "King", fa: "شاه" }, volume: 26.86, surface: 85.9 }
+    ],
+    cover: 'assets/img/chess-staunton/render-01.jpg',
+    thumb: 'assets/img/chess-staunton/render-01.jpg',
+    photos: [
+      'assets/img/chess-staunton/render-01.jpg',
+      'assets/img/chess-staunton/render-02.jpg',
+      'assets/img/chess-staunton/render-03.jpg',
+      'assets/img/chess-staunton/render-04.jpg',
+      'assets/img/chess-staunton/render-05.jpg',
+      'assets/img/chess-staunton/render-06.jpg'
+    ]
+  },
+  {
+    id: 'chess-monolith',
+    name: "MONOLITH CHESS",
+    added: '2026-11-09T00:42',
+    kind: { en: "Chess set \u00b7 six pieces on bases \u00b7 3D-print and cast file", fa: "ست شطرنج · شش مهره روی پایه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL \u00b7 6 pieces \u00b7 any size \u00b7 any colour", fa: "STL · ۶ مهره · هر اندازه · هر رنگ" },
+    description: {
+      en: "A modern, abstract chess set: six tall monolith pieces carved from blocky, stacked forms, each standing on its own square base and lined up as one assembly. Bold in gold, sharp in black resin — one product, one file, in any size.",
+      fa: "یک ست شطرنج مدرن و انتزاعی: شش مهره‌ی بلند و تک‌سنگی با فرم‌های مکعبی و پله‌ای، هر کدام روی پایه‌ی مربعی خودش و کنار هم به صورت یک مجموعه. در طلا پرابهت و در رزین مشکی تیز. یک محصول، یک فایل، در هر اندازه."
+    },
+    model: 'chess3',
+    rot: [-90, 0, 0],
+    view: [0.2, 0.28],
+    volume: 140.45,
+    surface: 764.2,
+    size: { w: 282.0, d: 42.0, h: 90.0 },
+    cover: 'assets/img/chess-monolith/render-01.jpg',
+    thumb: 'assets/img/chess-monolith/render-01.jpg',
+    photos: [
+      'assets/img/chess-monolith/render-01.jpg',
+      'assets/img/chess-monolith/render-02.jpg',
+      'assets/img/chess-monolith/render-03.jpg',
+      'assets/img/chess-monolith/render-04.jpg',
+      'assets/img/chess-monolith/render-05.jpg',
+      'assets/img/chess-monolith/render-06.jpg'
+    ]
   }
 ];
 

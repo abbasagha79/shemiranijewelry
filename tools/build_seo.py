@@ -102,6 +102,15 @@ FIGURES = [
     {"id": "cthulhu", "name": "CTHULHU",
      "desc": "CTHULHU is a chibi Cthulhu action figure with a tentacled face and bat-like wings, standing on its own rocky R'lyeh base — an STL file ready to 3D-print, cast in metal or paint, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
      "size": "57.3 x 38.6 x 51.0 mm at 100% (figure on base)", "volume": "16.7 cm3 at 100% (figure + base)"},
+    {"id": "chess-helix", "name": "HELIX CHESS",
+     "desc": "HELIX CHESS is a six-piece chess set with every piece twisted into an open spiral lattice — a watertight STL file ready to 3D-print or cast in metal, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
+     "size": "265.0 x 40.0 x 104.0 mm at 100% (six pieces)", "volume": "127.6 cm3 at 100%"},
+    {"id": "chess-staunton", "name": "STAUNTON CHESS",
+     "desc": "STAUNTON CHESS is a classic six-piece Staunton chess set — pawn, rook, knight, bishop, queen and king — an STL file ready to 3D-print or cast in metal, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
+     "size": "234.2 x 38.5 x 89.0 mm at 100% (six pieces)", "volume": "104.0 cm3 at 100%"},
+    {"id": "chess-monolith", "name": "MONOLITH CHESS",
+     "desc": "MONOLITH CHESS is a modern abstract six-piece chess set, each piece standing on a square base — an STL file ready to 3D-print or cast in metal, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
+     "size": "282.0 x 42.0 x 90.0 mm at 100% (six pieces)", "volume": "140.4 cm3 at 100%"},
 ]
 
 COLLECTIONS = {
