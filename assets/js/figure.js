@@ -164,7 +164,7 @@
   var stage = main.querySelector('.vstage'), stageIn = main.querySelector('.vstage-in');
   SM.beam(stage, { length: 16, thickness: 1.5, speed: 9 });
   var img = stage.querySelector('.vimg');
-  viewer = window.ShemiraniFigure(stage.querySelector('canvas'), { url: u('assets/models/' + F.model + '.bin'), host: stageIn, rot: F.rot, combo: combo });
+  viewer = window.ShemiraniFigure(stage.querySelector('canvas'), { url: u('assets/models/' + F.model + '.bin'), host: stageIn, rot: F.rot, combo: combo, view: F.view });
 
   function pick(c, quiet){
     combo = c; viewer.setCombo && viewer.setCombo(c);

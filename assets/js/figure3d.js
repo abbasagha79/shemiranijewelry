@@ -113,7 +113,7 @@
     api.setCombo = function(c){ opt.combo = c; paint(c); };
 
     /* camera: orbit by dragging, a slow spin when left alone */
-    var az = .6, el = .22, dist = 4, zoom = 1, vaz = 0, vel = 0, drag = false, lx = 0, ly = 0, idle = 0;
+    var az = opt.view ? opt.view[0] : .6, el = opt.view ? opt.view[1] : .22, dist = 4, zoom = 1, vaz = 0, vel = 0, drag = false, lx = 0, ly = 0, idle = 0;
     function place(){
       var d = dist * zoom;
       camera.position.set(Math.sin(az) * Math.cos(el) * d, Math.sin(el) * d + radius * .05, Math.cos(az) * Math.cos(el) * d);

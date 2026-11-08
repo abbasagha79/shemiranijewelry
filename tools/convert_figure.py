@@ -5,7 +5,7 @@ and print the figure's volume, size and surface area (used for the weight table)
   python3 tools/convert_figure.py figure.obj <name> [cell_mm]
   python3 tools/convert_figure.py "figure.stl+base.stl@90,-10.7,-39.4,-26.8" <name>     # a figure standing on its base
 
-A part can carry "@rz,dx,dy,dz": turn it rz degrees about the Z axis, then move it (mm), so a base can be placed
+A part can carry "@g,dx,dy" (stand it on the floor, footprint centre at dx,dy) or "@rz,dx,dy,dz": turn it rz degrees about the Z axis, then move it (mm), so a base can be placed
 under the figure and the pair becomes ONE web model. Prints every part and the total (use the total for the page).
 
 Writes assets/models/<name>.bin (+ .gz): the same quantised layout the ring viewer reads
@@ -83,7 +83,10 @@ if __name__ == '__main__':
     for spec in src.split('+'):
         path, _, tf = spec.partition('@')
         v, f = load_obj(path) if path.lower().endswith('.obj') else load_stl(path)
-        if tf:
+        if tf.startswith('g'):      # "g,dx,dy": stand the part on the floor, its footprint centred on (dx,dy)
+            g = [float(x) for x in tf.split(',')[1:]] + [0, 0]
+            v = v - np.array([(v[:, 0].min() + v[:, 0].max()) / 2 - g[0], (v[:, 1].min() + v[:, 1].max()) / 2 - g[1], v[:, 2].min()])
+        elif tf:
             rz, dx, dy, dz = [float(x) for x in tf.split(',')]
             c, sn = np.cos(np.radians(rz)), np.sin(np.radians(rz))
             v = np.stack([c * v[:, 0] - sn * v[:, 1] + dx, sn * v[:, 0] + c * v[:, 1] + dy, v[:, 2] + dz], 1)
