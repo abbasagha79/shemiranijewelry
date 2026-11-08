@@ -111,6 +111,9 @@ FIGURES = [
     {"id": "chess-monolith", "name": "MONOLITH CHESS",
      "desc": "MONOLITH CHESS is a modern abstract six-piece chess set, each piece standing on a square base — an STL file ready to 3D-print or cast in metal, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
      "size": "282.0 x 42.0 x 90.0 mm at 100% (six pieces)", "volume": "140.4 cm3 at 100%"},
+    {"id": "joker", "name": "JOKER BUST",
+     "desc": "JOKER BUST is a grinning Joker bust in a wide-brimmed hat on a square plinth — a watertight STL file ready to 3D-print or cast in metal, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
+     "size": "130.1 x 97.8 x 194.0 mm at 100% (bust, hat and plinth)", "volume": "610.6 cm3 at 100%"},
 ]
 
 COLLECTIONS = {

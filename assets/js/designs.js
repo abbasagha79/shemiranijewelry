@@ -2831,6 +2831,38 @@ window.SHEMIRANI_FIGURES = [
       'assets/img/chess-monolith/render-05.jpg',
       'assets/img/chess-monolith/render-06.jpg'
     ]
+  },
+  {
+    id: 'joker',
+    name: "JOKER BUST",
+    added: '2026-11-09T01:10',
+    kind: { en: "Character bust with plinth · 3D-print and cast file", fa: "نیم‌تنه‌ی شخصیت همراه با پایه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · bust + hat + plinth · any size · any colour", fa: "STL · نیم‌تنه، کلاه و پایه · هر اندازه · هر رنگ" },
+    description: {
+      en: "A grinning Joker bust in a wide-brimmed hat, sharp suit and tie, standing on a square plinth with his name cut into the front. Body, hat and plinth are one product, supplied together in one watertight file, ready to print, cast in metal or paint in any size you need.",
+      fa: "نیم‌تنه‌ی جوکری خنده‌به‌لب با کلاه لبه‌پهن، کت‌وشلوار و کراوات، روی پایه‌ی مربعی که اسمش روی آن حک شده است. بدنه، کلاه و پایه یک محصول‌اند و با هم در یک فایل سالم (watertight) ارائه می‌شوند، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: 'joker',
+    rot: [-90, 0, 0],
+    view: [0.35, 0.15],
+    volume: 610.58,
+    surface: 866.5,
+    size: { w: 130.1, d: 97.8, h: 194.0 },
+    parts: [
+      { name: { en: "Bust", fa: "نیم‌تنه" }, volume: 380.01, surface: 388.8 },
+      { name: { en: "Hat", fa: "کلاه" }, volume: 49.04, surface: 153.1 },
+      { name: { en: "Plinth", fa: "پایه" }, volume: 181.53, surface: 324.6, solid: true }
+    ],
+    cover: 'assets/img/joker/render-01.jpg',
+    thumb: 'assets/img/joker/render-01.jpg',
+    photos: [
+      'assets/img/joker/render-01.jpg',
+      'assets/img/joker/render-02.jpg',
+      'assets/img/joker/render-03.jpg',
+      'assets/img/joker/render-04.jpg',
+      'assets/img/joker/render-05.jpg',
+      'assets/img/joker/render-06.jpg'
+    ]
   }
 ];
 
