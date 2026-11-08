@@ -94,6 +94,13 @@ DESIGNS = [
      "desc": "AURELIS is a men's ring in 18K gold with 47 diamonds (0.61 ct) — a woven gold top edged with pavé rows and a single centre stone.",
      "diamonds": "47 round diamonds, 0.61 ct", "weight18k": "5.76 g"},
 ]
+# Action figures (keep in sync with SHEMIRANI_FIGURES in assets/js/designs.js)
+FIGURES = [
+    {"id": "catball", "name": "CATBALL",
+     "desc": "CATBALL is a round-faced cat head sculpted in ZBrush — a watertight OBJ and STL file ready to 3D-print or cast, in any size, with its weight listed for resin, filament, bronze, silver, gold and platinum.",
+     "size": "58.6 x 61.6 x 53.8 mm at 100%", "volume": "75.8 cm3 at 100%"},
+]
+
 COLLECTIONS = {
     "rings": "Rings", "earrings": "Earrings", "bracelets": "Bracelets",
     "bangles": "Bangles", "necklaces": "Necklaces", "pendants": "Pendants", "sets": "Sets",
@@ -245,6 +252,34 @@ for cid, cname in COLLECTIONS.items():
     inject_noscript("collections/%s/index.html" % cid,
         "<h1>%s — SHEMIRANI</h1><p>%s</p><ul>%s</ul>" % (cname, desc, items))
 
+# ---- action figure pages ----
+FIG_DESC = ("Action figures by SHEMIRANI — %s. 3D-print and casting files that can be made larger or smaller, "
+            "with weights in resin, filament, bronze, silver, gold and platinum." % ", ".join(f["name"] for f in FIGURES))
+fig_url = SITE + "/collections/action-figures/"
+fig_title = "Action Figure | SHEMIRANI — Figures designed in 3D"
+inject_head("collections/action-figures/index.html", tags(fig_url, fig_title, FIG_DESC,
+            "assets/img/%s/render-01.jpg" % FIGURES[0]["id"],
+            [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Action Figure — SHEMIRANI",
+              "url": fig_url, "isPartOf": {"@id": SITE + "/#org"}, "about": {"@id": SITE + "/#org"}},
+             crumb([("Home", SITE + "/"), ("Action Figure", fig_url)])]))
+inject_noscript("collections/action-figures/index.html",
+    "<h1>Action Figure — SHEMIRANI</h1><p>%s</p><ul>%s</ul>" % (FIG_DESC,
+        "".join("<li><a href=\"/figures/%s/\">%s</a></li>" % (f["id"], f["name"]) for f in FIGURES)))
+for f in FIGURES:
+    url = SITE + "/figures/%s/" % f["id"]
+    prod = {"@context": "https://schema.org", "@type": "Product", "name": "SHEMIRANI %s" % f["name"], "sku": f["name"],
+            "url": url, "image": [SITE + "/assets/img/%s/render-0%d.jpg" % (f["id"], i) for i in (1, 2, 3)],
+            "description": f["desc"], "category": "Action figure",
+            "brand": {"@type": "Brand", "name": "SHEMIRANI"}, "manufacturer": {"@id": SITE + "/#org"},
+            "additionalProperty": [{"@type": "PropertyValue", "name": "Size", "value": f["size"]},
+                                   {"@type": "PropertyValue", "name": "Volume", "value": f["volume"]}]}
+    inject_head("figures/%s/index.html" % f["id"], tags(url, "%s — Action Figure | SHEMIRANI" % f["name"], f["desc"],
+                "assets/img/%s/render-01.jpg" % f["id"],
+                [prod, crumb([("Home", SITE + "/"), ("Action Figure", fig_url), (f["name"], url)])]))
+    inject_noscript("figures/%s/index.html" % f["id"],
+        "<h1>SHEMIRANI %s</h1><p>%s</p><p><img src=\"/assets/img/%s/render-01.jpg\" alt=\"SHEMIRANI %s action figure\" width=\"600\"></p>"
+        % (f["name"], f["desc"], f["id"], f["name"]))
+
 # ---- robots.txt ----
 open("robots.txt", "w", encoding="utf-8").write(
     "# SHEMIRANI Jewelry\nUser-agent: *\nAllow: /\n\n"
@@ -258,6 +293,7 @@ open("robots.txt", "w", encoding="utf-8").write(
 urls = [(SITE + "/", "1.0"), (SITE + "/#story", "0.6")]
 urls += [(SITE + "/designs/%s/" % d["id"], "0.9") for d in DESIGNS]
 urls += [(SITE + "/collections/%s/" % c, "0.7") for c in COLLECTIONS]
+urls += [(fig_url, "0.7")] + [(SITE + "/figures/%s/" % f["id"], "0.9") for f in FIGURES]
 sm = ['<?xml version="1.0" encoding="UTF-8"?>',
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 seen = set()
@@ -283,6 +319,9 @@ for d in DESIGNS:
 llms += ["", "## Collections"]
 for cid, cname in COLLECTIONS.items():
     llms.append("- [%s](%s/collections/%s/)" % (cname, SITE, cid))
+llms += ["", "## Action figures", "- [Action Figure](%s/collections/action-figures/)" % SITE]
+for f in FIGURES:
+    llms.append("- [%s](%s/figures/%s/): %s" % (f["name"], SITE, f["id"], f["desc"]))
 llms += ["", "## Contact", "- Telegram: https://t.me/abbasamrahbari", "- Based in Karaj, Iran"]
 open("llms.txt", "w", encoding="utf-8").write("\n".join(llms) + "\n")
 

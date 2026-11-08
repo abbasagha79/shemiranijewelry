@@ -15,9 +15,13 @@ All links are relative, so the site also works from a sub-folder or a custom dom
 ```
 index.html                  home: full-screen hero; opens on the newest design and moves to the next every 30 s
 collections/<name>/         one page per collection (rings, earrings, bracelets, bangles, necklaces, pendants)
+collections/action-figures/ the Action Figure section (menu: Fine Jewelry = the collections above, Action Figure = this)
+figures/<name>/             one page per action figure (3D viewer, colour combos, size slider, weights per material)
 designs/<name>/             one page per design (3D viewer, film, photos, specifications)
 assets/js/designs.js        the list of designs: names, descriptions, specifications, photos
 assets/js/ring3d.js         the 3D ring viewer (gold and diamond materials, studio light, mirror floor)
+assets/js/figure3d.js       the action-figure viewer (colour combos, studio light)
+assets/js/figure.js         the figure pages: size slider and live weights per material
 assets/js/site.js           language switch (English / Persian), sidebar menu
 assets/js/home.js           home hero chapters
 assets/css/site.css         shared styles; assets/css/hero.css adds the home hero
@@ -35,6 +39,13 @@ assets/vendor/three.min.js  three.js r128 (MIT licence, see three.LICENSE)
 4. Copy the folder `designs/aurelis/` to `designs/<name>/` and change `data-design="aurelis"` to the new name in its `index.html`.
 
 The new design then appears in its collection and in the sidebar menu. The design with the latest `added` date opens the home page, and the hero shows every design in turn, 30 seconds each.
+
+## Add an action figure
+
+1. Export the figure as OBJ or binary STL (millimetres) and run `python3 tools/convert_figure.py figure.obj <name>`. It writes `assets/models/<name>.bin` (+ `.gz`) and prints the volume, surface and size.
+2. Copy the `catball` entry in `SHEMIRANI_FIGURES` (`assets/js/designs.js`) and fill in the name, text, volume, surface and size. Weights for every material (`SHEMIRANI_FIGURE_MATERIALS`) and the colour combos (`SHEMIRANI_FIGURE_COMBOS`) are shared; the weights follow the size slider.
+3. Make renders in `assets/img/<name>/render-01.jpg` … (open the page, pick a combo, screenshot the viewer).
+4. Copy `figures/catball/` to `figures/<name>/` and change `data-figure`, add the figure to `FIGURES` in `tools/build_seo.py`, then run `python3 tools/build_seo.py`.
 
 ## Test on your computer
 

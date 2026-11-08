@@ -2666,3 +2666,77 @@ window.SHEMIRANI_COLLECTIONS = [
   { id: 'pendants',  en: 'Pendants',  fa: 'آویز',          c: '#ff9a3d', icon: '<polyline points="26,6 50,38 74,6"/><ellipse cx="50" cy="68" rx="19" ry="25"/><ellipse cx="50" cy="68" rx="9" ry="14"/>' },
   { id: 'sets',      en: 'Sets',      fa: 'ست',            c: '#f2c94c', icon: '<path d="M30 10v10M70 10v10"/><circle cx="30" cy="27" r="7"/><circle cx="70" cy="27" r="7"/><polyline points="38,44 50,58 62,44"/><ellipse cx="50" cy="76" rx="14" ry="18"/>' }
 ];
+
+/* =====================================================================
+   ACTION FIGURES — the second section of the site (menu: "Action Figure").
+   Figures are kept apart from the jewellery above, so they never appear in the
+   home hero or the jewellery collections.
+
+   To add a figure: run  python3 tools/convert_figure.py figure.obj <id>  (it prints the
+   volume, surface and size used below and writes assets/models/<id>.bin), copy one entry,
+   put its renders in assets/img/<id>/, copy figures/catball/ to figures/<id>/ and change
+   data-figure, then run python3 tools/build_seo.py (add the figure to FIGURES there too).
+   Weights are computed on the page from volume x density, so they follow the size slider.
+   ===================================================================== */
+window.SHEMIRANI_FIGURES = [
+  {
+    id: 'catball',
+    name: "CATBALL",
+    added: '2026-11-08T05:00',
+    kind: { en: "Action figure · 3D-print and cast file", fa: "اکشن فیگور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "OBJ + STL · any size · any colour", fa: "OBJ و STL · هر اندازه · هر رنگ" },
+    description: {
+      en: "A round-faced cat head sculpted in ZBrush. The file is watertight and ready to print or cast, and the figure can be made larger or smaller to any size you need.",
+      fa: "سر گربه‌ای با صورت گرد که در زی‌براش مجسمه‌سازی شده. فایل آب‌بندی (بدون سوراخ) و آماده‌ی چاپ یا ریخته‌گری است و فیگور را می‌توان به هر اندازه‌ای بزرگ‌تر یا کوچک‌تر ساخت."
+    },
+    model: 'catball',
+    rot: [0, 0, 0],                         /* degrees, applied to the file so the figure stands upright */
+    volume: 75.77,                          /* cm3 at the file's own size (tools/convert_figure.py) */
+    surface: 101.6,                         /* cm2 */
+    size: { w: 58.6, d: 61.6, h: 53.8 },    /* mm at 100% (width, depth, height after rot) */
+    cover: 'assets/img/catball/render-01.jpg',
+    thumb: 'assets/img/catball/render-01.jpg',
+    photos: [
+      'assets/img/catball/render-01.jpg',
+      'assets/img/catball/render-02.jpg',
+      'assets/img/catball/render-03.jpg',
+      'assets/img/catball/render-04.jpg',
+      'assets/img/catball/render-05.jpg',
+      'assets/img/catball/render-06.jpg'
+    ]
+  }
+];
+
+/* densities in g/cm3 (the gold, silver and platinum values match the jewellery weight tables) */
+window.SHEMIRANI_FIGURE_MATERIALS = [
+  { title: { en: 'Weight · 3D print and wax', fa: 'وزن · چاپ سه‌بعدی و واکس' }, items: [
+    { en: 'Standard resin', fa: 'رزین استاندارد', d: 1.10 },
+    { en: 'PLA filament', fa: 'فیلامنت PLA', d: 1.24 },
+    { en: 'PETG filament', fa: 'فیلامنت PETG', d: 1.27 },
+    { en: 'ABS filament', fa: 'فیلامنت ABS', d: 1.04 },
+    { en: 'Casting wax', fa: 'واکس ریخته‌گری', d: 0.95 }
+  ]},
+  { title: { en: 'Weight · cast metal', fa: 'وزن · فلز ریخته‌گری' }, items: [
+    { en: 'Bronze', fa: 'برنز', d: 8.8 },
+    { en: 'Brass', fa: 'برنج', d: 8.5 },
+    { en: 'Silver 925', fa: 'نقره‌ی ۹۲۵', d: 10.4 },
+    { en: '14K yellow gold', fa: 'طلای زرد ۱۴ عیار', d: 13.0 },
+    { en: '18K yellow gold', fa: 'طلای زرد ۱۸ عیار', d: 15.5 },
+    { en: '18K white gold', fa: 'طلای سفید ۱۸ عیار', d: 14.7 },
+    { en: '18K rose gold', fa: 'طلای رزگلد ۱۸ عیار', d: 15.5 },
+    { en: '22K yellow gold', fa: 'طلای زرد ۲۲ عیار', d: 18.0 },
+    { en: 'Platinum', fa: 'پلاتین', d: 20.2 }
+  ]}
+];
+
+/* colour combos for the figure viewer: stops run from the base up to the top of the figure */
+window.SHEMIRANI_FIGURE_COMBOS = [
+  { id: 'royal',    en: 'Royal Gold',          fa: 'طلایی سلطنتی',        stops: ['#a87722', '#e3bd74', '#fff1c1'], metal: 1,   rough: .22, clear: 0,  bg: ['#17285a', '#040818'], glow: '#e3bd74' },
+  { id: 'obsidian', en: 'Obsidian & Gold',     fa: 'سیاه و طلا',          stops: ['#e3bd74', '#16161d', '#07070b'], metal: .55, rough: .24, clear: 1,  bg: ['#2a2110', '#050508'], glow: '#e3bd74' },
+  { id: 'neon',     en: 'Neon Nights',         fa: 'نئون شب',             stops: ['#00e5ff', '#7b2cff', '#ff2fa0'], metal: .12, rough: .22, clear: 1,  bg: ['#25104f', '#05030f'], glow: '#9b5cff' },
+  { id: 'rose',     en: 'Rose Gold & Pearl',   fa: 'رزگلد و مروارید',     stops: ['#b76e79', '#f4c2c2', '#fff5ee'], metal: .9,  rough: .27, clear: 0,  bg: ['#3a1f2b', '#0c0508'], glow: '#f4a6b0' },
+  { id: 'candy',    en: 'Cyber Candy',         fa: 'آب‌نبات سایبری',      stops: ['#14e0c8', '#ff7ac6', '#ffd9f2'], metal: 0,   rough: .3,  clear: 1,  bg: ['#10315a', '#050918'], glow: '#ff7ac6' },
+  { id: 'emerald',  en: 'Emerald & Champagne', fa: 'زمرد و شامپاین',      stops: ['#06402f', '#0f9b6c', '#ecdca8'], metal: .35, rough: .3,  clear: 1,  bg: ['#073a2d', '#02080a'], glow: '#3de0a8' },
+  { id: 'sunset',   en: 'Sunset Blaze',        fa: 'غروب آتشین',          stops: ['#6a1fff', '#ff3d6e', '#ffb347'], metal: .1,  rough: .35, clear: .8, bg: ['#401530', '#0a0410'], glow: '#ff7a45' },
+  { id: 'arctic',   en: 'Arctic Chrome',       fa: 'کروم قطبی',           stops: ['#6f84a0', '#dbe6f2', '#ffffff'], metal: 1,   rough: .1,  clear: 0,  bg: ['#233049', '#06090f'], glow: '#9fc6ff' }
+];

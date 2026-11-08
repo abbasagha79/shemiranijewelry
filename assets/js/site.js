@@ -118,11 +118,20 @@
     SM.designs.forEach(function(d){
       h += item('design-' + d.id, SM.url('designs/' + d.id + '/index.html'), d.name, d.name, ICON.gem, '', 'site', true);
     });
-    h += '<div class="menu-caption" data-group="col" data-fa="مجموعه‌ها">Collections</div>';
+    h += '<div class="menu-caption" data-group="col" data-fa="جواهر نفیس">Fine Jewelry</div>';
     SM.collections.forEach(function(c){
       var n = SM.inCollection(c.id).length;
       var badge = n ? '<span class="badge">' + n + '</span>' : '<span class="badge soon" data-fa="به‌زودی">Soon</span>';
       h += item('col-' + c.id, SM.url('collections/' + c.id + '/index.html'), c.en, c.fa, '<svg viewBox="0 0 100 100" class="v100">' + c.icon + '</svg>', badge, 'col');
+    });
+    /* Action Figure: the second main section (figures live in SHEMIRANI_FIGURES, apart from the jewellery) */
+    var figs = window.SHEMIRANI_FIGURES || [];
+    h += '<div class="menu-caption" data-group="fig" data-fa="اکشن فیگور">Action Figure</div>';
+    h += item('figures', SM.url('collections/action-figures/index.html'), 'Action Figures', 'اکشن فیگورها',
+      '<svg viewBox="0 0 100 100" class="v100"><circle cx="50" cy="24" r="14"/><path d="M30 92V62c0-10 8-18 20-18s20 8 20 18v30M30 62H16M70 62h14"/></svg>',
+      figs.length ? '<span class="badge">' + figs.length + '</span>' : '<span class="badge soon" data-fa="به‌زودی">Soon</span>', 'fig');
+    figs.forEach(function(f){
+      h += item('figure-' + f.id, SM.url('figures/' + f.id + '/index.html'), f.name, f.name, ICON.gem, '', 'fig', true);
     });
     return '<div class="sb-scrim" aria-hidden="true"></div>' +
       '<aside class="sidebar" id="sidebar" aria-label="Site menu" aria-hidden="true">' +
