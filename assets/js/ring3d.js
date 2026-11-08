@@ -53,7 +53,13 @@
     aurevant:  { metal: 'models/aurevant-metal.bin', gems: 'models/aurevant-gems.json' },
     calveron:  { metal: 'models/calveron-metal.bin', gems: 'models/calveron-gems.json' },
     verenza:   { metal: 'models/verenza-metal.bin', gems: 'models/verenza-gems.json' },
-    orlevian:  { metal: 'models/orlevian-metal.bin', gems: 'models/orlevian-gems.json' }
+    orlevian:  { metal: 'models/orlevian-metal.bin', gems: 'models/orlevian-gems.json' },
+    azerion:   { metal: 'models/azerion-metal.bin', gems: 'models/azerion-gems.json' },
+    celestre:  { metal: 'models/celestre-metal.bin', gems: 'models/celestre-gems.json' },
+    velorian:  { metal: 'models/velorian-metal.bin', gems: 'models/velorian-gems.json' },
+    sylvera:   { metal: 'models/sylvera-metal.bin', gems: 'models/sylvera-gems.json' },
+    emerove:   { metal: 'models/emerove-metal.bin', gems: 'models/emerove-gems.json' },
+    zorelian:  { metal: 'models/zorelian-metal.bin', gems: 'models/zorelian-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */

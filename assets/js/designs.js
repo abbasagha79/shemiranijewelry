@@ -12,6 +12,360 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'azerion',
+    name: "AZÉRION",
+    added: '2026-11-08T04:06',
+    collection: 'earrings',
+    kind: { en: "Stud earrings · 18K gold and diamonds", fa: "گوشواره‌ی میخی · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 14 diamonds each", fa: "طلای ۱۸ عیار · ۱۴ الماس در هر لنگه" },
+    description: {
+      en: "A pavé heart in bloom over a fluted gold flower.",
+      fa: "قلبی از الماس که بر گلی طلایی با گلبرگ‌های شیاردار شکفته است."
+    },
+    model: 'azerion',
+    pose: { az: 0.4, el: 0.14, d: 1, ty: 0 },
+    tour: [
+      { az: 0.4, el: 0.14, d: 1, ty: 0 },
+      { az: 0, el: 0.06, d: 0.9, ty: 0 },
+      { az: 0.22, el: 0.18, d: 0.55, ty: 0 },
+      { az: -0.5, el: 0.12, d: 0.95, ty: 0 }
+    ],
+    spin: 'assets/video/azerion-spin.mp4',
+    spinPoster: 'assets/img/azerion/spin-poster.jpg',
+    cover: 'assets/img/azerion/render-01.jpg',
+    thumb: 'assets/img/azerion/render-01-sm.jpg',
+    stream: ['assets/img/azerion/stream-a.jpg', 'assets/img/azerion/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/azerion/render-01.jpg',
+      'assets/img/azerion/matrix-01.jpg',
+      'assets/img/azerion/matrix-02.jpg',
+      'assets/img/azerion/matrix-03.jpg',
+      'assets/img/azerion/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 0.99 g", fa: "طلای زرد ۱۸ عیار: ۰٫۹۹ گرم" },
+        { en: "18K white gold: 0.94 g", fa: "طلای سفید ۱۸ عیار: ۰٫۹۴ گرم" },
+        { en: "18K rose gold: 0.99 g", fa: "طلای رزگلد ۱۸ عیار: ۰٫۹۹ گرم" },
+        { en: "14K yellow gold: 0.83 g", fa: "طلای زرد ۱۴ عیار: ۰٫۸۳ گرم" },
+        { en: "22K yellow gold: 1.15 g", fa: "طلای زرد ۲۲ عیار: ۱٫۱۵ گرم" },
+        { en: "Silver 925: 0.67 g", fa: "نقره‌ی ۹۲۵: ۰٫۶۷ گرم" },
+        { en: "Platinum: 1.29 g", fa: "پلاتین: ۱٫۲۹ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "Each earring: 14 diamonds, 0.17 ct", fa: "هر لنگه: ۱۴ الماس، ۰٫۱۷ قیراط" },
+        { en: "7 stones, 1.5 mm: 0.09 ct", fa: "۷ نگین ۱٫۵ میلی‌متری: ۰٫۰۹ قیراط" },
+        { en: "4 stones, 1.4 mm: 0.04 ct", fa: "۴ نگین ۱٫۴ میلی‌متری: ۰٫۰۴ قیراط" },
+        { en: "2 stones, 1.6 mm: 0.03 ct", fa: "۲ نگین ۱٫۶ میلی‌متری: ۰٫۰۳ قیراط" },
+        { en: "1 stone, 1.3 mm: 0.008 ct", fa: "۱ نگین ۱٫۳ میلی‌متری: ۰٫۰۰۸ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 12.8 mm", fa: "طول: ۱۲٫۸ میلی‌متر" },
+        { en: "Width: 10.1 mm", fa: "عرض: ۱۰٫۱ میلی‌متر" },
+        { en: "Depth with the post: 6.8 mm", fa: "عمق با پایه: ۶٫۸ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A heart set with pavé diamonds rests on a five-petal gold flower", fa: "قلبی با الماس‌های پاوه روی گلی طلایی با پنج گلبرگ" },
+        { en: "Fine lines run along each petal", fa: "خطوط ظریف در امتداد هر گلبرگ" },
+        { en: "Post fitting behind each earring", fa: "پایه‌ی میخی پشت هر گوشواره" }
+      ]}
+    ],
+    note: { en: "Metal weights and stones are per earring, from the design file. Dimensions are measured on the 3D model.", fa: "وزن فلز و نگین‌ها برای هر لنگه و از فایل طراحی است. ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'celestre',
+    name: "CÉLESTRÉ",
+    added: '2026-11-08T04:05',
+    collection: 'earrings',
+    kind: { en: "Stud earrings · 18K gold and diamonds", fa: "گوشواره‌ی میخی · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 19 diamonds each", fa: "طلای ۱۸ عیار · ۱۹ الماس در هر لنگه" },
+    description: {
+      en: "Three petals of light held in outlines of open gold.",
+      fa: "سه گلبرگ از نور، در قاب‌های باز طلا."
+    },
+    model: 'celestre',
+    pose: { az: 0.4, el: 0.14, d: 1, ty: 0 },
+    tour: [
+      { az: 0.4, el: 0.14, d: 1, ty: 0 },
+      { az: 0, el: 0.06, d: 0.9, ty: 0 },
+      { az: 0.22, el: 0.18, d: 0.55, ty: 0 },
+      { az: -0.5, el: 0.12, d: 0.95, ty: 0 }
+    ],
+    spin: 'assets/video/celestre-spin.mp4',
+    spinPoster: 'assets/img/celestre/spin-poster.jpg',
+    cover: 'assets/img/celestre/render-01.jpg',
+    thumb: 'assets/img/celestre/render-01-sm.jpg',
+    stream: ['assets/img/celestre/stream-a.jpg', 'assets/img/celestre/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/celestre/render-01.jpg',
+      'assets/img/celestre/matrix-01.jpg',
+      'assets/img/celestre/matrix-02.jpg',
+      'assets/img/celestre/matrix-03.jpg',
+      'assets/img/celestre/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 1.68 g", fa: "طلای زرد ۱۸ عیار: ۱٫۶۸ گرم" },
+        { en: "18K white gold: 1.59 g", fa: "طلای سفید ۱۸ عیار: ۱٫۵۹ گرم" },
+        { en: "18K rose gold: 1.68 g", fa: "طلای رزگلد ۱۸ عیار: ۱٫۶۸ گرم" },
+        { en: "14K yellow gold: 1.40 g", fa: "طلای زرد ۱۴ عیار: ۱٫۴۰ گرم" },
+        { en: "22K yellow gold: 1.94 g", fa: "طلای زرد ۲۲ عیار: ۱٫۹۴ گرم" },
+        { en: "Silver 925: 1.13 g", fa: "نقره‌ی ۹۲۵: ۱٫۱۳ گرم" },
+        { en: "Platinum: 2.18 g", fa: "پلاتین: ۲٫۱۸ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "Each earring: 19 diamonds, 0.19 ct", fa: "هر لنگه: ۱۹ الماس، ۰٫۱۹ قیراط" },
+        { en: "11 stones, 1.4 mm: 0.115 ct", fa: "۱۱ نگین ۱٫۴ میلی‌متری: ۰٫۱۱۵ قیراط" },
+        { en: "6 stones, 1.3 mm: 0.05 ct", fa: "۶ نگین ۱٫۳ میلی‌متری: ۰٫۰۵ قیراط" },
+        { en: "2 stones, 1.5 mm: 0.025 ct", fa: "۲ نگین ۱٫۵ میلی‌متری: ۰٫۰۲۵ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 14.0 mm", fa: "طول: ۱۴٫۰ میلی‌متر" },
+        { en: "Width: 18.6 mm", fa: "عرض: ۱۸٫۶ میلی‌متر" },
+        { en: "Depth with the post: 8.5 mm", fa: "عمق با پایه: ۸٫۵ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "Three triangular petals set with pavé diamonds, with a small round stone above", fa: "سه گلبرگ مثلثی با الماس‌های پاوه و یک نگین گرد کوچک در بالا" },
+        { en: "Open gold leaf outlines frame the petals", fa: "خطوط باز برگ‌های طلایی دور گلبرگ‌ها" },
+        { en: "Post fitting behind each earring", fa: "پایه‌ی میخی پشت هر گوشواره" }
+      ]}
+    ],
+    note: { en: "Metal weights and stones are per earring, from the design file. Dimensions are measured on the 3D model.", fa: "وزن فلز و نگین‌ها برای هر لنگه و از فایل طراحی است. ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'velorian',
+    name: "VÉLORIAN",
+    added: '2026-11-08T04:04',
+    collection: 'earrings',
+    kind: { en: "Stud earrings · 18K gold and diamonds", fa: "گوشواره‌ی میخی · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 13 diamonds each", fa: "طلای ۱۸ عیار · ۱۳ الماس در هر لنگه" },
+    description: {
+      en: "One great stone at the centre, a halo of light around it.",
+      fa: "یک نگین بزرگ در مرکز و هاله‌ای از نور دور آن."
+    },
+    model: 'velorian',
+    pose: { az: 0.4, el: 0.14, d: 1, ty: 0 },
+    tour: [
+      { az: 0.4, el: 0.14, d: 1, ty: 0 },
+      { az: 0, el: 0.06, d: 0.9, ty: 0 },
+      { az: 0.22, el: 0.18, d: 0.55, ty: 0 },
+      { az: -0.5, el: 0.12, d: 0.95, ty: 0 }
+    ],
+    spin: 'assets/video/velorian-spin.mp4',
+    spinPoster: 'assets/img/velorian/spin-poster.jpg',
+    cover: 'assets/img/velorian/render-01.jpg',
+    thumb: 'assets/img/velorian/render-01-sm.jpg',
+    stream: ['assets/img/velorian/stream-a.jpg', 'assets/img/velorian/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/velorian/render-01.jpg',
+      'assets/img/velorian/matrix-01.jpg',
+      'assets/img/velorian/matrix-02.jpg',
+      'assets/img/velorian/matrix-03.jpg',
+      'assets/img/velorian/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 1.91 g", fa: "طلای زرد ۱۸ عیار: ۱٫۹۱ گرم" },
+        { en: "18K white gold: 1.82 g", fa: "طلای سفید ۱۸ عیار: ۱٫۸۲ گرم" },
+        { en: "18K rose gold: 1.91 g", fa: "طلای رزگلد ۱۸ عیار: ۱٫۹۱ گرم" },
+        { en: "14K yellow gold: 1.60 g", fa: "طلای زرد ۱۴ عیار: ۱٫۶۰ گرم" },
+        { en: "22K yellow gold: 2.22 g", fa: "طلای زرد ۲۲ عیار: ۲٫۲۲ گرم" },
+        { en: "Silver 925: 1.29 g", fa: "نقره‌ی ۹۲۵: ۱٫۲۹ گرم" },
+        { en: "Platinum: 2.50 g", fa: "پلاتین: ۲٫۵۰ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "Each earring: 13 diamonds, 1.00 ct", fa: "هر لنگه: ۱۳ الماس، ۱٫۰۰ قیراط" },
+        { en: "1 oval diamond, 7.2 × 5.2 mm: 0.74 ct", fa: "۱ الماس بیضی ۷٫۲ × ۵٫۲ میلی‌متری: ۰٫۷۴ قیراط" },
+        { en: "12 round stones, 1.8 mm: 0.26 ct", fa: "۱۲ نگین گرد ۱٫۸ میلی‌متری: ۰٫۲۶ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 13.6 mm", fa: "طول: ۱۳٫۶ میلی‌متر" },
+        { en: "Width: 11.5 mm", fa: "عرض: ۱۱٫۵ میلی‌متر" },
+        { en: "Depth with the post: 11.7 mm", fa: "عمق با پایه: ۱۱٫۷ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A large oval diamond held by claws at the centre", fa: "الماس بیضی بزرگ با چنگک در مرکز" },
+        { en: "A ring of petal-shaped settings around it, each with a diamond", fa: "حلقه‌ای از گلبرگ‌های نگین‌دار دور آن" },
+        { en: "Post fitting behind each earring", fa: "پایه‌ی میخی پشت هر گوشواره" }
+      ]}
+    ],
+    note: { en: "Metal weights and stones are per earring, from the design file. Dimensions are measured on the 3D model.", fa: "وزن فلز و نگین‌ها برای هر لنگه و از فایل طراحی است. ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'sylvera',
+    name: "SYLVÉRA",
+    added: '2026-11-08T04:03',
+    collection: 'earrings',
+    kind: { en: "Stud earrings · 18K gold and diamonds", fa: "گوشواره‌ی میخی · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 30 diamonds each", fa: "طلای ۱۸ عیار · ۳۰ الماس در هر لنگه" },
+    description: {
+      en: "A flower at the crown, two drops of light below.",
+      fa: "گلی در بالا و دو قطره‌ی نور در پایین."
+    },
+    model: 'sylvera',
+    pose: { az: 0.4, el: 0.14, d: 1, ty: 0 },
+    tour: [
+      { az: 0.4, el: 0.14, d: 1, ty: 0 },
+      { az: 0, el: 0.06, d: 0.9, ty: 0 },
+      { az: 0.22, el: 0.18, d: 0.55, ty: 0 },
+      { az: -0.5, el: 0.12, d: 0.95, ty: 0 }
+    ],
+    spin: 'assets/video/sylvera-spin.mp4',
+    spinPoster: 'assets/img/sylvera/spin-poster.jpg',
+    cover: 'assets/img/sylvera/render-01.jpg',
+    thumb: 'assets/img/sylvera/render-01-sm.jpg',
+    stream: ['assets/img/sylvera/stream-a.jpg', 'assets/img/sylvera/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/sylvera/render-01.jpg',
+      'assets/img/sylvera/matrix-01.jpg',
+      'assets/img/sylvera/matrix-02.jpg',
+      'assets/img/sylvera/matrix-03.jpg',
+      'assets/img/sylvera/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 1.80 g", fa: "طلای زرد ۱۸ عیار: ۱٫۸۰ گرم" },
+        { en: "18K white gold: 1.71 g", fa: "طلای سفید ۱۸ عیار: ۱٫۷۱ گرم" },
+        { en: "18K rose gold: 1.80 g", fa: "طلای رزگلد ۱۸ عیار: ۱٫۸۰ گرم" },
+        { en: "14K yellow gold: 1.51 g", fa: "طلای زرد ۱۴ عیار: ۱٫۵۱ گرم" },
+        { en: "22K yellow gold: 2.09 g", fa: "طلای زرد ۲۲ عیار: ۲٫۰۹ گرم" },
+        { en: "Silver 925: 1.21 g", fa: "نقره‌ی ۹۲۵: ۱٫۲۱ گرم" },
+        { en: "Platinum: 2.35 g", fa: "پلاتین: ۲٫۳۵ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "Each earring: 30 diamonds, 0.23 ct", fa: "هر لنگه: ۳۰ الماس، ۰٫۲۳ قیراط" },
+        { en: "9 stones, 1.5 mm: 0.115 ct", fa: "۹ نگین ۱٫۵ میلی‌متری: ۰٫۱۱۵ قیراط" },
+        { en: "15 stones, 1.1 mm: 0.075 ct", fa: "۱۵ نگین ۱٫۱ میلی‌متری: ۰٫۰۷۵ قیراط" },
+        { en: "6 stones, 1.2 mm: 0.04 ct", fa: "۶ نگین ۱٫۲ میلی‌متری: ۰٫۰۴ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 19.5 mm", fa: "طول: ۱۹٫۵ میلی‌متر" },
+        { en: "Width: 11.5 mm", fa: "عرض: ۱۱٫۵ میلی‌متر" },
+        { en: "Depth with the post: 9.1 mm", fa: "عمق با پایه: ۹٫۱ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A flower of marquise and round diamonds at the top", fa: "گلی از الماس‌های مارکیز و گرد در بالا" },
+        { en: "An outer drop-shaped loop, beaded on one side and set with pavé along the bottom", fa: "حلقه‌ی قطره‌ای بیرونی، دانه‌دار در یک سو و با نگین پاوه در پایین" },
+        { en: "An inner open loop with three stones", fa: "حلقه‌ی باز داخلی با سه نگین" },
+        { en: "Post fitting behind each earring", fa: "پایه‌ی میخی پشت هر گوشواره" }
+      ]}
+    ],
+    note: { en: "Metal weights and stones are per earring, from the design file. Dimensions are measured on the 3D model.", fa: "وزن فلز و نگین‌ها برای هر لنگه و از فایل طراحی است. ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'emerove',
+    name: "ÉMEROVÉ",
+    added: '2026-11-08T04:02',
+    collection: 'earrings',
+    kind: { en: "Stud earrings · 18K gold and diamonds", fa: "گوشواره‌ی میخی · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 21 diamonds each", fa: "طلای ۱۸ عیار · ۲۱ الماس در هر لنگه" },
+    description: {
+      en: "A five-pointed star of light, set among open leaves of gold.",
+      fa: "ستاره‌ای پنج‌پر از نور، میان برگ‌های باز طلا."
+    },
+    model: 'emerove',
+    pose: { az: 0.4, el: 0.14, d: 1, ty: 0 },
+    tour: [
+      { az: 0.4, el: 0.14, d: 1, ty: 0 },
+      { az: 0, el: 0.06, d: 0.9, ty: 0 },
+      { az: 0.22, el: 0.18, d: 0.55, ty: 0 },
+      { az: -0.5, el: 0.12, d: 0.95, ty: 0 }
+    ],
+    spin: 'assets/video/emerove-spin.mp4',
+    spinPoster: 'assets/img/emerove/spin-poster.jpg',
+    cover: 'assets/img/emerove/render-01.jpg',
+    thumb: 'assets/img/emerove/render-01-sm.jpg',
+    stream: ['assets/img/emerove/stream-a.jpg', 'assets/img/emerove/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/emerove/render-01.jpg',
+      'assets/img/emerove/matrix-01.jpg',
+      'assets/img/emerove/matrix-02.jpg',
+      'assets/img/emerove/matrix-03.jpg',
+      'assets/img/emerove/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 2.11 g", fa: "طلای زرد ۱۸ عیار: ۲٫۱۱ گرم" },
+        { en: "18K white gold: 2.01 g", fa: "طلای سفید ۱۸ عیار: ۲٫۰۱ گرم" },
+        { en: "18K rose gold: 2.11 g", fa: "طلای رزگلد ۱۸ عیار: ۲٫۱۱ گرم" },
+        { en: "14K yellow gold: 1.77 g", fa: "طلای زرد ۱۴ عیار: ۱٫۷۷ گرم" },
+        { en: "22K yellow gold: 2.45 g", fa: "طلای زرد ۲۲ عیار: ۲٫۴۵ گرم" },
+        { en: "Silver 925: 1.42 g", fa: "نقره‌ی ۹۲۵: ۱٫۴۲ گرم" },
+        { en: "Platinum: 2.75 g", fa: "پلاتین: ۲٫۷۵ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "Each earring: 21 diamonds, 0.28 ct", fa: "هر لنگه: ۲۱ الماس، ۰٫۲۸ قیراط" },
+        { en: "1 stone, 2.0 mm: 0.03 ct", fa: "۱ نگین ۲٫۰ میلی‌متری: ۰٫۰۳ قیراط" },
+        { en: "20 stones, 1.5 mm: 0.25 ct", fa: "۲۰ نگین ۱٫۵ میلی‌متری: ۰٫۲۵ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 19.2 mm", fa: "طول: ۱۹٫۲ میلی‌متر" },
+        { en: "Width: 20.2 mm", fa: "عرض: ۲۰٫۲ میلی‌متر" },
+        { en: "Depth with the post: 9.6 mm", fa: "عمق با پایه: ۹٫۶ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "Five diamond-set panels form a star around a larger centre stone", fa: "پنج صفحه‌ی نگین‌دار ستاره‌ای دور یک نگین مرکزی بزرگ‌تر می‌سازند" },
+        { en: "Five open gold leaves between the points", fa: "پنج برگ باز طلایی میان پره‌ها" },
+        { en: "Post fitting behind each earring", fa: "پایه‌ی میخی پشت هر گوشواره" }
+      ]}
+    ],
+    note: { en: "Metal weights and stones are per earring, from the design file. Dimensions are measured on the 3D model.", fa: "وزن فلز و نگین‌ها برای هر لنگه و از فایل طراحی است. ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'zorelian',
+    name: "ZORÉLIAN",
+    added: '2026-11-08T04:01',
+    collection: 'rings',
+    kind: { en: "Pavé ring · 18K gold and diamonds", fa: "انگشتر پاوه · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 46 diamonds", fa: "طلای ۱۸ عیار · ۴۶ الماس" },
+    description: {
+      en: "A circle of diamonds held between two flowered links.",
+      fa: "حلقه‌ای از الماس میان دو حلقه‌ی گل‌دار."
+    },
+    model: 'zorelian',
+    spin: 'assets/video/zorelian-spin.mp4',
+    spinPoster: 'assets/img/zorelian/spin-poster.jpg',
+    cover: 'assets/img/zorelian/render-01.jpg',
+    thumb: 'assets/img/zorelian/render-01-sm.jpg',
+    stream: ['assets/img/zorelian/stream-a.jpg', 'assets/img/zorelian/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/zorelian/render-01.jpg',
+      'assets/img/zorelian/matrix-01.jpg',
+      'assets/img/zorelian/matrix-02.jpg',
+      'assets/img/zorelian/matrix-03.jpg',
+      'assets/img/zorelian/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.40 g", fa: "طلای زرد ۱۸ عیار: ۳٫۴۰ گرم" },
+        { en: "18K white gold: 3.24 g", fa: "طلای سفید ۱۸ عیار: ۳٫۲۴ گرم" },
+        { en: "18K rose gold: 3.40 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۴۰ گرم" },
+        { en: "14K yellow gold: 2.84 g", fa: "طلای زرد ۱۴ عیار: ۲٫۸۴ گرم" },
+        { en: "22K yellow gold: 3.95 g", fa: "طلای زرد ۲۲ عیار: ۳٫۹۵ گرم" },
+        { en: "Silver 925: 2.29 g", fa: "نقره‌ی ۹۲۵: ۲٫۲۹ گرم" },
+        { en: "Platinum: 4.44 g", fa: "پلاتین: ۴٫۴۴ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "46 round diamonds, 0.19 ct in total", fa: "۴۶ الماس گرد، در مجموع ۰٫۱۹ قیراط" },
+        { en: "12 stones, 1.2 mm: 0.08 ct", fa: "۱۲ نگین ۱٫۲ میلی‌متری: ۰٫۰۸ قیراط" },
+        { en: "22 stones, 1.0 mm: 0.085 ct", fa: "۲۲ نگین ۱٫۰ میلی‌متری: ۰٫۰۸۵ قیراط" },
+        { en: "12 stones, 0.9 mm: 0.033 ct", fa: "۱۲ نگین ۰٫۹ میلی‌متری: ۰٫۰۳۳ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 21.3 mm", fa: "ارتفاع از پایین تا بالا: ۲۱٫۳ میلی‌متر" },
+        { en: "Width across: 21.5 mm", fa: "عرض کلی: ۲۱٫۵ میلی‌متر" },
+        { en: "Inner diameter: 17.0 mm", fa: "قطر داخلی: ۱۷٫۰ میلی‌متر" },
+        { en: "Width along the finger: 7.5 mm", fa: "عرض در امتداد انگشت: ۷٫۵ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A pavé-set circle on top, linked to two scalloped gold flower settings", fa: "حلقه‌ی پاوه در بالا، متصل به دو قاب گل‌مانند با لبه‌ی موجی" },
+        { en: "Two rows of pavé diamonds along each side of the band", fa: "دو ردیف الماس پاوه در هر طرف رینگ" },
+        { en: "Split shank", fa: "بازوی دوشاخه" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'evorien',
     name: "ÉVORIEN",
     added: '2026-11-07T23:06',
