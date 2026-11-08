@@ -99,6 +99,9 @@ FIGURES = [
     {"id": "catball", "name": "CATBALL",
      "desc": "CATBALL is a round-faced cat head sculpted in ZBrush — a watertight OBJ and STL file ready to 3D-print or cast, in any size, with its weight listed for resin, filament, bronze, silver, gold and platinum.",
      "size": "58.6 x 61.6 x 53.8 mm at 100%", "volume": "75.8 cm3 at 100%"},
+    {"id": "cthulhu", "name": "CTHULHU",
+     "desc": "CTHULHU is a chibi Cthulhu action figure with a tentacled face and bat-like wings, standing on its own rocky R'lyeh base — an STL file ready to 3D-print, cast in metal or paint, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
+     "size": "57.3 x 38.6 x 51.0 mm at 100% (figure on base)", "volume": "16.7 cm3 at 100% (figure + base)"},
 ]
 
 COLLECTIONS = {

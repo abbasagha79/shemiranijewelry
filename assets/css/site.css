@@ -727,3 +727,4 @@ html[lang=fa] .combos-h{font-family:var(--fa);letter-spacing:0;font-size:13px}
 .spec li b{color:var(--gold-hi);font-weight:700}
 .viewer .vstage-in{background:radial-gradient(ellipse at 50% 38%,#17285a 0%,#040818 72%)}
 @media (max-width:560px){ .combos-l{grid-template-columns:repeat(2,minmax(0,1fr))} .sizer-row input[type=number]{width:100%} }
+.spec li small{display:block;margin-top:2px;font-size:.8em;color:rgba(224,232,245,.55)}

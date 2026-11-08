@@ -3,11 +3,16 @@
 and print the figure's volume, size and surface area (used for the weight table).
 
   python3 tools/convert_figure.py figure.obj <name> [cell_mm]
+  python3 tools/convert_figure.py "figure.stl+base.stl@90,-10.7,-39.4,-26.8" <name>     # a figure standing on its base
+
+A part can carry "@rz,dx,dy,dz": turn it rz degrees about the Z axis, then move it (mm), so a base can be placed
+under the figure and the pair becomes ONE web model. Prints every part and the total (use the total for the page).
 
 Writes assets/models/<name>.bin (+ .gz): the same quantised layout the ring viewer reads
 (int16 positions over the bounding box, int8 normals, uint32 indices), but with smooth
-normals taken from the full-resolution mesh. `cell_mm` (default 0.30) is the vertex-clustering
-grid: a bigger cell gives a lighter file. A 460k-triangle ZBrush export drops to ~100k at 0.30.
+normals taken from the full-resolution mesh. `cell_mm` is the vertex-clustering
+grid: a bigger cell gives a lighter file. Default = the longest side / 180, so small pieces keep their detail
+(a 60 mm figure gets ~0.33 mm, a 30 mm disc ~0.17 mm). A 460k-triangle export drops to ~100k.
 Units are assumed to be millimetres. Needs Python 3 and numpy (pip install numpy).
 """
 import sys, gzip, struct, json
@@ -73,12 +78,30 @@ if __name__ == '__main__':
     if len(sys.argv) < 3:
         sys.exit(__doc__)
     src, name = sys.argv[1], sys.argv[2]
-    cell = float(sys.argv[3]) if len(sys.argv) > 3 else 0.30
-    V, F = load_obj(src) if src.lower().endswith('.obj') else load_stl(src)
+    cell = float(sys.argv[3]) if len(sys.argv) > 3 else None
+    Vs, Fs, n0 = [], [], 0
+    for spec in src.split('+'):
+        path, _, tf = spec.partition('@')
+        v, f = load_obj(path) if path.lower().endswith('.obj') else load_stl(path)
+        if tf:
+            rz, dx, dy, dz = [float(x) for x in tf.split(',')]
+            c, sn = np.cos(np.radians(rz)), np.sin(np.radians(rz))
+            v = np.stack([c * v[:, 0] - sn * v[:, 1] + dx, sn * v[:, 0] + c * v[:, 1] + dy, v[:, 2] + dz], 1)
+        pv, pa = measure(v, f)
+        print('part %s: %d triangles, %.2f cm3, %.1f cm2' % (path.split('/')[-1], len(f), pv / 1000, pa / 100))
+        Vs.append(v); Fs.append(f + n0); n0 += len(v)
+    V, F = np.concatenate(Vs), np.concatenate(Fs)
     vol, area = measure(V, F)
     mn, mx = V.min(0), V.max(0)
     print(json.dumps({'triangles': int(len(F)), 'volume_mm3': round(vol, 1), 'volume_cm3': round(vol / 1000, 2),
                       'surface_cm2': round(area / 100, 1), 'size_mm': [round(x, 1) for x in (mx - mn)]}))
+    e = np.sort(np.concatenate([F[:, [0, 1]], F[:, [1, 2]], F[:, [2, 0]]]), axis=1)
+    _, ec = np.unique(e, axis=0, return_counts=True)
+    print('mesh health: %d open edges, %d non-manifold edges %s' % ((ec == 1).sum(), (ec > 2).sum(),
+          '(watertight, weights are exact)' if (ec == 1).sum() == 0 and (ec > 2).sum() == 0 else '(NOT watertight: volume and weights are approximate)'))
+    if cell is None:
+        cell = round(float((V.max(0) - V.min(0)).max()) / 180.0, 3)
+    print('cell: %s mm' % cell)
     N = vertex_normals(V, F)
     P, M, I = cluster(V, F, N, cell)
     print('web mesh: %d vertices, %d triangles (%.0f%% of the original)' % (len(P), len(I), 100.0 * len(I) / len(F)))

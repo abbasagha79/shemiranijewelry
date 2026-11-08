@@ -2704,6 +2704,36 @@ window.SHEMIRANI_FIGURES = [
       'assets/img/catball/render-05.jpg',
       'assets/img/catball/render-06.jpg'
     ]
+  },
+  {
+    id: 'cthulhu',
+    name: "CTHULHU",
+    added: '2026-11-08T19:50',
+    kind: { en: "Action figure with base · 3D-print and cast file", fa: "اکشن فیگور همراه با پایه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · figure + base · any size · any colour", fa: "STL · فیگور و پایه · هر اندازه · هر رنگ" },
+    description: {
+      en: "A chibi Cthulhu with a big round head, a face of tentacles, bat-like wings and small clawed feet, standing on his own rocky R'lyeh base. The base has two pins that fit the feet. Fine skin detail, made to be printed, cast in metal or painted, in any size you need.",
+      fa: "کتولوی چیبی با سر گرد و بزرگ، صورتی از شاخک‌ها، بال‌هایی شبیه خفاش و پاهای کوچک چنگال‌دار، ایستاده روی پایه‌ی صخره‌ای مخصوص خودش (R'lyeh). پایه دو میخ دارد که در پاها جا می‌شوند. با ریزه‌کاری‌های پوست مجسمه‌سازی شده و برای چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای ساخته شده است."
+    },
+    model: 'cthulhu',
+    rot: [-90, 0, 0],
+    volume: 16.68,                          /* cm3, figure + base together (tools/convert_figure.py prints the total) */
+    surface: 75.0,                          /* cm2 */
+    size: { w: 57.3, d: 38.6, h: 51.0 },    /* mm at 100%: the figure standing on its base */
+    parts: [                                /* the weights add up the parts; the thin base is always solid */
+      { name: { en: "Figure", fa: "فیگور" }, volume: 14.71, surface: 56.7 },
+      { name: { en: "R'lyeh base", fa: "پایه‌ی R'lyeh" }, volume: 1.96, surface: 18.3, solid: true }
+    ],
+    cover: 'assets/img/cthulhu/render-01.jpg',
+    thumb: 'assets/img/cthulhu/render-01.jpg',
+    photos: [
+      'assets/img/cthulhu/render-01.jpg',
+      'assets/img/cthulhu/render-02.jpg',
+      'assets/img/cthulhu/render-03.jpg',
+      'assets/img/cthulhu/render-04.jpg',
+      'assets/img/cthulhu/render-05.jpg',
+      'assets/img/cthulhu/render-06.jpg'
+    ]
   }
 ];
 
