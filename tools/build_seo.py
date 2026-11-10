@@ -21,6 +21,18 @@ TODAY = datetime.date.today().isoformat()
 
 # Keep in sync with assets/js/designs.js (newest first is fine; order here is display order)
 DESIGNS = [
+    {"id": "nnor-auralis", "name": "NNOR AURALIS", "collection": "pendants", "desc": "NNOR AURALIS is a bow and arrow pendant in 18K gold — a bow and an arrow drawn in a fine line of gold; the arrowhead is a heart set with diamonds; 18 diamonds, 0.09 ct.", "diamonds": "18 diamonds, 0.09 ct", "weight18k": "4.05 g"},
+    {"id": "nnor-solenne", "name": "NNOR SOLENNE", "collection": "pendants", "desc": "NNOR SOLENNE is a bow pendant in 18K gold — a ribbon bow with its loops and tails set with pavé diamonds; three diamonds hang in a line below the knot, growing in size, the last one 5.05 mm; 70 diamonds, 1.69 ct.", "diamonds": "70 diamonds, 1.69 ct", "weight18k": "6.16 g"},
+    {"id": "nnor-veyra", "name": "NNOR VEYRA", "collection": "pendants", "desc": "NNOR VEYRA is a flower pendant in 18K gold — a gold flower with six pointed petals opening around a round diamond; four slim claws hold the diamond; 1 diamond, 0.12 ct.", "diamonds": "1 diamond, 0.12 ct", "weight18k": "0.56 g"},
+    {"id": "nnor-elara", "name": "NNOR ELARA", "collection": "rings", "desc": "NNOR ELARA is a filigree ring in 18K gold — a pointed plate of gold filigree with a flower of seven diamonds at its centre; rows of diamonds follow the four edges of the plate and run down each shoulder; 47 diamonds, 0.48 ct.", "diamonds": "47 diamonds, 0.48 ct", "weight18k": "2.54 g"},
+    {"id": "nnor-lumiere", "name": "NNOR LUMIERE", "collection": "rings", "desc": "NNOR LUMIERE is a filigree ring in 18K gold — a rounded-square plate of fine gold filigree; a gold flower at the centre, with leaves and tiny beads across the plate; no stones.", "diamonds": "no diamonds", "weight18k": "4.28 g"},
+    {"id": "nnor-seraph", "name": "NNOR SERAPH", "collection": "rings", "desc": "NNOR SERAPH is a solitaire ring in 18K gold — a single round diamond held by four claws; split shoulders rise to meet the setting; 1 diamond, 0.44 ct.", "diamonds": "1 diamond, 0.44 ct", "weight18k": "3.35 g"},
+    {"id": "nnor-orlina", "name": "NNOR ORLINA", "collection": "rings", "desc": "NNOR ORLINA is a solitaire ring in 18K gold — a single round diamond held by four claws; split shoulders rise to meet the setting; 1 diamond, 0.44 ct.", "diamonds": "1 diamond, 0.44 ct", "weight18k": "3.13 g"},
+    {"id": "nnor-celest", "name": "NNOR CELEST", "collection": "rings", "desc": "NNOR CELEST is a pavé solitaire ring in 18K gold — a large round diamond on four straight claws; beaded openwork sides set with small diamonds; 37 diamonds, 1.00 ct.", "diamonds": "37 diamonds, 1.00 ct", "weight18k": "4.58 g"},
+    {"id": "nnor-amaris", "name": "NNOR AMARIS", "collection": "rings", "desc": "NNOR AMARIS is a solitaire ring in 18K gold — a princess-cut diamond held by four claws; split shoulders rise to meet the setting; 1 diamond, 0.46 ct.", "diamonds": "1 diamond, 0.46 ct", "weight18k": "3.08 g"},
+    {"id": "nnor-velora", "name": "NNOR VELORA", "collection": "rings", "desc": "NNOR VELORA is a halo ring in 18K gold — a round centre diamond ringed by a halo of small diamonds; twisting shoulders rise to the setting; 15 diamonds, 0.91 ct.", "diamonds": "15 diamonds, 0.91 ct", "weight18k": "3.80 g"},
+    {"id": "nnor-isola", "name": "NNOR ISOLA", "collection": "rings", "desc": "NNOR ISOLA is a halo ring in 18K gold — a princess-cut centre diamond inside a square halo of small diamonds; twisting shoulders rise to the setting; 15 diamonds, 0.43 ct.", "diamonds": "15 diamonds, 0.43 ct", "weight18k": "3.89 g"},
+    {"id": "nnor-elarin", "name": "NNOR ELARIN", "collection": "rings", "desc": "NNOR ELARIN is a solitaire ring with side stones in 18K gold — a round centre diamond on four claws; smaller diamonds set along the shoulders, some in bezels and some in pairs; 13 diamonds, 0.91 ct.", "diamonds": "13 diamonds, 0.91 ct", "weight18k": "3.19 g"},
     {"id": "azerion", "name": "AZÉRION", "collection": "earrings", "desc": "AZÉRION is a pair of stud earrings in 18K gold — a pavé-set heart over a fluted five-petal gold flower; 14 diamonds, 0.17 ct each.", "diamonds": "14 round diamonds each, 0.17 ct", "weight18k": "0.99 g"},
     {"id": "celestre", "name": "CÉLESTRÉ", "collection": "earrings", "desc": "CÉLESTRÉ is a pair of stud earrings in 18K gold — three pavé-set petals and a small round stone inside open gold leaf outlines; 19 diamonds, 0.19 ct each.", "diamonds": "19 round diamonds each, 0.19 ct", "weight18k": "1.68 g"},
     {"id": "velorian", "name": "VÉLORIAN", "collection": "earrings", "desc": "VÉLORIAN is a pair of stud earrings in 18K gold — a claw-set 7.2 × 5.2 mm oval diamond ringed by petal-shaped settings; 13 diamonds, 1.00 ct each.", "diamonds": "1 oval and 12 round diamonds each, 1.00 ct", "weight18k": "1.91 g"},
@@ -238,7 +250,7 @@ inject_noscript("index.html",
 for d in DESIGNS:
     url = SITE + "/designs/%s/" % d["id"]
     noun = NOUN[d["collection"]]
-    title = "%s — 18K Gold & Diamond %s | SHEMIRANI" % (d["name"], noun)
+    title = "%s — 18K Gold %s | SHEMIRANI" % (d["name"], noun) if d["diamonds"].startswith("no diamonds") else "%s — 18K Gold & Diamond %s | SHEMIRANI" % (d["name"], noun)
     bc = crumb([("Home", SITE + "/"), (COLLECTIONS[d["collection"]], SITE + "/collections/%s/" % d["collection"]), (d["name"], url)])
     inject_head("designs/%s/index.html" % d["id"],
                 tags(url, title, d["desc"], "assets/img/%s/render-01.jpg" % d["id"], [product(d), bc]))

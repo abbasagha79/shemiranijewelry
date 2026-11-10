@@ -12,6 +12,656 @@
    ===================================================================== */
 window.SHEMIRANI_DESIGNS = [
   {
+    id: 'nnor-auralis',
+    name: "NNOR AURALIS",
+    added: '2026-11-10T04:12',
+    collection: 'pendants',
+    kind: { en: "Bow and arrow pendant · 18K gold and diamonds", fa: "آویز کمان و تیر · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 18 diamonds", fa: "طلای ۱۸ عیار · ۱۸ الماس" },
+    description: {
+      en: "Golden radiance and timeless beauty.",
+      fa: "درخشش طلایی و زیبایی جاودانه."
+    },
+    model: 'nnor-auralis',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .55, ty: 0 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/nnor-auralis-spin.mp4',
+    spinPoster: 'assets/img/nnor-auralis/spin-poster.jpg',
+    cover: 'assets/img/nnor-auralis/render-01.jpg',
+    thumb: 'assets/img/nnor-auralis/render-01-sm.jpg',
+    stream: ['assets/img/nnor-auralis/stream-a.jpg', 'assets/img/nnor-auralis/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-auralis/render-01.jpg',
+      'assets/img/nnor-auralis/matrix-01.jpg',
+      'assets/img/nnor-auralis/matrix-02.jpg',
+      'assets/img/nnor-auralis/matrix-03.jpg',
+      'assets/img/nnor-auralis/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 4.05 g", fa: "طلای زرد ۱۸ عیار: ۴٫۰۵ گرم" },
+        { en: "18K white gold: 3.85 g", fa: "طلای سفید ۱۸ عیار: ۳٫۸۵ گرم" },
+        { en: "18K rose gold: 4.05 g", fa: "طلای رزگلد ۱۸ عیار: ۴٫۰۵ گرم" },
+        { en: "14K yellow gold: 3.38 g", fa: "طلای زرد ۱۴ عیار: ۳٫۳۸ گرم" },
+        { en: "22K yellow gold: 4.70 g", fa: "طلای زرد ۲۲ عیار: ۴٫۷۰ گرم" },
+        { en: "Silver 925: 2.72 g", fa: "نقره‌ی ۹۲۵: ۲٫۷۲ گرم" },
+        { en: "Platinum: 5.28 g", fa: "پلاتین: ۵٫۲۸ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "18 round diamonds, 0.09 ct in total", fa: "۱۸ الماس گرد، در مجموع ۰٫۰۹ قیراط" },
+        { en: "18 stones, 1.1 mm: 0.09 ct", fa: "۱۸ نگین ۱٫۱ میلی‌متری: ۰٫۰۹ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 40.2 mm", fa: "طول: ۴۰٫۲ میلی‌متر" },
+        { en: "Width: 27.3 mm", fa: "عرض: ۲۷٫۳ میلی‌متر" },
+        { en: "Height: 5.0 mm", fa: "ارتفاع: ۵٫۰ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A bow and an arrow drawn in a fine line of gold", fa: "کمان و تیری که با خطی باریک از طلا کشیده شده" },
+        { en: "The arrowhead is a heart set with diamonds", fa: "نوک تیر قلبی نگین‌دار است" },
+        { en: "A diamond-set bar at the foot of the bow, and a loop at the top for the chain", fa: "یک تیرک نگین‌دار در پای کمان و یک حلقه در بالا برای زنجیر" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-solenne',
+    name: "NNOR SOLENNE",
+    added: '2026-11-10T04:11',
+    collection: 'pendants',
+    kind: { en: "Bow pendant · 18K gold and diamonds", fa: "آویز پاپیون · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 70 diamonds", fa: "طلای ۱۸ عیار · ۷۰ الماس" },
+    description: {
+      en: "Poise, grandeur and royal elegance.",
+      fa: "وقار، شکوه و ظرافت سلطنتی."
+    },
+    model: 'nnor-solenne',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .55, ty: 0 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/nnor-solenne-spin.mp4',
+    spinPoster: 'assets/img/nnor-solenne/spin-poster.jpg',
+    cover: 'assets/img/nnor-solenne/render-01.jpg',
+    thumb: 'assets/img/nnor-solenne/render-01-sm.jpg',
+    stream: ['assets/img/nnor-solenne/stream-a.jpg', 'assets/img/nnor-solenne/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-solenne/render-01.jpg',
+      'assets/img/nnor-solenne/render-02.jpg',
+      'assets/img/nnor-solenne/render-03.jpg',
+      'assets/img/nnor-solenne/render-04.jpg',
+      'assets/img/nnor-solenne/render-05.jpg',
+      'assets/img/nnor-solenne/matrix-01.jpg',
+      'assets/img/nnor-solenne/matrix-02.jpg',
+      'assets/img/nnor-solenne/matrix-03.jpg',
+      'assets/img/nnor-solenne/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 6.16 g", fa: "طلای زرد ۱۸ عیار: ۶٫۱۶ گرم" },
+        { en: "18K white gold: 5.86 g", fa: "طلای سفید ۱۸ عیار: ۵٫۸۶ گرم" },
+        { en: "18K rose gold: 6.16 g", fa: "طلای رزگلد ۱۸ عیار: ۶٫۱۶ گرم" },
+        { en: "14K yellow gold: 5.15 g", fa: "طلای زرد ۱۴ عیار: ۵٫۱۵ گرم" },
+        { en: "22K yellow gold: 7.15 g", fa: "طلای زرد ۲۲ عیار: ۷٫۱۵ گرم" },
+        { en: "Silver 925: 4.14 g", fa: "نقره‌ی ۹۲۵: ۴٫۱۴ گرم" },
+        { en: "Platinum: 8.03 g", fa: "پلاتین: ۸٫۰۳ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "70 round diamonds, 1.69 ct in total", fa: "۷۰ الماس گرد، در مجموع ۱٫۶۹ قیراط" },
+        { en: "1 stone, 5.05 mm: 0.47 ct", fa: "۱ نگین ۵٫۰۵ میلی‌متری: ۰٫۴۷ قیراط" },
+        { en: "2 stones, 3.05 mm: 0.21 ct", fa: "۲ نگین ۳٫۰۵ میلی‌متری: ۰٫۲۱ قیراط" },
+        { en: "3 stones, 2.15 mm: 0.11 ct", fa: "۳ نگین ۲٫۱۵ میلی‌متری: ۰٫۱۱ قیراط" },
+        { en: "6 stones, 2.05 mm: 0.19 ct", fa: "۶ نگین ۲٫۰۵ میلی‌متری: ۰٫۱۹ قیراط" },
+        { en: "10 stones, 1.85 mm: 0.23 ct", fa: "۱۰ نگین ۱٫۸۵ میلی‌متری: ۰٫۲۳ قیراط" },
+        { en: "4 stones, 1.65 mm: 0.066 ct", fa: "۴ نگین ۱٫۶۵ میلی‌متری: ۰٫۰۶۶ قیراط" },
+        { en: "6 stones, 1.55 mm: 0.083 ct", fa: "۶ نگین ۱٫۵۵ میلی‌متری: ۰٫۰۸۳ قیراط" },
+        { en: "11 stones, 1.45 mm: 0.12 ct", fa: "۱۱ نگین ۱٫۴۵ میلی‌متری: ۰٫۱۲ قیراط" },
+        { en: "27 stones, 1.25 mm: 0.20 ct", fa: "۲۷ نگین ۱٫۲۵ میلی‌متری: ۰٫۲۰ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 29.1 mm", fa: "طول: ۲۹٫۱ میلی‌متر" },
+        { en: "Width: 25.1 mm", fa: "عرض: ۲۵٫۱ میلی‌متر" },
+        { en: "Height: 7.2 mm", fa: "ارتفاع: ۷٫۲ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A ribbon bow with its loops and tails set with pavé diamonds", fa: "پاپیونی از روبان که حلقه‌ها و دم‌هایش با الماس‌های پاوه نگین‌کاری شده" },
+        { en: "Three diamonds hang in a line below the knot, growing in size, the last one 5.05 mm", fa: "سه الماس زیر گره در یک خط آویزان‌اند و اندازه‌شان بزرگ‌تر می‌شود؛ آخری ۵٫۰۵ میلی‌متر است" },
+        { en: "A small loop at each end of the bow for the chain", fa: "یک حلقه‌ی کوچک در دو سر پاپیون برای زنجیر" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-veyra',
+    name: "NNOR VEYRA",
+    added: '2026-11-10T04:10',
+    collection: 'pendants',
+    kind: { en: "Flower pendant · 18K gold and diamond", fa: "آویز گل · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 1 diamond", fa: "طلای ۱۸ عیار · ۱ الماس" },
+    description: {
+      en: "Boldness, beauty and modernity.",
+      fa: "جسارت، زیبایی و مدرنیته."
+    },
+    model: 'nnor-veyra',
+    /* pendants stand upright: front-on views instead of the ring tour */
+    pose: { az: .4, el: .14, d: 1, ty: 0 },
+    tour: [{ az: .4, el: .14, d: 1, ty: 0 }, { az: 0, el: .06, d: .9, ty: 0 }, { az: .22, el: .18, d: .55, ty: 0 }, { az: -.5, el: .12, d: .95, ty: 0 }],
+    spin: 'assets/video/nnor-veyra-spin.mp4',
+    spinPoster: 'assets/img/nnor-veyra/spin-poster.jpg',
+    cover: 'assets/img/nnor-veyra/render-01.jpg',
+    thumb: 'assets/img/nnor-veyra/render-01-sm.jpg',
+    stream: ['assets/img/nnor-veyra/stream-a.jpg', 'assets/img/nnor-veyra/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-veyra/render-01.jpg',
+      'assets/img/nnor-veyra/matrix-01.jpg',
+      'assets/img/nnor-veyra/matrix-02.jpg',
+      'assets/img/nnor-veyra/matrix-03.jpg',
+      'assets/img/nnor-veyra/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 0.56 g", fa: "طلای زرد ۱۸ عیار: ۰٫۵۶ گرم" },
+        { en: "18K white gold: 0.53 g", fa: "طلای سفید ۱۸ عیار: ۰٫۵۳ گرم" },
+        { en: "18K rose gold: 0.56 g", fa: "طلای رزگلد ۱۸ عیار: ۰٫۵۶ گرم" },
+        { en: "14K yellow gold: 0.47 g", fa: "طلای زرد ۱۴ عیار: ۰٫۴۷ گرم" },
+        { en: "22K yellow gold: 0.65 g", fa: "طلای زرد ۲۲ عیار: ۰٫۶۵ گرم" },
+        { en: "Silver 925: 0.38 g", fa: "نقره‌ی ۹۲۵: ۰٫۳۸ گرم" },
+        { en: "Platinum: 0.73 g", fa: "پلاتین: ۰٫۷۳ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "1 round diamond, 3.2 mm, 0.12 ct", fa: "۱ الماس گرد، ۳٫۲ میلی‌متر، ۰٫۱۲ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Length: 10.5 mm", fa: "طول: ۱۰٫۵ میلی‌متر" },
+        { en: "Width: 9.2 mm", fa: "عرض: ۹٫۲ میلی‌متر" },
+        { en: "Height: 5.2 mm", fa: "ارتفاع: ۵٫۲ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A gold flower with six pointed petals opening around a round diamond", fa: "گلی طلایی با شش گلبرگ تیز که دور یک الماس گرد باز شده‌اند" },
+        { en: "Four slim claws hold the diamond", fa: "چهار چنگک باریک الماس را نگه می‌دارند" },
+        { en: "A smooth, rounded body under the petals", fa: "بدنه‌ی گرد و صیقلی زیر گلبرگ‌ها" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-elara',
+    name: "NNOR ELARA",
+    added: '2026-11-10T04:09',
+    collection: 'rings',
+    kind: { en: "Filigree ring · 18K gold and diamonds", fa: "انگشتر فیلیگری · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 47 diamonds", fa: "طلای ۱۸ عیار · ۴۷ الماس" },
+    description: {
+      en: "Heavenly beauty and the glow of the stars.",
+      fa: "زیبایی آسمانی و درخشش ستارگان."
+    },
+    model: 'nnor-elara',
+    spin: 'assets/video/nnor-elara-spin.mp4',
+    spinPoster: 'assets/img/nnor-elara/spin-poster.jpg',
+    cover: 'assets/img/nnor-elara/render-01.jpg',
+    thumb: 'assets/img/nnor-elara/render-01-sm.jpg',
+    stream: ['assets/img/nnor-elara/stream-a.jpg', 'assets/img/nnor-elara/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-elara/render-01.jpg',
+      'assets/img/nnor-elara/matrix-01.jpg',
+      'assets/img/nnor-elara/matrix-02.jpg',
+      'assets/img/nnor-elara/matrix-03.jpg',
+      'assets/img/nnor-elara/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 2.54 g", fa: "طلای زرد ۱۸ عیار: ۲٫۵۴ گرم" },
+        { en: "18K white gold: 2.41 g", fa: "طلای سفید ۱۸ عیار: ۲٫۴۱ گرم" },
+        { en: "18K rose gold: 2.54 g", fa: "طلای رزگلد ۱۸ عیار: ۲٫۵۴ گرم" },
+        { en: "14K yellow gold: 2.12 g", fa: "طلای زرد ۱۴ عیار: ۲٫۱۲ گرم" },
+        { en: "22K yellow gold: 2.94 g", fa: "طلای زرد ۲۲ عیار: ۲٫۹۴ گرم" },
+        { en: "Silver 925: 1.71 g", fa: "نقره‌ی ۹۲۵: ۱٫۷۱ گرم" },
+        { en: "Platinum: 3.31 g", fa: "پلاتین: ۳٫۳۱ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "47 round diamonds, 0.48 ct in total", fa: "۴۷ الماس گرد، در مجموع ۰٫۴۸ قیراط" },
+        { en: "1 stone, 2.0 mm: 0.03 ct", fa: "۱ نگین ۲٫۰ میلی‌متری: ۰٫۰۳ قیراط" },
+        { en: "6 stones, 1.8 mm: 0.13 ct", fa: "۶ نگین ۱٫۸ میلی‌متری: ۰٫۱۳ قیراط" },
+        { en: "40 stones, 1.3 mm: 0.32 ct", fa: "۴۰ نگین ۱٫۳ میلی‌متری: ۰٫۳۲ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 25.1 mm", fa: "ارتفاع از پایین تا بالا: ۲۵٫۱ میلی‌متر" },
+        { en: "Width across: 20.5 mm", fa: "عرض کلی: ۲۰٫۵ میلی‌متر" },
+        { en: "Inner diameter: 18.0 mm", fa: "قطر داخلی: ۱۸٫۰ میلی‌متر" },
+        { en: "Width along the finger: 19.1 mm", fa: "عرض در امتداد انگشت: ۱۹٫۱ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A pointed plate of gold filigree with a flower of seven diamonds at its centre", fa: "صفحه‌ای نوک‌تیز از فیلیگری طلا با گلی از هفت الماس در مرکز" },
+        { en: "Rows of diamonds follow the four edges of the plate and run down each shoulder", fa: "ردیف‌های الماس لبه‌های چهارگانه‌ی صفحه را دنبال می‌کنند و از هر شانه پایین می‌آیند" },
+        { en: "Fine gold beads and small flowers across the plate, and hearts cut through the band", fa: "دانه‌ها و گل‌های ریز طلایی روی صفحه و قلب‌هایی که در بدنه‌ی رینگ بریده شده" }
+      ]}
+    ],
+    note: { en: "No stone file was supplied for this design, so the diamond positions, sizes and weights are estimated from the metal model. Metal weight and dimensions come from the design file.", fa: "برای این طرح فایل نگین‌ها در دسترس نبود؛ جای نگین‌ها، اندازه و وزنشان از روی مدل فلز تخمین زده شده است. وزن فلز و ابعاد از فایل طراحی است." }
+  },
+  {
+    id: 'nnor-lumiere',
+    name: "NNOR LUMIERE",
+    added: '2026-11-10T04:08',
+    collection: 'rings',
+    kind: { en: "Filigree ring · 18K gold", fa: "انگشتر فیلیگری · طلای ۱۸ عیار" },
+    line: { en: "18K gold · no stones", fa: "طلای ۱۸ عیار · بدون نگین" },
+    description: {
+      en: "Light, radiance and endless allure.",
+      fa: "نور، درخشش و جذابیت بی‌انتها."
+    },
+    model: 'nnor-lumiere',
+    spin: 'assets/video/nnor-lumiere-spin.mp4',
+    spinPoster: 'assets/img/nnor-lumiere/spin-poster.jpg',
+    cover: 'assets/img/nnor-lumiere/render-01.jpg',
+    thumb: 'assets/img/nnor-lumiere/render-01-sm.jpg',
+    stream: ['assets/img/nnor-lumiere/stream-a.jpg', 'assets/img/nnor-lumiere/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-lumiere/render-01.jpg',
+      'assets/img/nnor-lumiere/matrix-01.jpg',
+      'assets/img/nnor-lumiere/matrix-03.jpg',
+      'assets/img/nnor-lumiere/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 4.28 g", fa: "طلای زرد ۱۸ عیار: ۴٫۲۸ گرم" },
+        { en: "18K white gold: 4.07 g", fa: "طلای سفید ۱۸ عیار: ۴٫۰۷ گرم" },
+        { en: "18K rose gold: 4.28 g", fa: "طلای رزگلد ۱۸ عیار: ۴٫۲۸ گرم" },
+        { en: "14K yellow gold: 3.58 g", fa: "طلای زرد ۱۴ عیار: ۳٫۵۸ گرم" },
+        { en: "22K yellow gold: 4.97 g", fa: "طلای زرد ۲۲ عیار: ۴٫۹۷ گرم" },
+        { en: "Silver 925: 2.88 g", fa: "نقره‌ی ۹۲۵: ۲٫۸۸ گرم" },
+        { en: "Platinum: 5.58 g", fa: "پلاتین: ۵٫۵۸ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "No diamonds: this design is worked in gold alone", fa: "بدون الماس: این طرح تنها با طلا ساخته شده است" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 30.6 mm", fa: "ارتفاع از پایین تا بالا: ۳۰٫۶ میلی‌متر" },
+        { en: "Width across: 24.0 mm", fa: "عرض کلی: ۲۴٫۰ میلی‌متر" },
+        { en: "Inner diameter: 18.9 mm", fa: "قطر داخلی: ۱۸٫۹ میلی‌متر" },
+        { en: "Width along the finger: 21.7 mm", fa: "عرض در امتداد انگشت: ۲۱٫۷ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A rounded-square plate of fine gold filigree", fa: "صفحه‌ای مربع با گوشه‌های گرد از فیلیگری ظریف طلا" },
+        { en: "A gold flower at the centre, with leaves and tiny beads across the plate", fa: "گلی طلایی در مرکز، با برگ و دانه‌های ریز روی صفحه" },
+        { en: "Open lattice shoulders and a small gold rose on one side of the band", fa: "شانه‌های توری باز و یک گل رز کوچک طلایی در یک سوی رینگ" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-seraph',
+    name: "NNOR SERAPH",
+    added: '2026-11-10T04:07',
+    collection: 'rings',
+    kind: { en: "Solitaire ring · 18K gold and diamond", fa: "انگشتر تک‌نگین · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 1 diamond", fa: "طلای ۱۸ عیار · ۱ الماس" },
+    description: {
+      en: "Angelic beauty and softness.",
+      fa: "زیبایی فرشته‌گون و لطافت."
+    },
+    model: 'nnor-seraph',
+    spin: 'assets/video/nnor-seraph-spin.mp4',
+    spinPoster: 'assets/img/nnor-seraph/spin-poster.jpg',
+    cover: 'assets/img/nnor-seraph/render-01.jpg',
+    thumb: 'assets/img/nnor-seraph/render-01-sm.jpg',
+    stream: ['assets/img/nnor-seraph/stream-a.jpg', 'assets/img/nnor-seraph/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-seraph/render-01.jpg',
+      'assets/img/nnor-seraph/matrix-01.jpg',
+      'assets/img/nnor-seraph/matrix-02.jpg',
+      'assets/img/nnor-seraph/matrix-03.jpg',
+      'assets/img/nnor-seraph/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.35 g", fa: "طلای زرد ۱۸ عیار: ۳٫۳۵ گرم" },
+        { en: "18K white gold: 3.19 g", fa: "طلای سفید ۱۸ عیار: ۳٫۱۹ گرم" },
+        { en: "18K rose gold: 3.35 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۳۵ گرم" },
+        { en: "14K yellow gold: 2.80 g", fa: "طلای زرد ۱۴ عیار: ۲٫۸۰ گرم" },
+        { en: "22K yellow gold: 3.89 g", fa: "طلای زرد ۲۲ عیار: ۳٫۸۹ گرم" },
+        { en: "Silver 925: 2.25 g", fa: "نقره‌ی ۹۲۵: ۲٫۲۵ گرم" },
+        { en: "Platinum: 4.37 g", fa: "پلاتین: ۴٫۳۷ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "1 round diamond, 5.0 mm, 0.44 ct", fa: "۱ الماس گرد، ۵٫۰ میلی‌متر، ۰٫۴۴ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 25.5 mm", fa: "ارتفاع از پایین تا بالا: ۲۵٫۵ میلی‌متر" },
+        { en: "Width across: 20.8 mm", fa: "عرض کلی: ۲۰٫۸ میلی‌متر" },
+        { en: "Inner diameter: 17.2 mm", fa: "قطر داخلی: ۱۷٫۲ میلی‌متر" },
+        { en: "Width along the finger: 5.0 mm", fa: "عرض در امتداد انگشت: ۵٫۰ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A single round diamond held by four claws", fa: "یک الماس گرد که چهار چنگک نگهش می‌دارند" },
+        { en: "Split shoulders rise to meet the setting", fa: "شانه‌های دوشاخه تا نگین بالا می‌روند" },
+        { en: "Fine millegrain beading inside the band", fa: "دانه‌چینی ظریف (میلگرین) در داخل رینگ" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-orlina',
+    name: "NNOR ORLINA",
+    added: '2026-11-10T04:06',
+    collection: 'rings',
+    kind: { en: "Solitaire ring · 18K gold and diamond", fa: "انگشتر تک‌نگین · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 1 diamond", fa: "طلای ۱۸ عیار · ۱ الماس" },
+    description: {
+      en: "Pure gold and feminine elegance.",
+      fa: "طلای ناب و ظرافت زنانه."
+    },
+    model: 'nnor-orlina',
+    spin: 'assets/video/nnor-orlina-spin.mp4',
+    spinPoster: 'assets/img/nnor-orlina/spin-poster.jpg',
+    cover: 'assets/img/nnor-orlina/render-01.jpg',
+    thumb: 'assets/img/nnor-orlina/render-01-sm.jpg',
+    stream: ['assets/img/nnor-orlina/stream-a.jpg', 'assets/img/nnor-orlina/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-orlina/render-01.jpg',
+      'assets/img/nnor-orlina/matrix-01.jpg',
+      'assets/img/nnor-orlina/matrix-02.jpg',
+      'assets/img/nnor-orlina/matrix-03.jpg',
+      'assets/img/nnor-orlina/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.13 g", fa: "طلای زرد ۱۸ عیار: ۳٫۱۳ گرم" },
+        { en: "18K white gold: 2.97 g", fa: "طلای سفید ۱۸ عیار: ۲٫۹۷ گرم" },
+        { en: "18K rose gold: 3.13 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۱۳ گرم" },
+        { en: "14K yellow gold: 2.61 g", fa: "طلای زرد ۱۴ عیار: ۲٫۶۱ گرم" },
+        { en: "22K yellow gold: 3.63 g", fa: "طلای زرد ۲۲ عیار: ۳٫۶۳ گرم" },
+        { en: "Silver 925: 2.10 g", fa: "نقره‌ی ۹۲۵: ۲٫۱۰ گرم" },
+        { en: "Platinum: 4.08 g", fa: "پلاتین: ۴٫۰۸ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "1 round diamond, 5.0 mm, 0.44 ct", fa: "۱ الماس گرد، ۵٫۰ میلی‌متر، ۰٫۴۴ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 25.2 mm", fa: "ارتفاع از پایین تا بالا: ۲۵٫۲ میلی‌متر" },
+        { en: "Width across: 20.9 mm", fa: "عرض کلی: ۲۰٫۹ میلی‌متر" },
+        { en: "Inner diameter: 17.2 mm", fa: "قطر داخلی: ۱۷٫۲ میلی‌متر" },
+        { en: "Width along the finger: 5.0 mm", fa: "عرض در امتداد انگشت: ۵٫۰ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A single round diamond held by four claws", fa: "یک الماس گرد که چهار چنگک نگهش می‌دارند" },
+        { en: "Split shoulders rise to meet the setting", fa: "شانه‌های دوشاخه تا نگین بالا می‌روند" },
+        { en: "Fine millegrain beading inside the band", fa: "دانه‌چینی ظریف (میلگرین) در داخل رینگ" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-celest',
+    name: "NNOR CELEST",
+    added: '2026-11-10T04:05',
+    collection: 'rings',
+    kind: { en: "Pavé solitaire ring · 18K gold and diamonds", fa: "انگشتر تک‌نگین پاوه · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 37 diamonds", fa: "طلای ۱۸ عیار · ۳۷ الماس" },
+    description: {
+      en: "Sky, stars and cosmic beauty.",
+      fa: "آسمان، ستارگان و زیبایی کیهانی."
+    },
+    model: 'nnor-celest',
+    spin: 'assets/video/nnor-celest-spin.mp4',
+    spinPoster: 'assets/img/nnor-celest/spin-poster.jpg',
+    cover: 'assets/img/nnor-celest/render-01.jpg',
+    thumb: 'assets/img/nnor-celest/render-01-sm.jpg',
+    stream: ['assets/img/nnor-celest/stream-a.jpg', 'assets/img/nnor-celest/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-celest/render-01.jpg',
+      'assets/img/nnor-celest/matrix-01.jpg',
+      'assets/img/nnor-celest/matrix-02.jpg',
+      'assets/img/nnor-celest/matrix-03.jpg',
+      'assets/img/nnor-celest/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 4.58 g", fa: "طلای زرد ۱۸ عیار: ۴٫۵۸ گرم" },
+        { en: "18K white gold: 4.36 g", fa: "طلای سفید ۱۸ عیار: ۴٫۳۶ گرم" },
+        { en: "18K rose gold: 4.58 g", fa: "طلای رزگلد ۱۸ عیار: ۴٫۵۸ گرم" },
+        { en: "14K yellow gold: 3.83 g", fa: "طلای زرد ۱۴ عیار: ۳٫۸۳ گرم" },
+        { en: "22K yellow gold: 5.32 g", fa: "طلای زرد ۲۲ عیار: ۵٫۳۲ گرم" },
+        { en: "Silver 925: 3.08 g", fa: "نقره‌ی ۹۲۵: ۳٫۰۸ گرم" },
+        { en: "Platinum: 5.98 g", fa: "پلاتین: ۵٫۹۸ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "37 round diamonds, 1.00 ct in total", fa: "۳۷ الماس گرد، در مجموع ۱٫۰۰ قیراط" },
+        { en: "1 stone, 6.0 mm: 0.77 ct", fa: "۱ نگین ۶٫۰ میلی‌متری: ۰٫۷۷ قیراط" },
+        { en: "18 stones, 1.3 mm: 0.14 ct", fa: "۱۸ نگین ۱٫۳ میلی‌متری: ۰٫۱۴ قیراط" },
+        { en: "8 stones, 1.2 mm: 0.056 ct", fa: "۸ نگین ۱٫۲ میلی‌متری: ۰٫۰۵۶ قیراط" },
+        { en: "4 stones, 1.1 mm: 0.02 ct", fa: "۴ نگین ۱٫۱ میلی‌متری: ۰٫۰۲ قیراط" },
+        { en: "4 stones, 0.9 mm: 0.01 ct", fa: "۴ نگین ۰٫۹ میلی‌متری: ۰٫۰۱ قیراط" },
+        { en: "2 stones, 0.8 mm: 0.004 ct", fa: "۲ نگین ۰٫۸ میلی‌متری: ۰٫۰۰۴ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 24.9 mm", fa: "ارتفاع از پایین تا بالا: ۲۴٫۹ میلی‌متر" },
+        { en: "Width across: 20.6 mm", fa: "عرض کلی: ۲۰٫۶ میلی‌متر" },
+        { en: "Inner diameter: 15.6 mm", fa: "قطر داخلی: ۱۵٫۶ میلی‌متر" },
+        { en: "Width along the finger: 5.6 mm", fa: "عرض در امتداد انگشت: ۵٫۶ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A large round diamond on four straight claws", fa: "یک الماس گرد بزرگ روی چهار چنگک راست" },
+        { en: "Beaded openwork sides set with small diamonds", fa: "کناره‌های توری و دانه‌دار با الماس‌های ریز" },
+        { en: "A row of graduated diamonds along the band", fa: "ردیفی از الماس‌های درجه‌بندی‌شده در امتداد رینگ" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-amaris',
+    name: "NNOR AMARIS",
+    added: '2026-11-10T04:04',
+    collection: 'rings',
+    kind: { en: "Solitaire ring · 18K gold and diamond", fa: "انگشتر تک‌نگین · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 1 diamond", fa: "طلای ۱۸ عیار · ۱ الماس" },
+    description: {
+      en: "Love, feeling and lasting beauty.",
+      fa: "عشق، احساس و زیبایی ماندگار."
+    },
+    model: 'nnor-amaris',
+    spin: 'assets/video/nnor-amaris-spin.mp4',
+    spinPoster: 'assets/img/nnor-amaris/spin-poster.jpg',
+    cover: 'assets/img/nnor-amaris/render-01.jpg',
+    thumb: 'assets/img/nnor-amaris/render-01-sm.jpg',
+    stream: ['assets/img/nnor-amaris/stream-a.jpg', 'assets/img/nnor-amaris/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-amaris/render-01.jpg',
+      'assets/img/nnor-amaris/matrix-01.jpg',
+      'assets/img/nnor-amaris/matrix-02.jpg',
+      'assets/img/nnor-amaris/matrix-03.jpg',
+      'assets/img/nnor-amaris/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.08 g", fa: "طلای زرد ۱۸ عیار: ۳٫۰۸ گرم" },
+        { en: "18K white gold: 2.93 g", fa: "طلای سفید ۱۸ عیار: ۲٫۹۳ گرم" },
+        { en: "18K rose gold: 3.08 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۰۸ گرم" },
+        { en: "14K yellow gold: 2.58 g", fa: "طلای زرد ۱۴ عیار: ۲٫۵۸ گرم" },
+        { en: "22K yellow gold: 3.58 g", fa: "طلای زرد ۲۲ عیار: ۳٫۵۸ گرم" },
+        { en: "Silver 925: 2.07 g", fa: "نقره‌ی ۹۲۵: ۲٫۰۷ گرم" },
+        { en: "Platinum: 4.02 g", fa: "پلاتین: ۴٫۰۲ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "1 princess-cut diamond, 4.5 mm, 0.46 ct", fa: "۱ الماس تراش پرنسس، ۴٫۵ میلی‌متر، ۰٫۴۶ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 24.4 mm", fa: "ارتفاع از پایین تا بالا: ۲۴٫۴ میلی‌متر" },
+        { en: "Width across: 20.9 mm", fa: "عرض کلی: ۲۰٫۹ میلی‌متر" },
+        { en: "Inner diameter: 17.2 mm", fa: "قطر داخلی: ۱۷٫۲ میلی‌متر" },
+        { en: "Width along the finger: 5.6 mm", fa: "عرض در امتداد انگشت: ۵٫۶ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A princess-cut diamond held by four claws", fa: "الماس تراش پرنسس که چهار چنگک نگهش می‌دارند" },
+        { en: "Split shoulders rise to meet the setting", fa: "شانه‌های دوشاخه تا نگین بالا می‌روند" },
+        { en: "Fine millegrain beading inside the band", fa: "دانه‌چینی ظریف (میلگرین) در داخل رینگ" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-velora',
+    name: "NNOR VELORA",
+    added: '2026-11-10T04:03',
+    collection: 'rings',
+    kind: { en: "Halo ring · 18K gold and diamonds", fa: "انگشتر هاله‌ای · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 15 diamonds", fa: "طلای ۱۸ عیار · ۱۵ الماس" },
+    description: {
+      en: "Splendour, softness and luxurious design.",
+      fa: "شکوه، لطافت و طراحی لوکس."
+    },
+    model: 'nnor-velora',
+    spin: 'assets/video/nnor-velora-spin.mp4',
+    spinPoster: 'assets/img/nnor-velora/spin-poster.jpg',
+    cover: 'assets/img/nnor-velora/render-01.jpg',
+    thumb: 'assets/img/nnor-velora/render-01-sm.jpg',
+    stream: ['assets/img/nnor-velora/stream-a.jpg', 'assets/img/nnor-velora/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-velora/render-01.jpg',
+      'assets/img/nnor-velora/matrix-01.jpg',
+      'assets/img/nnor-velora/matrix-02.jpg',
+      'assets/img/nnor-velora/matrix-03.jpg',
+      'assets/img/nnor-velora/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.80 g", fa: "طلای زرد ۱۸ عیار: ۳٫۸۰ گرم" },
+        { en: "18K white gold: 3.62 g", fa: "طلای سفید ۱۸ عیار: ۳٫۶۲ گرم" },
+        { en: "18K rose gold: 3.80 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۸۰ گرم" },
+        { en: "14K yellow gold: 3.18 g", fa: "طلای زرد ۱۴ عیار: ۳٫۱۸ گرم" },
+        { en: "22K yellow gold: 4.41 g", fa: "طلای زرد ۲۲ عیار: ۴٫۴۱ گرم" },
+        { en: "Silver 925: 2.56 g", fa: "نقره‌ی ۹۲۵: ۲٫۵۶ گرم" },
+        { en: "Platinum: 4.96 g", fa: "پلاتین: ۴٫۹۶ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "15 round diamonds, 0.91 ct in total", fa: "۱۵ الماس گرد، در مجموع ۰٫۹۱ قیراط" },
+        { en: "1 stone, 6.0 mm: 0.77 ct", fa: "۱ نگین ۶٫۰ میلی‌متری: ۰٫۷۷ قیراط" },
+        { en: "14 stones, 1.4 mm: 0.14 ct", fa: "۱۴ نگین ۱٫۴ میلی‌متری: ۰٫۱۴ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 25.0 mm", fa: "ارتفاع از پایین تا بالا: ۲۵٫۰ میلی‌متر" },
+        { en: "Width across: 20.2 mm", fa: "عرض کلی: ۲۰٫۲ میلی‌متر" },
+        { en: "Inner diameter: 16.5 mm", fa: "قطر داخلی: ۱۶٫۵ میلی‌متر" },
+        { en: "Width along the finger: 8.8 mm", fa: "عرض در امتداد انگشت: ۸٫۸ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A round centre diamond ringed by a halo of small diamonds", fa: "الماس گرد مرکزی با هاله‌ای از الماس‌های ریز" },
+        { en: "Twisting shoulders rise to the setting", fa: "شانه‌های تابیده تا نگین بالا می‌روند" },
+        { en: "Fine millegrain beading inside the band", fa: "دانه‌چینی ظریف (میلگرین) در داخل رینگ" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-isola',
+    name: "NNOR ISOLA",
+    added: '2026-11-10T04:02',
+    collection: 'rings',
+    kind: { en: "Halo ring · 18K gold and diamonds", fa: "انگشتر هاله‌ای · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 15 diamonds", fa: "طلای ۱۸ عیار · ۱۵ الماس" },
+    description: {
+      en: "Independent beauty and minimal elegance.",
+      fa: "زیبایی مستقل و ظرافت مینیمال."
+    },
+    model: 'nnor-isola',
+    spin: 'assets/video/nnor-isola-spin.mp4',
+    spinPoster: 'assets/img/nnor-isola/spin-poster.jpg',
+    cover: 'assets/img/nnor-isola/render-01.jpg',
+    thumb: 'assets/img/nnor-isola/render-01-sm.jpg',
+    stream: ['assets/img/nnor-isola/stream-a.jpg', 'assets/img/nnor-isola/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-isola/render-01.jpg',
+      'assets/img/nnor-isola/matrix-01.jpg',
+      'assets/img/nnor-isola/matrix-02.jpg',
+      'assets/img/nnor-isola/matrix-03.jpg',
+      'assets/img/nnor-isola/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.89 g", fa: "طلای زرد ۱۸ عیار: ۳٫۸۹ گرم" },
+        { en: "18K white gold: 3.70 g", fa: "طلای سفید ۱۸ عیار: ۳٫۷۰ گرم" },
+        { en: "18K rose gold: 3.89 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۸۹ گرم" },
+        { en: "14K yellow gold: 3.25 g", fa: "طلای زرد ۱۴ عیار: ۳٫۲۵ گرم" },
+        { en: "22K yellow gold: 4.51 g", fa: "طلای زرد ۲۲ عیار: ۴٫۵۱ گرم" },
+        { en: "Silver 925: 2.61 g", fa: "نقره‌ی ۹۲۵: ۲٫۶۱ گرم" },
+        { en: "Platinum: 5.07 g", fa: "پلاتین: ۵٫۰۷ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "15 diamonds, 0.43 ct in total", fa: "۱۵ الماس، در مجموع ۰٫۴۳ قیراط" },
+        { en: "1 princess-cut stone, 4.0 mm: 0.32 ct", fa: "۱ نگین تراش پرنسس ۴٫۰ میلی‌متری: ۰٫۳۲ قیراط" },
+        { en: "12 stones, 1.3 mm: 0.096 ct", fa: "۱۲ نگین ۱٫۳ میلی‌متری: ۰٫۰۹۶ قیراط" },
+        { en: "2 stones, 1.2 mm: 0.014 ct", fa: "۲ نگین ۱٫۲ میلی‌متری: ۰٫۰۱۴ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 24.6 mm", fa: "ارتفاع از پایین تا بالا: ۲۴٫۶ میلی‌متر" },
+        { en: "Width across: 20.2 mm", fa: "عرض کلی: ۲۰٫۲ میلی‌متر" },
+        { en: "Inner diameter: 16.5 mm", fa: "قطر داخلی: ۱۶٫۵ میلی‌متر" },
+        { en: "Width along the finger: 7.0 mm", fa: "عرض در امتداد انگشت: ۷٫۰ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A princess-cut centre diamond inside a square halo of small diamonds", fa: "الماس مرکزی تراش پرنسس درون هاله‌ای مربع از الماس‌های ریز" },
+        { en: "Twisting shoulders rise to the setting", fa: "شانه‌های تابیده تا نگین بالا می‌روند" },
+        { en: "Fine millegrain beading inside the band", fa: "دانه‌چینی ظریف (میلگرین) در داخل رینگ" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
+    id: 'nnor-elarin',
+    name: "NNOR ELARIN",
+    added: '2026-11-10T04:01',
+    collection: 'rings',
+    kind: { en: "Solitaire ring with side stones · 18K gold and diamonds", fa: "انگشتر تک‌نگین با نگین‌های کناری · طلای ۱۸ عیار و الماس" },
+    line: { en: "18K gold · 13 diamonds", fa: "طلای ۱۸ عیار · ۱۳ الماس" },
+    description: {
+      en: "Authenticity, mystery and luxury.",
+      fa: "اصالت، رمزآلودگی و تجمل."
+    },
+    model: 'nnor-elarin',
+    spin: 'assets/video/nnor-elarin-spin.mp4',
+    spinPoster: 'assets/img/nnor-elarin/spin-poster.jpg',
+    cover: 'assets/img/nnor-elarin/render-01.jpg',
+    thumb: 'assets/img/nnor-elarin/render-01-sm.jpg',
+    stream: ['assets/img/nnor-elarin/stream-a.jpg', 'assets/img/nnor-elarin/stream-b.jpg'],   /* portrait cards for the collections corridor (tools/make_stream.py) */
+    photos: [
+      'assets/img/nnor-elarin/render-01.jpg',
+      'assets/img/nnor-elarin/matrix-01.jpg',
+      'assets/img/nnor-elarin/matrix-02.jpg',
+      'assets/img/nnor-elarin/matrix-03.jpg',
+      'assets/img/nnor-elarin/matrix-04.jpg'
+    ],
+    specs: [
+      { title: { en: 'Metal weight', fa: 'وزن فلز' }, items: [
+        { en: "18K yellow gold: 3.19 g", fa: "طلای زرد ۱۸ عیار: ۳٫۱۹ گرم" },
+        { en: "18K white gold: 3.03 g", fa: "طلای سفید ۱۸ عیار: ۳٫۰۳ گرم" },
+        { en: "18K rose gold: 3.19 g", fa: "طلای رزگلد ۱۸ عیار: ۳٫۱۹ گرم" },
+        { en: "14K yellow gold: 2.67 g", fa: "طلای زرد ۱۴ عیار: ۲٫۶۷ گرم" },
+        { en: "22K yellow gold: 3.70 g", fa: "طلای زرد ۲۲ عیار: ۳٫۷۰ گرم" },
+        { en: "Silver 925: 2.14 g", fa: "نقره‌ی ۹۲۵: ۲٫۱۴ گرم" },
+        { en: "Platinum: 4.16 g", fa: "پلاتین: ۴٫۱۶ گرم" }
+      ]},
+      { title: { en: 'Diamonds', fa: 'الماس‌ها' }, items: [
+        { en: "13 round diamonds, 0.91 ct in total", fa: "۱۳ الماس گرد، در مجموع ۰٫۹۱ قیراط" },
+        { en: "1 stone, 6.0 mm: 0.77 ct", fa: "۱ نگین ۶٫۰ میلی‌متری: ۰٫۷۷ قیراط" },
+        { en: "6 stones, 1.6 mm: 0.09 ct", fa: "۶ نگین ۱٫۶ میلی‌متری: ۰٫۰۹ قیراط" },
+        { en: "2 stones, 1.4 mm: 0.02 ct", fa: "۲ نگین ۱٫۴ میلی‌متری: ۰٫۰۲ قیراط" },
+        { en: "2 stones, 1.3 mm: 0.016 ct", fa: "۲ نگین ۱٫۳ میلی‌متری: ۰٫۰۱۶ قیراط" },
+        { en: "2 stones, 1.2 mm: 0.014 ct", fa: "۲ نگین ۱٫۲ میلی‌متری: ۰٫۰۱۴ قیراط" }
+      ]},
+      { title: { en: 'Dimensions', fa: 'ابعاد' }, items: [
+        { en: "Height, base to top: 26.5 mm", fa: "ارتفاع از پایین تا بالا: ۲۶٫۵ میلی‌متر" },
+        { en: "Width across: 21.8 mm", fa: "عرض کلی: ۲۱٫۸ میلی‌متر" },
+        { en: "Inner diameter: 17.2 mm", fa: "قطر داخلی: ۱۷٫۲ میلی‌متر" },
+        { en: "Width along the finger: 6.0 mm", fa: "عرض در امتداد انگشت: ۶٫۰ میلی‌متر" }
+      ]},
+      { title: { en: 'Details', fa: 'جزئیات' }, items: [
+        { en: "A round centre diamond on four claws", fa: "یک الماس گرد مرکزی روی چهار چنگک" },
+        { en: "Smaller diamonds set along the shoulders, some in bezels and some in pairs", fa: "الماس‌های کوچک‌تر در امتداد شانه‌ها، بعضی با قاب و بعضی جفت" },
+        { en: "Scalloped band edges with millegrain beading", fa: "لبه‌های موجی رینگ با دانه‌چینی میلگرین" }
+      ]}
+    ],
+    note: { en: "Weights and stone sizes come from the design file. Dimensions are measured on the 3D model.", fa: "وزن‌ها و اندازه‌ی نگین‌ها از فایل طراحی و ابعاد از مدل سه‌بعدی اندازه‌گیری شده است." }
+  },
+  {
     id: 'azerion',
     name: "AZÉRION",
     added: '2026-11-08T04:06',

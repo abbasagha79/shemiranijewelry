@@ -59,7 +59,19 @@
     velorian:  { metal: 'models/velorian-metal.bin', gems: 'models/velorian-gems.json' },
     sylvera:   { metal: 'models/sylvera-metal.bin', gems: 'models/sylvera-gems.json' },
     emerove:   { metal: 'models/emerove-metal.bin', gems: 'models/emerove-gems.json' },
-    zorelian:  { metal: 'models/zorelian-metal.bin', gems: 'models/zorelian-gems.json' }
+    zorelian:  { metal: 'models/zorelian-metal.bin', gems: 'models/zorelian-gems.json' },
+    'nnor-auralis': { metal: 'models/nnor-auralis-metal.bin', gems: 'models/nnor-auralis-gems.json' },
+    'nnor-solenne': { metal: 'models/nnor-solenne-metal.bin', gems: 'models/nnor-solenne-gems.json' },
+    'nnor-veyra': { metal: 'models/nnor-veyra-metal.bin', gems: 'models/nnor-veyra-gems.json' },
+    'nnor-elara': { metal: 'models/nnor-elara-metal.bin', gems: 'models/nnor-elara-gems.json' },
+    'nnor-lumiere': { metal: 'models/nnor-lumiere-metal.bin', gems: 'models/nnor-lumiere-gems.json' },
+    'nnor-seraph': { metal: 'models/nnor-seraph-metal.bin', gems: 'models/nnor-seraph-gems.json' },
+    'nnor-orlina': { metal: 'models/nnor-orlina-metal.bin', gems: 'models/nnor-orlina-gems.json' },
+    'nnor-celest': { metal: 'models/nnor-celest-metal.bin', gems: 'models/nnor-celest-gems.json' },
+    'nnor-amaris': { metal: 'models/nnor-amaris-metal.bin', gems: 'models/nnor-amaris-gems.json' },
+    'nnor-velora': { metal: 'models/nnor-velora-metal.bin', gems: 'models/nnor-velora-gems.json' },
+    'nnor-isola': { metal: 'models/nnor-isola-metal.bin', gems: 'models/nnor-isola-gems.json' },
+    'nnor-elarin': { metal: 'models/nnor-elarin-metal.bin', gems: 'models/nnor-elarin-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
@@ -392,7 +404,7 @@
       /* glints on the largest stone and a few on the top */
       A.h.updateMatrixWorld(true);
       var big = m.gems.slice().sort(function(a, b){ return b.d - a.d; })[0];
-      var top = [big].concat(m.gems.filter(function(x){ return x !== big && x.n[2] > .8; }).filter(function(_, i){ return i % 4 === 1; }).slice(0, 4));
+      var top = !big ? [] : [big].concat(m.gems.filter(function(x){ return x !== big && x.n[2] > .8; }).filter(function(_, i){ return i % 4 === 1; }).slice(0, 4));
       var st = starTex(), w = new THREE.Vector3();
       top.forEach(function(x, k){
         var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: st, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false }));
