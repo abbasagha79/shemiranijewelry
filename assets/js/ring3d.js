@@ -71,7 +71,19 @@
     'nnor-amaris': { metal: 'models/nnor-amaris-metal.bin', gems: 'models/nnor-amaris-gems.json' },
     'nnor-velora': { metal: 'models/nnor-velora-metal.bin', gems: 'models/nnor-velora-gems.json' },
     'nnor-isola': { metal: 'models/nnor-isola-metal.bin', gems: 'models/nnor-isola-gems.json' },
-    'nnor-elarin': { metal: 'models/nnor-elarin-metal.bin', gems: 'models/nnor-elarin-gems.json' }
+    'nnor-elarin': { metal: 'models/nnor-elarin-metal.bin', gems: 'models/nnor-elarin-gems.json' },
+    'nnor-novelle': { metal: 'models/nnor-novelle-metal.bin', gems: 'models/nnor-novelle-gems.json' },
+    'nnor-aurelle': { metal: 'models/nnor-aurelle-metal.bin', gems: 'models/nnor-aurelle-gems.json' },
+    'nnor-miraya': { metal: 'models/nnor-miraya-metal.bin', gems: 'models/nnor-miraya-gems.json' },
+    'nnor-sorelle': { metal: 'models/nnor-sorelle-metal.bin', gems: 'models/nnor-sorelle-gems.json' },
+    'nnor-calista': { metal: 'models/nnor-calista-metal.bin', gems: 'models/nnor-calista-gems.json' },
+    'nnor-zareen': { metal: 'models/nnor-zareen-metal.bin', gems: 'models/nnor-zareen-gems.json' },
+    'nnor-opaline': { metal: 'models/nnor-opaline-metal.bin', gems: 'models/nnor-opaline-gems.json' },
+    'nnor-liora': { metal: 'models/nnor-liora-metal.bin', gems: 'models/nnor-liora-gems.json' },
+    'nnor-evora': { metal: 'models/nnor-evora-metal.bin', gems: 'models/nnor-evora-gems.json' },
+    'nnor-thale': { metal: 'models/nnor-thale-metal.bin', gems: 'models/nnor-thale-gems.json' },
+    'nnor-marquise': { metal: 'models/nnor-marquise-metal.bin', gems: 'models/nnor-marquise-gems.json' },
+    'nnor-azura': { metal: 'models/nnor-azura-metal.bin', gems: 'models/nnor-azura-gems.json' }
   };
 
   /* 18K yellow gold, measured reflectance (linear RGB, F0) nudged warm the way the renders read */
