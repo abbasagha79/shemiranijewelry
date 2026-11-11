@@ -4163,6 +4163,37 @@ window.SHEMIRANI_FIGURES = [
       'assets/img/joker/render-05.jpg',
       'assets/img/joker/render-06.jpg'
     ]
+  },
+  {
+    id: 'wolverine',
+    name: "WOLVERINE BUST",
+    added: '2026-11-11T13:40',
+    kind: { en: "Character bust with plinth · 3D-print and cast file", fa: "نیم‌تنه‌ی شخصیت همراه با پایه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · bust + plinth · any size · any colour", fa: "STL · نیم‌تنه و پایه · هر اندازه · هر رنگ" },
+    description: {
+      en: "A snarling Wolverine bust in his horned cowl and battle armour, with heavy shoulder plates and a scarred chest, standing on a carved tech plinth. Bust and plinth are one product, supplied together in one file, ready to print, cast in metal or paint in any size you need.",
+      fa: "نیم‌تنه‌ی ولورین خشمگین با کلاه شاخ‌دار و زره‌ی نبرد، شانه‌بندهای سنگین و سینه‌ی زخم‌خورده، روی پایه‌ی حکاکی‌شده‌ی تکنو. نیم‌تنه و پایه یک محصول‌اند و با هم در یک فایل ارائه می‌شوند، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: 'wolverine',
+    rot: [-90, 0, 0],
+    view: [0.35, 0.15],
+    volume: 2871.22,
+    surface: 3146.9,
+    size: { w: 210.8, d: 152.7, h: 296.5 },
+    parts: [
+      { name: { en: "Bust", fa: "نیم‌تنه" }, volume: 2518.55, surface: 2209.5 },
+      { name: { en: "Plinth", fa: "پایه" }, volume: 352.67, surface: 937.4, solid: true }
+    ],
+    cover: 'assets/img/wolverine/render-01.jpg',
+    thumb: 'assets/img/wolverine/render-01.jpg',
+    photos: [
+      'assets/img/wolverine/render-01.jpg',
+      'assets/img/wolverine/render-02.jpg',
+      'assets/img/wolverine/render-03.jpg',
+      'assets/img/wolverine/render-04.jpg',
+      'assets/img/wolverine/render-05.jpg',
+      'assets/img/wolverine/render-06.jpg'
+    ]
   }
 ];
 
