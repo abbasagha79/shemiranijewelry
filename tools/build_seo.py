@@ -138,6 +138,9 @@ FIGURES = [
     {"id": "joker", "name": "JOKER BUST",
      "desc": "JOKER BUST is a grinning Joker bust in a wide-brimmed hat on a square plinth — a watertight STL file ready to 3D-print or cast in metal, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
      "size": "130.1 x 97.8 x 194.0 mm at 100% (bust, hat and plinth)", "volume": "610.6 cm3 at 100%"},
+    {"id": "wolverine", "name": "WOLVERINE BUST",
+     "desc": "WOLVERINE BUST is a snarling Wolverine bust in horned cowl and battle armour on a carved plinth — an STL file ready to 3D-print or cast in metal, in any size, with weights for resin, filament, bronze, silver, gold and platinum.",
+     "size": "210.8 x 152.7 x 296.5 mm at 100% (bust and plinth)", "volume": "2871.2 cm3 at 100%"},
 ]
 
 COLLECTIONS = {
