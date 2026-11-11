@@ -4248,6 +4248,519 @@ window.SHEMIRANI_FIGURES = [
       'assets/img/kratos/render-05.jpg',
       'assets/img/kratos/render-06.jpg'
     ]
+  },
+  {
+    id: "ossuary",
+    name: "ABYSSAL OSSUARY",
+    added: '2026-11-12T01:00',
+    kind: { en: "Diorama base · 3D-print and cast file", fa: "پایه‌ی دکوری دیوراما · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "ABYSSAL OSSUARY is a rectangular slab heaped with skulls, bones and writhing tentacles from the deep. Use it as a standalone relief plaque or as a dark diorama base for your figures. One piece, one file, ready to print, cast in metal or paint in any size you need.",
+      fa: "ABYSSAL OSSUARY یک تخته‌ی مستطیلی است که پر از جمجمه، استخوان و شاخک‌های در حال پیچ‌وتاب از اعماق است. هم به‌عنوان پلاک برجسته‌ی مستقل و هم به‌عنوان پایه‌ی تاریک دیوراما برای فیگورهایتان به کار می‌رود. یک تکه، یک فایل، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: "ossuary",
+    rot: [-90, 0, 0],
+    view: [0.5, 0.35],
+    volume: 3.61,
+    surface: 36.2,
+    size: { w: 19.5, d: 45.0, h: 9.2 },
+    cover: 'assets/img/ossuary/render-01.jpg',
+    thumb: 'assets/img/ossuary/render-01.jpg',
+    photos: [
+      'assets/img/ossuary/render-01.jpg',
+      'assets/img/ossuary/render-02.jpg',
+      'assets/img/ossuary/render-03.jpg',
+      'assets/img/ossuary/render-04.jpg',
+      'assets/img/ossuary/render-05.jpg',
+      'assets/img/ossuary/render-06.jpg'
+    ]
+  },
+  {
+    id: "karambit",
+    name: "KARAMBIT",
+    added: '2026-11-12T01:01',
+    kind: { en: "Curved blade with ring · 3D-print and cast file", fa: "تیغه‌ی خمیده‌ی کارامبیت با حلقه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "KARAMBIT is a curved claw-blade with a jagged spine and a finger ring at the heel, in the style of the classic karambit. One piece, one file, ready to print, cast in metal or finish as a prop or display piece in any size you need.",
+      fa: "KARAMBIT یک تیغه‌ی پنجه‌ای خمیده با پشت دندانه‌دار و حلقه‌ی انگشت در انتهای دسته، به سبک کارامبیت کلاسیک است. یک تکه، یک فایل، آماده‌ی چاپ، ریخته‌گری فلز یا ساخت به‌عنوان دکور و پراپ در هر اندازه‌ای که لازم دارید."
+    },
+    model: "karambit",
+    rot: [-90, 0, 0],
+    view: [0.2, 0.28],
+    volume: 88.33,
+    surface: 339.7,
+    size: { w: 449.5, d: 10.2, h: 142.6 },
+    cover: 'assets/img/karambit/render-01.jpg',
+    thumb: 'assets/img/karambit/render-01.jpg',
+    photos: [
+      'assets/img/karambit/render-01.jpg',
+      'assets/img/karambit/render-02.jpg',
+      'assets/img/karambit/render-03.jpg',
+      'assets/img/karambit/render-04.jpg',
+      'assets/img/karambit/render-05.jpg',
+      'assets/img/karambit/render-06.jpg'
+    ]
+  },
+  {
+    id: "roswell",
+    name: "ROSWELL GREY",
+    added: '2026-11-12T01:02',
+    kind: { en: "Keychain figure · 3D-print and cast file", fa: "فیگور آویز کلید · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "ROSWELL GREY is a small grey alien in a casual shirt and jeans, hands in his pockets, with a loop on his head so he can hang from your keys or a chain. Watertight, one piece, ready to print or cast in any size you need.",
+      fa: "ROSWELL GREY یک موجود فضایی خاکستری کوچک است با پیراهن و شلوار جین و دست‌ها در جیب، با حلقه‌ای روی سر تا بتوانید او را به دسته‌کلید یا زنجیر آویزان کنید. سالم (watertight)، یک تکه، آماده‌ی چاپ یا ریخته‌گری در هر اندازه‌ای که لازم دارید."
+    },
+    model: "roswell",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 17.1,
+    surface: 68.6,
+    size: { w: 31.4, d: 25.6, h: 100.8 },
+    cover: 'assets/img/roswell/render-01.jpg',
+    thumb: 'assets/img/roswell/render-01.jpg',
+    photos: [
+      'assets/img/roswell/render-01.jpg',
+      'assets/img/roswell/render-02.jpg',
+      'assets/img/roswell/render-03.jpg',
+      'assets/img/roswell/render-04.jpg',
+      'assets/img/roswell/render-05.jpg',
+      'assets/img/roswell/render-06.jpg'
+    ]
+  },
+  {
+    id: "lollipop",
+    name: "LOLLIPOP",
+    added: '2026-11-12T01:03',
+    kind: { en: "Candy sculpture · 3D-print and cast file", fa: "مجسمه‌ی آبنبات چوبی · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "LOLLIPOP is a round swirl-top sweet on a straight stick, a clean and playful decorative piece or charm blank. Watertight, one piece, ready to print or cast in any size you need.",
+      fa: "LOLLIPOP یک آبنبات چوبی گرد با چوب راست است؛ قطعه‌ی دکوری شاد و ساده یا پایه‌ی آویز. سالم (watertight)، یک تکه، آماده‌ی چاپ یا ریخته‌گری در هر اندازه‌ای که لازم دارید."
+    },
+    model: "lollipop",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 43.91,
+    surface: 69.6,
+    size: { w: 46.8, d: 46.7, h: 99.0 },
+    cover: 'assets/img/lollipop/render-01.jpg',
+    thumb: 'assets/img/lollipop/render-01.jpg',
+    photos: [
+      'assets/img/lollipop/render-01.jpg',
+      'assets/img/lollipop/render-02.jpg',
+      'assets/img/lollipop/render-03.jpg',
+      'assets/img/lollipop/render-04.jpg',
+      'assets/img/lollipop/render-05.jpg',
+      'assets/img/lollipop/render-06.jpg'
+    ]
+  },
+  {
+    id: "voltzombie",
+    name: "VOLT ZOMBIE",
+    added: '2026-11-12T01:04',
+    kind: { en: "Character figure · 3D-print and cast file", fa: "فیگور شخصیت · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "VOLT ZOMBIE is a stitched-up, patched and cracked electric mouse risen from the dead, arms flung wide and one ear torn. A mischievous undead collectible in one file, ready to print, cast in metal or paint in any size you need.",
+      fa: "VOLT ZOMBIE یک موش برقی زنده‌شده از مردگان است، با بخیه و وصله و ترک، دست‌های باز و یک گوش پاره. فیگور کلکسیونی شیطنت‌آمیز در یک فایل، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: "voltzombie",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 66.38,
+    surface: 147.3,
+    size: { w: 83.1, d: 54.9, h: 96.1 },
+    cover: 'assets/img/voltzombie/render-01.jpg',
+    thumb: 'assets/img/voltzombie/render-01.jpg',
+    photos: [
+      'assets/img/voltzombie/render-01.jpg',
+      'assets/img/voltzombie/render-02.jpg',
+      'assets/img/voltzombie/render-03.jpg',
+      'assets/img/voltzombie/render-04.jpg',
+      'assets/img/voltzombie/render-05.jpg',
+      'assets/img/voltzombie/render-06.jpg'
+    ]
+  },
+  {
+    id: "fred",
+    name: "FRED THE FROG",
+    added: '2026-11-12T01:05',
+    kind: { en: "Frog charm · 3D-print and cast file", fa: "چارم قورباغه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "FRED THE FROG is a plump, wide-eyed little frog sitting happily on his haunches, built as a charm with a through-hole so it threads straight onto a bracelet or cord. Watertight, one piece, ready to cast in silver or gold or print in any size.",
+      fa: "FRED THE FROG یک قورباغه‌ی کوچولوی تپل و چشم‌درشت است که شاد نشسته، به‌شکل چارم با یک سوراخ عبوری که مستقیم روی دستبند یا بند می‌نشیند. سالم (watertight)، یک تکه، آماده‌ی ریخته‌گری در نقره یا طلا یا چاپ در هر اندازه."
+    },
+    model: "fred",
+    rot: [0, 0, 0],
+    view: [0.35, 0.2],
+    volume: 4.83,
+    surface: 22.3,
+    size: { w: 25.4, d: 21.4, h: 22.9 },
+    cover: 'assets/img/fred/render-01.jpg',
+    thumb: 'assets/img/fred/render-01.jpg',
+    photos: [
+      'assets/img/fred/render-01.jpg',
+      'assets/img/fred/render-02.jpg',
+      'assets/img/fred/render-03.jpg',
+      'assets/img/fred/render-04.jpg',
+      'assets/img/fred/render-05.jpg',
+      'assets/img/fred/render-06.jpg'
+    ]
+  },
+  {
+    id: "skulls",
+    name: "THREE WISE SKULLS",
+    added: '2026-11-12T01:06',
+    kind: { en: "Skull charm trio · 3D-print and cast file", fa: "سه جمجمه‌ی آویز (چارم) · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "THREE WISE SKULLS are three tiny skulls side by side, one with a bullet-hole injury, with a hanging ring. A dark little charm for rings, pendants and keychains, watertight and ready to cast or print.",
+      fa: "THREE WISE SKULLS سه جمجمه‌ی ریز کنار هم است که یکی‌شان جای گلوله دارد و با یک حلقه‌ی آویز همراه است. چارم تیره و کوچک برای انگشتر، آویز و دسته‌کلید، سالم (watertight) و آماده‌ی ریخته‌گری یا چاپ."
+    },
+    model: "skulls",
+    rot: [-90, 0, 0],
+    view: [0.4, 0.2],
+    volume: 0.24,
+    surface: 3.6,
+    size: { w: 16.0, d: 6.7, h: 6.1 },
+    cover: 'assets/img/skulls/render-01.jpg',
+    thumb: 'assets/img/skulls/render-01.jpg',
+    photos: [
+      'assets/img/skulls/render-01.jpg',
+      'assets/img/skulls/render-02.jpg',
+      'assets/img/skulls/render-03.jpg',
+      'assets/img/skulls/render-04.jpg',
+      'assets/img/skulls/render-05.jpg',
+      'assets/img/skulls/render-06.jpg'
+    ]
+  },
+  {
+    id: "pandora",
+    name: "GUMMI BEAR CHARM",
+    added: '2026-11-12T01:07',
+    kind: { en: "Gummy bear charm · 3D-print and cast file", fa: "چارم خرس ژله‌ای · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "GUMMI BEAR CHARM is a soft, smiling gummy-bear bead with a slot cut through the body so it clips straight onto a bracelet chain. Watertight, one piece, ready to cast in silver or gold or print in any size.",
+      fa: "GUMMI BEAR CHARM یک چارم خرس ژله‌ای نرم و خندان است با شکافی که در بدنه‌اش بریده شده تا مستقیم روی زنجیر دستبند بنشیند. سالم (watertight)، یک تکه، آماده‌ی ریخته‌گری در نقره یا طلا یا چاپ در هر اندازه."
+    },
+    model: "pandora",
+    rot: [0, 0, 0],
+    view: [0.5, 0.3],
+    volume: 0.84,
+    surface: 7.5,
+    size: { w: 10.0, d: 18.2, h: 9.7 },
+    cover: 'assets/img/pandora/render-01.jpg',
+    thumb: 'assets/img/pandora/render-01.jpg',
+    photos: [
+      'assets/img/pandora/render-01.jpg',
+      'assets/img/pandora/render-02.jpg',
+      'assets/img/pandora/render-03.jpg',
+      'assets/img/pandora/render-04.jpg',
+      'assets/img/pandora/render-05.jpg',
+      'assets/img/pandora/render-06.jpg'
+    ]
+  },
+  {
+    id: "tambourine",
+    name: "TAMBOURINE MUSE",
+    added: '2026-11-12T01:08',
+    kind: { en: "Classical statue · 3D-print and cast file", fa: "مجسمه‌ی کلاسیک · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "TAMBOURINE MUSE is a classical marble-style group of a draped woman holding a tambourine with a small child clinging at her side, on a rocky base. Watertight, one piece, ready to print, cast in metal or patinate in any size you need.",
+      fa: "TAMBOURINE MUSE یک مجسمه‌ی کلاسیک به سبک مرمر است: زنی با لباس چین‌دار که دایره‌زنگی در دست دارد و کودکی کوچک کنارش چسبیده، روی پایه‌ی صخره‌ای. سالم (watertight)، یک تکه، آماده‌ی چاپ، ریخته‌گری یا پاتینه در هر اندازه‌ای که لازم دارید."
+    },
+    model: "tambourine",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 107.96,
+    surface: 243.0,
+    size: { w: 54.5, d: 57.0, h: 125.0 },
+    cover: 'assets/img/tambourine/render-01.jpg',
+    thumb: 'assets/img/tambourine/render-01.jpg',
+    photos: [
+      'assets/img/tambourine/render-01.jpg',
+      'assets/img/tambourine/render-02.jpg',
+      'assets/img/tambourine/render-03.jpg',
+      'assets/img/tambourine/render-04.jpg',
+      'assets/img/tambourine/render-05.jpg',
+      'assets/img/tambourine/render-06.jpg'
+    ]
+  },
+  {
+    id: "athena",
+    name: "ATHENA",
+    added: '2026-11-12T01:09',
+    kind: { en: "Classical statue · 3D-print and cast file", fa: "مجسمه‌ی کلاسیک · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "ATHENA is a standing armoured goddess in a pleated peplos and a crested helmet, on a square plinth, in the manner of a classical marble statue. Watertight, one piece, ready to print, cast in metal or patinate in any size you need.",
+      fa: "ATHENA الهه‌ی زره‌پوش ایستاده با پیراهن چین‌دار و کلاه‌خود پرچم‌دار روی پایه‌ی مربعی است، به سبک مجسمه‌ی مرمر کلاسیک. سالم (watertight)، یک تکه، آماده‌ی چاپ، ریخته‌گری یا پاتینه در هر اندازه‌ای که لازم دارید."
+    },
+    model: "athena",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 52.4,
+    surface: 135.2,
+    size: { w: 36.4, d: 37.4, h: 127.4 },
+    cover: 'assets/img/athena/render-01.jpg',
+    thumb: 'assets/img/athena/render-01.jpg',
+    photos: [
+      'assets/img/athena/render-01.jpg',
+      'assets/img/athena/render-02.jpg',
+      'assets/img/athena/render-03.jpg',
+      'assets/img/athena/render-04.jpg',
+      'assets/img/athena/render-05.jpg',
+      'assets/img/athena/render-06.jpg'
+    ]
+  },
+  {
+    id: "flame",
+    name: "FLAME BEARER",
+    added: '2026-11-12T01:10',
+    kind: { en: "Dramatic statue · 3D-print and cast file", fa: "مجسمه‌ی دراماتیک · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "FLAME BEARER is a dramatic figure raising one arm in a swirl of flowing cloth like flames, with a beast crouched at its feet, on a square base. One piece, ready to print, cast in metal or paint in any size you need.",
+      fa: "FLAME BEARER یک مجسمه‌ی دراماتیک است: پیکری با یک دست بالا‌برده در گردابی از پارچه‌ی روان شبیه شعله، با جانوری که پای او خمیده، روی پایه‌ی مربعی. یک تکه، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: "flame",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 78.14,
+    surface: 246.2,
+    size: { w: 63.4, d: 62.7, h: 125.0 },
+    cover: 'assets/img/flame/render-01.jpg',
+    thumb: 'assets/img/flame/render-01.jpg',
+    photos: [
+      'assets/img/flame/render-01.jpg',
+      'assets/img/flame/render-02.jpg',
+      'assets/img/flame/render-03.jpg',
+      'assets/img/flame/render-04.jpg',
+      'assets/img/flame/render-05.jpg',
+      'assets/img/flame/render-06.jpg'
+    ]
+  },
+  {
+    id: "amitie",
+    name: "L'AMITIÉ",
+    added: '2026-11-12T01:11',
+    kind: { en: "Louvre sculpture · 3D-print and cast file", fa: "مجسمه‌ی موزه‌ی لوور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "L'AMITIÉ (Friendship) is a graceful standing figure on a round base, after the sculpture in the Louvre, Paris. One piece, one file, ready to print, cast in metal or patinate in any size you need.",
+      fa: "L'AMITIÉ (دوستی) پیکری برازنده و ایستاده روی پایه‌ی گرد است، برگرفته از مجسمه‌ی موزه‌ی لوور پاریس. یک تکه، یک فایل، آماده‌ی چاپ، ریخته‌گری یا پاتینه در هر اندازه‌ای که لازم دارید."
+    },
+    model: "amitie",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 41.61,
+    surface: 162.7,
+    size: { w: 46.3, d: 46.3, h: 125.0 },
+    cover: 'assets/img/amitie/render-01.jpg',
+    thumb: 'assets/img/amitie/render-01.jpg',
+    photos: [
+      'assets/img/amitie/render-01.jpg',
+      'assets/img/amitie/render-02.jpg',
+      'assets/img/amitie/render-03.jpg',
+      'assets/img/amitie/render-04.jpg',
+      'assets/img/amitie/render-05.jpg',
+      'assets/img/amitie/render-06.jpg'
+    ]
+  },
+  {
+    id: "spring",
+    name: "LE PRINTEMPS",
+    added: '2026-11-12T01:12',
+    kind: { en: "Louvre sculpture · 3D-print and cast file", fa: "مجسمه‌ی موزه‌ی لوور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "LE PRINTEMPS (Spring) is a draped woman holding flowers against her side, on a square plinth, after the sculpture in the Louvre, Paris. Watertight, one piece, ready to print, cast in metal or patinate in any size you need.",
+      fa: "LE PRINTEMPS (بهار) زنی با لباس چین‌دار است که گل‌ها را کنار تن خود گرفته، روی پایه‌ی مربعی، برگرفته از مجسمه‌ی موزه‌ی لوور پاریس. سالم (watertight)، یک تکه، آماده‌ی چاپ، ریخته‌گری یا پاتینه در هر اندازه‌ای که لازم دارید."
+    },
+    model: "spring",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 55.66,
+    surface: 143.7,
+    size: { w: 47.2, d: 38.1, h: 128.7 },
+    cover: 'assets/img/spring/render-01.jpg',
+    thumb: 'assets/img/spring/render-01.jpg',
+    photos: [
+      'assets/img/spring/render-01.jpg',
+      'assets/img/spring/render-02.jpg',
+      'assets/img/spring/render-03.jpg',
+      'assets/img/spring/render-04.jpg',
+      'assets/img/spring/render-05.jpg',
+      'assets/img/spring/render-06.jpg'
+    ]
+  },
+  {
+    id: "chaintamer",
+    name: "CHAIN TAMER",
+    added: '2026-11-12T02:00',
+    kind: { en: "Dramatic sculpture group · 3D-print and cast file", fa: "گروه مجسمه‌ی دراماتیک · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "CHAIN TAMER is a dynamic sculpture group of a rider hauling on a chain while wrestling a powerful beast, on a rocky square base. One piece, one file, ready to print, cast in metal or paint in any size you need.",
+      fa: "CHAIN TAMER یک گروه مجسمه‌ی پرتحرک است: سواری که زنجیری را می‌کشد و با جانوری نیرومند کلنجار می‌رود، روی پایه‌ی صخره‌ای مربعی. یک تکه، یک فایل، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: "chaintamer",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 275.07,
+    surface: 530.3,
+    size: { w: 84.9, d: 124.8, h: 126.0 },
+    cover: 'assets/img/chaintamer/render-01.jpg',
+    thumb: 'assets/img/chaintamer/render-01.jpg',
+    photos: [
+      'assets/img/chaintamer/render-01.jpg',
+      'assets/img/chaintamer/render-02.jpg',
+      'assets/img/chaintamer/render-03.jpg',
+      'assets/img/chaintamer/render-04.jpg',
+      'assets/img/chaintamer/render-05.jpg',
+      'assets/img/chaintamer/render-06.jpg'
+    ]
+  },
+  {
+    id: "eurydice",
+    name: "EURYDICE DYING",
+    added: '2026-11-12T02:01',
+    kind: { en: "Louvre sculpture · 3D-print and cast file", fa: "مجسمه‌ی موزه‌ی لوور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "EURYDICE DYING (Eurydice mourante) is a slender standing figure caught mid-step on an oval base, after the sculpture in the Louvre, Paris. Watertight, one piece, ready to print, cast in metal or patinate in any size you need.",
+      fa: "EURYDICE DYING (اوریدیس در حال مرگ) پیکری باریک و ایستاده است که میان گام برداشتن روی پایه‌ی بیضی ثبت شده، برگرفته از مجسمه‌ی موزه‌ی لوور پاریس. سالم (watertight)، یک تکه، آماده‌ی چاپ، ریخته‌گری یا پاتینه در هر اندازه‌ای که لازم دارید."
+    },
+    model: "eurydice",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 86.64,
+    surface: 233.8,
+    size: { w: 47.7, d: 77.5, h: 125.0 },
+    cover: 'assets/img/eurydice/render-01.jpg',
+    thumb: 'assets/img/eurydice/render-01.jpg',
+    photos: [
+      'assets/img/eurydice/render-01.jpg',
+      'assets/img/eurydice/render-02.jpg',
+      'assets/img/eurydice/render-03.jpg',
+      'assets/img/eurydice/render-04.jpg',
+      'assets/img/eurydice/render-05.jpg',
+      'assets/img/eurydice/render-06.jpg'
+    ]
+  },
+  {
+    id: "amphitrite",
+    name: "AMPHITRITE",
+    added: '2026-11-12T02:02',
+    kind: { en: "Louvre sculpture · 3D-print and cast file", fa: "مجسمه‌ی موزه‌ی لوور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "AMPHITRITE is the sea goddess reclining on a wave-carved base beside a dolphin, after the sculpture in the Louvre, Paris. Watertight, one piece, ready to print, cast in metal or patinate in any size you need.",
+      fa: "AMPHITRITE الهه‌ی دریا است که روی پایه‌ی موج‌دار کنار یک دلفین لم داده، برگرفته از مجسمه‌ی موزه‌ی لوور پاریس. سالم (watertight)، یک تکه، آماده‌ی چاپ، ریخته‌گری یا پاتینه در هر اندازه‌ای که لازم دارید."
+    },
+    model: "amphitrite",
+    rot: [-90, 0, 0],
+    view: [0.3, 0.2],
+    volume: 112.56,
+    surface: 238.2,
+    size: { w: 130.0, d: 49.1, h: 72.9 },
+    cover: 'assets/img/amphitrite/render-01.jpg',
+    thumb: 'assets/img/amphitrite/render-01.jpg',
+    photos: [
+      'assets/img/amphitrite/render-01.jpg',
+      'assets/img/amphitrite/render-02.jpg',
+      'assets/img/amphitrite/render-03.jpg',
+      'assets/img/amphitrite/render-04.jpg',
+      'assets/img/amphitrite/render-05.jpg',
+      'assets/img/amphitrite/render-06.jpg'
+    ]
+  },
+  {
+    id: "nymph",
+    name: "SEATED NYMPH",
+    added: '2026-11-12T02:10',
+    kind: { en: "Classical statue · 3D-print and cast file", fa: "مجسمه‌ی کلاسیک · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "SEATED NYMPH is a classical marble-style figure of a young woman seated on a mound of heavy, flowing drapery, her gaze turned aside. Watertight, one piece, ready to print, cast in metal or patinate in any size you need.",
+      fa: "SEATED NYMPH پیکری کلاسیک به سبک مرمر است: دختری جوان که روی توده‌ای از پارچه‌ی سنگین و روان نشسته و نگاهش را کنار انداخته. سالم (watertight)، یک تکه، آماده‌ی چاپ، ریخته‌گری یا پاتینه در هر اندازه‌ای که لازم دارید."
+    },
+    model: "nymph",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 220.99,
+    surface: 387.8,
+    size: { w: 80.2, d: 102.8, h: 125.0 },
+    cover: 'assets/img/nymph/render-01.jpg',
+    thumb: 'assets/img/nymph/render-01.jpg',
+    photos: [
+      'assets/img/nymph/render-01.jpg',
+      'assets/img/nymph/render-02.jpg',
+      'assets/img/nymph/render-03.jpg',
+      'assets/img/nymph/render-04.jpg',
+      'assets/img/nymph/render-05.jpg',
+      'assets/img/nymph/render-06.jpg'
+    ]
+  },
+  {
+    id: "samus",
+    name: "SAMUS",
+    added: '2026-11-12T02:11',
+    kind: { en: "Character figure with base · 3D-print and cast file", fa: "فیگور شخصیت همراه با پایه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "SAMUS is a bounty hunter in a skin-tight zero suit with her arm cannon levelled, a high ponytail and armoured greaves, standing on a round base. Figure and base are one product in one file, ready to print, cast in metal or paint in any size you need.",
+      fa: "SAMUS شکارچی جایزه است با لباس چسبان، توپ روی بازو که به‌سمت هدف گرفته، دم‌اسبی بلند و ساق‌بند زره‌دار، روی پایه‌ی گرد. فیگور و پایه یک محصول در یک فایل‌اند، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: "samus",
+    rot: [0, 0, 0],
+    view: [-1.0, 0.12],
+    volume: 334.24,
+    surface: 743.7,
+    size: { w: 131.6, d: 250.0, h: 120.1 },
+    cover: 'assets/img/samus/render-01.jpg',
+    thumb: 'assets/img/samus/render-01.jpg',
+    photos: [
+      'assets/img/samus/render-01.jpg',
+      'assets/img/samus/render-02.jpg',
+      'assets/img/samus/render-03.jpg',
+      'assets/img/samus/render-04.jpg',
+      'assets/img/samus/render-05.jpg',
+      'assets/img/samus/render-06.jpg'
+    ]
+  },
+  {
+    id: "zeta",
+    name: "ZETA RETICULAN MINION",
+    added: '2026-11-12T02:12',
+    kind: { en: "Skeletal alien figure · 3D-print and cast file", fa: "فیگور اسکلت موجود فضایی · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "ZETA RETICULAN MINION is a skeletal grey alien with an oversized skull and visible ribs, caught mid-stride. A tiny, eerie collectible or charm, watertight and ready to cast in silver or gold or print in any size.",
+      fa: "ZETA RETICULAN MINION یک موجود فضایی خاکستری اسکلتی است با جمجمه‌ی بزرگ و دنده‌های پیدا، میان گام برداشتن. یک کلکسیون یا چارم ریز و عجیب، سالم (watertight) و آماده‌ی ریخته‌گری در نقره یا طلا یا چاپ در هر اندازه."
+    },
+    model: "zeta",
+    rot: [-90, 0, 0],
+    view: [0.35, 0.12],
+    volume: 0.37,
+    surface: 7.0,
+    size: { w: 15.8, d: 15.4, h: 24.2 },
+    cover: 'assets/img/zeta/render-01.jpg',
+    thumb: 'assets/img/zeta/render-01.jpg',
+    photos: [
+      'assets/img/zeta/render-01.jpg',
+      'assets/img/zeta/render-02.jpg',
+      'assets/img/zeta/render-03.jpg',
+      'assets/img/zeta/render-04.jpg',
+      'assets/img/zeta/render-05.jpg',
+      'assets/img/zeta/render-06.jpg'
+    ]
   }
 ];
 

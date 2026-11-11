@@ -36,7 +36,11 @@ def load_obj(path):
 def load_stl(path):
     b = open(path, 'rb').read()
     n = int(np.frombuffer(b, '<u4', 1, 80)[0])
-    t = np.frombuffer(b, dt, n, 84)['v'].astype(np.float64).reshape(-1, 3)
+    if b[:5] == b'solid' and 84 + 50 * n != len(b):          # ASCII STL
+        import re
+        t = np.array(re.findall(rb'vertex\s+(\S+)\s+(\S+)\s+(\S+)', b), dtype=np.float64).reshape(-1, 3)
+    else:
+        t = np.frombuffer(b, dt, n, 84)['v'].astype(np.float64).reshape(-1, 3)
     k = np.round(t / 1e-4).astype(np.int64)
     uk, first, inv = np.unique(k, axis=0, return_index=True, return_inverse=True)
     return t[first], inv.reshape(-1, 3)
