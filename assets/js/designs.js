@@ -4194,6 +4194,60 @@ window.SHEMIRANI_FIGURES = [
       'assets/img/wolverine/render-05.jpg',
       'assets/img/wolverine/render-06.jpg'
     ]
+  },
+  {
+    id: 'bellzebub',
+    name: "BELLZEBUB",
+    added: '2026-11-11T13:50',
+    kind: { en: "Winged imp character figure · 3D-print and cast file", fa: "فیگور شخصیت اهریمن بالدار · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "BELLZEBUB is a pot-bellied little imp with a toothy grin, a skull-topped staff and huge leathery bat wings folded around him. A mischievous, slightly demonic collectible, supplied as one file, ready to print, cast in metal or paint in any size you need.",
+      fa: "BELLZEBUB یک اهریمن کوچولوی شکم‌گنده است با لبخند دندان‌نما، عصای سردار و بال‌های چرمی بزرگ خفاشی که دورش جمع شده‌اند. یک فیگور شیطنت‌آمیز و کمی اهریمنی، در یک فایل، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: 'bellzebub',
+    rot: [-90, 0, 0],
+    view: [0.3, 0.12],
+    volume: 2.69,
+    surface: 58.4,
+    size: { w: 36.3, d: 27.6, h: 26.2 },
+    cover: 'assets/img/bellzebub/render-01.jpg',
+    thumb: 'assets/img/bellzebub/render-01.jpg',
+    photos: [
+      'assets/img/bellzebub/render-01.jpg',
+      'assets/img/bellzebub/render-02.jpg',
+      'assets/img/bellzebub/render-03.jpg',
+      'assets/img/bellzebub/render-04.jpg',
+      'assets/img/bellzebub/render-05.jpg',
+      'assets/img/bellzebub/render-06.jpg'
+    ]
+  },
+  {
+    id: 'kratos',
+    name: "KRATOS BUST",
+    added: '2026-11-11T14:05',
+    kind: { en: "Character bust with axe and base · 3D-print and cast file", fa: "نیم‌تنه‌ی شخصیت همراه با تبر و پایه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · bust + axe + base · any size · any colour", fa: "STL · نیم‌تنه، تبر و پایه · هر اندازه · هر رنگ" },
+    description: {
+      en: "A stern, bearded warrior bust with a bare scalp, scarred muscular torso, studded belt and a great axe slung over his back, standing on a round base. Bust, axe and base are one product, supplied together in one file, ready to print, cast in metal or paint in any size you need.",
+      fa: "نیم‌تنه‌ی جنگجوی ریشو و خشمگین با سر تاس، تن عضلانی و زخمی، کمربند میخ‌دار و تبر بزرگی که روی پشتش آویزان است، روی پایه‌ی گرد. نیم‌تنه، تبر و پایه یک محصول‌اند و با هم در یک فایل ارائه می‌شوند، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی در هر اندازه‌ای که لازم دارید."
+    },
+    model: 'kratos',
+    rot: [-90, 0, 0],
+    view: [0.35, 0.15],
+    volume: 3316.73,
+    surface: 2509.4,
+    size: { w: 222.5, d: 198.9, h: 284.3 },
+    cover: 'assets/img/kratos/render-01.jpg',
+    thumb: 'assets/img/kratos/render-01.jpg',
+    photos: [
+      'assets/img/kratos/render-01.jpg',
+      'assets/img/kratos/render-02.jpg',
+      'assets/img/kratos/render-03.jpg',
+      'assets/img/kratos/render-04.jpg',
+      'assets/img/kratos/render-05.jpg',
+      'assets/img/kratos/render-06.jpg'
+    ]
   }
 ];
 
