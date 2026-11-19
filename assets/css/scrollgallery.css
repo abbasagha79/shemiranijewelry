@@ -1,0 +1,16 @@
+/* SHEMIRANI — scroll gallery (renders only) on a white sheet. */
+.sg-sec{position:relative;z-index:5;background:#f7f4ec;color:#071438;margin-top:-28px;padding-top:28px}
+.sg{position:relative;overflow:hidden}
+.sg-move{position:relative;height:100vh;height:100dvh;will-change:transform}
+.sg-inset{position:relative;height:100%;will-change:clip-path}
+.sg-sheet{display:flex;gap:8px;padding:0 24px;overflow:hidden;background:#ece5d3;transform-origin:50% 50%;will-change:transform}
+.sg-col{display:flex;flex:1 1 0;min-width:0;flex-direction:column;gap:8px;position:relative;will-change:transform}
+.sg-col2{margin-top:-20%}
+.sg-col3{display:none}
+@media(min-width:768px){.sg-col3{display:flex}}
+.sg-img{display:block;overflow:hidden;background:#071438}
+.sg-img img{display:block;width:100%;height:auto;aspect-ratio:4/2.5;object-fit:cover;transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+.sg-img:hover img{transform:scale(1.04)}
+.sg-spacer{width:100%;height:10rem}
+@media(min-width:768px){.sg-spacer{height:24rem}}
+@media(prefers-reduced-motion:reduce){.sg-img img{transition:none}}
