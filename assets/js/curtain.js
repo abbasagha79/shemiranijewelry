@@ -27,7 +27,7 @@
   }
   function build(){
     var others = SM.collections.filter(function(c){ return c.id !== cur; });
-    var pills = others.map(function(c){
+    var pills = (cur ? others : SM.collections.concat([{ id: 'action-figures', en: 'Action figures', fa: 'اکشن فیگورها' }])).map(function(c){
       return '<a class="cf-pill md" data-mag href="' + e(SM.url('collections/' + c.id + '/index.html')) + '">' + e(fa() ? c.fa : c.en) + '</a>';
     }).join('');
     host.className = 'cf-wrap';
@@ -41,7 +41,8 @@
           '<div class="cf-links" data-links>' +
             '<div class="cf-row">' +
               '<a class="cf-pill lg" data-mag href="' + TG + '" target="_blank" rel="noopener">' + ICON.tg + (fa() ? 'پیام در تلگرام' : 'Message on Telegram') + '</a>' +
-              '<a class="cf-pill lg" data-mag href="' + e(SM.url('index.html#collections')) + '">' + ICON.grid + (fa() ? 'همه‌ی مجموعه‌ها' : 'All collections') + '</a>' +
+              (cur ? '<a class="cf-pill lg" data-mag href="' + e(SM.url('index.html#collections')) + '">' + ICON.grid + (fa() ? 'همه‌ی مجموعه‌ها' : 'All collections') + '</a>'
+                   : '<a class="cf-pill lg" data-mag href="#works">' + ICON.grid + (fa() ? 'طرح‌های ما' : 'Our designs') + '</a>') +
             '</div>' +
             '<div class="cf-row sm">' + pills + '</div>' +
           '</div>' +
@@ -124,7 +125,7 @@
     if (SM.collectLabels) SM.collectLabels();
     if (!bound){ bound = true; if (!RM){ addEventListener('scroll', kick, { passive: true }); addEventListener('resize', kick); } }
   }
-  var main = document.getElementById('collection') || document.querySelector('main');
+  var main = document.getElementById('collection');
   if (main) main.classList.add('cf-main');
   build();
   SM.onLang(build);
