@@ -38,8 +38,21 @@
       items: ds.map(function(d){ return { sub: SM.t(d.line) }; })
     };
   }
+  /* live 3D: the front card turns the real model. One shared viewer follows the active card;
+     the other cards keep their film / photo. */
+  var live = null, lhost = null;
+  function liveCard(i, card){
+    if (!window.ShemiraniRing || SM.RM || !card) return;
+    var d = ds[i]; if (!d || !d.model) return;
+    var face = card.querySelector('.wheel-face'); if (!face) return;
+    if (!lhost){ lhost = document.createElement('div'); lhost.className = 'wheel-live'; lhost.appendChild(document.createElement('canvas')); }
+    face.appendChild(lhost);
+    if (!live){
+      live = window.ShemiraniRing(lhost.firstChild, { model: d.model, base: u('assets/'), host: lhost, drag: false, fill: .6, pose: d.pose || { az: .62, el: .32, d: 1, ty: 0 } });
+    } else { live.setModel(d.model); live.resize(); }
+  }
   if (wEl && window.ShemiraniWheel){
-    var wt = wheelText();
+    var wt = wheelText(); wt.onActive = liveCard;
     wheel = window.ShemiraniWheel(wEl, ds.map(function(d, i){
       return { title: d.name, sub: wt.items[i].sub, href: u('designs/' + d.id + '/index.html'),
         video: d.spin ? u(d.spin) : null, poster: d.spinPoster ? u(d.spinPoster) : null, image: u(d.cover) };

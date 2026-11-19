@@ -109,6 +109,7 @@
       idxBtns.forEach(function(b, i){ b.classList.toggle('on', i === n); });
       paintTitle(n);
       syncVideos();
+      if (opt.onActive) opt.onActive(n, cards[n]);
     }
 
     /* fill the title / featured-design panel for item n */
