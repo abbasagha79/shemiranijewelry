@@ -1,16 +1,14 @@
-/* SHEMIRANI — scroll gallery (renders only) on a white sheet. */
-.sg-sec{position:relative;z-index:5;background:#2f3755;color:#f6d98f}
-.sg{position:relative;overflow:hidden}
-.sg-move{position:relative;height:100vh;height:100dvh;will-change:transform}
-.sg-inset{position:relative;height:100%;will-change:clip-path}
-.sg-sheet{display:flex;gap:8px;padding:0 24px;overflow:hidden;background:#34426e;transform-origin:50% 50%;will-change:transform}
-.sg-col{display:flex;flex:1 1 0;min-width:0;flex-direction:column;gap:8px;position:relative;will-change:transform}
-.sg-col2{margin-top:-20%}
-.sg-col3{display:none}
-@media(min-width:768px){.sg-col3{display:flex}}
-.sg-img{display:block;overflow:hidden;background:#303e60}
-.sg-img img{display:block;width:100%;height:auto;aspect-ratio:4/2.5;object-fit:cover;transition:transform .8s cubic-bezier(.22,.61,.36,1)}
-.sg-img:hover img{transform:scale(1.04)}
-.sg-spacer{width:100%;height:10rem}
-@media(min-width:768px){.sg-spacer{height:24rem}}
-@media(prefers-reduced-motion:reduce){.sg-img img{transition:none}}
+/* SHEMIRANI — works gallery: small renders sliding like a video, on a navy sheet. */
+.sg-sec{position:relative;z-index:5;background:#050c2a;color:#f6d98f}
+.sg{position:relative;overflow:hidden;padding:clamp(24px,4vw,56px) 0}
+.sg-inset{position:relative;will-change:clip-path}
+.sg-sheet{display:flex;gap:6px;padding:0 12px;overflow:hidden;height:min(92vh,880px);background:#0b1a4a;transform-origin:50% 50%;will-change:transform}
+.sg-col{flex:1 1 0;min-width:0;position:relative;overflow:hidden}
+.sg-track{display:flex;flex-direction:column;gap:6px;will-change:transform;animation:sg-slide var(--dur,80s) linear infinite;animation-delay:var(--off,0s)}
+.sg-col.dn .sg-track{animation-direction:reverse}
+@keyframes sg-slide{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,calc(-50% - 3px),0)}}
+.sg-img{display:block;overflow:hidden;background:#071438;flex:none}
+.sg-img img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.sg-sec:hover .sg-track{animation-play-state:paused}
+.sg-sec.still .sg-track,.still .sg-track{animation:none}
+@media(prefers-reduced-motion:reduce){.sg-track{animation:none}}

@@ -20,10 +20,32 @@
     en: ['Custom design', '18K gold', 'Diamond setting', '3D preview', 'Every measurement'],
     fa: ['طراحی اختصاصی', 'طلای ۱۸ عیار', 'نگین‌نشانی', 'پیش‌نمایش سه‌بعدی', 'همه‌ی اندازه‌ها']
   };
+  var PRICES = null;                       /* from data/prices.json (refreshed by a GitHub Action) */
+  function fmt(v, unit){
+    var f = fa();
+    if (unit === 'usd') return (f ? '' : '$') + v.toLocaleString(f ? 'fa-IR' : 'en-US', { maximumFractionDigits: 2 }) + (f ? ' $' : '');
+    return v.toLocaleString(f ? 'fa-IR' : 'en-US') + (f ? ' تومان' : ' Toman');
+  }
   function marq(){
-    var l = MQ[fa() ? 'fa' : 'en'], h = '<div class="cf-item">';
-    l.forEach(function(t, i){ h += '<span>' + e(t) + '</span> <i>✦</i>'; });
-    return h + '</div>';
+    var f = fa(), live = PRICES && PRICES.items.filter(function(it){ return it.value != null; });
+    if (live && live.length >= 2){
+      var h = '<div class="cf-item">';
+      live.forEach(function(it){
+        h += '<span>' + e(f ? it.fa : it.en) + '</span> <b class="cf-pr">' + e(fmt(it.value, it.unit)) + '</b>' +
+          (it.pct != null ? ' <em class="cf-ch ' + (it.dir === 'dn' ? 'dn' : 'up') + '">' + (it.dir === 'dn' ? '▼' : '▲') + ' ' + e(Number(it.pct).toLocaleString(f ? 'fa-IR' : 'en-US', { maximumFractionDigits: 2 })) + '%</em>' : '') + ' <i>✦</i>';
+      });
+      return h + '</div>';
+    }
+    var l = MQ[f ? 'fa' : 'en'], h2 = '<div class="cf-item">';
+    l.forEach(function(t){ h2 += '<span>' + e(t) + '</span> <i>✦</i>'; });
+    return h2 + '</div>';
+  }
+  function loadPrices(){
+    if (!window.fetch) return;
+    fetch(SM.url('data/prices.json') + '?t=' + Math.floor(Date.now() / 600000), { cache: 'no-cache' })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(j){ if (j && j.items){ PRICES = j; var m = host.querySelector('.cf-marq-in'); if (m) m.innerHTML = marq() + marq(); } })
+      .catch(function(){});
   }
   function build(){
     var others = SM.collections.filter(function(c){ return c.id !== cur; });
@@ -127,6 +149,6 @@
   }
   var main = document.getElementById('collection');
   if (main) main.classList.add('cf-main');
-  build();
+  build(); loadPrices();
   SM.onLang(build);
 })();
