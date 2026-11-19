@@ -1,8 +1,59 @@
-{"updated":null,"items":[
-{"id":"gold18","en":"18K gold / gram","fa":"طلای ۱۸ عیار / گرم","unit":"toman","value":null,"pct":null,"dir":null},
-{"id":"coin","en":"Emami coin","fa":"سکه امامی","unit":"toman","value":null,"pct":null,"dir":null},
-{"id":"usd","en":"US dollar","fa":"دلار","unit":"toman","value":null,"pct":null,"dir":null},
-{"id":"eur","en":"Euro","fa":"یورو","unit":"toman","value":null,"pct":null,"dir":null},
-{"id":"ounce","en":"Gold ounce","fa":"اونس جهانی","unit":"usd","value":null,"pct":null,"dir":null},
-{"id":"btc","en":"Bitcoin","fa":"بیت‌کوین","unit":"usd","value":null,"pct":null,"dir":null}
-]}
+{
+ "updated": "2026-11-19T19:17:40Z",
+ "items": [
+  {
+   "id": "gold18",
+   "en": "18K gold / gram",
+   "fa": "طلای ۱۸ عیار / گرم",
+   "unit": "toman",
+   "value": 24286700,
+   "pct": 0.71,
+   "dir": "dn"
+  },
+  {
+   "id": "coin",
+   "en": "Emami coin",
+   "fa": "سکه امامی",
+   "unit": "toman",
+   "value": 249590000,
+   "pct": 0.46,
+   "dir": "dn"
+  },
+  {
+   "id": "usd",
+   "en": "US dollar",
+   "fa": "دلار",
+   "unit": "toman",
+   "value": 269970,
+   "pct": 1.37,
+   "dir": "up"
+  },
+  {
+   "id": "eur",
+   "en": "Euro",
+   "fa": "یورو",
+   "unit": "toman",
+   "value": 297330,
+   "pct": 1.62,
+   "dir": "up"
+  },
+  {
+   "id": "ounce",
+   "en": "Gold ounce",
+   "fa": "اونس جهانی",
+   "unit": "usd",
+   "value": 3673.83,
+   "pct": 1.41,
+   "dir": "dn"
+  },
+  {
+   "id": "btc",
+   "en": "Bitcoin",
+   "fa": "بیت‌کوین",
+   "unit": "usd",
+   "value": 62746.38,
+   "pct": 0.19,
+   "dir": "up"
+  }
+ ]
+}
