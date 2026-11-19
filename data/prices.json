@@ -1,0 +1,8 @@
+{"updated":null,"items":[
+{"id":"gold18","en":"18K gold / gram","fa":"طلای ۱۸ عیار / گرم","unit":"toman","value":null,"pct":null,"dir":null},
+{"id":"coin","en":"Emami coin","fa":"سکه امامی","unit":"toman","value":null,"pct":null,"dir":null},
+{"id":"usd","en":"US dollar","fa":"دلار","unit":"toman","value":null,"pct":null,"dir":null},
+{"id":"eur","en":"Euro","fa":"یورو","unit":"toman","value":null,"pct":null,"dir":null},
+{"id":"ounce","en":"Gold ounce","fa":"اونس جهانی","unit":"usd","value":null,"pct":null,"dir":null},
+{"id":"btc","en":"Bitcoin","fa":"بیت‌کوین","unit":"usd","value":null,"pct":null,"dir":null}
+]}

@@ -1,0 +1,22 @@
+/* SHEMIRANI — white sticker rows */
+.play{position:relative;overflow:hidden;padding:clamp(70px,10vw,140px) 0;background:linear-gradient(180deg,#050c2a,#071440 50%,#050c2a)}
+.play-wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 clamp(18px,5vw,32px);display:grid;gap:clamp(28px,5vw,46px)}
+.play-row{display:flex;align-items:center;gap:20px;opacity:0;transform:translateY(40px) scale(.7) rotate(-6deg);transform-origin:left center}
+.play-row.alt{flex-direction:row-reverse}
+html[dir=rtl] .play-row{transform-origin:right center}
+.play-row.in{animation:play-pop .8s cubic-bezier(.2,1.3,.4,1) forwards;animation-delay:calc(var(--i)*.05s)}
+@keyframes play-pop{0%{opacity:0;transform:translateY(40px) scale(.7) rotate(-6deg)}100%{opacity:1;transform:none}}
+.play-st{flex:none;display:grid;place-items:center;width:86px;height:86px;animation:play-bob 3.6s ease-in-out infinite;animation-delay:calc(var(--i)*-.7s)}
+.play-st svg{width:100%;height:100%;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 10px rgba(255,255,255,.45))}
+.play-st .sp,.pf .sp{animation:play-tw 1.8s ease-in-out infinite}
+@keyframes play-bob{0%,100%{transform:translateY(-9px) rotate(-4deg)}50%{transform:translateY(9px) rotate(4deg)}}
+@keyframes play-tw{0%,100%{opacity:.25}50%{opacity:1}}
+.play-bub{position:relative;margin:0;padding:16px 22px;max-width:520px;background:#fff;color:#071438;border-radius:22px;font-size:clamp(.95rem,2.4vw,1.15rem);font-weight:600;line-height:1.7;box-shadow:0 14px 40px -14px rgba(0,0,0,.6)}
+.play-bub::before{content:"";position:absolute;top:50%;inset-inline-start:-9px;width:18px;height:18px;background:#fff;transform:translateY(-50%) rotate(45deg);border-radius:3px}
+.play-row.alt .play-bub::before{inset-inline-start:auto;inset-inline-end:-9px}
+.play-fly{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.pf{position:absolute;left:var(--x);bottom:-80px;width:var(--s);height:var(--s);opacity:.5;animation:play-fly var(--d) linear infinite;animation-delay:var(--o)}
+.pf svg{width:100%;height:100%;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transform:rotate(var(--r))}
+@keyframes play-fly{0%{transform:translateY(0);opacity:0}10%{opacity:.5}90%{opacity:.5}100%{transform:translateY(-120vh);opacity:0}}
+@media(max-width:520px){.play-st{width:64px;height:64px}.play-bub{padding:12px 16px}}
+@media(prefers-reduced-motion:reduce){.play-st,.pf,.play-st .sp{animation:none}.play-row{opacity:1;transform:none}}

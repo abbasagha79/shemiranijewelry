@@ -1,9 +1,9 @@
 /* SHEMIRANI — curtain footer (vanilla port of the "cinematic footer" component).
    The page scrolls away like a curtain and the footer, fixed underneath, is revealed.
    Colours are the site's navy + gold; font is the site's own (no third-party requests). */
-.cf-main{position:relative;z-index:10;background:#2e333d;box-shadow:0 30px 60px -20px rgba(43,46,51,.8),0 1px 0 rgba(227,189,116,.18);border-radius:0 0 28px 28px}
+.cf-main{position:relative;z-index:10;background:#04070d;box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 1px 0 rgba(227,189,116,.18);border-radius:0 0 28px 28px}
 .cf-wrap{position:relative;display:block;width:100%;height:100vh;height:100svh;min-height:600px;clip-path:polygon(0% 0,100% 0%,100% 100%,0 100%);
-  --foreground:#f4ecd8;--background:#2e3650;--primary:#e3bd74;--secondary:#3f6fe0;--destructive:#ff5a5f;--muted-foreground:#8f9bb8;--border:rgba(227,189,116,.28);
+  --foreground:#f4ecd8;--background:#040b24;--primary:#e3bd74;--secondary:#3f6fe0;--destructive:#ff5a5f;--muted-foreground:#8f9bb8;--border:rgba(227,189,116,.28);
   --pill-bg-1:color-mix(in oklch,var(--foreground) 3%,transparent);--pill-bg-2:color-mix(in oklch,var(--foreground) 1%,transparent);
   --pill-shadow:color-mix(in oklch,var(--background) 50%,transparent);--pill-highlight:color-mix(in oklch,var(--foreground) 10%,transparent);
   --pill-inset-shadow:color-mix(in oklch,var(--background) 80%,transparent);--pill-border:color-mix(in oklch,var(--foreground) 8%,transparent);
@@ -31,7 +31,7 @@ html[lang=fa] .cf-foot{font-family:var(--fa)}
   background:linear-gradient(180deg,color-mix(in oklch,var(--foreground) 10%,transparent) 0%,transparent 60%);-webkit-background-clip:text;background-clip:text;will-change:transform,opacity}
 .cf-marq{position:absolute;top:48px;left:0;width:100%;overflow:hidden;z-index:10;padding:16px 0;transform:rotate(-2deg) scale(1.1);direction:ltr;
   border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:color-mix(in oklch,var(--background) 60%,transparent);
-  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 25px 50px -12px rgba(43,46,51,.6)}
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 25px 50px -12px rgba(0,0,0,.6)}
 .cf-marq-in{display:flex;width:max-content;animation:cf-marquee 40s linear infinite;font-size:.75rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--muted-foreground)}
 html[lang=fa] .cf-marq-in{letter-spacing:0;text-transform:none;font-size:.95rem}
 @media(min-width:768px){.cf-marq-in{font-size:.875rem}html[lang=fa] .cf-marq-in{font-size:1.05rem}}
@@ -76,3 +76,8 @@ html[lang=fa] .cf-badge{letter-spacing:0;text-transform:none;font-size:.8rem}
 @media(min-width:768px){.cf-copy{order:1;font-size:.75rem}.cf-badge{order:2;font-size:.75rem}.cf-badge b{font-size:.875rem}}
 @media(max-height:700px){.cf-h{margin-bottom:1.5rem;font-size:clamp(2.2rem,8vw,4rem)}.cf-center{margin-top:6rem}.cf-pill.lg{padding:.9rem 1.8rem}}
 @media(prefers-reduced-motion:reduce){.cf-aurora,.cf-marq-in,.cf-heart{animation:none}}
+
+.cf-item b.cf-pr{font-weight:800;letter-spacing:.06em;color:var(--foreground)}
+html[lang=fa] .cf-item b.cf-pr{letter-spacing:0}
+.cf-ch{font-style:normal;font-size:.85em;letter-spacing:.04em}
+.cf-ch.up{color:#6fe0a0}.cf-ch.dn{color:#ff7b7f}
