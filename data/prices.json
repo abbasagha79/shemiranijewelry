@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T01:22:55Z",
+ "updated": "2026-11-20T08:48:04Z",
  "items": [
   {
    "id": "gold18",
@@ -42,8 +42,8 @@
    "en": "Gold ounce",
    "fa": "اونس جهانی",
    "unit": "usd",
-   "value": 3592.91,
-   "pct": 2.1,
+   "value": 3589.46,
+   "pct": 2.2,
    "dir": "dn"
   },
   {
@@ -51,9 +51,9 @@
    "en": "Bitcoin",
    "fa": "بیت‌کوین",
    "unit": "usd",
-   "value": 62484.57,
-   "pct": 0.51,
-   "dir": "up"
+   "value": 61905.42,
+   "pct": 0.43,
+   "dir": "dn"
   }
  ]
 }
