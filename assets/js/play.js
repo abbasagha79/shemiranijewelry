@@ -31,43 +31,61 @@
     { c: 'heart', en: 'Close to your heart. Far from your budget? No.', fa: 'نزدیک دلتم؛ دور از جیبت نه!' },
     { c: 'gold', en: 'Winning since 3000 BC.', fa: 'از هزاران سال پیش برنده‌ام!' }
   ];
-  var ACT = ['a-squat', 'a-jump', 'a-push', 'a-spin', 'a-stretch', 'a-lift'];
+  /* Each little jewel lives on the page itself (it scrolls away with the content) and moves by
+     its own will: it walks to a random spot, stops, works out or says something, then walks on. */
   var layer = document.createElement('div');
   layer.className = 'play-layer'; layer.setAttribute('aria-hidden', 'true');
   document.body.appendChild(layer);
-  var chars = [];
+  var chars = [], W = 0, H = 0;
+  var MOVES = ['st-jack', 'st-squat', 'st-lift', 'st-stretch'];
+  function size(){
+    W = document.documentElement.clientWidth;
+    H = Math.max(document.documentElement.scrollHeight, innerHeight);
+    layer.style.height = H + 'px';
+  }
   function build(){
     var fa = SM.lang === 'fa', n = innerWidth < 700 ? 4 : ROWS.length;
-    layer.innerHTML = ''; chars = [];
+    size(); layer.innerHTML = ''; chars = [];
     ROWS.slice(0, n).forEach(function(r, i){
       var el = document.createElement('div');
-      el.className = 'pl c-' + r.c + ' ' + ACT[i % ACT.length];
-      el.innerHTML = '<p class="pl-cloud">' + e(fa ? r.fa : r.en) + '<i></i></p><span class="pl-body">' + CH[r.c] + '</span>';
+      el.className = 'pl c-' + r.c + ' st-walk';
+      el.innerHTML = '<p class="pl-cloud">' + e(fa ? r.fa : r.en) + '<i></i></p>' +
+        '<div class="pl-fig"><i class="lm ar a1"></i><i class="lm lg g1"></i><span class="pl-body">' + CH[r.c] + '</span><i class="lm lg g2"></i><i class="lm ar a2"></i></div>';
       layer.appendChild(el);
-      chars.push({ el: el, x: (i * 137 + 9) % 86 + 4, ph: i * 211, sp: .22 + (i % 4) * .09, say: 1500 + i * 1300, act: i % ACT.length });
+      var home = Math.max(520, (i + .6) / n * (H - 400));
+      chars.push({ el: el, fig: el.querySelector('.pl-fig'), x: (i * 173) % Math.max(60, W - 80), y: home, home: home, tx: 0, ty: home, mode: 'walk', until: 0, dir: 1, talkAt: 2000 + i * 900, mi: i });
     });
   }
   build(); SM.onLang(build);
-  if (RM){ return; }
-  var vy = 0, lastY = scrollY, lastT = performance.now(), idle = 0, fast = false;
+  if (RM){ chars.forEach(function(c){ c.el.classList.add('still'); c.el.style.transform = 'translate3d(' + c.x + 'px,' + c.y + 'px,0)'; }); return; }
+  addEventListener('resize', build);
+  addEventListener('load', size);
+  setInterval(size, 4000);
+  var last = performance.now();
+  function pick(c, t){
+    c.tx = 10 + Math.random() * Math.max(40, W - 80);
+    c.ty = Math.min(H - 80, Math.max(300, c.home + (Math.random() - .5) * 360));
+    c.mode = 'walk'; c.el.classList.remove('st-jack', 'st-squat', 'st-lift', 'st-stretch'); c.el.classList.add('st-walk');
+  }
+  chars.forEach(function(c){ pick(c, 0); });
   function frame(t){
-    var vh = innerHeight, vw = innerWidth, y = scrollY;
-    vy = vy * .88 + (y - lastY) * .12; lastY = y;
-    var f = Math.abs(vy) > 14;
-    if (f !== fast){ fast = f; layer.classList.toggle('fast', f); }
+    var dt = Math.min(.05, (t - last) / 1000); last = t;
     chars.forEach(function(c, i){
-      var span = vh + 160;
-      var py = (((c.ph + y * c.sp + t * .006 * (1 + i % 3)) % span) + span) % span - 80;
-      var px = c.x / 100 * (vw - 70) + Math.sin(t / 1600 + i * 1.7) * 26;
-      c.el.style.transform = 'translate3d(' + px.toFixed(1) + 'px,' + py.toFixed(1) + 'px,0)';
-      if (t > c.say){
-        c.say = t + 7000 + (i * 977) % 5000;
-        if (py > 70 && py < vh - 90 && !fast){
-          c.el.classList.add('talk'); setTimeout(function(){ c.el.classList.remove('talk'); }, 3200);
+      if (c.mode === 'walk'){
+        var dx = c.tx - c.x, dy = c.ty - c.y, d = Math.hypot(dx, dy), sp = 46 + (i % 4) * 14;
+        if (d < 6){
+          c.mode = 'play'; c.until = t + 3200 + Math.random() * 2600; c.mi = (c.mi + 1) % MOVES.length;
+          c.el.classList.remove('st-walk'); c.el.classList.add(MOVES[c.mi]);
+        } else {
+          c.x += dx / d * sp * dt; c.y += dy / d * sp * .5 * dt;
+          if (Math.abs(dx) > 3) c.fig.style.transform = 'scaleX(' + (dx < 0 ? -1 : 1) + ')';
         }
-        c.act = (c.act + 1) % ACT.length;
-        c.el.className = c.el.className.replace(/a-\w+/, ACT[c.act]);
+      } else if (t > c.until) pick(c, t);
+      if (t > c.talkAt && c.mode === 'play'){
+        c.talkAt = t + 9000 + Math.random() * 6000;
+        c.el.classList.add('talk'); (function(el){ setTimeout(function(){ el.classList.remove('talk'); }, 3400); })(c.el);
       }
+      c.el.style.transform = 'translate3d(' + c.x.toFixed(1) + 'px,' + c.y.toFixed(1) + 'px,0)';
     });
     requestAnimationFrame(frame);
   }
