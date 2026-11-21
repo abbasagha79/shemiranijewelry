@@ -9,6 +9,5 @@
 @keyframes sg-slide{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,calc(-50% - 3px),0)}}
 .sg-img{display:block;overflow:hidden;background:#071438;flex:none}
 .sg-img img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
-.sg-sec:hover .sg-track{animation-play-state:paused}
 .sg-sec.still .sg-track,.still .sg-track{animation:none}
 @media(prefers-reduced-motion:reduce){.sg-track{animation:none}}
