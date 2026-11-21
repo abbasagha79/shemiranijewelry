@@ -52,16 +52,42 @@
     '</div>' +
     '<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo"><img alt=""><button type="button" aria-label="Close">×</button></div>';
 
+  var SALES = { price: 20, total: 1000, sold: {} };
   /* language-dependent parts */
   SM.onLang(function(){
     main.querySelector('[data-kind]').textContent = SM.t(D.kind);
     main.querySelector('[data-desc]').textContent = SM.t(D.description);
     main.querySelector('[data-note]').textContent = SM.t(D.note);
-    main.querySelector('[data-specs]').innerHTML = D.specs.map(function(g){
-      return '<div class="spec"><div class="spec-in"><h2>' + e(SM.t(g.title)) + '</h2><ul>' + g.items.map(function(it){ return '<li>' + e(SM.t(it)) + '</li>'; }).join('') + '</ul></div></div>';
-    }).join('');
-    [].forEach.call(main.querySelectorAll('.spec'), function(sp){ SM.beam(sp, { reveal: 'hover', length: 18, thickness: 1, speed: 4 }); });
+    renderSpecs();
   });
+  function renderSpecs(){
+    var fa = SM.lang === 'fa', box = main.querySelector('[data-specs]'), sold = Math.max(0, Math.min(SALES.total, +SALES.sold[D.id] || 0)), left = SALES.total - sold, pct = Math.round(left / SALES.total * 100);
+    function num(s){ var m = /([\d.]+)\s*g\b/.exec(s); return m ? parseFloat(m[1]) : 0; }
+    function fmt(n){ return n.toLocaleString(fa ? 'fa-IR' : 'en-US'); }
+    var icons = { 0: '<path d="M4 18h16l-2-9H6zM9 9V6h6v3"/>', 1: '<path d="M6 4h12l4 6-10 11L2 10z"/><path d="M2 10h20"/>', 2: '<path d="M3 17L17 3l4 4L7 21zM8 12l2 2M11 9l2 2M14 6l2 2"/>', 3: '<path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/>' };
+    var cards = D.specs.map(function(g, gi){
+      var rows = g.items.map(function(it){ return SM.t(it); });
+      var maxG = Math.max.apply(null, rows.map(num).concat([0.0001])), isMetal = gi === 0 && maxG > 0.001;
+      var body = rows.map(function(r){
+        var k = r.indexOf(':'), lab = k > 0 ? r.slice(0, k) : '', val = k > 0 ? r.slice(k + 1).trim() : r;
+        var bar = isMetal && num(r) ? '<i class="bar"><b style="--w:' + Math.max(6, Math.round(num(r) / maxG * 100)) + '%"></b></i>' : '';
+        return '<li><span class="bl">' + e(lab) + '</span><span class="bv">' + e(val) + '</span>' + bar + '</li>';
+      }).join('');
+      var size = (g.items.length > 4 || gi === 3) ? 'md' : 'sm';
+      return '<article class="bc ' + size + '"><div class="bc-vis"><svg viewBox="0 0 24 24">' + (icons[gi % 4]) + '</svg></div><h2>' + e(SM.t(g.title)) + '</h2><ul>' + body + '</ul></article>';
+    }).join('');
+    var edition = '<article class="bc full ed"><div class="ed-l"><div class="ed-p"><small>' + (fa ? 'قیمت پایه' : 'Base price') + '</small><strong>$' + SALES.price + '</strong></div>' +
+      '<div class="ed-m"><div class="ed-t"><span>' + (fa ? 'نسخه‌های باقی‌مانده' : 'Copies remaining') + '</span><b>' + fmt(left) + ' / ' + fmt(SALES.total) + '</b></div><div class="ed-bar" role="progressbar" aria-valuemin="0" aria-valuemax="' + SALES.total + '" aria-valuenow="' + left + '"><i style="--w:' + pct + '%"></i></div>' +
+      '<p>' + (fa ? 'از هر طرح فقط ' + fmt(SALES.total) + ' نسخه عرضه می‌شود.' : 'Only ' + fmt(SALES.total) + ' copies of each design will ever exist.') + '</p></div></div>' +
+      '<div class="ed-r"><small>' + (fa ? 'حق امتیاز کامل طرح' : 'Full design royalty') + '</small><strong>$' + fmt(SALES.price * left) + '</strong><p>' + (fa ? 'خرید تمام ' + fmt(left) + ' نسخه‌ی باقی‌مانده = تملک کامل و فروش‌رفتن (Sold out) طرح.' : 'Buy all ' + fmt(left) + ' remaining copies to own the whole design and sell it out.') + '</p></div></article>';
+    box.innerHTML = '<div class="bento">' + edition + cards + '</div>';
+    [].forEach.call(box.querySelectorAll('.bc'), function(sp){ SM.beam(sp, { reveal: 'hover', length: 18, thickness: 1, speed: 4 }); });
+    if ('IntersectionObserver' in window && !SM.RM){
+      var io = new IntersectionObserver(function(es){ es.forEach(function(x){ if (x.isIntersecting){ x.target.classList.add('on'); io.unobserve(x.target); } }); }, { threshold: .2 });
+      [].forEach.call(box.querySelectorAll('.bc'), function(c){ io.observe(c); });
+    } else [].forEach.call(box.querySelectorAll('.bc'), function(c){ c.classList.add('on'); });
+  }
+  try { fetch(u('data/sales.json'), { cache: 'no-cache' }).then(function(r){ return r.json(); }).then(function(j){ if (j && j.total){ SALES = j; SALES.sold = j.sold || {}; renderSpecs(); } }).catch(function(){}); } catch (x) {}
 
   /* viewer */
   var stage = main.querySelector('.vstage'), stageIn = main.querySelector('.vstage-in');
