@@ -9,9 +9,9 @@
   function lerp(a, b, t){ return a + (b - a) * t; }
   function clamp01(v){ return v < 0 ? 0 : v > 1 ? 1 : v; }
 
-  var all = SM.designs.filter(function(d){ return d.cover && d.id.indexOf('nnor-') === 0; });   /* clean studio renders only */
+  var all = SM.designs.filter(function(d){ return d.cover; });   /* every work */
   if (all.length < 6) return;
-  var N = innerWidth >= 1100 ? 6 : innerWidth >= 768 ? 4 : 3;
+  var N = innerWidth >= 1100 ? 10 : innerWidth >= 768 ? 7 : 4;
   var cols = []; for (var i = 0; i < N; i++) cols.push([]);
   all.forEach(function(d, i){ cols[i % N].push(d); });
 

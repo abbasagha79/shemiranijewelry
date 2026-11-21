@@ -71,7 +71,6 @@
         '</div>' +
         '<div class="cf-bar">' +
           '<div class="cf-copy">' + (fa() ? '© ۲۰۲۶ SHEMIRANI. تمامی حقوق محفوظ است.' : '© 2026 SHEMIRANI. All rights reserved.') + '</div>' +
-          '<div class="cf-badge"><span>' + (fa() ? 'ساخته‌شده با' : 'Crafted with') + '</span><span class="cf-heart">❤</span><span>' + (fa() ? 'توسط' : 'by') + '</span><b>SHEMIRANI</b></div>' +
           '<button type="button" class="cf-pill cf-top" data-mag data-top aria-label="' + (fa() ? 'بازگشت به بالا' : 'Back to top') + '">' + ICON.up + '</button>' +
         '</div>' +
       '</div>';
