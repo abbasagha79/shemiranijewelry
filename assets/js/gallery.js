@@ -9,7 +9,9 @@
   function lerp(a, b, t){ return a + (b - a) * t; }
   function clamp01(v){ return v < 0 ? 0 : v > 1 ? 1 : v; }
 
-  var all = SM.designs.filter(function(d){ return d.cover; });   /* every work */
+  /* every work whose cover is a real render (a few older covers are gem-report / Matrix screenshots) */
+  var SKIP = { thalver: 1, orovant: 1, zorelian: 1 };
+  var all = SM.designs.filter(function(d){ return d.cover && !SKIP[d.id]; });
   if (all.length < 6) return;
   var N = innerWidth >= 1100 ? 10 : innerWidth >= 768 ? 7 : 4;
   var cols = []; for (var i = 0; i < N; i++) cols.push([]);

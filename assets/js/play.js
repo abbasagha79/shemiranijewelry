@@ -1,9 +1,9 @@
-/* SHEMIRANI — mischievous jewels. Seven little white characters misbehave in their own way
-   and say one short thing from a thought cloud above their heads. Renders into <section data-play>. */
+/* SHEMIRANI — mischievous jewels. Seven tiny white characters roam the whole page: they drift
+   with the scroll, tumble when you scroll fast, work out when you stop, and now and then say
+   one salty thing from a little cloud. Pure overlay (pointer-events none). */
 (function(){
   'use strict';
-  var host = document.querySelector('[data-play]');
-  if (!host || !window.SM) return;
+  if (!window.SM || document.querySelector('.play-layer')) return;
   var SM = window.SM, e = SM.esc, RM = SM.RM;
   /* shared face: eyes that blink, slanted brows, a crooked grin; (x,y) is the centre of the face */
   function face(x, y, k){
@@ -31,21 +31,45 @@
     { c: 'heart', en: 'Close to your heart. Far from your budget? No.', fa: 'نزدیک دلتم؛ دور از جیبت نه!' },
     { c: 'gold', en: 'Winning since 3000 BC.', fa: 'از هزاران سال پیش برنده‌ام!' }
   ];
-  var FLY = ['diamond', 'ring', 'pearl', 'heart', 'gold', 'diamond', 'necklace', 'ring', 'heart', 'bracelet', 'pearl', 'gold'];
+  var ACT = ['a-squat', 'a-jump', 'a-push', 'a-spin', 'a-stretch', 'a-lift'];
+  var layer = document.createElement('div');
+  layer.className = 'play-layer'; layer.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(layer);
+  var chars = [];
   function build(){
-    var fa = SM.lang === 'fa';
-    host.className = 'play';
-    host.innerHTML =
-      '<div class="play-fly" aria-hidden="true">' + FLY.map(function(k, i){
-        return '<span class="pf" style="--x:' + ((i * 83 + 7) % 100) + '%;--d:' + (9 + (i * 5) % 8) + 's;--o:-' + ((i * 3.7) % 12).toFixed(1) + 's;--s:' + (22 + (i * 11) % 22) + 'px;--r:' + ((i * 37) % 50 - 25) + 'deg">' + CH[k].replace(/<g class="face".*<\/g>(?=<\/svg>)/, '') + '</span>';
-      }).join('') + '</div>' +
-      '<div class="play-wrap">' + ROWS.map(function(r, i){
-        return '<div class="pc c-' + r.c + '" style="--i:' + i + '"><p class="pc-cloud">' + e(fa ? r.fa : r.en) + '<i></i><i></i></p><span class="pc-body">' + CH[r.c] + '</span></div>';
-      }).join('') + '</div>';
-    var cells = host.querySelectorAll('.pc');
-    if (RM || !('IntersectionObserver' in window)){ [].forEach.call(cells, function(r){ r.classList.add('in'); }); return; }
-    var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: .3 });
-    [].forEach.call(cells, function(r){ io.observe(r); });
+    var fa = SM.lang === 'fa', n = innerWidth < 700 ? 4 : ROWS.length;
+    layer.innerHTML = ''; chars = [];
+    ROWS.slice(0, n).forEach(function(r, i){
+      var el = document.createElement('div');
+      el.className = 'pl c-' + r.c + ' ' + ACT[i % ACT.length];
+      el.innerHTML = '<p class="pl-cloud">' + e(fa ? r.fa : r.en) + '<i></i></p><span class="pl-body">' + CH[r.c] + '</span>';
+      layer.appendChild(el);
+      chars.push({ el: el, x: (i * 137 + 9) % 86 + 4, ph: i * 211, sp: .22 + (i % 4) * .09, say: 1500 + i * 1300, act: i % ACT.length });
+    });
   }
   build(); SM.onLang(build);
+  if (RM){ return; }
+  var vy = 0, lastY = scrollY, lastT = performance.now(), idle = 0, fast = false;
+  function frame(t){
+    var vh = innerHeight, vw = innerWidth, y = scrollY;
+    vy = vy * .88 + (y - lastY) * .12; lastY = y;
+    var f = Math.abs(vy) > 14;
+    if (f !== fast){ fast = f; layer.classList.toggle('fast', f); }
+    chars.forEach(function(c, i){
+      var span = vh + 160;
+      var py = (((c.ph + y * c.sp + t * .006 * (1 + i % 3)) % span) + span) % span - 80;
+      var px = c.x / 100 * (vw - 70) + Math.sin(t / 1600 + i * 1.7) * 26;
+      c.el.style.transform = 'translate3d(' + px.toFixed(1) + 'px,' + py.toFixed(1) + 'px,0)';
+      if (t > c.say){
+        c.say = t + 7000 + (i * 977) % 5000;
+        if (py > 70 && py < vh - 90 && !fast){
+          c.el.classList.add('talk'); setTimeout(function(){ c.el.classList.remove('talk'); }, 3200);
+        }
+        c.act = (c.act + 1) % ACT.length;
+        c.el.className = c.el.className.replace(/a-\w+/, ACT[c.act]);
+      }
+    });
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
 })();
