@@ -5,7 +5,7 @@ and print the figure's volume, size and surface area (used for the weight table)
   python3 tools/convert_figure.py figure.obj <name> [cell_mm]
   python3 tools/convert_figure.py "figure.stl+base.stl@90,-10.7,-39.4,-26.8" <name>     # a figure standing on its base
 
-A part can carry "@g,dx,dy" (stand it on the floor, footprint centre at dx,dy) or "@x10" (scale, e.g. cm to mm) or "@rz,dx,dy,dz": turn it rz degrees about the Z axis, then move it (mm), so a base can be placed
+A part can carry "@g,dx,dy[,dz]" (stand it on the floor, footprint centre at dx,dy, optionally raised dz) or "@x10" (scale, e.g. cm to mm) or "@rz,dx,dy,dz": turn it rz degrees about the Z axis, then move it (mm), so a base can be placed
 under the figure and the pair becomes ONE web model. Prints every part and the total (use the total for the page).
 
 Writes assets/models/<name>.bin (+ .gz): the same quantised layout the ring viewer reads
@@ -89,13 +89,15 @@ if __name__ == '__main__':
         v, f = load_obj(path) if path.lower().endswith('.obj') else load_stl(path)
         if tf.startswith('g'):      # "g,dx,dy": stand the part on the floor, its footprint centred on (dx,dy)
             g = [float(x) for x in tf.split(',')[1:]] + [0, 0]
-            v = v - np.array([(v[:, 0].min() + v[:, 0].max()) / 2 - g[0], (v[:, 1].min() + v[:, 1].max()) / 2 - g[1], v[:, 2].min()])
+            v = v - np.array([(v[:, 0].min() + v[:, 0].max()) / 2 - g[0], (v[:, 1].min() + v[:, 1].max()) / 2 - g[1], v[:, 2].min() - g[2]])
         elif tf.startswith('x'):    # "x10": scale the part (a file exported in cm instead of mm)
             v = v * float(tf[1:])
         elif tf:
             rz, dx, dy, dz = [float(x) for x in tf.split(',')]
             c, sn = np.cos(np.radians(rz)), np.sin(np.radians(rz))
             v = np.stack([c * v[:, 0] - sn * v[:, 1] + dx, sn * v[:, 0] + c * v[:, 1] + dy, v[:, 2] + dz], 1)
+        if np.einsum('ij,ij->i', v[f[:, 0]], np.cross(v[f[:, 1]], v[f[:, 2]])).sum() < 0:   # inside-out part: flip it
+            f = f[:, ::-1].copy(); print('part %s was inside-out, flipped' % path.split('/')[-1])
         pv, pa = measure(v, f)
         print('part %s: %d triangles, %.2f cm3, %.1f cm2' % (path.split('/')[-1], len(f), pv / 1000, pa / 100))
         Vs.append(v); Fs.append(f + n0); n0 += len(v)

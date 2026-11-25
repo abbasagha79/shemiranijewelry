@@ -4761,6 +4761,345 @@ window.SHEMIRANI_FIGURES = [
       'assets/img/zeta/render-05.jpg',
       'assets/img/zeta/render-06.jpg'
     ]
+  },
+  {
+    id: "firbolg",
+    name: "FIRBOLG PRISONER",
+    added: '2026-11-25T14:00',
+    kind: { en: "Tabletop miniature · 3D-print and cast file", fa: "مینیاتور رومیزی · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "FIRBOLG PRISONER is a bearded, bare-chested forest giant caught mid-step with a shackle chain dragging from his legs. A watertight tabletop miniature, ready to print, cast in metal or paint, and the size slider takes it larger or smaller.",
+      fa: "FIRBOLG PRISONER یک غول جنگلیِ ریشو و نیمه‌برهنه است که میانِ قدم‌برداشتن، زنجیرِ اسارت را پشت سر می‌کشد. مینیاتور رومیزی با مشِ کاملاً بسته، آماده‌ی چاپ، ریخته‌گری فلز یا رنگ‌آمیزی، و با اسلایدر اندازه می‌شود بزرگ‌ترش کرد یا کوچک‌ترش."
+    },
+    model: "firbolg",
+    rot: [-90, 0, 0],
+    volume: 4.97,
+    surface: 28.2,
+    size: { w: 22.3, d: 15.4, h: 47.0 },
+    cover: 'assets/img/firbolg/render-01.jpg',
+    thumb: 'assets/img/firbolg/render-01.jpg',
+    photos: [
+      'assets/img/firbolg/render-01.jpg',
+      'assets/img/firbolg/render-02.jpg',
+      'assets/img/firbolg/render-03.jpg',
+      'assets/img/firbolg/render-04.jpg',
+      'assets/img/firbolg/render-05.jpg',
+      'assets/img/firbolg/render-06.jpg'
+    ]
+  },
+  {
+    id: "commander",
+    name: "COMMANDER BUST",
+    added: '2026-11-25T14:01',
+    kind: { en: "Portrait bust · 3D-print and cast file", fa: "نیم‌تنه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "COMMANDER BUST is a heavy-browed statesman in a suit and tie with swept-up hair, cut off at the chest like a classical portrait bust. A watertight file ready to print or cast, in any size, with weights for every material.",
+      fa: "COMMANDER BUST نیم‌تنهٔ یک مردِ دولتی با ابروهای سنگین، کت‌وشلوار و موهای به‌بالا شانه‌شده است، که مثلِ نیم‌تنه‌های کلاسیک زیرِ سینه بریده شده. فایلی با مشِ کاملاً بسته، آماده‌ی چاپ یا ریخته‌گری در هر اندازه، با وزن برای همهٔ مواد."
+    },
+    model: "commander",
+    rot: [-90, 0, 0],
+    volume: 103.5,
+    surface: 158.4,
+    size: { w: 58.4, d: 60.5, h: 85.0 },
+    cover: 'assets/img/commander/render-01.jpg',
+    thumb: 'assets/img/commander/render-01.jpg',
+    photos: [
+      'assets/img/commander/render-01.jpg',
+      'assets/img/commander/render-02.jpg',
+      'assets/img/commander/render-03.jpg',
+      'assets/img/commander/render-04.jpg',
+      'assets/img/commander/render-05.jpg',
+      'assets/img/commander/render-06.jpg'
+    ]
+  },
+  {
+    id: "lm-a",
+    name: "VEILED LADY",
+    added: '2026-11-25T14:02',
+    kind: { en: "Statue on plinth · 3D-print and cast file", fa: "مجسمه روی پایه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "VEILED LADY is a standing woman in a long veil and heavy folded drapery, hands gathered at her chest, on a plain rectangular plinth, in the manner of a classical devotional statue. Watertight, ready to print or cast in any size.",
+      fa: "VEILED LADY بانویی ایستاده است با روسریِ بلند و پارچهٔ پرچین، دست‌ها جمع‌شده روی سینه، روی یک پایهٔ مستطیلی ساده، به سبکِ مجسمه‌های نیایشِ کلاسیک. مشِ کاملاً بسته، آماده‌ی چاپ یا ریخته‌گری در هر اندازه."
+    },
+    model: "lm-a",
+    rot: [-90, 0, 0],
+    volume: 75.28,
+    surface: 170.6,
+    size: { w: 63.4, d: 38.1, h: 130.0 },
+    cover: 'assets/img/lm-a/render-01.jpg',
+    thumb: 'assets/img/lm-a/render-01.jpg',
+    photos: [
+      'assets/img/lm-a/render-01.jpg',
+      'assets/img/lm-a/render-02.jpg',
+      'assets/img/lm-a/render-03.jpg',
+      'assets/img/lm-a/render-04.jpg',
+      'assets/img/lm-a/render-05.jpg',
+      'assets/img/lm-a/render-06.jpg'
+    ]
+  },
+  {
+    id: "lm-b",
+    name: "ASHIGARU GUNNER",
+    added: '2026-11-25T14:03',
+    kind: { en: "Tabletop miniature · 3D-print and cast file", fa: "مینیاتور رومیزی · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "ASHIGARU GUNNER is an armoured foot-soldier in a conical straw hat, shouldering a hand cannon and standing on a round 25 mm base with a cobbled floor. Figure and base are one product in one file.",
+      fa: "ASHIGARU GUNNER یک پیاده‌نظامِ زره‌پوش با کلاه حصیریِ مخروطی است که توپِ دستی را روی شانه گرفته و روی پایهٔ گردِ ۲۵ میلی‌متری با کفِ سنگ‌فرش ایستاده. فیگور و پایه یک محصول در یک فایل‌اند."
+    },
+    model: "lm-b",
+    rot: [-90, 0, 0],
+    volume: 2.98,
+    surface: 25.5,
+    size: { w: 25.1, d: 25.1, h: 34.5 },
+    cover: 'assets/img/lm-b/render-01.jpg',
+    thumb: 'assets/img/lm-b/render-01.jpg',
+    photos: [
+      'assets/img/lm-b/render-01.jpg',
+      'assets/img/lm-b/render-02.jpg',
+      'assets/img/lm-b/render-03.jpg',
+      'assets/img/lm-b/render-04.jpg',
+      'assets/img/lm-b/render-05.jpg',
+      'assets/img/lm-b/render-06.jpg'
+    ]
+  },
+  {
+    id: "lm-c",
+    name: "THE WRETCH BUST",
+    added: '2026-11-25T14:04',
+    kind: { en: "Portrait bust · 3D-print and cast file", fa: "نیم‌تنه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "THE WRETCH BUST is a gaunt, bald river-cave creature with huge eyes and ears and a snarl full of sharp teeth, ribs and collarbones showing. A bust file ready to print, cast or paint, in any size.",
+      fa: "THE WRETCH BUST موجودی لاغر و بی‌مو از غارِ رودخانه است با چشم‌ها و گوش‌های بزرگ و پوزخندی پر از دندانِ تیز، با دنده‌ها و ترقوهٔ بیرون‌زده. نیم‌تنه‌ای آماده‌ی چاپ، ریخته‌گری یا رنگ‌آمیزی در هر اندازه."
+    },
+    model: "lm-c",
+    rot: [-90, 0, 0],
+    volume: 167.78,
+    surface: 235.2,
+    size: { w: 73.4, d: 69.7, h: 100.0 },
+    cover: 'assets/img/lm-c/render-01.jpg',
+    thumb: 'assets/img/lm-c/render-01.jpg',
+    photos: [
+      'assets/img/lm-c/render-01.jpg',
+      'assets/img/lm-c/render-02.jpg',
+      'assets/img/lm-c/render-03.jpg',
+      'assets/img/lm-c/render-04.jpg',
+      'assets/img/lm-c/render-05.jpg',
+      'assets/img/lm-c/render-06.jpg'
+    ]
+  },
+  {
+    id: "crypt-trio",
+    name: "CRYPT TRIO",
+    added: '2026-11-25T14:05',
+    kind: { en: "Figure set · 3D-print and cast file", fa: "ست فیگور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · one product, all pieces together · any size · any colour", fa: "STL · یک محصول، همهٔ قطعه‌ها با هم · هر اندازه · هر رنگ" },
+    description: {
+      en: "CRYPT TRIO is three undead miniatures side by side, each on its own round 25 mm base: a vampire in a high-collared cloak, a zombie in a fighting stance and a horned lich with a trident staff. All three are one product in one file.",
+      fa: "CRYPT TRIO سه مینیاتورِ مردگان کنارِ هم است، هر کدام روی پایهٔ گردِ ۲۵ میلی‌متریِ خودش: یک خون‌آشام با شنلِ یقه‌بلند، یک زامبی در حالتِ مبارزه و یک لیچِ شاخ‌دار با عصای سه‌شاخه. هر سه یک محصول در یک فایل‌اند."
+    },
+    model: "crypt-trio",
+    rot: [-90, 0, 0],
+    volume: 10.05,
+    surface: 117.8,
+    size: { w: 95.4, d: 25.6, h: 48.1 },
+    cover: 'assets/img/crypt-trio/render-01.jpg',
+    thumb: 'assets/img/crypt-trio/render-01.jpg',
+    photos: [
+      'assets/img/crypt-trio/render-01.jpg',
+      'assets/img/crypt-trio/render-02.jpg',
+      'assets/img/crypt-trio/render-03.jpg',
+      'assets/img/crypt-trio/render-04.jpg',
+      'assets/img/crypt-trio/render-05.jpg',
+      'assets/img/crypt-trio/render-06.jpg'
+    ]
+  },
+  {
+    id: "cracked-dice",
+    name: "CRACKED DICE SET",
+    added: '2026-11-25T14:06',
+    kind: { en: "Figure set · 3D-print and cast file", fa: "ست فیگور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · one product, all pieces together · any size · any colour", fa: "STL · یک محصول، همهٔ قطعه‌ها با هم · هر اندازه · هر رنگ" },
+    description: {
+      en: "CRACKED DICE SET is six polyhedral dice with fractured, crystalline surfaces: D4, D6, D8, D10, D12 and D20. All six are one product in one file.",
+      fa: "CRACKED DICE SET شش تاسِ چندوجهی با سطحِ ترک‌خورده و بلورین است: D4، D6، D8، D10، D12 و D20. هر شش تا یک محصول در یک فایل‌اند."
+    },
+    model: "cracked-dice",
+    rot: [-90, 0, 0],
+    volume: 86.09,
+    surface: 299.9,
+    size: { w: 125.1, d: 79.1, h: 30.4 },
+    cover: 'assets/img/cracked-dice/render-01.jpg',
+    thumb: 'assets/img/cracked-dice/render-01.jpg',
+    photos: [
+      'assets/img/cracked-dice/render-01.jpg',
+      'assets/img/cracked-dice/render-02.jpg',
+      'assets/img/cracked-dice/render-03.jpg',
+      'assets/img/cracked-dice/render-04.jpg',
+      'assets/img/cracked-dice/render-05.jpg',
+      'assets/img/cracked-dice/render-06.jpg'
+    ]
+  },
+  {
+    id: "three-monkeys",
+    name: "THREE WISE BABIES",
+    added: '2026-11-25T14:07',
+    kind: { en: "Figure set · 3D-print and cast file", fa: "ست فیگور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · one product, all pieces together · any size · any colour", fa: "STL · یک محصول، همهٔ قطعه‌ها با هم · هر اندازه · هر رنگ" },
+    description: {
+      en: "THREE WISE BABIES are three chubby seated babies in the old poses of see no evil, hear no evil and speak no evil: hands over eyes, ears and mouth. A watertight set, three pieces, one product, in one file.",
+      fa: "THREE WISE BABIES سه نوزادِ گردالو و نشسته‌اند با حالتِ کهنِ «بد نبین، بد نشنو، بد نگو»: دست روی چشم، گوش و دهان. ستی با مشِ کاملاً بسته، سه قطعه، یک محصول در یک فایل."
+    },
+    model: "three-monkeys",
+    rot: [-90, 0, 0],
+    volume: 211.72,
+    surface: 430.5,
+    size: { w: 192.5, d: 62.7, h: 65.5 },
+    cover: 'assets/img/three-monkeys/render-01.jpg',
+    thumb: 'assets/img/three-monkeys/render-01.jpg',
+    photos: [
+      'assets/img/three-monkeys/render-01.jpg',
+      'assets/img/three-monkeys/render-02.jpg',
+      'assets/img/three-monkeys/render-03.jpg',
+      'assets/img/three-monkeys/render-04.jpg',
+      'assets/img/three-monkeys/render-05.jpg',
+      'assets/img/three-monkeys/render-06.jpg'
+    ]
+  },
+  {
+    id: "steel-legion",
+    name: "STEEL LEGION",
+    added: '2026-11-25T14:08',
+    kind: { en: "Figure set · 3D-print and cast file", fa: "ست فیگور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · one product, all pieces together · any size · any colour", fa: "STL · یک محصول، همهٔ قطعه‌ها با هم · هر اندازه · هر رنگ" },
+    description: {
+      en: "STEEL LEGION is a squad of four armoured troopers standing at attention in a line, in one file. A tabletop-scale set, ready to print or cast.",
+      fa: "STEEL LEGION یک دستهٔ چهارنفرهٔ سربازانِ زره‌پوش است که در یک ردیف آماده‌باش ایستاده‌اند، همه در یک فایل. ستی در مقیاسِ رومیزی، آماده‌ی چاپ یا ریخته‌گری."
+    },
+    model: "steel-legion",
+    rot: [-90, 0, 0],
+    view: [-0.5, 0.2],
+    volume: 2.99,
+    surface: 48.8,
+    size: { w: 50.4, d: 50.5, h: 29.3 },
+    cover: 'assets/img/steel-legion/render-01.jpg',
+    thumb: 'assets/img/steel-legion/render-01.jpg',
+    photos: [
+      'assets/img/steel-legion/render-01.jpg',
+      'assets/img/steel-legion/render-02.jpg',
+      'assets/img/steel-legion/render-03.jpg',
+      'assets/img/steel-legion/render-04.jpg',
+      'assets/img/steel-legion/render-05.jpg',
+      'assets/img/steel-legion/render-06.jpg'
+    ]
+  },
+  {
+    id: "risen",
+    name: "THE RISEN",
+    added: '2026-11-25T14:09',
+    kind: { en: "Figure set · 3D-print and cast file", fa: "ست فیگور · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · one product, all pieces together · any size · any colour", fa: "STL · یک محصول، همهٔ قطعه‌ها با هم · هر اندازه · هر رنگ" },
+    description: {
+      en: "THE RISEN is three skeletal undead warriors walking in a row, ragged armour hanging off bare bone. Three poses, one product, in one watertight file.",
+      fa: "THE RISEN سه جنگجوی اسکلتیِ برخاسته از گور است که در یک ردیف راه می‌روند، با زرهِ ژنده‌ای که از استخوان آویزان است. سه حالت، یک محصول، در یک فایلِ کاملاً بسته."
+    },
+    model: "risen",
+    rot: [-90, 0, 0],
+    volume: 1.27,
+    surface: 32.2,
+    size: { w: 55.5, d: 7.5, h: 33.0 },
+    cover: 'assets/img/risen/render-01.jpg',
+    thumb: 'assets/img/risen/render-01.jpg',
+    photos: [
+      'assets/img/risen/render-01.jpg',
+      'assets/img/risen/render-02.jpg',
+      'assets/img/risen/render-03.jpg',
+      'assets/img/risen/render-04.jpg',
+      'assets/img/risen/render-05.jpg',
+      'assets/img/risen/render-06.jpg'
+    ]
+  },
+  {
+    id: "thenatarius",
+    name: "THENATARIUS",
+    added: '2026-11-25T14:10',
+    kind: { en: "Tabletop miniature · 3D-print and cast file", fa: "مینیاتور رومیزی · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "THENATARIUS is a cloaked dark knight mid-lunge with a greatsword raised high overhead, on a hexagonal base. Watertight, ready to print or cast, and the size slider scales it.",
+      fa: "THENATARIUS یک شوالیهٔ تاریکِ شنل‌دار است که میانِ حمله، شمشیرِ بزرگ را بالای سر برده، روی پایهٔ شش‌ضلعی. مشِ کاملاً بسته، آماده‌ی چاپ یا ریخته‌گری، و با اسلایدر اندازه تغییر می‌کند."
+    },
+    model: "thenatarius",
+    rot: [-90, 0, 0],
+    volume: 1.68,
+    surface: 29.9,
+    size: { w: 26.6, d: 22.1, h: 45.2 },
+    cover: 'assets/img/thenatarius/render-01.jpg',
+    thumb: 'assets/img/thenatarius/render-01.jpg',
+    photos: [
+      'assets/img/thenatarius/render-01.jpg',
+      'assets/img/thenatarius/render-02.jpg',
+      'assets/img/thenatarius/render-03.jpg',
+      'assets/img/thenatarius/render-04.jpg',
+      'assets/img/thenatarius/render-05.jpg',
+      'assets/img/thenatarius/render-06.jpg'
+    ]
+  },
+  {
+    id: "adam",
+    name: "ADAM",
+    added: '2026-11-25T14:11',
+    kind: { en: "Tabletop miniature · 3D-print and cast file", fa: "مینیاتور رومیزی · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "ADAM is a plate-armoured knight in a visored helm and cape, resting both hands on a long sword planted before him, on a hexagonal base. Watertight, ready to print or cast.",
+      fa: "ADAM شوالیه‌ای زره‌پوش با کلاه‌خودِ دریچه‌دار و شنل است که هر دو دست را روی شمشیرِ بلندِ فرورفته جلوی پایش گذاشته، روی پایهٔ شش‌ضلعی. مشِ کاملاً بسته، آماده‌ی چاپ یا ریخته‌گری."
+    },
+    model: "adam",
+    rot: [-90, 0, 0],
+    volume: 2.51,
+    surface: 31.6,
+    size: { w: 23.1, d: 20.0, h: 42.4 },
+    cover: 'assets/img/adam/render-01.jpg',
+    thumb: 'assets/img/adam/render-01.jpg',
+    photos: [
+      'assets/img/adam/render-01.jpg',
+      'assets/img/adam/render-02.jpg',
+      'assets/img/adam/render-03.jpg',
+      'assets/img/adam/render-04.jpg',
+      'assets/img/adam/render-05.jpg',
+      'assets/img/adam/render-06.jpg'
+    ]
+  },
+  {
+    id: "sappho",
+    name: "SAPPHO'S HEAD",
+    added: '2026-11-25T14:12',
+    kind: { en: "Portrait bust · 3D-print and cast file", fa: "نیم‌تنه · فایل چاپ سه‌بعدی و ریخته‌گری" },
+    line: { en: "STL · single piece · any size · any colour", fa: "STL · یک تکه · هر اندازه · هر رنگ" },
+    description: {
+      en: "SAPPHO'S HEAD is a classical bust of a young woman with her hair bound in a band, her head turned a little aside, on a round turned pedestal. Watertight, ready to print or cast in any size.",
+      fa: "SAPPHO'S HEAD نیم‌تنهٔ کلاسیکِ زنی جوان است با موهای بسته با نوار و سری که کمی به یک سو چرخیده، روی پایهٔ گردِ تراشیده. مشِ کاملاً بسته، آماده‌ی چاپ یا ریخته‌گری در هر اندازه."
+    },
+    model: "sappho",
+    rot: [-90, 0, 0],
+    volume: 60.08,
+    surface: 129.4,
+    size: { w: 57.2, d: 35.3, h: 110.7 },
+    cover: 'assets/img/sappho/render-01.jpg',
+    thumb: 'assets/img/sappho/render-01.jpg',
+    photos: [
+      'assets/img/sappho/render-01.jpg',
+      'assets/img/sappho/render-02.jpg',
+      'assets/img/sappho/render-03.jpg',
+      'assets/img/sappho/render-04.jpg',
+      'assets/img/sappho/render-05.jpg',
+      'assets/img/sappho/render-06.jpg'
+    ]
   }
 ];
 
