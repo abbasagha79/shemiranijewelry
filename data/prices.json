@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-25T07:44:55Z",
+ "updated": "2026-11-25T18:12:54Z",
  "items": [
   {
    "id": "gold18",
    "en": "18K gold / gram",
    "fa": "طلای ۱۸ عیار / گرم",
    "unit": "toman",
-   "value": 25244500,
-   "pct": 0.59,
-   "dir": "dn"
+   "value": 25475500,
+   "pct": 0.32,
+   "dir": "up"
   },
   {
    "id": "coin",
    "en": "Emami coin",
    "fa": "سکه امامی",
    "unit": "toman",
-   "value": 263995000,
-   "pct": 0.76,
-   "dir": "up"
+   "value": 261275000,
+   "pct": 0.28,
+   "dir": "dn"
   },
   {
    "id": "usd",
    "en": "US dollar",
    "fa": "دلار",
    "unit": "toman",
-   "value": 285655,
-   "pct": 0.62,
+   "value": 292890,
+   "pct": 3.17,
    "dir": "up"
   },
   {
@@ -33,8 +33,8 @@
    "en": "Euro",
    "fa": "یورو",
    "unit": "toman",
-   "value": 313140,
-   "pct": 0.47,
+   "value": 321800,
+   "pct": 3.25,
    "dir": "up"
   },
   {
@@ -42,8 +42,8 @@
    "en": "Gold ounce",
    "fa": "اونس جهانی",
    "unit": "usd",
-   "value": 3524.38,
-   "pct": 0.87,
+   "value": 3524.73,
+   "pct": 0.86,
    "dir": "dn"
   },
   {
@@ -51,9 +51,9 @@
    "en": "Bitcoin",
    "fa": "بیت‌کوین",
    "unit": "usd",
-   "value": 58801.56,
-   "pct": 1.47,
-   "dir": "dn"
+   "value": 59743.04,
+   "pct": 0.13,
+   "dir": "up"
   }
  ]
 }
